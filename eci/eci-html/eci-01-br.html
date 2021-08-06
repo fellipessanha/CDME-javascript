@@ -1,0 +1,684 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>O Problema do Cilindro Inscrito numa Esfera</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+a.mainmenu:link { color : #FFFFFF;  background : transparent; text-decoration : none;}
+a.mainmenu:visited {color : #FFFFFF; background : transparent; text-decoration : none;}
+a.mainmenu:hover {color : #FFFF00; background : transparent; text-decoration : none;}
+span.next:hover {cursor:hand}body {text-align: center; min-width: 800px;}
+/* #menu {position: absolute; left: 50%; width: 800px; margin-left: -210px;} */
+#menu {position: absolute; left: 50%; width: 800px; margin-left: -185px;}
+div.jqDockLabel {border:0px none; padding:0px 4px; font-size:14px; white-space:nowrap; color:#0000FF; background-color:transparent; font-weight: bold;}
+td.id { font-size: xx-small;}
+body, td { font-size: 16px; font-family: "Times New Roman"; }
+.subscript {font-size:xx-small; vertical-align:bottom;}
+.supscript {font-size:xx-small; vertical-align:top;}
+</style>
+<script type='text/javascript' src='jquery-1.2.4.min.js'></script>
+<script type='text/javascript' src='jquery.jqDock.js'></script>
+<script type='text/javascript'>
+var options =
+{ align: 'middle'
+, size: 48
+, labels: true
+};
+jQuery(document).ready(function()
+{
+  jQuery('#menu').jqDock(options);
+});
+</script>
+<script type="text/javascript" src="fc.js"></script>
+</head>
+
+<body bgcolor="#ffffff" leftmargin="0" topmargin="0" onload="initialize();">
+<script type="text/javascript" src="wz_tooltip.js"></script>
+<center>
+<table border="0" cellpadding="0" cellspacing="0" width="770" align="center" height="63">
+  <tr>
+    <td width="770" valign="top">
+      <table border="0" cellpadding="0" cellspacing="0" width="770">
+     <tr>
+         <td><img border="0" src="banner_top_eci_br.gif" width="770" height="63"/></td>
+     </tr>
+   </table>
+    </td>
+  </tr>
+</table>
+<br>
+<br>
+<div style='text-align: left;' id='menu'>
+  <a href="avaliacao.html">
+  <img src='avaliacao.jpg' alt='avaliacao.jpg' title='Avalie-nos!'/>
+  </a>
+  <img src='eci-fill.jpg' alt='eci-fill.jpg' title=''/>
+  <a href="eci-aluno.rtf" target="_new">
+  <img src='formulario.jpg' alt='formulario.jpg' title='Formulário de Acompanhamento do Aluno!'/>
+  </a>
+  <img src='eci-fill.jpg' alt='eci-fill.jpg' title=''/>
+  <a href="guia-do-professor.html">
+  <img src='guia.jpg' alt='guia.jpg' title='Guia do Professor!'/>
+  </a>
+  <img src='eci-fill.jpg' alt='eci-fill.jpg' title=''/>
+  <a href="http://www.uff.br/cdme/eci/">
+  <img src='update-01.jpg' alt='update-01.jpg' title='Verificar Atualizações no Servidor 1!'/>
+  </a>
+  <img src='eci-fill.jpg' alt='eci-fill.jpg' title=''/>
+  <a href="http://www.cdme.im-uff.mat.br/eci/">
+  <img src='update-02.jpg' alt='update-02.jpg' title='Verificar Atualizações no Servidor 2!'/>
+  </a>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<center>
+<table border="0" cellpadding="3" cellspacing="0" width="702">
+<tr>
+<td width="33%" align="left">
+</td>
+<td width="33%" align="center">
+<a href="eci-02-br.html">[Clique aqui para ir para a Parte 2]</a>
+</td>
+<td width="33%" align="right">
+<a href="#instrucoes">[Instruções no final desta página!]</a>
+</td>
+</tr>
+</tbody>
+</table>
+<br />
+<table border="0" cellpadding="3" cellspacing="0" width="714" style="margin-bottom:20px;margin-top:8px;">
+<tbody>
+<tr bgcolor="#e0e0e0">
+<td align="center">
+<b>PARTE 1</b>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+
+
+<table width="710" border="0" bgcolor="#FFFFFF" cellpadding="1" cellspacing="0" style="margin-bottom:0px;">
+<tr valign="top">
+<td align="center" bgcolor="#FFFFFF">
+<p align="center" style="margin-top: 0px; margin-bottom: 10px;">
+<b>Enunciado do Problema</b>
+</p>
+<p align="justify" style="margin-top: 0px; margin-bottom: 0px;">
+Queremos encaixar (inscrever) dentro de uma esfera um cilindro circular reto com o maior volume possível.
+Se a esfera tem 3 metros de raio, quanto deve ser x, a medida em metros do raio da base do cilindro, para que o volume V do cilindro seja o maior possível?
+</p>
+</td>
+</tr>
+</table>
+
+<br />
+
+<table width="700" border="0" bgcolor="#FFFFFF" cellpadding="1" cellspacing="0" style="margin-bottom:0px;">
+<tr valign="top">
+<td bgcolor="#FFFFFF">
+<applet name="lspApplet" id="lspApplet"
+        code="geogebra.GeoGebraApplet" codebase="." archive="geogebra.jar"
+        width="350" height="212"
+        MAYSCRIPT>
+	<param name="filename" value="eci-01-c-br.ggb">
+    <param name="language" value="pt">
+	<param name="framePossible" value="false">
+	<param name="enableRightClick" value="false">
+	<param name="enableShiftDragZoom" value="false">
+	<param name="showToolBar" value="false">
+	<param name="showToolBarHelp" value="false">
+    <param name="allowRescaling" value="true">
+    <param name="borderColor" value="#000000">
+    <param name="ggbOnInitParam" value="lspApplet">
+	Seu navegador não está com a linguagem JAVA instalada ou habilitada!
+	<br>
+	<br>
+	Por favor, verifique se o seu navegador não está bloqueando o acesso ao applet.
+    Para instalar a linguagem JAVA em seu computador, acesse o endereço
+    <a href="http://www.java.com/pt_BR/" target="_new">http://www.java.com/pt_BR/</a>.
+</applet>
+</td>
+<td align="center" bgcolor="#FFFFFF">
+<applet name="jvxApplet" id="jvxApplet" code="ECI.class"
+        width="354"
+        height="214"
+        archive="javaview.jar,jvx.jar"
+        border="0"
+        alt="O Problema do Cilindro Inscrito numa Esfera"
+        style="margin-bottom:0px;margin-left:5px;">
+<param name="panel" value="project">
+   Por favor, verifique se o seu navegador não está bloqueando o acesso ao applet. Para instalar a linguagem JAVA em seu computador, acesse o endereço <a href="http://www.java.com/pt_BR/" target="_new">http://www.java.com/pt_BR/</a>.
+</applet>
+</td>
+</tr>
+<tr valign="top">
+<td bgcolor="#FFFFFF"
+<div id="table">
+<table width="350" bgcolor="#000000" border="0" cellpadding="0" cellspacing="1" style="margin-bottom:10px;">
+<tr bgcolor="#E0E0E0">
+<td align="center" width="50%" >
+<b>x</b>
+</td>
+<td align="center" width="50%">
+<b>V</b>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td align="center" bgcolor="#FFFFFF">
+<applet name="rspApplet" id="rspApplet"
+        code="geogebra.GeoGebraApplet" codebase="." archive="geogebra.jar"
+        width="350" height="212"
+        MAYSCRIPT>
+	<param name="filename" value="eci-01-g-br.ggb">
+    <param name="language" value="pt">
+	<param name="framePossible" value="false">
+	<param name="enableRightClick" value="false">
+	<param name="enableShiftDragZoom" value="false">
+	<param name="showToolBar" value="false">
+	<param name="showToolBarHelp" value="false">
+    <param name="allowRescaling" value="true">
+    <param name="borderColor" value="#000000">
+    <param name="ggbOnInitParam" value="rspApplet">
+	Seu navegador não está com a linguagem JAVA instalada ou habilitada!
+	<br>
+	<br>
+	Por favor, verifique se o seu navegador não está bloqueando o acesso ao applet.
+    Para instalar a linguagem JAVA em seu computador, acesse o endereço
+    <a href="http://www.java.com/pt_BR/" target="_new">http://www.java.com/pt_BR/</a>.
+</applet>
+</td>
+</tr>
+</table>
+<table width="702" bgcolor="#000000" border="0" cellpadding="5" cellspacing="1" style="margin-bottom:10px;">
+<tr>
+<td bgcolor="#FFFFFF">
+<table width="100%">
+<tr>
+<td align="left" bgcolor="#FFFFFF">
+x = <input name="fldx" id="fldx" disabled="true" value="" type="text" style="text-align:left; width:200px; font-weight: bold; position:relative; top:0px; color: #781351;background: #fff8da; border: 1px solid #781351" />
+</td>
+<td width="30%" align="center" bgcolor="#FFFFFF">
+<input type="button" name="btnc" id="btnc" disabled="true" value="Calcular!" onclick='compute()' style="width:100px;" />
+</td>
+<td align="right" bgcolor="#FFFFFF">
+V = <input name="fldv" id="fldv" disabled="true" value="" type="text" style="text-align:right; width:200px; font-weight: bold; position:relative; top:0px; color: #781351;background: #ffffff; border: 1px solid #781351" />
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<center>
+<input type="button" name="btnr" id="btnr" disabled="true" value="Reiniciar!" onclick='reset();' style="width:100px;" />
+</center>
+
+<br />
+<br />
+
+
+<center>
+<a name="instrucoes"></a>
+<table border="0" cellpadding="3" cellspacing="0" width="710">
+<tbody>
+<tr bgcolor="#e0e0e0">
+<td align="center">
+<b>INSTRUÇÕES</b>
+</td>
+</tr>
+</tbody>
+</table>
+<br />
+<table width="710" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+<p align="justify" style="margin-top:0px; margin-bottom:0px" >
+<b>Importante:</b> o desenvolvimento desta atividade é feito através de vários
+exercícios que estão disponíveis no
+<a href="eci-aluno.rtf">formulário de acompanhamento do aluno</a>.
+<br />
+<br />
+Clique e arraste o Modelo 3D para girá-lo. Para mudar a transparência da esfera,
+clique na janela e, então, pressione as teclas <b>1</b> (para tornar a esfera mais transparente)
+e <b>2</b> (para tornar a esfera mais opaca). Para ampliar ou reduzir o Modelo 3D, clique com o botão direito
+do mouse e, mantendo-o pressionado, arraste o mouse.
+<br />
+<br />
+A variável x representa a medida, em metros, do raio da base do cilindro.
+Para alterar o valor de x, digite o número desejado no campo &#8220;x =&#8221;.
+Neste campo, além de números decimais, você poderá usar números em outros formatos, tais como 1/2,
+sqrt(5) (raiz quadrada de 5), sen(8) (seno de 8), pi (o número irracional &pi;), etc.
+Multiplicações podem ser indicadas com um asterisco ou um espaço em branco
+(por exemplo, 2*pi ou 2&nbsp;pi para indicar o número <nobr>2&nbsp;&pi;</nobr>).
+Use parêntesis para agrupar termos (por exemplo, <nobr>3^(1/2)</nobr>
+para indicar a raiz quadrada de 3).
+<br />
+<br />
+Ao pressionar o botão &#8220;Calcular!&#8221;, o aplicativo fará o seguinte:
+(1) ele modificará o formato do desenho do cilindro para este valor de x e
+(2) ele calculará o volume V correspondente, marcando o par ordenado (x, V) no gráfico e
+acrescentando uma linha na tabela.
+<b>Importante: os valores de x e de V são arredondados para 7 casas decimais.</b>
+<br />
+<br />
+Caso você dê um clique em uma das linhas da tabela, o aplicativo redesenhará o cilindro
+para o respectivo valor de x. Para reiniciar o programa, clique no botão &#8220;Reiniciar!&#8221; ou pressione a tecla F5!
+<br />
+<br />
+Nas versões mais atuais do Firefox, do Internet Explorer e do Google Chrome,
+é possível usar as combinações de teclas indicadas na tabela abaixo para aumentar ou diminuir
+o tamanho da fonte do texto e o tamanho das figuras.
+Isto permite configurar estes navegadores para uma leitura mais agradável.
+</p>
+<p align="center">
+<table width="400" bgcolor="#000000" cellspacing="1" cellpadding="5" border="0">
+    <tr>
+      <th align="center" bgcolor="#DDDDDD">Combinação de Teclas</TH>
+      <th align="center" bgcolor="#DDDDDD">Efeito</TH></TR>
+    <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-01.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Ampliar</td></tr>
+    <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-02.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Reduzir</td></tr>
+     <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-03.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Voltar para a configuração inicial</td></tr>
+</table>
+</p>
+</td>
+</tr>
+</table>
+</center>
+
+<script type="text/javascript">
+
+var check_timer = setInterval("check()", 500);
+
+var lspAppletOK = false;
+var rspAppletOK = false;
+var jvxAppletOK = true;
+
+var nod = 7;
+var nop_max = 100;
+var nop = 0;
+
+var xArray = new Array(nop_max);
+var yArray = new Array(nop_max);
+
+function ggbOnInit(c)
+{
+   if (c == "lspApplet")
+   {
+      lspAppletOK = true;
+   }
+
+   if (c == "rspApplet")
+   {
+      rspAppletOK = true;
+   }
+}
+
+function check()
+{
+   document.getElementById("lspApplet").evalCommand("loadValue = 1/3 + 1/3 + 1/3");
+   if (document.getElementById("lspApplet").getValue("loadTest") == 0)
+   {
+      return;
+   }
+
+   if ((lspAppletOK == true) && (rspAppletOK == true) &&
+       (jvxAppletOK == true))
+   {
+      document.getElementById("lspApplet").setErrorDialogsActive(false);
+      document.getElementById("lspApplet").setMode(40);
+      document.getElementById("rspApplet").setErrorDialogsActive(false);
+
+      clearInterval(check_timer);
+
+      document.getElementById("fldx").value = "";
+      document.getElementById("fldv").value = "";
+      document.getElementById("fldx").disabled = false;
+      document.getElementById("btnc").disabled = false;
+      document.getElementById("btnr").disabled = false;
+      // document.getElementById("fldv").disabled = false;
+   }
+}
+
+function updateX()
+{
+   xVal = document.getElementById("lspApplet").getValue("xVal");
+   document.getElementById("rspApplet").setValue("a", xVal);
+   document.getElementById("jvxApplet").xVal = xVal;
+   document.getElementById("jvxApplet").updateBox();
+}
+
+function n2s(number)
+{
+   // s = Math.floor(number*Math.pow(10.0, nod))/Math.pow(10.0, nod);
+   document.getElementById("lspApplet").evalCommand("rVal = " + number);
+   // s = document.getElementById("lspApplet").getValue("sVal");
+   s = document.getElementById("lspApplet").getValueString("sVal");
+   s = s.replace(/sVal = /g, "");
+
+   s = s + "";
+   p = s.indexOf(".");
+   if (p == -1)
+   {
+      s = s + ".";
+      h = nod;
+   }
+   else
+   {
+      h = nod - s.substring(p + 1, s.length).length;
+   }
+   for (i = 0; i < h; i++)
+   {
+      s = s + "0";
+   }
+   return(s);
+}
+
+function check_duplicated_entry(number)
+{
+   s = n2s(number);
+   for (i = 0; i < nop; i++)
+   {
+     if (s == xArray[i])
+     {
+        return(true);
+     }
+   }
+   return(false);
+}
+
+function sort_entries()
+{
+   if (nop > 1)
+   {
+      flag = true;
+      while (flag == true)
+      {
+         flag = false;
+         for (i = 0; i < nop - 1; i++)
+         {
+            x1 = parseFloat(xArray[i]);
+            x2 = parseFloat(xArray[i + 1]);
+            if (x1 > x2)
+            {
+               tmp = xArray[i];
+               xArray[i] = xArray[i + 1];
+               xArray[i + 1] = tmp;
+
+               tmp = yArray[i]
+               yArray[i] = yArray[i + 1];
+               yArray[i + 1] = tmp;
+
+               flag = true;
+            }
+         }
+      }
+   }
+}
+
+function onClickCB(i)
+{
+   id = "trid" + i;
+   document.getElementById(id).style.backgroundColor = "#ffff00";
+   xVal = xArray[i];
+   document.getElementById("rspApplet").setValue("a", xVal);
+   document.getElementById("jvxApplet").xVal = xVal;
+   document.getElementById("jvxApplet").updateCylinder();
+   document.getElementById("lspApplet").evalCommand("xVal = " + xVal);
+   document.getElementById("fldx").value = "";
+   document.getElementById("fldv").value = "";
+}
+
+function onMouseOverCB(i)
+{
+   id = "trid" + i;
+   document.getElementById(id).style.backgroundColor = "#ffffb2";
+}
+
+function onMouseOutCB(i)
+{
+   id = "trid" + i;
+   document.getElementById(id).style.backgroundColor = "#ffffff";
+}
+
+function build_table()
+{
+   str = '';
+   str = str + '<table width="350" bgcolor="#000000" border="0" cellpadding="0" cellspacing="1" style="margin-bottom:10px;">\n';
+   str = str + '<tr>\n';
+   str = str + '<td align="center" bgcolor="#E0E0E0" width="50%">\n';
+   str = str + '<b>x</b>\n';
+   str = str + '</td>\n';
+   str = str + '<td align="center" bgcolor="#E0E0E0" width="50%">\n';
+   str = str + '<b>V</b>\n';
+   str = str + '</td>\n';
+   str = str + '</tr>\n';
+
+   for (i = 0; i < nop; i++)
+   {
+      str = str + '<tr bgcolor="#ffffff" id="trid' + i + '" onClick="onClickCB(' + i + ')" onMouseOver="onMouseOverCB(' + i + ')" onMouseOut="onMouseOutCB(' + i + ')">\n';
+      str = str + '<td align="right">\n';
+      str = str + xArray[i] + '&nbsp;\n';
+      str = str + '</td>\n';
+      str = str + '<td align="right" >\n';
+      str = str + yArray[i] + '&nbsp;\n';
+      str = str + '</td>\n';
+      str = str + '</tr>\n';
+   }
+
+   str = str + '</table>\n';
+   document.getElementById("table").innerHTML = str;
+}
+
+function compute()
+{
+   id = "fldx";
+   v = document.getElementById(id).value;
+   v = v.replace(/sen/g, "sin");
+   v = v.replace(/tg/g, "tan");
+   v = v.replace(/,/g, "\.");
+
+   document.getElementById("fldv").value = "";
+
+   if (v == '')
+   {
+      alert('Digite algum valor para x!');
+      document.getElementById(id).style.background = '#ff7777';
+      return;
+   }
+
+   if  (document.getElementById("lspApplet").exists("pTest") == true)
+   {
+      document.getElementById("lspApplet").deleteObject("pTest")
+   }
+   document.getElementById("lspApplet").evalCommand("pTest =" + v);
+   if (document.getElementById("lspApplet").isDefined("pTest") == false)
+   {
+      alert('Erro de sintaxe para x!');
+      document.getElementById(id).style.background = '#ff7777';
+      return;
+   }
+   else
+   {
+      xVal = document.getElementById("lspApplet").getValue("pTest");
+      xVal = n2s(xVal);
+
+      if ((xVal <= 0.0) || (xVal >= 3.0))
+      {
+         alert('Não é possível construir um cilindro inscrito na esfera de raio 3 metros para este valor de x:\n' + xVal + '.\n\nLembre-se que os valores de x são arredondados para ' + nod + ' casas decimais!');
+         document.getElementById(id).value = xVal;
+         document.getElementById(id).style.background = '#ff7777';
+         return;
+      }
+
+      if (check_duplicated_entry(xVal) == true)
+      {
+         alert('Valor para x já fornecido anteriormente: ' + xVal + '.\n\nLembre-se que os valores de x são arredondados para ' + nod + ' casas decimais!');
+         document.getElementById(id).value = xVal;
+         document.getElementById(id).style.background = '#ff7777';
+         return;
+      }
+
+      document.getElementById(id).style.background = '#fff8da';
+      document.getElementById("rspApplet").setValue("a", xVal);
+      // yVal = document.getElementById("rspApplet").getValue("b");
+      yVal = document.getElementById("rspApplet").getValueString("b");
+      yVal = yVal.replace(/b = /g, "");
+
+      document.getElementById("rspApplet").setVisible("P", true);
+      document.getElementById("rspApplet").setVisible("X", true);
+      document.getElementById("rspApplet").setVisible("Y", true);
+      document.getElementById("rspApplet").setVisible("sPX", true);
+      document.getElementById("rspApplet").setVisible("sPY", true);
+      document.getElementById("rspApplet").setLayer("P", 1);
+
+
+      document.getElementById("rspApplet").evalCommand("P" + nop + "= (" + xVal + "," + yVal + ")");
+      document.getElementById("rspApplet").setPointSize("P" + nop, 1);
+      document.getElementById("rspApplet").setColor("P" + nop, 0, 0, 0);
+      document.getElementById("rspApplet").setFixed("P" + nop, true);
+      document.getElementById("rspApplet").setLayer("P" + nop, 0);
+
+      document.getElementById("jvxApplet").xVal = xVal;
+      document.getElementById("jvxApplet").updateCylinder();
+
+      document.getElementById("lspApplet").evalCommand("xVal = " + xVal);
+
+      xArray[nop] = n2s(xVal);
+      yArray[nop] = n2s(yVal);
+      document.getElementById("fldv").value = yArray[nop];
+
+      nop++;
+
+      sort_entries();
+      build_table();
+   }
+}
+
+function getCookie(c_name)
+{
+   var i,x,y,ARRcookies=document.cookie.split(";");
+   for (i=0;i<ARRcookies.length;i++)
+   {
+     x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+     y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+     x=x.replace(/^\s+|\s+$/g,"");
+     if (x==c_name)
+     {
+        return unescape(y);
+     }
+   }
+   return(null);
+}
+
+function initialize()
+{
+   wp = getCookie("resetECI1");
+   document.cookie = "resetECI2 = 0";
+   if (wp != null)
+   {
+       wp = parseInt(wp);
+       window.scrollTo(0, wp);
+   }
+}
+
+function reset()
+{
+   wp = document.body.scrollTop || document.documentElement.scrollTop;
+
+   document.cookie = "resetECI1 = " + wp;
+   document.location.reload(true);
+}
+</script>
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="770" align="center">
+  <tr>
+     <td>
+     <table border="0" cellpadding="0" cellspacing="0" width="770" >
+     <tr>
+     <td><div align="right"><img name="banner_final" src="banner_final.gif" border="0" height="33"></td><td><div align="left"><div align="right"><img name="banner_final" src="banner_final.gif" border="0" height="33"></div></td>
+     </tr>
+     </table>
+     </td>
+  </tr>
+</table>
+</center>
+<br>
+<center>
+   <img border="0" src="logomarcas.jpg" width="700" height="30" />
+</center>
+<br>
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/br/">
+<img alt="Creative Commons License" style="border-width:0" src="creative_commons.png" width="88" height="31" />
+</a>
+</center>
+<hr width="770">
+<center>
+<table>
+<tr align="top">
+<td align="center" colspan="1" class="id">
+Responsável:
+<a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br>
+Idealização:
+<a href="http://www.mat.puc-rio.br/pagina.php?id=docentes_gpalis" target="_new">Gilda de La Rocque Palis</a>, Silvana Marini Rodrigues Lopes e <a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br>
+Programação:
+<a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br>
+Revisão:
+<a href="http://www.uff.br/leg/">Ana Maria Martensen Roland Kaleff</a>,
+Anne Michelle Dysman Gomes,
+Carla Cristina de Lima Pracias,
+<a href="http://www.professores.uff.br/dirceuesu/">Dirce Uesu Pesco</a>,
+<a href="http://www.mat.puc-rio.br/pagina.php?id=docentes_gpalis">Gilda de La Rocque Palis</a>,
+<br>
+<a href="http://www.professores.uff.br/hjbortol/">Humberto José Bortolossi</a>,
+José Osorio de Figueiredo,
+Rodrigo Viana Pereira,
+Silvana Marini Rodrigues Lopes,
+Thiago Gomes Pereira,
+<a href="http://www.professores.uff.br/wmrezende/">Wanderley Moura Rezende</a>.
+<br>
+<br>
+Biblioteca gráfica:
+<a href="http://www.javaview.de" target="_new">JavaView &ndash; Interactive 3D Geometry and Visualization</a>.
+<br>
+Esta atividade foi construída com o software de matemática dinâmica gratuito
+e multiplataforma
+<a href="http://www.geogebra.org" target="_new">GeoGebra</a>.
+<br>
+<br>
+O Problema do Cilindro Inscrito numa Esfera Versão 07/02/2011
+<br>
+Atualizações desta atividade estarão disponíveis no endereço
+<a href="http://www.uff.br/cdme/">http://www.uff.br/cdme/</a>.
+<br />
+Endereço alternativo: <a href="http://www.cdme.im-uff.mat.br/">http://www.cdme.im-uff.mat.br/</a>.
+</td></tr>
+</table>
+</center>
+<hr width="770">
+<center>
+<font size="3">
+Dúvidas? Sugestões? Nós damos suporte! Contacte-nos pelo e-mail:
+<br>
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;">&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;</a>.
+</font>
+</center>
+</body>
+</html>

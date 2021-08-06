@@ -1,4 +1,5 @@
 from os import listdir, read
+import io
 
 
 
@@ -18,10 +19,10 @@ def readhtml(filename, dir):
   dir += "\\" + dir+"-html\\"
   filename = dir+filename
   print('\n', filename, '\n')
-  with open(filename) as f:
+  with open(filename, mode='r', encoding='ISO-8859-1') as f:
     filename = f.read()
     f.close()
-  return filename
+  return  filename
 
 # These functions get texts from other texts
 def getAppletText(reader):
@@ -130,6 +131,7 @@ def convertAppletoJS(htmlFile, dir, ggbdir, vparameters, htmlparameters, lastApp
   ggbfilename1 = getggbfilename(applet1)
   ggbfilename1 = ggbfilename1.replace('.ggb', '.html')
   ggbfilename1 = ggbfilename1.replace('-', '_')
+  print("read this:", ggbfilename1)
 
   
   with open(ggbdir+dir+'\\'+ggbfilename1, 'r') as f:
@@ -155,11 +157,14 @@ def convertAppletoJS(htmlFile, dir, ggbdir, vparameters, htmlparameters, lastApp
 
 # main()
 
-ggbDir = '..\\htmls\\'
+ggbDir = "geogebra-constructions\\"
+
 dirs = listdir(ggbDir)
+print(dirs)
+
+quit()
 dirs.remove('copying.py')
 dirs.remove('estranhos')
-# print(dirs)
 
 
 # print(dir+"\\"+dir+"-html\\filename")
@@ -181,7 +186,7 @@ for curr in dirs:
     htmlfile = convertAppletoJS(htmlfile, curr, ggbDir, ggbConstructParams, oldHtmlParams, lastApplet=True)
     # quit()
 
-    with open(curr+'\\'+curr+'-html'+'\\'+filetoConvert, 'w', encoding='utf-8') as f:
+    with open(curr+'\\converted-'+filetoConvert, 'w', encoding='utf-8') as f:
       f.write(htmlfile)
 
 # print(ggbhtmlFile)

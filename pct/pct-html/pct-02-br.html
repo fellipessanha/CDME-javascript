@@ -1,0 +1,706 @@
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<meta charset="UTF-8">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>O Problema da Caixa com Tampa</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+a.mainmenu:link { color : #FFFFFF;  background : transparent; text-decoration : none;}
+a.mainmenu:visited {color : #FFFFFF; background : transparent; text-decoration : none;}
+a.mainmenu:hover {color : #FFFF00; background : transparent; text-decoration : none;}
+span.next:hover {cursor:hand}body {text-align: center; min-width: 800px;}
+/* #menu {position: absolute; left: 50%; width: 800px; margin-left: -210px;} */
+#menu {position: absolute; left: 50%; width: 800px; margin-left: -185px;}
+div.jqDockLabel {border:0px none; padding:0px 4px; font-size:14px; white-space:nowrap; color:#0000FF; background-color:transparent; font-weight: bold;}
+td.id { font-size: xx-small;}
+body, td { font-size: 16px; font-family: "Times New Roman"; }
+.subscript {font-size:xx-small; vertical-align:bottom;}
+.supscript {font-size:xx-small; vertical-align:top;}
+</style>
+<script type='text/javascript' src='jquery-1.2.4.min.js'></script>
+<script type='text/javascript' src='jquery.jqDock.js'></script>
+<script type='text/javascript'>
+var options =
+{ align: 'middle'
+, size: 48
+, labels: true
+};
+jQuery(document).ready(function()
+{
+  jQuery('#menu').jqDock(options);
+});
+</script>
+<script type="text/javascript" src="fc.js"></script>
+</head>
+
+<body bgcolor="#ffffff" leftmargin="0" topmargin="0" onload="initialize();">
+<script type="text/javascript" src="wz_tooltip.js"></script>
+<center>
+<table border="0" cellpadding="0" cellspacing="0" width="770" align="center" height="63">
+  <tr>
+    <td width="770" valign="top">
+      <table border="0" cellpadding="0" cellspacing="0" width="770">
+     <tr>
+         <td><img border="0" src="banner_top_pct_br.gif" width="770" height="63"/></td>
+     </tr>
+   </table>
+    </td>
+  </tr>
+</table>
+<br>
+<br>
+<div style='text-align: left;' id='menu'>
+  <a href="avaliacao.html">
+  <img src='avaliacao.jpg' alt='avaliacao.jpg' title='Avalie-nos!'/>
+  </a>
+  <img src='pct-fill.jpg' alt='pct-fill.jpg' title=''/>
+  <a href="pct-aluno.rtf" target="_new">
+  <img src='formulario.jpg' alt='formulario.jpg' title='Formulário de Acompanhamento do Aluno!'/>
+  </a>
+  <img src='pct-fill.jpg' alt='pct-fill.jpg' title=''/>
+  <a href="guia-do-professor.html">
+  <img src='guia.jpg' alt='guia.jpg' title='Guia do Professor!'/>
+  </a>
+  <img src='pct-fill.jpg' alt='pct-fill.jpg' title=''/>
+  <a href="http://www.uff.br/cdme/pct/pct-offline.zip">
+  <img src='download-01.jpg' alt='download-01.jpg' title='Download para Uso Offline do Servidor 1!'/>
+  </a>
+  <img src='pct-fill.jpg' alt='pct-fill.jpg' title=''/>
+  <a href="http://www.cdme.im-uff.mat.br/pct/pct-offline.zip">
+  <img src='download-02.jpg' alt='download-02.jpg' title='Download para Uso Offline do Servidor 2!'/>
+  </a>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<center>
+<table border="0" cellpadding="3" cellspacing="0" width="702">
+<tr>
+<td width="33%" align="left">
+</td>
+<td width="33%" align="center">
+<a href="pct-01-br.html">[Clique aqui para ir para a Parte 1]</a>
+</td>
+<td width="33%" align="right">
+<a href="#instrucoes">[Instruções no final desta página!]</a>
+</td>
+</tr>
+</tbody>
+</table>
+<br />
+<table border="0" cellpadding="3" cellspacing="0" width="714" style="margin-bottom:20px;margin-top:8px;">
+<tbody>
+<tr bgcolor="#e0e0e0">
+<td align="center">
+<b>PARTE 2</b>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+
+<table width="710" border="0" bgcolor="#FFFFFF" cellpadding="1" cellspacing="0" style="margin-bottom:0px;">
+<tr valign="top">
+<td align="center" bgcolor="#FFFFFF">
+<p align="center" style="margin-top: 0px; margin-bottom: 10px;">
+<b>Enunciado do Problema</b>
+</p>
+<p align="justify" style="margin-top: 0px; margin-bottom: 0px;">
+Um fabricante quer construir caixas com tampa a partir de uma folha de papelão retangular medindo
+<nobr>10 cm</nobr> por <nobr>16 cm.</nobr> Para construir a caixa, dois quadrados
+e dois retângulos são removidos dos cantos da folha de papelão.
+As abas que sobram são então dobradas para cima de modo a formar
+uma caixa com tampa.
+Quanto deve ser x, a medida em centímetros dos lados dos quadrados que são retirados da folha de papelão,
+para que o volume V da caixa seja o maior possível?
+</p>
+</td>
+</tr>
+</table>
+
+<br />
+
+
+<table width="700" border="0" bgcolor="#FFFFFF" cellpadding="1" cellspacing="0" style="margin-bottom:0px;">
+<tr valign="top">
+<td bgcolor="#FFFFFF">
+<script type="text/javascript">
+var paramslspApplet = {"id": "lspApplet", "allowStyleBar": false, "enableShiftDragZoom": false, "useBrowserForJS": false, "showMenuBar": false, "showAlgebraInput": false, "showResetIcon": false, "enableLabelDrags": false, "errorDialogsActive": true, "ggbBase64": "UEsDBBQACAgIAPqL5FIAAAAAAAAAAAAAAAASAAAAZ2VvZ2VicmFfbWFjcm8ueG1s7Vtdc5s4FH1uf4WGp2TbYCRAwExox3a6s2n6Oe3bzj7IWLbZYvAC7tr59XuFwLXBJMZ2XJLti3GEcpHOOfdDl+Ty9WIaoO88TvwodBWsagrioRcN/XDsKvN0dGErr189vxzzaMwHMUOjKJ6y1FV0lSgwPmVeHCFvOvzAptxV+tF0xpIkUlAaRcG2sT94MHMVBfleFP7uB1x8TybRv9fhV7jbY7GrpPGcr2xfh7N5ipjmKtcKYthV3sKFuMqN0immfJynxZxxNgqmEzDipbAnlPqpfAqbp5MoFt+GLBUjMJMHfMrDFKXLGYzMIj9MFRSwAQ/E8149f3Yp1oaiwd/cS/OVFfdHLEi4eN6zS7jfj4IoRmAeABxnnwNXIaYJzw1mEwYjAG02OWBLHqPvLBCz8hEw+D4a8o1RFvqAtNhCkvKZMIABqhnnw5wnuWj4MgOTGV9rS/KiKB4maOEqF5pqGbqOHcekmOoWobCopauYKtWwbZm6QwjVDMdW0K20nBnIwPji3+aL0jNkOzlg90D39olDR1VMLAubpoOppWMLHw+6mycC3Qf2IYMqu97K607geNF0ysIhCmXw8GMv4BkmfjkS3OQw/HB/TxrLTVSQhrjgeyskvcxq4If8S7oMOEonvvct5EkCCP7YZudgOrT9ydhpcdwf8/A7LC2KE4QWWs7TUpMPRLfFyAJnihb3cD50i9dkC7zH/gJ1i/ndYlYX4i3BKrVNXbMhYhgGBA7QWFfPH9E1xJeqq3RNeGLVWeSy/wnl1hLx6SqgMc8f+d4eeriReriu6GHYRA/DX3pooIcLjFXT1ClQapmaiemuciCqZlFNN7FDbMOyCSGH6OE6TKF2gc2WJOFJSQwrkujKGz1ZRcAnLPpulWzG5+5+8ZkamQLEZSAv+2rgCCH2rv31nvj+wnkQ/OwtPoYc2y2q7bID8SYxlf+KqQ1iKrZUW8MW0TTsUIMYWC8FVUMlJsGWjTURVh2jiKmGijdKeevoKbZXJ4dREzmMfsmhgRwsVae2oxGbGia1KCmJATKpRSEF29ixiG4YDnkINdQlWC4FMZJ5lBQbWlNGv0la7f/smHyaqJpXqv0KWOMmbjQ+kRsddJBskSMZqq2boui0bd12qG2dqlbtrHeixM9Zv6raNnvHw3E6eSdwXO+cVYb3b55tlr3BUBa+QVLTRVv37Ymc++aIrbU9i+jWNTmkIEEoZibII7WA9izBW4cOVh3IXrroMho2pY5uHwWscD7l8Vo0DOTBHX51nhuAk+mW6CfXWPxWhujORQTeEUF8OIL1GeUdRNTtVXqvkk/Y3flEBOcVFGzPdLIJ6MOWZVWf26YuEJWjOibGtqY5BGK6YTVJRqWo7k9nge/56d2sfIwh9o2jkAX1/LAKP4MG/AweFT8XNW6v5V7/w/RP4qRXx8k93eMNTvZtHreTE111KNZ0xwCvsbEFh40Hp+iupkNQbdudpJN7SnJaVB4TOEiWu/nSmCiCTbWG58O7CVt4Pkl36f/KM1UtvOHmZdK3hYkjaKCuhzCUMhjIc8ZqE0fsIezE9EM0EVYnAwq1aKNit1H7xauH7qoJdFctgq7u2NAYSb6YxeBuogzPdzFXEAy6ytnZ4qx7ji7Q4qx/fo466MpPUhZ6/M/uS9T/6yU6W8r7y633zwv3lS6roE4F3uLO6sHtj1TbSux9SrbMzkaU8Fic8sRnYcODXVI+2GlP5WBXlWb3U6FNoUmQXpCg30Cf8/OXmQqLkSWMrPSXO3FVfqV2y6cWufcqMlqN2wBV0D5vgPaiAtqLA0D73EbQ6OGg9daUdlVR2tVBSuu1SWl1ieQIwut93sDwRQXDA4TXa5Pw6pNxQww3y5ovfCzGS0VNXxY1V5Va5p6XjElu7RG9Zty5n4WJ6ujU1A1MNEx1s0hYh57MM3wDkaJWJSboO5GLXNv7N85nX8Hox/BrzMJE/PmvnFPk2XqS3/tDqewdWX7TpGJ9054Xhhowt95zpM5RSv/tPiLqBAEfpKcyfve8Qyx7yaneIh6rg6U9UBvxBJ6wncpeTmWvSuWkGZWTR01lOfIZepuZrX2n2yn+R+LVf1BLBwg/GJS/GQYAAFUxAABQSwMEFAAICAgA+ovkUgAAAAAAAAAAAAAAAAwAAABnZW9nZWJyYS54bWztXd1y47YVvm6fgtVFxm5XWoJ/IifrdPyz6/2xd7NrZzOTTOqhJEiiTZEySSVSnqB5il72qk/RN8mTFCAISiJEidCPQ2B7Y0skBRLnO+d8BwcH4Iu/T0e+8jOMYi8MThqgpTYUGHTDnhcMThqTpN+0G3//5s8vBjAcwE7kKv0wGrnJSUNvaQ18fOJ98+c/vYiH4S+K66eXfPbgLyeNvuvHsKHE4wi6vXgIYbJ03J1MPd9zo9mHzj3sJvFJI4km+Dhp400wniT5xd1R78qLk+ya5/iGvtuBPnrGm2TmQ0X52fVPGho51Q+DRFFi71eI+pMee/E8fcwXcNL1vZ7nBvhR0sdGFynKL14vGaIeGVpDGUJvMER3Ao5DWuuGYdS7mcUJHCnTH2AUonOW1TJ1rW0Aw7QdFdgNZUbOOKDV1k3b1lRgOpZptZEAuq6PH0RtaUBTzbammY7j6A46NSs/l94a/nwDkwR1MlbcKYxzcQwir7f05U18FvrzQ+PQC5Jzd5xMohRFPTuUyuqkgRCOcCdPg4EPs2MACXkIuw+dcHpDBKeTpm9n4/Qn6QN1BuehH0ZKhGRtmuiC7H+H/E+vwU+aX6Wm16jpFVkbuNH8PHC09Ir0f4f8J/B6AXm0rOeA9hqo9DZerOADqHGsfHnnU8U4aTSUSeAlV/RL4nUf5l3FP3g/GXWQ1i/qVN4m2FebL54XVO7FA4wC6BPFChC2k3ASE+0l90ofpAe73gh9JScAlSzG6zv0BORwDw4iSJ+cWA2RWHpWXdTewuEXz+lT4IeI0cN2E2T9qEMJ7gw2zmQYRvhTz03wEWw7PhxBZFhJqhDBZAQjr5uLBunN9w18Q3SXSXYvYLWyp0i9Q5gaelGmC71GF5QoDvIK46GLPrUAtf4ZjJaMPm3uOuzRe1ORITmmfUP2OyYNIJcEYS9zdUmm3soYNZkaS/5ACDvS5Sqdf810XpWn81Pkw2PMD/S5zxBHTFGLR80jDPyx8lzRWuozBQuCfD6mraeOp6E8Z4SYnchb3E5UlpHKCv/rkH+5tNSK0lq0lFiZnjSaNhbO7KRh4v+/EmGl1xAvijkj/aXOpybTz65/7U6LmmJKrCgvqaJMj86Onykz9FdpKpkgeHXkZR11ROXVkW44GrlBTwncEerhDRzg42nPPBzzKK6a2pcLcIdJXyYJPeGS1rI2GHnFWWtUIG5jmUuTIaKsAEGE+5mjumfl21qmZkGkxrytKj2AjwG5Jiac7I3Gvtf1klyIPlbdN0GCGBqmhMcS7wOEYxzxfAhuIzeIcaxLrlkg9BIkv011dRlHlwHwej2Aywp/zSo8CZKz8/PIpQyXNDrbFpld3MJKW9Fbquq0Ld2xgQl0XbU4vSvjXrAjuQpREJ25GbcTH2U+ZnZ0fXy8yqes8sqkjSKDtxxH1XQLxfeGbVmObnM64PXPfrnoGpW/KflzLLnJ9Aivo7x8CkepV3SUFgv6IVRhVlAFHJeQUGRRklUUYlamEGxP9qkPN3N9uMT6MFvUh8tjXh24qZEOqIey//OSODT9+vp4u1D0vI5hRpM/FmWk9X6uYeeMxznn1rD3NdKwEi/DL7VlTr9CcUeB0s9JaHbGMPtgPbPjECaXzECouKwJ1EJk1rT3F5qt19nOL59Xu/RtqJ40dkCvvqw9517U9Uv0J4v7f7x+ppz9xOjSw3pd6obBQq8eBFCmalriDWDwM3q2MIoVZapmUeZMpYpHj0yRAJtEJ0F26FewYOQoao28qXJKrz+lV51qJw0b+QTddizVdNQ2sDUdHdazO5wa6Hz6wVwYlxe1F4XAXa+PENiova8XPS7xsot+l9fjvq6Tx82ZaUdWX7aZD1EyDAdhgCTE+t7XxHYGjL3cc/jeewHMZUHM1PVmThg7Xx19WuGx9uqJK3iy6zIm7PF4r54AcNTIe1lOEfsS77XCLHd0Zp3Mmc2Uk5RyV/mrJUvrCAAtO0gBuZmtFuBWZoYEV8HM1jq/S2JuHcbchhzObygUJE1QjDtLgrUDB6Hv1g+cdqH0d3Wi9JJB1F4JfiWVvMt0O43Pi/r9yEMnjwIoeI3oBLGJaVttR9MMAxi2Dgp0skIjMLnsnVuu5hb2jkl+veNOTVzVyKryAO7wZnS1PLY8e6Zcs2PLiMecov+bE485mYXgTCuYE2n4IBZ0eQfmNpRPcv0YPVPuf0qHnsVj3JMK6Ab1SYwykzPGXoxsnQA+bNn96moOFvr+od+PYUKiIMLDmrpONH1vCnvLc5WrvBD3dPX6jNrIjR6uYDBIhqCYV9Nb5kbHsHkCsw5VDWslEMOxG6W3IXIoikGtIAZBqjvWT6Ou7r4hT3HL2u77odv7jLvN4v8EAljtGQ5e3YM7fQvjJCOeXAb/OMLTbsrvv/1LSW/AUksnDH3oBg2mpYL0FiRzSMe7xrNWV4Eg7BUfv/2FaH+0Yl4FyNN3RvHj+aRUFE6C3hEWgPJXBedo/3GEFOEYzz3Pv1WZnIrXyXBPNQYJnCahlj35V4+TMPn63Pce0e2g4kaRi+SkhMo4DJJQuf4LuaDBPjpuplFok0F6qVLpsCOAtOA/RtLsz5cdpEXsTdTXmBa9E53oxKE/SeBNN4IwwEPMVEFwiNQm6T+Tk/euveAP8fk1MPvpimpWiWq+GfM5pSOs+Uz0LjXPpzUaT21f8sxI6WKVlHaqyLmooaB2LS1ZXfh7SjI4F0zWprs+a1Ms/O0KkLdZGMwfsr7kIKW/rNa/mmdfTtN8y+lOJZyvapTB3FP57sbSqqzq/ZRRfrhe+ZdmuKBQmp9POloHrqyqWtfGep4+h/D7Ygv/SWS/MnN/UaUqbLweieXM/VgAKGqUud9UFdbcZ1nYmzlXXKRccbHTHPKbGnLFzol4Rmhv16+X4BXa2xoJrWTifccIs0opXZ9xMh6Hu/cE8DGL1SRWMcwEmn0Qj89q7/Xi9NwVo79X3Pp7/TTTcRU1eMVaqSeuDU0FjFX6nlFpn0OlfaFUOh84Necq7bSWkDAOHtCsheWqDJQRBygj0UF5qtUSt3Mf85Ypo3nL7WNua+RhqFB3JMVvQ3+GdHV1KTMmRY1Uo+m44JIJwEP/v/9Bvw4zVzNOfQ76xTD9gH7zkH5A8eLgDqxX8HH2IHm8Pm97O2Wvkm8vbtoy13fAp+/lOeJiJmp8t22HKqlaeY92sGAUJwDH1NqOpauaZQFteVm63QKmpWl6WzU0oDm1zlOtxWYoIDbzMu3liMPQU3BMfBgYqmXrKOJACImLzoOA6DTXm05Tt1qgbTqGputtR3UMgY1nICA888VEMlgPE/58nIc/75nw5z13+POxhuHPrtNOq+OfrP7+PYlmPpJY5qo8/tHI9Q93GvlFQH7xSKMff+voR5Mr+sESEs1JlIzl88pRdN5S0am2blsAtO16O4m18ATCgUP9wIqMIcIGrww1bBsgANumZZm6uNA8CkivDK0WTKfuk9prAfEFBCRnzdXm0gR2S7XbThsAy3ZMo22YdcanCpPTJUCEly8JL78rZ3KdXO9TJo/JLwbpdwMTmL4lk+tyMbkvIJNvGI0J7Y5i4dDY4IzE8kWbxsbiGct6W5EocYFdumjgrA97xTKdKjR+uUTjt4SU35bTuJHtjHOnZzROJyQSQuP3Ww/IDblofCCd8gsWxG5gdQEHGVKP+hLh4NgQZkmUIrkX0FjkSi4yMxCf5jMQN0yR1w33DMSnGs1AlCC31wqvtTmNa1pt8YmENjfl4ZBJsxpZODSi4VBEZyjiO23LgMiUKyDyBQ6IVqnkillM5pVCtfIha9EZCejiN2SdsIu3Vc0GuoXO64YqMANHAsJTWgMgn/XE0qWh9lhJ+oflNvJK7TeEnF8Rav5UTucWuX5EJyk8Sud9SufR1nRuyUXnIwFVni+5J3B2wxOQLjawuTzFsH0BweGcUhLYdCIB/doGKhcrEK6ye0W2qJAtN3A3TT8wL67b2hh5ePkQa8klKKytAnVeMVqEusMLdUc0qKVKYVbB+j3B+iODdZcX665oWEtUblkF6Y8Eabbyu8eLdE80pAWfxauC7kIevYgv5MUXioavTDnjKmAvZFmKYAe8YAeigi3BsKgK1m8I0q8YpBNepJO9I90Ng55HdmNEl3/Irp7eoC9nT6ILEiUwqujCK6ILbDbV3ZQiZcdgT7EY6wBWL0M2pArUn2iRIDsG44S6IyzUXwqd3xCsb1eMwTix7oqG9RcQmd8SdNkC3x4vuj3R0JWpXK8K1G8J1OzmMpAXaiga1F9c4iyr4r9msO7zYt0XDWupdpqoNN6mW0gVsR7yYj0UDesva4B1WTbJ5fEC7ckFtFBL5DjmuNhs+D0v0veiIS3veru1qXF2KB3wQh2IBrXYi8Q5xs4r9nPkBXcsGrhSrTnnmvZgE6CPvGg/ioa2VJX3VdA+L6tCSXixTiphrW0L9t43Gd5Qb+S0HBMAG9m8Zui60QZVkNYEgJodX7mbdqhh5zWqrHiqD9Sb8p9NgAbTGrBtGxht29HNSk681mBndSjsy2g6vGB3BAOb2rVNR88V469aw3lRVonQ5YWzKxicm2xXPtPN5p/Zl3j1eLHu/R/rmmN9WjYpCXmxhoJhnY+rpPLT2dzUGYNnnxfPvqh4fjHx9FnZ3NSQF+uhYFhL7KavYDBIhldYAGWvdyT7YbjRA7k2W0gbw7EbpS9NJocZrfDusp1C7+d7aujkt9/xqYu39YYTfxSrq4V309Y7I7ppJkIo6edpDvqKTqBbIot/JJb4GeUXSveX91L6rkYvEV8IH82dXqJc6u8v6DBsS38fUH8/pv7+kfr7z3z+PhBL5RciwczfmyLpPDtjJZT0m8yr4AEQWv6PYsmf0X6hhL/s8D/XyOEDgB39olpXdfjLPQwmIxgtvOV77tjJ9BVqY5K1hO/IalUlCZSpFajY/ew6N/BGLln6k8AxaUCJxxD2shdvU91RxqhJpBgLD7QN5+VD2gLnaRU5L6KcF1POSyjnfc/HedHerZ5vGdUBpxtlIMVYNng2pTTslqO2NUMDbdPSdLPWlXmb5uklg46xrOKGqmZbHLSWCfj7GhFw08kI2EDiXV5QcpDxV7YVzvm2XOTeZVv6d9IPGp76NMhvf+DjItyS1BYjssGw5QqSgfXlMFNXNuiKdiZUyLfMRD/UkYmaT0RFefXNllTUo1QEKRX1KRWd8m8LJKmRSJIuhLLhs7EoRx4C6suGHWtbIod6y4x0mm20Uw9OempKyosEt6SkAaWkIaUkj1LSGS8lDaQ3G5Gthi02kgytL4igPNmwk2m27KyWhPREfJSvI9uSj+4pHz1QPvIpH53z8tG9bFYiWQXdg2z4bFhKCLSWoyPLM4CmAks3Qa3XCG962Zlk2LG2VVzoLVC8sExI57UipGabZSKyrp6zgI99Z+RLvGSdvjXyI/PWyI/cb418+TSS2+29kWme7CBkni0efUlfF8lP5yNK5wGl8zGl81e8dD6S3uXUfIeQTdWpksGzYZ9zhs3FhW4sG3SMZa2IyIRBa5mSXtWKzFUk18XlfJazNzJP4DQJKZ9/9TgJk6+n5F+DpW18caPwy3oraz9EDx/DyOvn8MVIPEh2SP0yRaMWl7hR8i0WIBHG2R1YaPlDvx/DBIORDfQrilbfWrS6vKL9YaVgmwCkotUqitbYWrSGvKJ9VaK1TRL/g6rCNbcWrimvcE9LhGsR2VYUrbW1aC15Rft9iUvQuVxCe2vRtuUV7XmZS9D4XIK9JFygKt0Rh4Dt6gKul/g+7xYF4NxIJji3Ex/Njs6OlaYyO7rGaRJWcMUFM+nP8f2XVsowQ6XKcqvqpJxlsC0+sB1Rwf6uxA2RgBtUCKgzP0Caw+gpXw2SrxXUCeX3f/5bIUd8dAR/unanq5SgE4Y+dOcv/87aLKgBHdPsc8UUl6R5X6R+tlRjfpGV5DHZrPxV521aUW7SinKT/KaXfjBwrbi5PrtV+hr19tMMxTHav//2LyWX7CIIf8Dr1rEst+t4JbU6yGuJmSW2ttAZvK6AEDDbWogNQU9ACNiV5mJj4AqIwbx+RhQ74Niplt289PHOWM+u7OYBT5ThrkSrh5ikkAn3fMuVIu4RL+6RrLiL53Q5tsFkt02MeYGPZQVeTk+fD8CKwCe8wCdbA1/K3jVBXjiLZ1MQF4sFOrdMgc4td4HOhQgFOtz1OUjZgxhJNAUBfx/AcAA7kfvN/wBQSwcISULjLCcSAABk/gAAUEsBAhQAFAAICAgA+ovkUj8YlL8ZBgAAVTEAABIAAAAAAAAAAAAAAAAAAAAAAGdlb2dlYnJhX21hY3JvLnhtbFBLAQIUABQACAgIAPqL5FJJQuMsJxIAAGT+AAAMAAAAAAAAAAAAAAAAAFkGAABnZW9nZWJyYS54bWxQSwUGAAAAAAIAAgB6AAAAuhgAAAAA", "width": 350, "height": 212, "framePossible": false, "enableRightClick": false, "showToolBar": false, "showToolBarHelp": false};
+paramslspApplet.appletOnLoad = function(api) {lspAppletOK = true};
+var lspApplet = new GGBApplet("5.0", paramslspApplet);
+window.addEventListener("load", function(){lspApplet.inject("lspApplet_container", "auto")});
+</script>
+<div id="lspApplet_container"></div>
+</td>
+<td align="center" bgcolor="#FFFFFF">
+<applet name="jvxApplet" id="jvxApplet" code="PCT.class"
+        width="354"
+        height="214"
+        archive="javaview.jar,jvx.jar"
+        border="0"
+        alt="O Problema da Caixa com Tampa"
+        style="margin-bottom:0px;margin-left:5px;">
+<param name="panel" value="project">
+   Por favor, verifique se o seu navegador não está bloqueando o acesso ao applet. Para instalar a linguagem JAVA em seu computador, acesse o endereço <a href="http://www.java.com/pt_BR/" target="_new">http://www.java.com/pt_BR/</a>.
+</applet>
+</td>
+</tr>
+<tr valign="top">
+<td bgcolor="#FFFFFF"
+&nbsp;
+</td>
+<td align="center" bgcolor="#FFFFFF">
+<script type="text/javascript">
+var paramsrspApplet = {"id": "rspApplet", "allowStyleBar": false, "enableShiftDragZoom": false, "useBrowserForJS": false, "showMenuBar": false, "showAlgebraInput": false, "showResetIcon": false, "enableLabelDrags": false, "errorDialogsActive": true, "ggbBase64": "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", "width": 350, "height": 212, "framePossible": false, "enableRightClick": false, "showToolBar": false, "showToolBarHelp": false};
+paramsrspApplet.appletOnLoad = function(api) {rspAppletOK = true};
+var rspApplet = new GGBApplet("5.0", paramsrspApplet);
+window.addEventListener("load", function(){rspApplet.inject("rspApplet_container", "auto")});
+</script>
+<div id="rspApplet_container"></div>
+</td>
+</tr>
+</table>
+
+
+<table width="702" bgcolor="#000000" border="0" cellpadding="5" cellspacing="1" style="margin-bottom:10px;">
+<tr>
+<td bgcolor="#FFFFFF">
+<table width="100%">
+<tr>
+<td align="right" bgcolor="#FFFFFF">
+V = f(x)
+</td>
+<td align="center" bgcolor="#FFFFFF">
+=
+</td>
+<td align="left" bgcolor="#FFFFFF">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="fexp" id="fexp" disabled="true" value="" type="text" style="text-align:left; width:570px; font-weight: bold; position:relative; top:0px; color: #781351;background: #fff8da; border: 1px solid #781351" />
+</td>
+</tr>
+<tr>
+<td align="right" bgcolor="#FFFFFF">
+Domínio
+</td>
+<td align="center" bgcolor="#FFFFFF">
+=
+</td>
+<td align="left" bgcolor="#FFFFFF">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <select id="lint" name="lint" disabled="true" style="position:relative; top:3px;">
+       <option value="("> &nbsp;(&nbsp; </option>
+       <option value="["> &nbsp;[&nbsp; </option>
+       </select>
+       a, b
+       <select id="rint" name="rint" disabled="true" style="position:relative; top:3px;">
+       <option value=")"> &nbsp;)&nbsp; </option>
+       <option value="]"> &nbsp;]&nbsp; </option>
+       </select>
+</td>
+</tr>
+<tr>
+<td align="right" bgcolor="#FFFFFF">
+a
+</td>
+<td align="center" bgcolor="#FFFFFF">
+=
+</td>
+<td align="left" bgcolor="#FFFFFF">
+<input type="radio" id="ltf" disabled="true" name="ltype" onclick="    document.getElementById('xmin').disabled = false;" checked="true" />
+<input name="xmin" id="xmin" disabled="true" type="text" style="text-align:left; width:500px; font-weight: bold; position:relative; top:0px; color: #781351;background: #fff8da; border: 1px solid #781351" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" id="lti" disabled="true" name="ltype" onclick="document.getElementById('xmin').disabled = true;document.getElementById('lint').selectedIndex = 0;" /> &minus;&infin;
+</td>
+</tr>
+<tr>
+<td align="right" bgcolor="#FFFFFF">
+b
+</td>
+<td align="center" bgcolor="#FFFFFF">
+=
+</td>
+<td align="left" bgcolor="#FFFFFF">
+<input type="radio" id="rtf" disabled="true" name="rtype" onclick="document.getElementById('xmax').disabled = false;" checked="true" />
+<input name="xmax" id="xmax" disabled="true" type="text" style="text-align:left; width:500px; font-weight: bold; position:relative; top:0px; color: #781351;background: #fff8da; border: 1px solid #781351" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" id="rti" disabled="true" name="rtype" onclick="document.getElementById('xmax').disabled = true;document.getElementById('rint').selectedIndex = 0;" /> +&infin;
+</td>
+</tr>
+<tr>
+<td colspan="3" align="center" bgcolor="#FFFFFF">
+<input type="button" name="btnc" id="btnc" disabled="true" value="Conferir!" onclick='compute()' style="width:100px;" />
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<center>
+<input type="button" name="btnr" id="btnr" disabled="true" value="Reiniciar!" onclick='reset();' style="width:100px;" />
+</center>
+
+<br />
+<br />
+
+
+<center>
+<a name="instrucoes"></a>
+<table border="0" cellpadding="3" cellspacing="0" width="710">
+<tbody>
+<tr bgcolor="#e0e0e0">
+<td align="center">
+<b>INSTRUÇÕES</b>
+</td>
+</tr>
+</tbody>
+</table>
+<br />
+<table width="710" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+<p align="justify" style="margin-top:0px; margin-bottom:0px" >
+Neste módulo você deve explicitar a função que modela o problema,
+indicando uma expressão para a função e o seu domínio. Preencha os campos acima
+e, então, clique no botão &#8220;Conferir!&#8221;
+para conferir sua resposta. Além de conferir sua resposta,
+o programa também desenhará na cor preta
+o gráfico da função que você forneceu. Para visualizar o gráfico da
+função correta (desenhado em cinza claro), habilite a opção &#8220;Gráfico&#8221;.
+<br />
+<br />
+O domínio da função que modela o problema é indicado
+usando-se a notação de intervalos. Inicialmente, você deve especificar como
+são os extremos do intervalo:
+<nobr>(a, b)</nobr>, <nobr>(a, b]</nobr>, <nobr>[a, b)</nobr>
+ou <nobr>[a, b]</nobr>. Para isto, clique nos seletores e escolha entre as opções
+&#8220;(&#8221;, &#8220;[&#8221;, &#8220;]&#8221; e &#8220;)&#8221;.
+Depois, você deve especificar os valores de &#8220;a&#8221; e &#8220;b&#8221;.
+Se &#8220;a&#8221; for igual a <nobr>&minus;&infin;</nobr>,
+clique na bolinha à esquerda de <nobr>&minus;&infin;</nobr>.
+Caso contrário, clique na bolinha à esquerda do campo de entrada e digite
+o valor de &#8220;a&#8221;.  O valor de &#8220;b&#8221; é especificado
+de modo análogo.
+<br />
+<br />
+Nos campos &#8220;a&#8221;
+e &#8220;b&#8221; você poderá usar números tais como 7, 1/2,
+sqrt(5) (raiz quadrada de 5), sen(8) (seno de 8), pi (o número irracional &pi;), etc.
+<b>Importante: intencionalmente, números com pontos ou vírgulas decimais não são permitidos neste módulo</b>.
+Multiplicações podem ser indicadas com um asterisco ou um espaço em branco
+(por exemplo, 2*pi ou 2&nbsp;pi para indicar o número <nobr>2&nbsp;&pi;</nobr>).
+Use parêntesis para agrupar termos (por exemplo, <nobr>3^(1/2)</nobr>
+para indicar a raiz quadrada de 3).
+<br />
+<br />
+No campo &#8220;V = f(x)&#8221;
+você poderá usar expressões como sqrt(x) (raiz quadrada de x), sen(x) (seno de x),
+2^x <nobr>(2 elevado</nobr> <nobr>a x),</nobr> abs(x) (módulo de x).  Use parêntesis para agrupar termos (por exemplo, <nobr>1/(2 + x)).</nobr>
+Multiplicações podem ser indicadas com um asterisco ou com um espaço em branco
+(por exemplo, <nobr>x*cos(x)</nobr> ou <nobr>x&nbsp;cos(x)</nobr>). Em alguns casos,
+não é necessário usar nem asteriscos e nem espaços em branco, pois
+a multiplicação é identificada automaticamente (por exemplo,
+<nobr>2x</nobr>).
+<br />
+<br />
+Clique e arraste o ponto M. Se a opção &#8220;Rastro&#8221; estiver habilitada,
+o programa irá exibir alguns pontos do gráfico da função que modela o problema durante o processo.
+Para reiniciar o programa, clique no botão &#8220;Reiniciar!&#8221; ou pressione a tecla F5!
+<br />
+<br />
+Clique e arraste o Modelo 3D para girá-lo. Para abrir e fechar as abas
+da caixa do Modelo 3D, clique na janela e, então, pressione as teclas <b>1</b> (para abrir)
+e <b>2</b> (para fechar). Para ampliar ou reduzir o Modelo 3D, clique com o botão direito
+do mouse e, mantendo-o pressionado, arraste o mouse.
+<br />
+<br />
+Nas versões mais atuais do Firefox, do Internet Explorer e do Google Chrome,
+é possível usar as combinações de teclas indicadas na tabela abaixo para aumentar ou diminuir
+o tamanho da fonte do texto e o tamanho das figuras.
+Isto permite configurar estes navegadores para uma leitura mais agradável.
+</p>
+<p align="center">
+<table width="400" bgcolor="#000000" cellspacing="1" cellpadding="5" border="0">
+    <tr>
+      <th align="center" bgcolor="#DDDDDD">Combinação de Teclas</TH>
+      <th align="center" bgcolor="#DDDDDD">Efeito</TH></TR>
+    <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-01.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Ampliar</td></tr>
+    <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-02.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Reduzir</td></tr>
+     <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-03.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Voltar para a configuração inicial</td></tr>
+</table>
+</p>
+</td>
+</tr>
+</table>
+</center>
+
+<script type="text/javascript">
+var check_timer = setInterval("check()", 500);
+
+var lspAppletOK = false;
+var rspAppletOK = false;
+var jvxAppletOK = true;
+
+var ltiChecked = false;
+var rtiChecked = false;
+
+var notMax = 7;
+var notVal = 0;
+
+
+function check()
+{
+   lspApplet.evalCommand("loadValue = 1/3 + 1/3 + 1/3");
+   if (lspApplet.getValue("loadTest") == 0)
+   {
+      return;
+   }
+
+   if ((lspAppletOK == true) && (rspAppletOK == true) &&
+       (jvxAppletOK == true))
+   {
+      lspApplet.setErrorDialogsActive(false);
+      lspApplet.setFixed("M", false);
+      lspApplet.registerObjectUpdateListener("M", "updateX");
+
+      rspApplet.setErrorDialogsActive(false);
+      rspApplet.registerObjectUpdateListener("showTrace", "updateTrace");
+
+      document.getElementById("fexp").disabled = false;
+      document.getElementById("xmin").disabled = false;
+      document.getElementById("xmax").disabled = false;
+      document.getElementById("btnc").disabled = false;
+      document.getElementById("btnr").disabled = false;
+      document.getElementById("lint").disabled = false;
+      document.getElementById("rint").disabled = false;
+      document.getElementById("ltf").disabled = false;
+      document.getElementById("lti").disabled = false;
+      document.getElementById("rti").disabled = false;
+      document.getElementById("rtf").disabled = false;
+
+      clearInterval(check_timer);
+   }
+}
+
+function updateX()
+{
+   xVal = lspApplet.getValue("xVal");
+   rspApplet.setValue("aGGB", xVal);
+   document.getElementById("jvxApplet").xVal = xVal;
+   document.getElementById("jvxApplet").updateBox();
+}
+
+function updateTrace()
+{
+   var showTrace = true;
+   if (rspApplet.getValue("showTrace") == 0)
+   {
+      showTrace = false;
+   }
+   rspApplet.setTrace("PGGB", showTrace);
+}
+
+function compute()
+{
+   var uMin;
+   var uMax;
+   var uGGB;
+
+   // Function expression test
+   id = "fexp";
+   v = document.getElementById(id).value;
+   v = v.replace(/sen/g, "sin");
+   v = v.replace(/tg/g, "tan");
+   v = v.replace(/,/g, "\.");
+
+   if (v == '')
+   {
+      alert('Digite algum valor para o campo indicado!');
+      document.getElementById(id).style.background = '#ff7777';
+      return;
+   }
+
+   if (v.indexOf(".") != -1)
+   {
+      alert('Dê sua resposta sem usar números com pontos ou vírgulas decimais!');
+      document.getElementById(id).style.background = '#ff7777';
+      return;
+   }
+
+   if  (rspApplet.exists("pTest") == true)
+   {
+      rspApplet.deleteObject("pTest")
+   }
+
+
+   rspApplet.evalCommand("pTest(x) = " + v);
+   rspApplet.setVisible("pTest", false);
+   if (rspApplet.isDefined("pTest") == false)
+   {
+      alert('Erro de sintaxe para o campo indicado!');
+      document.getElementById(id).style.background = '#ff7777';
+      return;
+   }
+   else
+   {
+      document.getElementById(id).style.background = '#fff8da';
+      uGGB = v;
+   }
+
+   // xMin test
+   id = "xmin";
+   v = document.getElementById(id).value;
+   v = v.replace(/sen/g, "sin");
+   v = v.replace(/tg/g, "tan");
+   v = v.replace(/,/g, "\.");
+
+   if (document.getElementById("lti").checked == false)
+   {
+       ltiChecked = false;
+       if (v == '')
+       {
+          alert('Digite algum valor para o campo indicado!');
+          document.getElementById(id).style.background = '#ff7777';
+          return;
+       }
+
+       if (v.indexOf(".") != -1)
+       {
+          alert('Dê sua resposta sem usar números com pontos ou vírgulas decimais!');
+          document.getElementById(id).style.background = '#ff7777';
+          return;
+       }
+
+       if  (lspApplet.exists("pTest") == true)
+       {
+          lspApplet.deleteObject("pTest")
+       }
+       lspApplet.evalCommand("pTest =" + v);
+       if (lspApplet.isDefined("pTest") == false)
+       {
+          alert('Erro de sintaxe para o campo indicado!');
+          document.getElementById(id).style.background = '#ff7777';
+          return;
+       }
+       else
+       {
+          xVal = lspApplet.getValue("pTest");
+
+          document.getElementById(id).style.background = '#fff8da';
+          uMin = v;
+       }
+   }
+   else
+   {
+       ltiChecked = true;
+       var infVal = "\u221e";
+       uMin = "-" + infVal;
+   }
+
+   // xMax test
+   id = "xmax";
+   v = document.getElementById(id).value;
+   v = v.replace(/sen/g, "sin");
+   v = v.replace(/tg/g, "tan");
+   v = v.replace(/,/g, "\.");
+
+   if (document.getElementById("rti").checked == false)
+   {
+       rtiChecked = false;
+       if (v == '')
+       {
+          alert('Digite algum valor para o campo indicado!');
+          document.getElementById(id).style.background = '#ff7777';
+          return;
+       }
+
+       if (v.indexOf(".") != -1)
+       {
+          alert('Dê sua resposta sem usar números com pontos ou vírgulas decimais!');
+          document.getElementById(id).style.background = '#ff7777';
+          return;
+       }
+
+       if  (lspApplet.exists("pTest") == true)
+       {
+          lspApplet.deleteObject("pTest")
+       }
+       lspApplet.evalCommand("pTest =" + v);
+       if (lspApplet.isDefined("pTest") == false)
+       {
+          alert('Erro de sintaxe para o campo indicado!');
+          document.getElementById(id).style.background = '#ff7777';
+          return;
+       }
+       else
+       {
+          xVal = lspApplet.getValue("pTest");
+
+          document.getElementById(id).style.background = '#fff8da';
+          uMax = v;
+       }
+   }
+   else
+   {
+       rtiChecked = true;
+       var infVal = "\u221e";
+       uMax = infVal;
+   }
+
+   // rspApplet.setVisible("hGGB", true);
+   // rspApplet.evalCommand("pList = {" + uMin + ", " + uMax + ", " + uGGB + "}");
+      rspApplet.evalCommand("uMin = " + uMin);
+      rspApplet.evalCommand("uMax = " + uMax);
+      rspApplet.evalCommand("uGGB(x) = " + uGGB);
+      rspApplet.deleteObject("hGGB");
+      rspApplet.evalCommand("hGGB(x) = Função[" + uGGB + ", " + uMin + ", " + uMax + "]");
+   // rspApplet.setColor("hGGB", 0, 0, 255);
+
+   // Check answer
+   notVal++;
+
+   isOK = true;
+
+   // fexp
+   if ((rspApplet.getValue("fB") == 0) ||
+       (rspApplet.getValue("iB") == 0))
+   {
+      alert("A expressão para a função não está correta! Tentativa " + notVal + " de " + notMax + "!");
+      isOK = false;
+   }
+   else
+   {
+       // rint and lint
+       if ((document.getElementById('lint').selectedIndex == 1) ||
+           (document.getElementById('rint').selectedIndex == 1))
+       {
+          alert("O domínio não está correto! Tentativa " + notVal + " de " + notMax + "!");
+          isOK = false;
+       }
+       else
+       {
+           // xMin and xMax
+           if ((rspApplet.getValue("xMinB") == 0) ||
+               (rspApplet.getValue("xMaxB") == 0))
+           {
+              alert("O domínio não está correto! Tentativa " + notVal + " de " + notMax + "!");
+              isOK = false
+           }
+        }
+   }
+
+   if (isOK == true)
+   {
+       document.getElementById("fexp").disabled = true;
+       document.getElementById("xmin").disabled = true;
+       document.getElementById("xmax").disabled = true;
+       document.getElementById("btnc").disabled = true;
+       document.getElementById("lint").disabled = true;
+       document.getElementById("rint").disabled = true;
+       document.getElementById("ltf").disabled = true;
+       document.getElementById("lti").disabled = true;
+       document.getElementById("rti").disabled = true;
+       document.getElementById("rtf").disabled = true;
+
+       alert("Parabéns!");
+   }
+   else
+   {
+      if (notVal == notMax)
+      {
+           rspApplet.deleteObject("hGGB");
+
+           document.getElementById("fexp").value = "(8 - x) (10 - 2 x) x";
+           document.getElementById("lint").selectedIndex = 0;
+           document.getElementById("rint").selectedIndex = 0;
+           document.getElementById("ltf").checked = true;
+           document.getElementById("xmin").value = "0";
+           document.getElementById("rtf").checked = true;
+           document.getElementById("xmax").value = "5";
+
+           document.getElementById("fexp").disabled = true;
+           document.getElementById("xmin").disabled = true;
+           document.getElementById("xmax").disabled = true;
+           document.getElementById("btnc").disabled = true;
+           document.getElementById("lint").disabled = true;
+           document.getElementById("rint").disabled = true;
+           document.getElementById("ltf").disabled = true;
+           document.getElementById("lti").disabled = true;
+           document.getElementById("rti").disabled = true;
+           document.getElementById("rtf").disabled = true;
+
+           alert("Número máximo de tentativas atingido!\nAs respostas corretas estão apresentadas nos vários campos!");
+      }
+   }
+}
+
+function getCookie(c_name)
+{
+   var i,x,y,ARRcookies=document.cookie.split(";");
+   for (i=0;i<ARRcookies.length;i++)
+   {
+     x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+     y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+     x=x.replace(/^\s+|\s+$/g,"");
+     if (x==c_name)
+     {
+        return unescape(y);
+     }
+   }
+   return(null);
+}
+
+function initialize()
+{
+   wp = getCookie("resetPCT2");
+   document.cookie = "resetPCT1 = 0";
+   if (wp != null)
+   {
+       wp = parseInt(wp);
+       window.scrollTo(0, wp);
+   }
+}
+
+function reset()
+{
+   wp = document.body.scrollTop || document.documentElement.scrollTop;
+
+   document.cookie = "resetPCT2 = " + wp;
+   document.location.reload(true);
+}
+</script>
+
+
+<table width="770" align="center" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+     <td>
+     <table width="770" border="0" cellpadding="0" cellspacing="0">
+     <tbody><tr>
+     <td><div align="right"><img name="banner_final" src="banner_final.gif" border="0" width="390" height="33"></div></td><td><div align="left"><div align="right"><img name="banner_final" src="banner_final.gif" border="0" width="390" height="33"></div></div></td>
+     </tr>
+     </tbody></table>
+     </td>
+  </tr>
+</tbody>
+</table>
+<br>
+<center>
+<font size="3">
+Dúvidas? Sugestões? Nós damos suporte! Contacte-nos pelo e-mail:
+<br>
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;">&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;</a>.
+</font>
+</center>
+</body>
+</html>
+

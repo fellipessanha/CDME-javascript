@@ -1,0 +1,381 @@
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<meta charset="UTF-8">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>O Problema da Distância entre Ponto e Parábola</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+a.mainmenu:link { color : #FFFFFF;  background : transparent; text-decoration : none;}
+a.mainmenu:visited {color : #FFFFFF; background : transparent; text-decoration : none;}
+a.mainmenu:hover {color : #FFFF00; background : transparent; text-decoration : none;}
+span.next:hover {cursor:hand}body {text-align: center; min-width: 800px;}
+/* #menu {position: absolute; left: 50%; width: 800px; margin-left: -210px;} */
+#menu {position: absolute; left: 50%; width: 800px; margin-left: -185px;}
+div.jqDockLabel {border:0px none; padding:0px 4px; font-size:14px; white-space:nowrap; color:#0000FF; background-color:transparent; font-weight: bold;}
+td.id { font-size: xx-small;}
+body, td { font-size: 16px; font-family: "Times New Roman"; }
+.subscript {font-size:xx-small; vertical-align:bottom;}
+.supscript {font-size:xx-small; vertical-align:top;}
+</style>
+<script type='text/javascript' src='jquery-1.2.4.min.js'></script>
+<script type='text/javascript' src='jquery.jqDock.js'></script>
+<script type='text/javascript'>
+var options =
+{ align: 'middle'
+, size: 48
+, labels: true
+};
+jQuery(document).ready(function()
+{
+  jQuery('#menu').jqDock(options);
+});
+</script>
+<script type="text/javascript" src="fc.js"></script>
+</head>
+
+<body bgcolor="#ffffff" leftmargin="0" topmargin="0" onload="initialize();">
+<script type="text/javascript" src="wz_tooltip.js"></script>
+<center>
+<table border="0" cellpadding="0" cellspacing="0" width="770" align="center" height="63">
+  <tr>
+    <td width="770" valign="top">
+      <table border="0" cellpadding="0" cellspacing="0" width="770">
+     <tr>
+         <td><img border="0" src="banner_top_ppa_br.gif" width="770" height="63"/></td>
+     </tr>
+   </table>
+    </td>
+  </tr>
+</table>
+<br>
+<br>
+<div style='text-align: left;' id='menu'>
+  <a href="avaliacao.html">
+  <img src='avaliacao.jpg' alt='avaliacao.jpg' title='Avalie-nos!'/>
+  </a>
+  <img src='ppa-fill.jpg' alt='ppa-fill.jpg' title=''/>
+  <a href="ppa-aluno.rtf" target="_new">
+  <img src='formulario.jpg' alt='formulario.jpg' title='Formulário de Acompanhamento do Aluno!'/>
+  </a>
+  <img src='ppa-fill.jpg' alt='ppa-fill.jpg' title=''/>
+  <a href="guia-do-professor.html">
+  <img src='guia.jpg' alt='guia.jpg' title='Guia do Professor!'/>
+  </a>
+  <img src='ppa-fill.jpg' alt='ppa-fill.jpg' title=''/>
+  <a href="http://www.uff.br/cdme/ppa/ppa-offline.zip">
+  <img src='download-01.jpg' alt='download-01.jpg' title='Download para Uso Offline do Servidor 1!'/>
+  </a>
+  <img src='ppa-fill.jpg' alt='ppa-fill.jpg' title=''/>
+  <a href="http://www.cdme.im-uff.mat.br/ppa/ppa-offline.zip">
+  <img src='download-02.jpg' alt='download-02.jpg' title='Download para Uso Offline do Servidor 2!'/>
+  </a>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<center>
+<table border="0" cellpadding="3" cellspacing="0" width="702">
+<tr>
+<td width="33%" align="left">
+<a href="ppa-01-br.html">[Clique aqui para ir para a Parte 1]</a>
+</td>
+<td width="33%" align="center">
+<a href="ppa-02-br.html">[Clique aqui para ir para a Parte 2]</a>
+</td>
+<td width="33%" align="right">
+<a href="#instrucoes">[Instruções no final desta página!]</a>
+</td>
+</tr>
+</tbody>
+</table>
+<br />
+<table border="0" cellpadding="3" cellspacing="0" width="714" style="margin-bottom:20px;margin-top:8px;">
+<tbody>
+<tr bgcolor="#e0e0e0">
+<td align="center">
+<b>PARTE 3</b>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+
+<table width="710" border="0" bgcolor="#FFFFFF" cellpadding="1" cellspacing="0" style="margin-bottom:0px;">
+<tr valign="top">
+<td align="center" bgcolor="#FFFFFF">
+<p align="center" style="margin-top: 0px; margin-bottom: 10px;">
+<b>Enunciado do Problema</b>
+</p>
+<p align="justify" style="margin-top: 0px; margin-bottom: 0px;">
+Dado um ponto A no plano cartesiano,
+quanto deve ser x
+para que a distância d entre A e <nobr>M = (x, x<span class="supscript">2</span>)</nobr>
+(um ponto da parábola <nobr>y = x<span class="supscript">2</span></nobr>)
+seja a menor possível?
+</p>
+</td>
+</tr>
+</table>
+
+<br />
+
+
+<table width="700" border="0" bgcolor="#FFFFFF" cellpadding="1" cellspacing="0" style="margin-bottom:0px;">
+<tr valign="top">
+<td rowspan="2" bgcolor="#FFFFFF">
+<script type="text/javascript">
+var paramslspApplet = {"id": "lspApplet", "allowStyleBar": false, "enableShiftDragZoom": true, "useBrowserForJS": false, "showMenuBar": false, "showAlgebraInput": false, "showResetIcon": false, "enableLabelDrags": false, "errorDialogsActive": true, "ggbBase64": "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", "width": 350, "height": 451, "framePossible": false, "enableRightClick": false, "showToolBar": true, "showToolBarHelp": true};
+paramslspApplet.appletOnLoad = function(api) {lspAppletOK = true};
+var lspApplet = new GGBApplet("5.0", paramslspApplet);
+window.addEventListener("load", function(){lspApplet.inject("lspApplet_container", "auto")});
+</script>
+<div id="lspApplet_container"></div>
+</td>
+<td align="center" bgcolor="#FFFFFF">
+<script type="text/javascript">
+var paramsrspApplet = {"id": "rspApplet", "allowStyleBar": false, "enableShiftDragZoom": true, "useBrowserForJS": false, "showMenuBar": false, "showAlgebraInput": false, "showResetIcon": false, "enableLabelDrags": false, "errorDialogsActive": true, "ggbBase64": "UEsDBBQACAgIAMWM5FIAAAAAAAAAAAAAAAASAAAAZ2VvZ2VicmFfbWFjcm8ueG1s7Vjbbts4EH1uv4LguxXeL0CUwjFQrBts9qH7A7JEO9qVRVeis7a/fkcXN4ntdqvE2xZFXkhqSAyHh4dnSF2+2ywLdO+qOvdljGlEMHJl6rO8XMR4HeYjg99dvb1cOL9wsypBc18tkxBjHjEM9mWSVh6ly+w2WboYT/xyldS1xyh4X5yy/eaKVYwxylNfvs8L17TrO//PtPwTeq+TKsahWrvPvqflah1QQmI8xSihMf4AFYvxDb7YD/ljHfZjFq0VXNfgJA2wJhTy0M2SrMOdr5pWloTGAiNd4ZauDChsV2BZ+bwMGBXJzBXNfFdv31w2sSE/+8uloY9s3z9Pito18725hP6JL3yFwD0AuGjLWYyZlDBvsbpLwALQtoOLZOsqdJ8UzajeAg5/95l7Yk3KHJBullAHt2ocUIBq5VzW71MXNDRW4LLdr0chpd5XWY02MR7RSApmKbdGKq6gUBhtY6wiKrWRBjoYFYpDqLvOc+ugBeNjvuuD4i2yFz1g/wHdh18WOtNDxxllVEtOlIXmGaG7+VWgI5EhXBFJJGVCqSYmQI5FlCiqtRaEG8uM0MOgS/1ymZQZKjtpyau0cC1i+aFO3PQgPYhD2jnrXRztA6hGnn7GOW29FnnpPoZt4VC4y9O/S1fXsIYHEC5evFnk+Vv1TcG5fOHKewjNVzVCG9Lv4pZ0E6Ld3rKh7aY1fbQ37eijnQFWVPkGjffjx/tRY1BjxiPONSVGaUmgJnBOxryfYiyakccaNJYw47EKdWF/Krul1U0ZY2Bgms/z9Bl8uOn4MD3iQzaED9krHwbwYURpZAyxTBHCqBVM2wNCnJCHlg8nBOIFhJiWAa42sNoDTqQdJ7IjToy7juvukgElxPx1mjyV7/Hz5FuJlgJNNeuq55LgQYEZHEkprVFcWKmEkqxVYBFpzZg2TBrG4Lya8+Wu659n8SMRKcMo1UpTw63Vff7hkbCQt7VilGvJBFPnW365LoofjcC50vdtctvi1da7rj5Xgh7vL/KHh88NEWT3KsgDBJmSSBstjdbcKqOt5Qd6PDolF60iHwvGuTP09ZcIMR9CiPkrIYYQQkVMCioFoVpoy/UBH07pZ0uHEwr6PyRo11Fi3uVhtl/SI25MhqTlyY/W5ScPIy2kJRZgJ/Cg5F1appGVnEOHFRQOICMD8/K3X4QnR1AuhhyzxXc6Zi96xf5EB01GRMKbyAq41VLFCJHf6SZ88fg3WPPd/ixrGvufeVf/AlBLBwhBATWspgMAAP4TAABQSwMEFAAICAgAxYzkUgAAAAAAAAAAAAAAAAwAAABnZW9nZWJyYS54bWzlW12O00gQfl5O0fIDmmEnGf/Eji0S0AxiERIsiAEeFrFSx+4kvTh2sNvgcILlFKuVVtqD7E04yVb/2I4dk5+ZMMwML5Ok3O6u+urr6qqyZ3A/n4XoA0lSGkdDzejqGiKRHwc0mgy1jI07rnb/3q3BhMQTMkowGsfJDLOhZnVNjcszeu/WT4N0Gn9EOBRDXlPycaiNcZgSDaXzhOAgnRLCanKc5TSkOFk8G/1BfJYONZZkXC7neBzNM1YO9mfBE5oyNeaYLxjiEQlBxzO2CAlCH3A41Ex5aRxHDKGUfiJgj5ANjoWaA5L5IQ0ojrgqQm0YhNBHGrApWNQzNTQldDKFlUzdk7P5cZwEZ4uUkRnKfyNJDJM6XtfVbdexPdPou/2+o6GFutS3uj3btQzTNWzd6/UtgMDHIahiWl3XNR2QOz0TxhhwU3Wp78BF1+1bnuU5Pbk0+XBGGAMjU4RzUkI0SWhQQsN/PE5P47ASzWMasQd4zrJEONFSIgHVUAMHJ9zGk2gSEiUDXfwp8d+N4vxM4mbJqV8u5uIWoc9o8iAO4wQloLFtwwD1OZKfYgxXtBylizG6GKHm4JOW1w3PFCPE50h+Su/SSKqmDDcKqw29WIamiAtgcs69AhtBi6GWayiLKHsif2mIUf9dZSq/4ddsNgLSL1OqnNNonTPYfc7BcYNxg3ckiUgoeRWBa7M4SyV5pfOEIgHx6Qx+ygtGgSz31yvQQIoDMklIobncNBIxcVVfJm9DPDgutOBKpKCsz2Dzg0GMG8P3JpvGCf8WYMYlfOuEZEZgXzFBiCibkYT6JTYnC40vB2tkaiWrq1QQkSEWm7xkqLqrgh6uf4U0EBDmUwzfukax8Rckqe13MdvTOFArGwVcgKGwC7buXE4A0YiQQEU5pqiN5jCl2CilC8Bv0tzNhudNw40fw/D5o0enTdO9LUxfovlVtj2HYyvlR2KpN7cXgVx+PcgP0RCl7xN2cJCjDjrJD38/MLv6IfoZHeTqK4gXSnyooeMVTMdZJHaeVlukHv/YFMJMBLpwy0v1V1GuhaodQda3BFmNG9OcBFKydB5v1nh7cr1oIddlBBT9+3ArrLgVltziGKA7iLMHPqyu0TMg3XBsy3a9vmcBufLtSBWen1QX2rqrrGqHV/8GBMItBDK69k0l0KgRnLj5reRo4jRqwUnverphuX3XcHmG60EKuxsi63V9Xukq9DxClcqHBQYiX20zQF1YnmvrUAjJTkAl/jD8mRrNF0a3J+wuyp/SCH35818kRF8+/wMSnK8aX+S+F6a8yM5SlEtuokUr9ujTUk4h83hetFRhej3cJytwg5q74nzyXXCGMojDzD9G8mOfQOsXRfZ0CVmY7giN5K7bCdnTG4OsQHQPFPbj2QxHAYrwDNA6IxMuFxBR3hNAWC9IjQ0VAaR9GSsu+0o4OFaTrTghVdMWGPvbnZHmLpnXvpy1p/O18lSnzUW1PWHZpu4afdM1PdfzbG+bE7rAhryP5KBU1sZ0Ng+pT1nppZAfbY8jBpUyEZnKagH8jpA57zw8i14mOEp5y6meb+5KmNP1hAl2JkzwIxGm2NoieAJBOteMIXVXjuI4JLjKjznYMIlPmonQ0nJ7SxnX++DZeJwSxiE3+66EvLfWRapnh0RJtqyLj+eCSWL0C5yyJN4dldcci3RbWGq0/raoWOuJux0qYF0MR/puhYXYcQ1AHkdjGlG2uCm9jw0A0KgJQOfyELiUAqt+ovxSFNT1I0V1geSpIlBB2FQEaZ4vk43ny0rVPrkqraC9Fu2NJBoNtazKorOy9yEQ3IRQdj36Ghch5b67Ii17V7+Mnu3ltEU22L4auI1LMf4KBO2opc1jbmP8teiHNQuA9xmJVDZXhWvOfd6b5zxAHcR/HqI7iKJjFJXFAZUxXOS72FK4NYN5zh9Fr4/mIR9Rnphi/NaBahVow/gq1I1i2lqWVk/9Oittua0gEyfcQ3nPG2HFEaJvD2tQGctQAb5lmb8E2HhHwMbXFbBsT4BlOwKWXUHA1gck0haNu/rDjnNDDqM6X16QWfyBvIoCAnkyCRq0Kdj0Bo/Skj5ZQR8IVoVsXFIK/hxx6hyhikZvV9saO/IouII8qgNZ0KYCr7SxbrkoXdeb3uSkuqfBSrff7RmOYxm6aTmO3tvvw5BxkfvKxdHtkN1FYnO0dI6bJfp45UzfrmPxLfPdr7uO93MmCQ6b5zJwvnig3kGqBFAhE5dVFW6rqug5nExbnWw6va7T69m25/Scnt33eucF0bAtAaNtXDQSXbC0AlMLbtFzcItecW5tbl49SvB82jSiyme/W0ev199D7+pR8t/fY+pv6Ok1yZ/9wPVf1p5x3BTbV3Y/70iVjRXx4ODzX0i2qTbvfnnz1Q4ALRbjvLIYqjxp8XbxTt58zSxmJGeGshjLPPD2+yxmd+XfNrv5LVr9/q37h+3Pp6oHBdWzqXM/rhKvVpz7vTT+3ncKu35cvX0uXmbuwLGZFi8/i6H1N2zVrCnDCXvOM1IJ6UlZ/TdCuXyFoGNv5yFTeWh0Tg+ZGzy0dET8YA46/ZqD+tJB/aaDjpffdxb/FqD+q+He/1BLBwjJCjZ2lAcAAAcxAABQSwECFAAUAAgICADFjORSQQE1rKYDAAD+EwAAEgAAAAAAAAAAAAAAAAAAAAAAZ2VvZ2VicmFfbWFjcm8ueG1sUEsBAhQAFAAICAgAxYzkUskKNnaUBwAABzEAAAwAAAAAAAAAAAAAAAAA5gMAAGdlb2dlYnJhLnhtbFBLBQYAAAAAAgACAHoAAAC0CwAAAAA=", "width": 350, "height": 239, "framePossible": false, "enableRightClick": false, "showToolBar": true, "showToolBarHelp": true};
+paramsrspApplet.appletOnLoad = function(api) {rspAppletOK = true};
+var rspApplet = new GGBApplet("5.0", paramsrspApplet);
+window.addEventListener("load", function(){rspApplet.inject("rspApplet_container", "auto")});
+</script>
+<div id="rspApplet_container"></div>
+</td>
+</tr>
+</table>
+
+<br />
+<br />
+
+<center>
+<a name="instrucoes"></a>
+<table border="0" cellpadding="3" cellspacing="0" width="710">
+<tbody>
+<tr bgcolor="#e0e0e0">
+<td align="center">
+<b>INSTRUÇÕES</b>
+</td>
+</tr>
+</tbody>
+</table>
+<br />
+<table width="710" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+<p align="justify" style="margin-top:0px; margin-bottom:0px" >
+Clique e arraste os pontos A e M (a ferramenta cujo o ícone é a seta branca deve estar ativada).
+Dependendo das posições dos pontos A e M,
+talvez seja necessário ajustar a janela de visualização para visualizar algum ponto em particular. Para isto, use
+os ícones
+</p>
+<p align="center">
+<table>
+<tr valign="middle">
+<td>
+<img width="44" height="43" src="geogebra-n-zoom-out.jpg" />
+</td>
+<td>
+,&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+<img width="44" height="43" src="geogebra-n-zoom-in.jpg" />
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+e
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+<img width="44" height="43" src="geogebra-n-translate-view.jpg" />
+</td>
+</tr>
+</table>
+</p>
+<p align="justify">
+para reduzir (<i>zoom out</i>), ampliar (<i>zoom in</i>) e transladar
+a janela de visualização, respectivamente. Para ampliar ou reduzir, clique no ícone correspondente
+e, então, dê cliques sucessivos na janela de visualização.
+Para efetuar uma translação, clique no ícone correspondente e, então,
+clique e arraste a janela de visualização.
+<br />
+<br />
+Nas versões mais atuais do Firefox, do Internet Explorer e do Google Chrome,
+é possível usar as combinações de teclas indicadas na tabela abaixo para aumentar ou diminuir
+o tamanho da fonte do texto e o tamanho das figuras.
+Isto permite configurar estes navegadores para uma leitura mais agradável.
+</p>
+<p align="center">
+<table width="400" bgcolor="#000000" cellspacing="1" cellpadding="5" border="0">
+    <tr>
+      <th align="center" bgcolor="#DDDDDD">Combinação de Teclas</TH>
+      <th align="center" bgcolor="#DDDDDD">Efeito</TH></TR>
+    <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-01.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Ampliar</td></tr>
+    <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-02.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Reduzir</td></tr>
+     <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-03.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Voltar para a configuração inicial</td></tr>
+</table>
+</p>
+</td>
+</tr>
+</table>
+</center>
+
+<script type="text/javascript">
+var check_timer = setInterval("check()", 500);
+
+var lspAppletOK = false;
+var rspAppletOK = false;
+
+var ltiChecked = false;
+var rtiChecked = false;
+
+var notMax = 7;
+var notVal = 0;
+
+var Ax = 1;
+var Ay = 3;
+
+var f_answer = "sqrt((x - (" + Ax + "))^2 + (x^2 - (" + Ay + "))^2)";
+
+
+
+function check()
+{
+   lspApplet.evalCommand("loadValue = 1/3 + 1/3 + 1/3");
+   if (lspApplet.getValue("loadTest") == 0)
+   {
+      return;
+   }
+
+   if ((lspAppletOK == true) && (rspAppletOK == true))
+   {
+      lspApplet.setErrorDialogsActive(false);
+      lspApplet.setFixed("M", false);
+      lspApplet.registerObjectUpdateListener("M", "updateX");
+
+      rspApplet.setErrorDialogsActive(false);
+      rspApplet.registerObjectUpdateListener("showTrace", "updateTrace");
+
+      clearInterval(check_timer);
+
+      AxC = getCookie("AxGGB");
+      AyC = getCookie("AyGGB");
+      if ((AxC == null) || (AyC == null))
+      {
+         document.cookie = "AxGGB = " + Ax;
+         document.cookie = "AyGGB = " + Ay;
+      }
+      else
+      {
+         lspApplet.evalCommand("A = (" + AxC + ", " + AyC + ")");
+         rspApplet.evalCommand("Ax = " + AxC);
+         rspApplet.evalCommand("Ay = " + AyC);
+         Ax = parseFloat(AxC);
+         Ay = parseFloat(AyC);
+      }
+      f_answer = "sqrt((x - (" + Ax + "))^2 + (x^2 - (" + Ay + "))^2)";
+
+      lspApplet.registerObjectUpdateListener("A", "updatePoint");
+   }
+}
+
+function updateX()
+{
+   xVal = lspApplet.getValue("xVal");
+   rspApplet.setValue("aGGB", xVal);
+}
+
+function updateTrace()
+{
+   var showTrace = true;
+   if (rspApplet.getValue("showTrace") == 0)
+   {
+      showTrace = false;
+   }
+   rspApplet.setTrace("PGGB", showTrace);
+}
+
+
+function getCookie(c_name)
+{
+   var i,x,y,ARRcookies=document.cookie.split(";");
+   for (i=0;i<ARRcookies.length;i++)
+   {
+     x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+     y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+     x=x.replace(/^\s+|\s+$/g,"");
+     if (x==c_name)
+     {
+        return unescape(y);
+     }
+   }
+   return(null);
+}
+
+function initialize()
+{
+   wp = getCookie("resetPPA2");
+   document.cookie = "resetPPA1 = 0";
+   if (wp != null)
+   {
+       wp = parseInt(wp);
+       window.scrollTo(0, wp);
+   }
+}
+
+function reset()
+{
+   wp = document.body.scrollTop || document.documentElement.scrollTop;
+
+   document.cookie = "resetPPA2 = " + wp;
+   document.location.reload(true);
+}
+
+function updatePoint()
+{
+   Ax = lspApplet.getXcoord("A");
+   Ay = lspApplet.getYcoord("A");
+   document.cookie = "AxGGB = " + Ax;
+   document.cookie = "AyGGB = " + Ay;
+
+   rspApplet.evalCommand("Ax = " + Ax);
+   rspApplet.evalCommand("Ay = " + Ay);
+}
+</script>
+
+
+<table width="770" align="center" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+     <td>
+     <table width="770" border="0" cellpadding="0" cellspacing="0">
+     <tbody><tr>
+     <td><div align="right"><img name="banner_final" src="banner_final.gif" border="0" width="390" height="33"></div></td><td><div align="left"><div align="right"><img name="banner_final" src="banner_final.gif" border="0" width="390" height="33"></div></div></td>
+     </tr>
+     </tbody></table>
+     </td>
+  </tr>
+</tbody>
+</table>
+<br>
+<center>
+<font size="3">
+Dúvidas? Sugestões? Nós damos suporte! Contacte-nos pelo e-mail:
+<br>
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;">&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;</a>.
+</font>
+</center>
+</body>
+</html>
+

@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>Polígonos Regulares</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+a.mainmenu:link { color : #FFFFFF;  background : transparent; text-decoration : none;}
+a.mainmenu:visited {color : #FFFFFF; background : transparent; text-decoration : none;}
+a.mainmenu:hover {color : #FFFF00; background : transparent; text-decoration : none;}
+span.next:hover {cursor:hand}
+body {text-align: center; min-width: 800px;}
+td.id { font-size: xx-small;}
+
+.subscript {font-size:xx-small; vertical-align:bottom;}
+.supscript {font-size:xx-small; vertical-align:top;}
+</style>
+<script type="text/javascript">
+nsNew = new Array(16);
+for (i = 0; i < 16; i++)
+{
+   nsNew[0] = true;
+};
+
+nsXML = new Array(16);
+
+nsIDX = 0;
+
+function ggbOnInit()
+{
+   document.getElementById("lspApplet").setMode("1001");
+}
+
+function updateScene()
+{
+  value = document.getElementById("ns").selectedIndex;
+  if (value != nsIDX)
+  {
+    nsXML[nsIDX] = document.getElementById("lspApplet").getXML();
+    nsNew[nsIDX] = false;
+    nsIDX = value;
+    nsCur = nsIDX + 3;
+    if (nsCur < 10)
+    {
+      fn = "ppr-0" + nsCur + ".ggb";
+    }
+    else
+    {
+      fn = "ppr-" + nsCur + ".ggb";
+    }
+    document.getElementById("lspApplet").openFile(fn);
+    if (nsNew[nsIDX] == false)
+    {
+       document.getElementById("lspApplet").setXML(nsXML[nsIDX]);
+    }
+    document.getElementById("lspApplet").setMode("1001");
+
+  }
+}
+</script>
+<link rel="stylesheet" type="text/css" href="css/lightwindow.css" />
+<script type="text/javascript" src="javascript/prototype.js"></script>
+<script type="text/javascript" src="javascript/effects.js"></script>
+<script type="text/javascript" src="javascript/lightwindow-br.js"></script>
+</head>
+
+<body topmargin="0" leftmargin="0" text="#000000" vlink="#ff00ff" bgcolor="#ffffff" link="#0000ff" >
+<script type="text/javascript" src="wz_tooltip.js"></script>
+<center>
+<table width="780" align="center" border="0" cellpadding="0" cellspacing="0" height="63">
+  <tbody><tr>
+    <td valign="top" width="770">
+      <table width="780" border="0" cellpadding="0" cellspacing="0">
+     <tbody><tr>
+         <td><img src="banner_top_ppr_br.gif" width="780" border="0" height="63"></td>
+     </tr>
+     </tbody>
+     </table>
+    </td>
+  </tr>
+</tbody>
+</table>
+<br />
+<table width="500" border="0">
+<tr>
+<td align="left">
+<img width="24" height="24" src='bt_e1w.jpg'/>
+</td>
+<td align="center">
+<img width="24" height="24" src='bt_i1w.jpg' onmouseover="Tip('Clique aqui para acessar a página principal!', FIX, [this, -110, -5], ABOVE, true)" onmouseout="UnTip()" onclick="window.location.href = 'ppr-br.html#mt'" />
+</td>
+<td align="right">
+<img width="24" height="24" src='bt_e1w.jpg'/>
+</td>
+</tr>
+</table>
+<br />
+<center>
+<table border="0" cellpadding="3" cellspacing="0" width="706">
+<tbody><tr bgcolor="#e0e0e0">
+<td align="center">
+<b>PARTE 2</b>
+</td>
+</tr>
+</tbody></table>
+</center>
+
+<br />
+
+<table width="700" border="0" cellpadding="10">
+<tr valign="top">
+<td =align="center">
+<p align="center" style="margin-top: 0; margin-bottom: 0;">
+<b>PAVIMENTAÇÃO DO PLANO COM POLÍGONOS REGULARES DE UM SÓ TIPO</b>
+</p>
+</td>
+</tr>
+</table>
+<br />
+<table width="700" border="0">
+<tr valign="top">
+<td align="center">
+<p align="justify" style="margin-top: 0">
+O objetivo deste módulo é determinar todas as pavimentações lado-lado do plano que usam apenas
+um tipo de polígono regular. Quantas e quais são?
+Para responder a estas perguntas, o software abaixo pode ser útil: com ele, você poderá, na tela do computador,
+experimentar e descobrir propriedades deste tipo de mosaico.
+<a href="ppr-it-mt-br.html">Clique aqui para ver uma animação ensinando como usar o programa!</a>
+Para reiniciar a construção, clique no ícone <img width="10" height="11" src="reset.gif" />.
+</p>
+</td>
+</tr>
+</table>
+<br />
+<p align="center" style="margin-top: 0; margin-bottom: 0;" >
+<table cellpadding="0" cellspacing="0" border="0" style="margin-top: 0; margin-bottom: 3px;" >
+<tr valign="middle">
+<td>
+<div style="position:relative;margin-bottom:4px;" >Número de lados:</div>
+</td>
+<td>
+&nbsp;&nbsp;
+</td>
+<td>
+<select style="width: 77px;" name="ns" id="ns" onChange="updateScene()">
+       <option value="ns-03">3 lados</option>
+       <option value="ns-04">4 lados</option>
+       <option value="ns-05">5 lados</option>
+       <option value="ns-06">6 lados</option>
+       <option value="ns-07">7 lados</option>
+       <option value="ns-08">8 lados</option>
+       <option value="ns-09">9 lados</option>
+       <option value="ns-10">10 lados</option>
+       <option value="ns-11">11 lados</option>
+       <option value="ns-12">12 lados</option>
+       <option value="ns-13">13 lados</option>
+       <option value="ns-15">14 lados</option>
+       <option value="ns-15">15 lados</option>
+       <option value="ns-16">16 lados</option>
+       <option value="ns-17">17 lados</option>
+       <option value="ns-18">18 lados</option>
+       <option value="ns-19">19 lados</option>
+       <option value="ns-20">20 lados</option>
+       </select>
+</td>
+</tr>
+</table>
+<applet name="lspApplet" id="lspApplet" code="geogebra.GeoGebraApplet" codebase="." archive="geogebra.jar" width="700" height="452" MAYSCRIPT>
+	<param name="filename" value="ppr-03.ggb">
+    <param name="language" value="pt">
+	<param name="framePossible" value="false">
+	<param name="enableRightClick" value="false">
+	<param name="enableShiftDragZoom" value="false">
+	<param name="showToolBar" value="true">
+	<param name="showToolBarHelp" value="false">
+    <param name="customToolBar" value="0 | 6 | 1001 | 1002 | 1003 | 1004 | 1005 | 1006 | 1007 | 1008 | 1009 | 1010 | 1011 | 1012"  >
+    <param name="showReseticon" value="true" >
+	Seu navegador não está com a linguagem JAVA instalada ou habilitada!
+	<br>
+	<br>
+	Por favor, verifique se o seu navegador não está bloqueando o acesso ao applet. Para instalar a linguagem JAVA em seu computador, acesse o endereço <a href="http://www.java.com/pt_BR/" target="_new">http://www.java.com/pt_BR/</a>.
+</applet>
+</p>
+
+<br />
+<br />
+<br />
+
+<a name="exercises"></a>
+<table border="0" cellpadding="3" cellspacing="0" width="700">
+<tbody>
+<tr bgcolor="#e3e3e3">
+<td fgcolor"#ffffff" align="center">
+<b>
+EXERCÍCIOS
+<br />
+</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<table border="0" cellpadding="10" cellspacing="0" width="700" align="center">
+     <tr valign="top">
+     <td align="center">
+	 <p align="justify">
+     Os exercícios enunciados abaixo
+     também estão disponíveis no formulário de acompanhamento do aluno:
+     <a href="ppr-aluno.rtf">ppr-aluno.rtf</a>.
+     </p>
+     </td>
+	 </tr>
+     <tr valign="top">
+     <td bgcolor="#E3E3E3">
+     <table width="97%">
+
+     <tr valign="top">
+     <td>
+     [01]
+     </td>
+     <td>
+     <p align="justify" style="margin-top: 0; margin-bottom:0">
+     Usando o software, verifique que é possível construir uma pavimentação lado-lado do plano usando triângulos equiláteros.
+     Qual é a soma dos ângulos dos triângulos equiláteros com vértice em um nó da pavimentação?
+     </p>
+     <p align="center">
+     <img width="100" height="87" src="fig-tile-10-p.gif" />
+     </p>
+     </td>
+     </tr>
+
+
+     <tr valign="top">
+     <td>
+     [02]
+     </td>
+     <td>
+     <p align="justify" style="margin-top: 0; margin-bottom:0">
+     Usando o software, verifique que é possível construir uma pavimentação lado-lado do plano usando quadrados.
+     Qual é a soma dos ângulos dos quadrados com vértice em um nó da pavimentação?
+     </p>
+     <p align="center">
+     <img width="87" height="87" src="fig-tile-11-p.gif" />
+     </p>
+     </td>
+     </tr>
+
+
+     <tr valign="top">
+     <td>
+     [03]
+     </td>
+     <td>
+     <p align="justify" style="margin-top: 0; margin-bottom:0">
+     É possível construir uma pavimentação lado-lado do plano usando pentágonos regulares? Justifique sua resposta!
+     </p>
+     </td>
+     </tr>
+
+
+     <tr valign="top">
+     <td>
+     [04]
+     </td>
+     <td>
+     <p align="justify" style="margin-top: 0; margin-bottom:0">
+     Usando o software, verifique que é possível construir uma pavimentação lado-lado do plano usando hexágonos regulares.
+     Qual é a soma dos ângulos dos hexágonos regulares com vértice em um nó da pavimentação?
+     </p>
+     <p align="center">
+     <img width="120" height="119" src="fig-tile-12-p.gif" />
+     </p>
+     </td>
+     </tr>
+
+     <tr valign="top">
+     <td>
+     [05]
+     </td>
+     <td>
+     <p align="justify" style="margin-top: 0; margin-bottom:0">
+      O objetivo deste exercício é provar que as únicas pavimentações lado-lado do plano com
+      polígnos regulares de um só tipo são aquelas obtidas com triângulos equiláteros,
+      quadrados e hexágonos regulares. Para isto, seja
+     </p>
+     <p align="center">
+     &alpha; = <nobr>(n &minus; 2) 180&deg;/n</nobr>
+     </p>
+     <p align="justify">
+      a medida dos ângulos
+      internos de um polígono regular com n lados (veja o Exercício [03] da Parte 1) e seja k o número de polígonos da pavimentação
+      com um vértice comum. Note que
+     </p>
+     <p align="center">
+     <nobr>k &alpha; = 360&deg;</nobr>.
+     </p>
+     <p align="justify" style="margin-top: 0; margin-bottom:0">
+     Verifique que <nobr>k = 2n/(n &minus; 2)</nobr>.
+     Por que k deve ser maior do que ou igual a 3? Conclua que  <nobr>2n/(n &minus; 2) &ge; 3</nobr> e que,
+     portanto, <nobr>n &le; 6</nobr>.
+     Assim, os únicos valores possíveis de n são 3, 4, 5 e 6. Mas pentágonos regulares
+     não pavimentam o plano (Exercício [03]), portanto, as únicas pavimentações lado-lado do
+     plano com polígonos regulares se um só tipo são aquelas com <nobr>n = 3</nobr>, <nobr>n = 4</nobr> e <nobr>n = 6</nobr>.
+     </p>
+     </td>
+     </tr>
+     </table>
+</table>
+
+
+
+</center>
+
+
+<table width="770" align="center" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+     <td>
+     <table width="770" border="0" cellpadding="0" cellspacing="0">
+     <tbody><tr>
+     <td><div align="right"><img name="banner_final" src="banner_final.gif" border="0" width="390" height="33"></div></td><td><div align="left"><div align="right"><img name="banner_final" src="banner_final.gif" border="0" width="390" height="33"></div></div></td>
+     </tr>
+     </tbody></table>
+     </td>
+  </tr>
+</tbody></table>
+
+<br>
+<center>
+<font size="3">
+Dúvidas? Sugestões? Nós damos suporte! Contacte-nos pelo e-mail:
+<br>
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;">&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;</a>.
+</font>
+</center>
+</body>
+</html>

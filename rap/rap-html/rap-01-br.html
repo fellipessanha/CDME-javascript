@@ -1,0 +1,758 @@
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<meta charset="UTF-8">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>O Problema do Retângulo: Área e Perímetro</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+a.mainmenu:link { color : #FFFFFF;  background : transparent; text-decoration : none;}
+a.mainmenu:visited {color : #FFFFFF; background : transparent; text-decoration : none;}
+a.mainmenu:hover {color : #FFFF00; background : transparent; text-decoration : none;}
+span.next:hover {cursor:hand}body {text-align: center; min-width: 800px;}
+/* #menu {position: absolute; left: 50%; width: 800px; margin-left: -210px;} */
+#menu {position: absolute; left: 50%; width: 800px; margin-left: -185px;}
+div.jqDockLabel {border:0px none; padding:0px 4px; font-size:14px; white-space:nowrap; color:#0000FF; background-color:transparent; font-weight: bold;}
+td.id { font-size: xx-small;}
+body, td { font-size: 16px; font-family: "Times New Roman"; }
+.subscript {font-size:xx-small; vertical-align:bottom;}
+.supscript {font-size:xx-small; vertical-align:top;}
+</style>
+<script type='text/javascript' src='jquery-1.2.4.min.js'></script>
+<script type='text/javascript' src='jquery.jqDock.js'></script>
+<script type='text/javascript'>
+var options =
+{ align: 'middle'
+, size: 48
+, labels: true
+};
+jQuery(document).ready(function()
+{
+  jQuery('#menu').jqDock(options);
+});
+</script>
+<script type="text/javascript" src="fc.js"></script>
+</head>
+
+<body bgcolor="#ffffff" leftmargin="0" topmargin="0" onload="initialize();">
+<script type="text/javascript" src="wz_tooltip.js"></script>
+<center>
+<table border="0" cellpadding="0" cellspacing="0" width="770" align="center" height="63">
+  <tr>
+    <td width="770" valign="top">
+      <table border="0" cellpadding="0" cellspacing="0" width="770">
+     <tr>
+         <td><img border="0" src="banner_top_rap_br.gif" width="770" height="63"/></td>
+     </tr>
+   </table>
+    </td>
+  </tr>
+</table>
+<br>
+<br>
+<div style='text-align: left;' id='menu'>
+  <a href="avaliacao.html">
+  <img src='avaliacao.jpg' alt='avaliacao.jpg' title='Avalie-nos!'/>
+  </a>
+  <img src='rap-fill.jpg' alt='rap-fill.jpg' title=''/>
+  <a href="rap-aluno.rtf" target="_new">
+  <img src='formulario.jpg' alt='formulario.jpg' title='Formulário de Acompanhamento do Aluno!'/>
+  </a>
+  <img src='rap-fill.jpg' alt='rap-fill.jpg' title=''/>
+  <a href="guia-do-professor.html">
+  <img src='guia.jpg' alt='guia.jpg' title='Guia do Professor!'/>
+  </a>
+  <img src='rap-fill.jpg' alt='rap-fill.jpg' title=''/>
+  <a href="http://www.uff.br/cdme/rap/rap-offline.zip">
+  <img src='download-01.jpg' alt='download-01.jpg' title='Download para Uso Offline do Servidor 1!'/>
+  </a>
+  <img src='rap-fill.jpg' alt='rap-fill.jpg' title=''/>
+  <a href="http://www.cdme.im-uff.mat.br/rap/rap-offline.zip">
+  <img src='download-02.jpg' alt='download-02.jpg' title='Download para Uso Offline do Servidor 2!'/>
+  </a>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<center>
+<table border="0" cellpadding="3" cellspacing="0" width="702">
+<tr>
+<td width="33%" align="left">
+</td>
+<td width="33%" align="center">
+<a href="rap-02-br.html">[Clique aqui para ir para a Parte 2]</a>
+</td>
+<td width="33%" align="right">
+<a href="#instrucoes">[Instruções no final desta página!]</a>
+</td>
+</tr>
+</tbody>
+</table>
+<br />
+<table border="0" cellpadding="3" cellspacing="0" width="714" style="margin-bottom:20px;margin-top:8px;">
+<tbody>
+<tr bgcolor="#e0e0e0">
+<td align="center">
+<b>PARTE 1</b>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+
+
+<table width="710" border="0" bgcolor="#FFFFFF" cellpadding="1" cellspacing="0" style="margin-bottom:0px;">
+<tr valign="top">
+<td align="center" bgcolor="#FFFFFF">
+<p align="center" style="margin-top: 0px; margin-bottom: 10px;">
+<b>Enunciado do Problema</b>
+</p>
+<p align="justify" style="margin-top: 0px; margin-bottom: 0px;">
+Considerando os retângulos de área igual a <nobr>3 m<span class="supscript">2</span>,</nobr>
+quanto deve ser x, a medida em metros da base do retângulo,
+para que o perímetro y do retângulo seja o menor possível?
+</p>
+</td>
+</tr>
+</table>
+
+<br />
+
+<table width="700" border="0" bgcolor="#FFFFFF" cellpadding="1" cellspacing="0" style="margin-bottom:0px;">
+<tr valign="top">
+<td bgcolor="#FFFFFF">
+<script type="text/javascript">
+var paramslspApplet = {"id": "lspApplet", "allowStyleBar": false, "enableShiftDragZoom": true, "useBrowserForJS": false, "showMenuBar": false, "showAlgebraInput": false, "showResetIcon": false, "enableLabelDrags": false, "errorDialogsActive": true, "ggbBase64": "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", "width": 350, "height": 239, "framePossible": false, "enableRightClick": false, "showToolBar": true, "showToolBarHelp": true};
+paramslspApplet.appletOnLoad = function(api) {lspAppletOK = true};
+var lspApplet = new GGBApplet("5.0", paramslspApplet);
+window.addEventListener("load", function(){lspApplet.inject("lspApplet_container", "auto")});
+</script>
+<div id="lspApplet_container"></div>
+</td>
+<td align="center" bgcolor="#FFFFFF">
+<script type="text/javascript">
+var paramsrspApplet = {"id": "rspApplet", "allowStyleBar": false, "enableShiftDragZoom": true, "useBrowserForJS": false, "showMenuBar": false, "showAlgebraInput": false, "showResetIcon": false, "enableLabelDrags": false, "errorDialogsActive": true, "ggbBase64": "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", "width": 350, "height": 239, "framePossible": false, "enableRightClick": false, "showToolBar": true, "showToolBarHelp": true};
+paramsrspApplet.appletOnLoad = function(api) {rspAppletOK = true};
+var rspApplet = new GGBApplet("5.0", paramsrspApplet);
+window.addEventListener("load", function(){rspApplet.inject("rspApplet_container", "auto")});
+</script>
+<div id="rspApplet_container"></div>
+</td>
+</tr>
+<tr valign="top">
+<td bgcolor="#FFFFFF"
+<div id="table">
+<table width="350" bgcolor="#000000" border="0" cellpadding="0" cellspacing="1" style="margin-bottom:10px;">
+<tr bgcolor="#E0E0E0">
+<td align="center" width="50%" >
+<b>x</b>
+</td>
+<td align="center" width="50%">
+<b>y</b>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td align="center" bgcolor="#FFFFFF">
+</td>
+</tr>
+</table>
+<table width="702" bgcolor="#000000" border="0" cellpadding="5" cellspacing="1" style="margin-bottom:10px;">
+<tr>
+<td bgcolor="#FFFFFF">
+<table width="100%">
+<tr>
+<td align="left" bgcolor="#FFFFFF">
+x = <input name="fldx" id="fldx" disabled="true" value="" type="text" style="text-align:left; width:200px; font-weight: bold; position:relative; top:0px; color: #781351;background: #fff8da; border: 1px solid #781351" />
+</td>
+<td width="30%" align="center" bgcolor="#FFFFFF">
+<input type="button" name="btnc" id="btnc" disabled="true" value="Calcular!" onclick='compute()' style="width:100px;" />
+</td>
+<td align="right" bgcolor="#FFFFFF">
+y = <input name="fldv" id="fldv" disabled="true" value="" type="text" style="text-align:right; width:200px; font-weight: bold; position:relative; top:0px; color: #781351;background: #ffffff; border: 1px solid #781351" />
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<center>
+<input type="button" name="btnr" id="btnr" disabled="true" value="Reiniciar!" onclick='reset();' style="width:100px;" />
+</center>
+
+<br />
+<br />
+
+
+<center>
+<a name="instrucoes"></a>
+<table border="0" cellpadding="3" cellspacing="0" width="710">
+<tbody>
+<tr bgcolor="#e0e0e0">
+<td align="center">
+<b>INSTRUÇÕES</b>
+</td>
+</tr>
+</tbody>
+</table>
+<br />
+<table width="710" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+<p align="justify" style="margin-top:0px; margin-bottom:0px" >
+<b>Importante:</b> o desenvolvimento desta atividade é feito através de vários
+exercícios que estão disponíveis no
+<a href="rap-aluno.rtf">formulário de acompanhamento do aluno</a>.
+<br />
+<br />
+A variável x representa a medida da base do retângulo.
+Para alterar o valor de x, digite o número desejado no campo &#8220;x =&#8221;.
+Neste campo, além de números decimais, você poderá usar números em outros formatos, tais como 1/2,
+sqrt(5) (raiz quadrada de 5), sen(8) (seno de 8), pi (o número irracional &pi;), etc.
+Multiplicações podem ser indicadas com um asterisco ou um espaço em branco
+(por exemplo, 2*pi ou 2&nbsp;pi para indicar o número <nobr>2&nbsp;&pi;</nobr>).
+Use parêntesis para agrupar termos (por exemplo, <nobr>3^(1/2)</nobr>
+para indicar a raiz quadrada de 3).
+<br />
+<br />
+Ao pressionar o botão &#8220;Calcular!&#8221;, o aplicativo fará o seguinte:
+(1) ele modificará o formato do retângulo para este valor de x e
+(2) ele calculará o perímetro y correspondente, marcando o par ordenado (x, y) no gráfico e
+acrescentando uma linha na tabela.
+<b>Importante: os valores de x e de y são arredondados para 7 casas decimais.</b>
+<br />
+<br />
+Caso você dê um clique em uma das linhas da tabela, o aplicativo redesenhará o formato do retângulo
+para o respectivo valor de x. Para reiniciar o programa, pressione a tecla F5!
+<br />
+<br />
+Dependendo do valor de x que você escolher,
+talvez seja necessário ajustar a janela de visualização para visualizar algum ponto em particular. Para isto, use
+os ícones
+</p>
+<p align="center">
+<table>
+<tr valign="middle">
+<td>
+<img width="44" height="43" src="geogebra-n-zoom-out.jpg" />
+</td>
+<td>
+,&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+<img width="44" height="43" src="geogebra-n-zoom-in.jpg" />
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+e
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+<img width="44" height="43" src="geogebra-n-translate-view.jpg" />
+</td>
+</tr>
+</table>
+</p>
+<p align="justify">
+para reduzir (<i>zoom out</i>), ampliar (<i>zoom in</i>) e transladar
+a janela de visualização, respectivamente. Para ampliar ou reduzir, clique no ícone correspondente
+e, então, dê cliques sucessivos na janela de visualização.
+Para efetuar uma translação, clique no ícone correspondente e, então,
+clique e arraste a janela de visualização. Para mudar a posição do ponto A,
+ative a ferramenta cujo o ícone é a seta branca
+</p>
+<p align="center">
+<table>
+<tr valign="middle">
+<td>
+<img width="44" height="43" src="geogebra-n-move.jpg" />
+</td>
+</tr>
+</table>
+</p>
+<p align="justify">
+e, então, clique e arraste o ponto A.
+Importante: o ponto A só pode ser deslocado para posições com coordenadas inteiras.
+<br />
+<br />
+Nas versões mais atuais do Firefox, do Internet Explorer e do Google Chrome,
+é possível usar as combinações de teclas indicadas na tabela abaixo para aumentar ou diminuir
+o tamanho da fonte do texto e o tamanho das figuras.
+Isto permite configurar estes navegadores para uma leitura mais agradável.
+</p>
+<p align="center">
+<table width="400" bgcolor="#000000" cellspacing="1" cellpadding="5" border="0">
+    <tr>
+      <th align="center" bgcolor="#DDDDDD">Combinação de Teclas</TH>
+      <th align="center" bgcolor="#DDDDDD">Efeito</TH></TR>
+    <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-01.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Ampliar</td></tr>
+    <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-02.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Reduzir</td></tr>
+     <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-03.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Voltar para a configuração inicial</td></tr>
+</table>
+</p>
+</td>
+</tr>
+</table>
+</center>
+
+<script type="text/javascript">
+
+var check_timer = setInterval("check()", 500);
+
+var lspAppletOK = false;
+var rspAppletOK = false;
+
+var nod = 7;
+var nop_max = 100;
+var nop = 0;
+
+var xArray = new Array(nop_max);
+var yArray = new Array(nop_max);
+
+
+function check()
+{
+   lspApplet.evalCommand("loadValue = 1/3 + 1/3 + 1/3");
+   if (lspApplet.getValue("loadTest") == 0)
+   {
+      return;
+   }
+
+   if ((lspAppletOK == true) && (rspAppletOK == true))
+   {
+      lspApplet.setErrorDialogsActive(false);
+      lspApplet.setMode(40);
+      rspApplet.setErrorDialogsActive(false);
+
+      clearInterval(check_timer);
+
+      document.getElementById("fldx").value = "";
+      document.getElementById("fldv").value = "";
+      document.getElementById("fldx").disabled = false;
+      document.getElementById("btnc").disabled = false;
+      document.getElementById("btnr").disabled = false;
+      // document.getElementById("fldv").disabled = false;
+   }
+}
+
+function updateX()
+{
+   xVal = lspApplet.getValue("xVal");
+   rspApplet.setValue("a", xVal);
+}
+
+function n2s(number)
+{
+   // s = Math.floor(number*Math.pow(10.0, nod))/Math.pow(10.0, nod);
+   lspApplet.evalCommand("rVal = " + number);
+   s = lspApplet.getValue("sVal");
+
+   s = s + "";
+   p = s.indexOf(".");
+   if (p == -1)
+   {
+      s = s + ".";
+      h = nod;
+   }
+   else
+   {
+      h = nod - s.substring(p + 1, s.length).length;
+   }
+   for (i = 0; i < h; i++)
+   {
+      s = s + "0";
+   }
+   return(s);
+}
+
+function m2s(number)
+{
+   s = number + "";
+   n = s.indexOf("-");
+   p = s.indexOf(".");
+   if (p == -1)
+   {
+      s = s + ".";
+      for (i = 0; i < nod; i++)
+      {
+         s = s + "0";
+      }
+      return(s);
+   }
+   else
+   {
+      pi = s.substring(0, p);
+      pd = "0." + s.substring(p + 1, s.length);
+      lspApplet.evalCommand("rVal = " + pd);
+      pd = lspApplet.getValueString("sVal");
+      pd = pd.replace(/sVal = /g, "");
+      pd = pd + "";
+      p = pd.indexOf(".");
+      if (p == -1)
+      {
+         if (n == -1) // Positive number
+         {
+            // s = lspApplet.evalMathPiper("pi + " + pd);
+            lspApplet.evalCommand("rVal = " + pi + " + " + pd);
+         }
+         else
+         {
+            // s = lspApplet.evalMathPiper("pi - " + pd);
+            lspApplet.evalCommand("rVal = " + pi + " - " + pd);
+         }
+         s = lspApplet.getValueString("rVal");
+         s = s.replace(/rVal = /g, "");
+         s = s + ".";
+         for (i = 0; i < nod; i++)
+         {
+            s = s + "0";
+         }
+         return(s);
+      }
+      else
+      {
+         s = pi + "." + pd.substring(p + 1, pd.length);
+         p = s.indexOf(".");
+         h = nod - s.substring(p + 1, s.length).length;
+         for (i = 0; i < h; i++)
+         {
+            s = s + "0";
+         }
+         return(s);
+      }
+   }
+}
+
+function check_duplicated_entry(number)
+{
+   s = n2s(number);
+   for (i = 0; i < nop; i++)
+   {
+     if (s == xArray[i])
+     {
+        return(true);
+     }
+   }
+   return(false);
+}
+
+function sort_entries()
+{
+   if (nop > 1)
+   {
+      flag = true;
+      while (flag == true)
+      {
+         flag = false;
+         for (i = 0; i < nop - 1; i++)
+         {
+            x1 = parseFloat(xArray[i]);
+            x2 = parseFloat(xArray[i + 1]);
+            if (x1 > x2)
+            {
+               tmp = xArray[i];
+               xArray[i] = xArray[i + 1];
+               xArray[i + 1] = tmp;
+
+               tmp = yArray[i]
+               yArray[i] = yArray[i + 1];
+               yArray[i + 1] = tmp;
+
+               flag = true;
+            }
+         }
+      }
+   }
+}
+
+function onClickCB(i)
+{
+   id = "trid" + i;
+   document.getElementById(id).style.backgroundColor = "#ffff00";
+   xVal = xArray[i];
+   rspApplet.setValue("a", xVal);
+   lspApplet.evalCommand("xVal = " + xVal);
+   document.getElementById("fldx").value = "";
+   document.getElementById("fldv").value = "";
+}
+
+function onMouseOverCB(i)
+{
+   id = "trid" + i;
+   document.getElementById(id).style.backgroundColor = "#ffffb2";
+}
+
+function onMouseOutCB(i)
+{
+   id = "trid" + i;
+   document.getElementById(id).style.backgroundColor = "#ffffff";
+}
+
+function build_table()
+{
+   str = '';
+   str = str + '<table width="350" bgcolor="#000000" border="0" cellpadding="0" cellspacing="1" style="margin-bottom:10px;">\n';
+   str = str + '<tr>\n';
+   str = str + '<td align="center" bgcolor="#E0E0E0" width="50%">\n';
+   str = str + '<b>x</b>\n';
+   str = str + '</td>\n';
+   str = str + '<td align="center" bgcolor="#E0E0E0" width="50%">\n';
+   str = str + '<b>y</b>\n';
+   str = str + '</td>\n';
+   str = str + '</tr>\n';
+
+   for (i = 0; i < nop; i++)
+   {
+      str = str + '<tr bgcolor="#ffffff" id="trid' + i + '" onClick="onClickCB(' + i + ')" onMouseOver="onMouseOverCB(' + i + ')" onMouseOut="onMouseOutCB(' + i + ')">\n';
+      str = str + '<td align="right">\n';
+      str = str + xArray[i] + '&nbsp;\n';
+      str = str + '</td>\n';
+      str = str + '<td align="right" >\n';
+      str = str + yArray[i] + '&nbsp;\n';
+      str = str + '</td>\n';
+      str = str + '</tr>\n';
+   }
+
+   str = str + '</table>\n';
+   document.getElementById("table").innerHTML = str;
+}
+
+function compute()
+{
+   id = "fldx";
+   v = document.getElementById(id).value;
+   v = v.replace(/sen/g, "sin");
+   v = v.replace(/tg/g, "tan");
+   v = v.replace(/,/g, "\.");
+
+   document.getElementById("fldv").value = "";
+
+   if (v == '')
+   {
+      alert('Digite algum valor para x!');
+      document.getElementById(id).style.background = '#ff7777';
+      return;
+   }
+
+   if  (lspApplet.exists("pTest") == true)
+   {
+      lspApplet.deleteObject("pTest")
+   }
+   lspApplet.evalCommand("pTest =" + v);
+   if (lspApplet.isDefined("pTest") == false)
+   {
+      alert('Erro de sintaxe para x!');
+      document.getElementById(id).style.background = '#ff7777';
+      return;
+   }
+   else
+   {
+/*
+      xVal = lspApplet.getValue("pTest");
+      xVal = n2s(xVal);
+ */
+      /* Begin MathPiper solution for GeoGebra's bug in round() */
+      // xTest = lspApplet.getValue("pTest");
+      // xVal = lspApplet.evalMathPiper("N(" + xTest + ", " + nod + ")");
+      xVal = lspApplet.getValueString("pTest");
+      xVal = xVal.replace(/pTest = /g, "");
+      xVal = m2s(xVal);
+      /* End MathPiper solution for GeoGebra's bug in round() */
+
+      if ((xVal <= 0.0))
+      {
+         alert('O problema não está definido para este valor de x:\n' + xVal + '.\n\nLembre-se que os valores de x são arredondados para ' + nod + ' casas decimais!');
+         document.getElementById(id).value = xVal;
+         document.getElementById(id).style.background = '#ff7777';
+         return;
+      }
+
+
+      if (check_duplicated_entry(xVal) == true)
+      {
+         alert('Valor para x já fornecido anteriormente: ' + xVal + '.\n\nLembre-se que os valores de x são arredondados para ' + nod + ' casas decimais!');
+         document.getElementById(id).value = xVal;
+         document.getElementById(id).style.background = '#ff7777';
+         return;
+      }
+
+      document.getElementById(id).style.background = '#fff8da';
+      rspApplet.setValue("a", xVal);
+      // yVal = rspApplet.getValue("b");
+      yVal = rspApplet.getValueString("b");
+      yVal = yVal.replace(/b = /g, "");
+      yVal = m2s(yVal);
+
+      rspApplet.setVisible("P", true);
+      rspApplet.setVisible("X", true);
+      rspApplet.setVisible("Y", true);
+      rspApplet.setVisible("sPX", true);
+      rspApplet.setVisible("sPY", true);
+      rspApplet.setLayer("P", 1);
+
+/*
+      rspApplet.evalCommand("P" + nop + "= (" + xVal + "," + yVal + ")");
+      rspApplet.setPointSize("P" + nop, 1);
+      rspApplet.setColor("P" + nop, 0, 0, 0);
+      rspApplet.setFixed("P" + nop, true);
+      rspApplet.setLayer("P" + nop, 0);
+ */
+
+      str = 'pList = {';
+      for (i = 0; i < nop; i++)
+      {
+        str = str + "(" + xArray[i] + "," + yArray[i] + "),";
+      }
+      str = str + "(" + xVal + "," + yVal + ")}";
+      rspApplet.evalCommand(str);
+      rspApplet.setVisible("pList", true);
+      rspApplet.setPointSize("pList", 1);
+
+      lspApplet.evalCommand("xVal = " + xVal);
+
+/*
+      xArray[nop] = n2s(xVal);
+      yArray[nop] = n2s(yVal);
+ */
+      /* Begin MathPiper solution for GeoGebra's bug in round() */
+      // yVal = lspApplet.evalMathPiper("N(" + yVal + ", " + nod + ")");
+      xArray[nop] = m2s(xVal);
+      yArray[nop] = m2s(yVal);
+      /* End MathPiper solution for GeoGebra's bug in round() */
+
+      document.getElementById("fldv").value = yArray[nop];
+
+      nop++;
+
+      sort_entries();
+      build_table();
+   }
+}
+
+function getCookie(c_name)
+{
+   var i,x,y,ARRcookies=document.cookie.split(";");
+   for (i=0;i<ARRcookies.length;i++)
+   {
+     x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+     y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+     x=x.replace(/^\s+|\s+$/g,"");
+     if (x==c_name)
+     {
+        return unescape(y);
+     }
+   }
+   return(null);
+}
+
+function initialize()
+{
+   wp = getCookie("resetRAP1");
+   document.cookie = "resetRAP2 = 0";
+   if (wp != null)
+   {
+       wp = parseInt(wp);
+       window.scrollTo(0, wp);
+   }
+}
+
+function reset()
+{
+   wp = document.body.scrollTop || document.documentElement.scrollTop;
+
+   document.cookie = "resetRAP1 = " + wp;
+   document.location.reload(true);
+}
+</script>
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="770" align="center">
+  <tr>
+     <td>
+     <table border="0" cellpadding="0" cellspacing="0" width="770" >
+     <tr>
+     <td><div align="right"><img name="banner_final" src="banner_final.gif" border="0" height="33"></td><td><div align="left"><div align="right"><img name="banner_final" src="banner_final.gif" border="0" height="33"></div></td>
+     </tr>
+     </table>
+     </td>
+  </tr>
+</table>
+</center>
+<br>
+<center>
+   <img border="0" src="logomarcas.jpg" width="700" height="30" />
+</center>
+<br>
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/br/">
+<img alt="Creative Commons License" style="border-width:0" src="creative_commons.png" width="88" height="31" />
+</a>
+</center>
+<hr width="770">
+<center>
+<table>
+<tr align="top">
+<td align="center" colspan="1" class="id">
+Responsável:
+<a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br>
+Idealização:
+<a href="http://www.mat.puc-rio.br/pagina.php?id=docentes_gpalis" target="_new">Gilda de La Rocque Palis</a>, Silvana Marini Rodrigues Lopes e <a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br>
+Programação:
+<a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br>
+Revisão:
+<a href="http://www.uff.br/leg/">Ana Maria Martensen Roland Kaleff</a>,
+Anne Michelle Dysman Gomes,
+Carla Cristina de Lima Pracias,
+<a href="http://www.professores.uff.br/dirceuesu/">Dirce Uesu Pesco</a>,
+<a href="http://www.mat.puc-rio.br/pagina.php?id=docentes_gpalis">Gilda de La Rocque Palis</a>,
+<br>
+<a href="http://www.professores.uff.br/hjbortol/">Humberto José Bortolossi</a>,
+José Osorio de Figueiredo,
+Rodrigo Viana Pereira,
+Silvana Marini Rodrigues Lopes,
+Thiago Gomes Pereira,
+<a href="http://www.professores.uff.br/wmrezende/">Wanderley Moura Rezende</a>.
+<br>
+<br>
+Esta atividade foi construída com o software de matemática dinâmica gratuito
+e multiplataforma
+<a href="http://www.geogebra.org" target="_new">GeoGebra</a>.
+<br>
+<br>
+O Problema do Retângulo: Área e Perímetro 07/02/2011
+<br>
+Atualizações desta atividade estarão disponíveis no endereço
+<a href="http://www.uff.br/cdme/">http://www.uff.br/cdme/</a>.
+<br />
+Endereço alternativo: <a href="http://www.cdme.im-uff.mat.br/">http://www.cdme.im-uff.mat.br/</a>.
+</td></tr>
+</table>
+</center>
+<hr width="770">
+<center>
+<font size="3">
+Dúvidas? Sugestões? Nós damos suporte! Contacte-nos pelo e-mail:
+<br>
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;">&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;</a>.
+</font>
+</center>
+</body>
+</html>

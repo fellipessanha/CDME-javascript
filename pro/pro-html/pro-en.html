@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>Orthogonal Projections</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+a.mainmenu:link { color : #FFFFFF;  background : transparent; text-decoration : none;}
+a.mainmenu:visited {color : #FFFFFF; background : transparent; text-decoration : none;}
+a.mainmenu:hover {color : #FFFF00; background : transparent; text-decoration : none;}
+span.next:hover {cursor:hand}body {text-align: center; min-width: 800px;}
+/* #menu {position: absolute; left: 50%; width: 800px; margin-left: -210px;} */
+#menu {position: absolute; left: 50%; width: 800px; margin-left: -130px;}
+div.jqDockLabel {border:0px none; padding:0px 4px; font-size:14px; white-space:nowrap; color:#0000FF; background-color:transparent; font-weight: bold;}
+td.id { font-size: xx-small;}
+</style>
+<script type='text/javascript' src='jquery-1.2.4.min.js'></script>
+<script type='text/javascript' src='jquery.jqDock.js'></script>
+<script type='text/javascript'>
+var options =
+{ align: 'middle'
+, size: 48
+, labels: true
+};
+jQuery(document).ready(function()
+{
+  jQuery('#menu').jqDock(options);
+});
+</script>
+</head>
+
+<body bgcolor="#ffffff" leftmargin="0" topmargin="0">
+<center>
+<table border="0" cellpadding="0" cellspacing="0" width="770" align="center" height="63">
+  <tr>
+    <td width="770" valign="top">
+      <table border="0" cellpadding="0" cellspacing="0" width="770">
+     <tr>
+         <td><img border="0" src="banner_top_pro_en.gif" width="770" height="63"/></td>
+     </tr>
+   </table>
+    </td>
+  </tr>
+</table>
+<br />
+<br />
+<table border="0" cellpadding="0" cellspacing="0" width="700" align="center">
+     <tr valign="top">
+     <td>
+     <p align="justify">
+      To <b>rotate</b> the scene, you have to place the mouse pointer over the
+      left area of the applet and then, keeping the mouse <i>left</i> button pressed, drag it.
+      To <b>enlarge</b>/<b>shrink</b> the scene, you have to place the mouse pointer over the
+      left area of the applet and then, keeping the mouse <i>right</i> button pressed, drag it.
+      Doing the same operation with the mouse <i>middle</i> button translates the scene.
+      To fit the scene on the window, click on the left area of the applet and, then,
+      press the &#8220;f&#8221; key.
+     </p>
+     </td>
+  </tr>
+</table>
+<br>
+
+<table border="1">
+	<tr>
+		<td>
+<applet code="PaShadow.class"
+        name="pro"
+        id="pro"
+        width="700"
+        height="400"
+        archive="javaview.jar,jvx.jar"
+        border="1"
+        alt="Orthogonal Projections">
+<param name="panel" value="project">
+<param name="idiom" value="1">
+<param name="category" value="Objects of Study">
+<param name="solid" value="Square">
+<param name="initial_transparency" value="0.0">
+<param name="enable_choice" value="true">
+      Please, check if your navigator is blocking the access to the applet.
+      To install the JAVA language in your computer, please, access the
+      link <a href="http://www.java.com/" target="_new">http://www.java.com/</a>.
+</applet>
+</td>
+</tr>
+</table>
+
+
+<br>
+<br>
+<a name="info"></a>
+<table border="0" cellpadding="3" cellspacing="0" width="700">
+<tbody>
+<tr bgcolor="#e3e3e3">
+<td fgcolor"#ffffff" align="center">
+<b>
+SUPPLEMENTARY INFORMATION
+<br>
+</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<br>
+
+
+<table border="0" cellpadding="10" cellspacing="0" width="700" align="center">
+     <tr valign="top">
+     <td align="center">
+	 <b>ORTHOGONAL PROJECTIONS, DESCRIPTIVE GEOMETRY, CANNONS AND FORTRESSES</b>
+     </td>
+	 </tr>
+     <tr valign="top">
+     <td bgcolor="#E3E3E3" align="center">
+     <p align="justify">
+     <i>Descriptive geometry</i> is the branch of geometry which allows the representation
+     of three-dimensional objects in two dimensions, by using a specific set of procedures.
+     The resulting techniques are important for engineering, architecture, design and in art.
+     The theoretical basis for descriptive geometry is provided by the orthogonal projections.
+     </p>
+     <center>
+     <font size="1">
+     <img width="400" height="769" src="fig-car.jpg" alt="Orthoganal projections" style="border-style: solid; border-color: #000000; border-width: 1px;" />
+     <br />
+     Illustration: orthogonal projections of a car model.
+     </font>
+     </center>
+     <p align="justify" style="top-margin:0px">
+     Gaspard Monge is usually considered the "father of descriptive geometry". He first developed his techniques to solve geometric problems in 1765 while working as a draftsman for military fortifications
+     The French mathematician Gaspard Monge (1746-1818) is considered the founder of descriptive geometry.
+     He used it in military engineering (construction of fortifications) during the time of Napoleon Bonaparte.
+     In fact, descriptive geometry was considered a military secret.
+     Dennis Lieu and Sheryl Sorby, in their excellent book <i>Visualization, Modeling, and Graphics for Engineering Design</i>,
+     present the historical context:
+     </p>
+     <table width="100%">
+     <tr>
+     <td align="right">
+     <p align="justify" style="width:480px;margin-top:0px;margin-bottom:0px">
+     <i>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8220;Gunpowder was introduced during the Renaissance, as was the cannon. The cannon
+     made obsolete most of the fortresses built during the medieval era. The walls could
+     not withstand impact from cannon projectiles. Consequently, fortresses needed to be
+     redesigned to survive cannon fire. In France, a new, stronger style of fortification was
+     designed. The fortification was constructed with angled walls that helped to deflect
+     cannon fire and did not crumble as flat vertical walls did when struck head on. The new
+     fortresses were geometrically more complicated to build than their predecessors with
+     vertical walls. Further, the perimeter of the fortress had evolved from a simple rectangular
+     shape to a pentagonal shape with a prominent extension at each apex. That
+     perimeter shape, coupled with the angled walls, resulted in walls that intersected at odd
+     angles that could not be seen and measured easily or directly.
+     </i>
+     [...]
+     <br />
+     <i>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fortunately, the French had Gaspard Monge, who developed a graphical analysis
+     technique called <b>descriptive geometry</b>.
+     </i>
+     [...]
+     <i>
+     Descriptive geometry techniques enabled engineers to
+     create any view of a geometric object from two existing views. By creating the proper
+     view, engineers could see and measure an object’s attributes, such as the true length of
+     its lines, the true shape of planes, and true angles of intersection.
+     </i>
+     [...]
+     <i>
+     The
+     complex geometry, odd angles of intersection, and height of walls were intended to
+     maximize the cross fire on an approaching enemy, while not revealing the interior of
+     the fortress.
+     </i>
+     [...]
+     <i>
+     <br />
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The astuteness of the French at building fortifications kept France the prime military
+     power in Europe until the 1700s. At that time, descriptive geometry was considered
+     a French state secret; divulging it was a crime punishable by death. As a result of
+     the alliance between France and the newly constituted United States, many U.S. fortifications
+     used French designs. An example is Fort McHenry (shown in Figure 1.13),
+     which was built in 1806 and is exquisitely preserved in Baltimore, Maryland.
+     Fort McHenry survived bombardment by the British during the War of 1812 and is significant
+     because it inspired Francis Scott Key to write <b>The Star Spangled Banner</b>,
+     the national anthem of the United States of America.&#8221;
+     </i>
+     </p>
+     <p align="justify">
+     Note: the Chapter 1 of the book <i>Visualization, Modeling, and Graphics for Engineering Design</i> by
+     Lieu and Sorby is freely available
+     <a href="http://cengagesites.com/academic/assets/sites/Lieu_1401842496_01.pdf">here</a>.
+     <!-- Ele também está disponível <a href="http://cengagesites.com/academic/assets/sites/Lieu_1401842496_01.pdf">aqui</a>. -->
+     </p>
+     <center>
+     <font size="1">
+     <img width="535" height="365" src="fig-fort-mchenry.jpg" alt="Forte McHenry (EUA)" style="border-style: solid; border-color: #000000; border-width: 1px;" />
+     <br />
+     Photo: Fort McHenry (<a href="http://ian.umces.edu/imagelibrary/displayimage-1586.html">IAN Image and Video Library</a>).
+     </font>
+     </center>
+     </td>
+     </tr>
+     </table>
+     </td>
+	 </tr>
+</table>
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="770" align="center">
+  <tr>
+     <td>
+     <br />
+     <table border="0" cellpadding="0" cellspacing="0" width="770" >
+     <tr>
+     <td><div align="right"><img src="banner_final.gif" border="0" height="33"></td><td><div align="left"><img src="banner_final.gif" border="0"></div></td>
+     </tr>
+     </table>
+     </td>
+  </tr>
+</table>
+</center>
+<br />
+<center>
+   <img border="0" src="logomarcas.jpg">
+</center>
+<br />
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/br/">
+<img alt="Creative Commons License" style="border-width:0" src="creative_commons.png" />
+</a>
+</center>
+<hr width="770">
+<center>
+<table>
+<tr align="top">
+<td align="center" colspan="1"class="id">
+Responsible:
+<a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br />
+Idealization and Programming:
+João Júlio Dias Bastos Queiroz e <a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br />
+Revision:
+João Júlio Dias Bastos Queiroz e <a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br />
+English version: Carlos Eduardo Castaño Ferreira and Igor Bromonschenkel Brandão.
+<br />
+Graphical library:
+<a href="http://www.javaview.de" target="_new">JavaView &ndash; Interactive 3D Geometry and Visualization</a>.
+</td>
+</tr>
+</table>
+<span id="versionBanner">
+</span>
+<script type='text/javascript' src='vc.js'></script>
+</center>
+<hr width="770" />
+<center>
+Problems? Suggestions? We give technical support! Please, contact us by the e-mail:
+<br />
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;">&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;</a>.
+</center>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4306252-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>Pavimentação com Polígonos Regulares</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+a.mainmenu:link { color : #FFFFFF;  background : transparent; text-decoration : none;}
+a.mainmenu:visited {color : #FFFFFF; background : transparent; text-decoration : none;}
+a.mainmenu:hover {color : #FFFF00; background : transparent; text-decoration : none;}
+span.next:hover {cursor:hand}
+body {text-align: center; min-width: 800px;}
+#menu {position: absolute; left: 50%; width: 800px; margin-left: -215px;}
+div.jqDockLabel {border:0px none; padding:0px 4px; font-size:14px; white-space:nowrap; color:#0000FF; background-color:transparent; font-weight: bold;}
+td.id { font-size: xx-small;}
+</style>
+<script type='text/javascript' src='jquery-1.2.4.min.js'></script>
+<script type='text/javascript' src='jquery.jqDock.js'></script>
+<script type='text/javascript'>
+var options =
+{ align: 'middle'
+, size: 48
+, labels: true
+};
+jQuery(document).ready(function()
+{
+  jQuery('#menu').jqDock(options);
+});
+</script>
+<link rel="stylesheet" type="text/css" href="css/lightwindow.css" />
+<script type="text/javascript" src="javascript/prototype.js"></script>
+<script type="text/javascript" src="javascript/effects.js"></script>
+<script type="text/javascript" src="javascript/lightwindow-br.js"></script>
+</head>
+<body topmargin="0" leftmargin="0" text="#000000" vlink="#ff00ff" bgcolor="#ffffff" link="#0000ff">
+<script type="text/javascript" src="wz_tooltip.js"></script>
+<center>
+<table width="770" align="center" border="0" cellpadding="0" cellspacing="0" height="63">
+  <tbody><tr>
+    <td valign="top" width="770">
+      <table width="770" border="0" cellpadding="0" cellspacing="0">
+     <tbody><tr>
+         <td><img src="banner_top_ppr_br.gif" width="770" border="0" height="63"></td>
+     </tr>
+   </tbody></table>
+    </td>
+  </tr>
+</tbody>
+</table>
+<br>
+<br>
+<div style='text-align: left;' id='menu'>
+  <img src='ppr-fill.jpg' alt='ppr-fill.jpg' title=''/>
+  <a href="info-br.html">
+  <img src='info.jpg' alt='info.jpg' title='Informações Suplementares!'/>
+  </a>
+  <img src='ppr-fill.jpg' alt='ppr-fill.jpg' title=''/>
+  <a href="avaliacao.html">
+  <img src='avaliacao.jpg' alt='avaliacao.jpg' title='Avalie-nos!'/>
+  </a>
+  <img src='ppr-fill.jpg' alt='ppr-fill.jpg' title=''/>
+  <a href="ppr-aluno.rtf" target="_new">
+  <img src='formulario.jpg' alt='formulario.jpg' title='Formulário de Acompanhamento do Aluno!'/>
+  </a>
+  <img src='ppr-fill.jpg' alt='ppr-fill.jpg' title=''/>
+  <a href="guia-do-professor.html">
+  <img src='guia.jpg' alt='guia.jpg' title='Guia do Professor!'/>
+  </a>
+  <img src='ppr-fill.jpg' alt='ppr-fill.jpg' title=''/>
+  <a href="http://www.uff.br/cdme/ppr/ppr-offline.zip">
+  <img src='download-01.jpg' alt='download-01.jpg' title='Download para Uso Offline do Servidor 1!'/>
+  </a>
+  <img src='ppr-fill.jpg' alt='ppr-fill.jpg' title=''/>
+  <a href="http://www.cdme.im-uff.mat.br/ppr/ppr-offline.zip">
+  <img src='download-02.jpg' alt='download-02.jpg' title='Download para Uso Offline do Servidor 2!'/>
+  </a>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="700" align="center">
+     <tr valign="top">
+     <td>
+     <p align="justify">
+        A arte de se criar mosaicos é antiga. Egípcios, persas, bizantinos, árabes,
+        mouros, hindus e chineses já usavam esta técnica de decoração
+        em pisos, tetos, painéis, templos e palácios. Mosaicos ainda são usados
+        nos dias de hoje e eles também aparecem em elementos da natureza.
+     </p>
+     <p align="center">
+     <a class="lightwindow page-options" params="lightwindow_type=external,lightwindow_width=640,lightwindow_height=480" title='Foto: Malu Green (Flickr Creative Commons)' href="fig-tile-01-g.jpg"><img src="fig-tile-01-p.jpg" alt='Crédito: Malu Green (Flickr Creative Commons)' width="100" height="75" /></a>&nbsp;&nbsp;
+     <a class="lightwindow page-options" params="lightwindow_type=external,lightwindow_width=640,lightwindow_height=480" title='Foto: Melissa Maples (Flickr Creative Commons)' href="fig-tile-02-g.jpg"><img src="fig-tile-02-p.jpg" alt='Crédito: Melissa Maples (Flickr Creative Commons)' width="100" height="75" /></a>&nbsp;&nbsp;
+<!-- <a class="lightwindow page-options" params="lightwindow_type=external,lightwindow_width=640,lightwindow_height=480" title='Foto: Amodiovalerio Verde (Flickr Creative Commons)' href="fig-tile-03-g.jpg"><img src="fig-tile-03-p.jpg" alt='Crédito: Amodiovalerio Verde (Flickr Creative Commons)' width="100" height="75" /></a>&nbsp;&nbsp; -->
+     <a class="lightwindow page-options" params="lightwindow_type=external,lightwindow_width=640,lightwindow_height=480" title='Foto: Robylab (Flickr Creative Commons)' href="fig-tile-07-g.jpg"><img src="fig-tile-07-p.jpg" alt='Crédito: Robylab (Flickr Creative Commons)' width="100" height="75" /></a>&nbsp;&nbsp;
+     <a class="lightwindow page-options" params="lightwindow_type=external,lightwindow_width=640,lightwindow_height=480" title='Foto: Eigene Aufnahme (Wikimedia Commons)' href="fig-tile-04-g.jpg"><img src="fig-tile-04-p.jpg" alt='Crédito: Eigene Aufnahme (Wikimedia Commons)' width="100" height="75" /></a>
+<!-- <a class="lightwindow page-options" params="lightwindow_type=external,lightwindow_width=640,lightwindow_height=480" title='Foto: David Monniaux (Wikimedia Commons)' href="fig-tile-05-g.jpg"><img src="fig-tile-05-p.jpg" alt='Crédito: David Monniaux (Wikimedia Commons)' width="100" height="75" /></a>&nbsp;&nbsp; -->
+<!-- <a class="lightwindow page-options" params="lightwindow_type=external,lightwindow_width=640,lightwindow_height=480" title='Foto: Ltshears (Wikimedia Commons)' href="fig-tile-06-g.jpg"><img src="fig-tile-06-p.jpg" alt='Crédito: Ltshears (Wikimedia Commons)' width="100" height="75" /></a>&nbsp;&nbsp; -->
+     </p>
+     <p align="justify">
+     Nesta atividade vamos explorar algumas propriedades matemáticas de duas classes
+     particulares de mosaicos do plano: aquelas obtidas por pavimentações lado-lado do plano por
+     polígono regulares.
+     </p>
+	 <p align="center" style="margin-top: 0">
+    	 <table bgcolor="#000000" cellspacing="0" cellpadding="10" border="0" width="100%">
+    	 <tr bgcolor="#e0e0e0">
+    	 <td align="center" fgcolor"#e0e0e0">
+    	 <p align="justify" style="margin-top:0;margin-bottom: 0">
+         <b>Definições</b>
+         (<font color="#0000FF"><span onmouseover="Tip('<p align=\'justify\' style=\'width:360px;margin-top:0px;margin-bottom:0px;\'>Barbosa, R. M. <i>Descobrindo Padrões em Mosaicos</i>. Atual Editora, 2005.</p>', ABOVE, true)" onmouseout="UnTip()">[Barbosa, 2005]</span></font>).
+    	 </p>
+    	 <p align="center" style="margin-top: 5px">
+    	   <table border="0" cellpadding="5" cellspacing="0" width="95%">
+    	   <tr valign="top">
+    	     <td width="1%" align="left">
+    		 &bull;
+    		 </td>
+    	     <td width="99%">
+    		 <p align="justify" style="margin-top: 0">
+             Um conjunto de polígonos é uma pavimentação do plano se, e somente se,
+             o conjunto de polígonos <i>cobre</i> <i>sem cruzamentos</i> o plano.
+             <i>Cobre</i> significa que todo ponto do plano pertence a pelo menos
+             um polígono do conjunto. <i>Sem cruzamentos</i> significa que toda
+             interseção de dois polígonos tem área nula.
+    		 </p>
+    		 </td>
+    	   </tr>
+    	   <tr valign="top">
+    	     <td width="1%" align="left">
+    		 &bull;
+    		 </td>
+    	     <td width="99%">
+    		 <p align="justify" style="margin-top: 0">
+             Aos vértices dos polígonos
+             chamamos de <b>nós</b> da pavimentação. Os segmentos de retas que têm por
+             extremos dois nós consecutivos de um mesmo lado de polígono chamamos de
+             <b>arestas</b>.
+    		 </p>
+    		 </td>
+    	   </tr>
+    	   <tr valign="top">
+    	     <td width="1%" align="left">
+    		 &bull;
+    		 </td>
+    	     <td width="99%">
+    		 <p align="justify" style="margin-top: 0">
+             Uma pavimentação é <b>lado-lado</b> se, e somente se, toda aresta é lado comum a dois polígonos.
+             Resulta, portanto, que todo nó na fronteira de um polígono da pavimentação é vértice do polígono.
+             Nas pavimentações parciais por quadrados apresentadas na figura abaixo, apenas (a) é lado-lado.
+    		 </p>
+    		 </td>
+    	   </tr>
+    	   </table>
+           <table>
+           <tr>
+           <td align="center">
+           <img width="199" height="130" src="fig-tile-08-p.jpg" />
+           </td>
+           <td align="center">
+           &nbsp;&nbsp;&nbsp;&nbsp;
+           </td>
+           <td align="center">
+           <img width="199" height="130" src="fig-tile-09-p.jpg" />
+           </td>
+           </tr>
+           <tr>
+           <td align="center">
+           (a)
+           </td>
+           <td align="center">
+           &nbsp;&nbsp;&nbsp;&nbsp;
+           </td>
+           <td align="center">
+           (b)
+           </td>
+           </tr>
+           </table>
+    	 </p>
+    	 </td>
+    	 </tr>
+    	 </table>
+	 </p>
+     </td>
+  </tr>
+</table>
+
+<br />
+<br />
+
+
+
+<table width="700" border="0" cellpadding="3" cellspacing="0">
+<tbody>
+<tr bgcolor="#e3e3e3">
+<td bgcolor="" #ffffff="" align="center">
+<b>
+Módulos
+<br>
+</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<br />
+
+<!-- Begin of Regular Polygons -->
+
+<a name="pr"></a>
+<table width="700" align="center" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr valign="top">
+<!-- Image -->
+<td width="25%">
+<table width="100%" bgcolor="#000000" border="0" cellpadding="5" cellspacing="0">
+<tbody>
+<tr valign="top">
+<td rowspan="1" align="center" bgcolor="#ffffff">
+<a href="ppr-pr-br.html" target="_top"><img src="ppr-m-pr.jpg" alt="Parte 1" width="160" height="120" border="1"></a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<!-- Space -->
+<td>
+<table width="100%" bgcolor="#000000" border="0" cellpadding="5" cellspacing="0">
+<tbody>
+<tr valign="top">
+<td rowspan="1" align="center" bgcolor="#ffffff">
+&nbsp;
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<!-- Description -->
+<td>
+<table width="100%" bgcolor="#000000" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr valign="top">
+<td align="center" bgcolor="#ffffff">
+<font size="-0">
+<a href="ppr-pr-br.html" target="_top">
+<b>
+Parte 1:<br />Polígonos Regulares
+</b>
+</a>
+</font>
+</td>
+</tr>
+<tr valign="top">
+<td  bgcolor="#ffffff">
+<p align="justify" style="line-height: 95%; margin-top:0" >
+<font size="2">
+<br />
+&nbsp;
+</font>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- End of Regular Polygons -->
+
+<br />
+
+<!-- Begin of Tiling by Regular Polygons of One Type -->
+
+<a name="mt"></a>
+<table width="700" align="center" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr valign="top">
+<!-- Image -->
+<td width="25%">
+<table width="100%" bgcolor="#000000" border="0" cellpadding="5" cellspacing="0">
+<tbody>
+<tr valign="top">
+<td rowspan="1" align="center" bgcolor="#ffffff">
+<a href="ppr-mt-br.html" target="_top"><img src="ppr-m-mt.jpg" alt="Parte 2" width="160" height="120" border="1"></a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<!-- Space -->
+<td>
+<table width="100%" bgcolor="#000000" border="0" cellpadding="5" cellspacing="0">
+<tbody>
+<tr valign="top">
+<td rowspan="1" align="center" bgcolor="#ffffff">
+&nbsp;
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<!-- Description -->
+<td>
+<table width="100%" bgcolor="#000000" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr valign="top">
+<td align="center" bgcolor="#ffffff">
+<font size="-0">
+<a href="ppr-mt-br.html" target="_top">
+<b>
+Parte 2:<br />Pavimentação do Plano com Polígonos Regulares de Um Só Tipo
+</b>
+</a>
+</font>
+</td>
+</tr>
+<tr valign="top">
+<td  bgcolor="#ffffff">
+<p align="justify" style="line-height: 95%; margin-top:0" >
+<font size="2">
+<br />
+&nbsp;
+</font>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- End of Tiling by Regular Polygons of One Type -->
+
+<br />
+
+<!-- Begin of Tiling by Regular Polygons of Several Types -->
+
+<a name="st"></a>
+<table width="700" align="center" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr valign="top">
+<!-- Image -->
+<td width="25%">
+<table width="100%" bgcolor="#000000" border="0" cellpadding="5" cellspacing="0">
+<tbody>
+<tr valign="top">
+<td rowspan="1" align="center" bgcolor="#ffffff">
+<a href="ppr-st-br.html" target="_top"><img src="ppr-m-st.jpg" alt="Parte 3" width="160" height="120" border="1"></a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<!-- Space -->
+<td>
+<table width="100%" bgcolor="#000000" border="0" cellpadding="5" cellspacing="0">
+<tbody>
+<tr valign="top">
+<td rowspan="1" align="center" bgcolor="#ffffff">
+&nbsp;
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<!-- Description -->
+<td>
+<table width="100%" bgcolor="#000000" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr valign="top">
+<td align="center" bgcolor="#ffffff">
+<font size="-0">
+<a href="ppr-st-br.html" target="_top">
+<b>
+Parte 3:<br />Pavimentação do Plano com Polígonos Regulares de Tipos Diferentes
+</b>
+</a>
+</font>
+</td>
+</tr>
+<tr valign="top">
+<td  bgcolor="#ffffff">
+<p align="justify" style="line-height: 95%; margin-top:0" >
+<font size="2">
+<br />
+&nbsp;
+</font>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- End of Tiling by Regular Polygons of Several Types -->
+
+
+</center>
+
+
+
+
+<table width="770" align="center" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+     <td>
+     <table width="770" border="0" cellpadding="0" cellspacing="0">
+     <tbody><tr>
+     <td><div align="right"><img name="banner_final" src="banner_final.gif" border="0" height="33"></div></td><td><div align="left"><div align="right"><img name="banner_final" src="banner_final.gif" border="0" height="33"></div></div></td>
+     </tr>
+     </tbody></table>
+     </td>
+  </tr>
+</tbody></table>
+
+<br>
+<center>
+   <img border="0" src="logomarcas.jpg" width="700" height="30" />
+</center>
+<br>
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/br/">
+<img alt="Creative Commons License" style="border-width:0" src="creative_commons.png" width="88" height="31" />
+</a>
+</center>
+<hr width="770">
+<center>
+<table>
+<tr align="top">
+<td align="center" colspan="1"class="id">
+Responsável:
+<a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br>
+Idealização:
+<a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br>
+Programação:
+Lucas Antonioli de Carvalho, Raiana Tomazini de Oliveira e <a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br>
+Revisão:
+Lucas Antonioli de Carvalho, Raiana Tomazini de Oliveira e <a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br>
+Esta atividade foi construída com o software de matemática dinâmica gratuito
+e multiplataforma
+<a href="http://www.geogebra.org" target="_new">GeoGebra</a>.
+<br>
+<br>
+Pavimentação com Polígonos Regulares Versão 29/05/2009
+<br />
+Atualizações desta atividade estarão disponíveis no endereço
+<a href="http://www.uff.br/cdme/">http://www.uff.br/cdme/</a>.
+<br />
+Endereço alternativo: <a href="http://www.cdme.im-uff.mat.br/">http://www.cdme.im-uff.mat.br/</a>.
+</td>
+</tr>
+</table>
+<span id="versionBanner">
+</span>
+<script type='text/javascript' src='vc.js'></script>
+</center>
+
+<hr width="770">
+<center>
+<font size="3">
+Dúvidas? Sugestões? Nós damos suporte! Contacte-nos pelo e-mail:
+<br>
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;">&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;</a>.
+</font>
+</center>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4306252-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>

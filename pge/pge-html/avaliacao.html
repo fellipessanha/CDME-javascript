@@ -1,0 +1,533 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Avaliação</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+a.mainmenu:link { color : #FFFFFF;  background : transparent; text-decoration : none;}
+a.mainmenu:visited {color : #FFFFFF; background : transparent; text-decoration : none;}
+a.mainmenu:hover {color : #FFFF00; background : transparent; text-decoration : none;}
+
+body {text-align: center; min-width: 800px;}
+#menu {position: absolute; left: 50%; width: 800px; margin-left: -110px;}
+div.jqDockLabel {border:0px none; padding:0px 4px; font-size:14px; white-space:nowrap; color:#000000; background-color:transparent;}
+
+td.id { font-size: xx-small;}
+body, td { font-size: 16px; font-family: "Times New Roman"; }
+</style>
+
+<script language="JavaScript">
+function display()
+{
+   window.onerror = null;
+
+   document.form.navigator.value = navigator.appName;
+   document.form.version.value = navigator.appVersion;
+   resolution = window.screen.width;
+   resolution = resolution + "x";
+   resolution = resolution + window.screen.height;
+   resolution = resolution + " (" + window.screen.colorDepth + " bits)";
+   document.form.resolution.value = resolution;
+   document.form.platform.value = navigator.platform;
+   if (navigator.javaEnabled() < 1) document.form.java.value="Não";
+   if (navigator.javaEnabled() == 1) document.form.java.value="Sim";
+}
+</script>
+
+</head>
+<body bgcolor="#ffffff" leftmargin="0" topmargin="0" onload="display();">
+<center>
+<table border="0" cellpadding="0" cellspacing="0" width="770" align="center" height="63">
+  <tr>
+    <td width="770" valign="top">
+      <table border="0" cellpadding="0" cellspacing="0" width="770">
+     <tr>
+         <td><img border="0" src="banner_top_pge_br.gif" width="770" height="63"></td>
+     </tr>
+   </table>
+    </td>
+  </tr>
+</table>
+
+<br>
+<br>
+
+<b>SUA OPINIÃO É IMPORTANTE!</b>
+
+<br>
+<br>
+
+<font color="#FF0000">Atenção: você precisa estar conectado na internet para enviar esta avaliação!</font>
+<br>
+<br>
+<a href="pge-01-br.html"><b>[Clique aqui para voltar para a página principal!]</b></a>
+<form name="form" action="http://www.uff.br/cdme/pge/pge-html/send_email.php" method="POST">
+<table border="0" cellpadding="0" cellspacing="0" width="770" align="center" height="440">
+<tr valign="top">
+<td width="770">
+
+
+<div align="center">
+<center>
+<table border="0" width="710" bgcolor="#FFFFFF">
+  <tr>
+  <td>
+
+<table border="0" width="100%" bgcolor="#E0E0E0">
+  <tr rowspan>
+  <td align="center" width="100%">
+       <table border="0" width="100%">
+       <tr>
+       <td>
+       <center>
+       <br>
+       <strong>
+       Avaliação Específica
+       <br>
+       <br>
+       </strong>
+       Você acha que o texto usado na página WEB está claro?
+       <br>
+       Em caso negativo, que modificações você acha que são necessárias? 
+	   <textarea rows="5" cols="75" name="textoweb"></textarea>
+
+       <br>
+       <br>
+           
+       Você tem alguma sugestão de modificação no software ou na página WEB?
+       <textarea rows="5" cols="75" name="sugestoesweb"></textarea>
+
+       <br>
+       <br>
+    
+       Você apresentaria
+       este software para seus alunos em sala de aula?
+       <br>
+       Em caso afirmativo, para tratar sobre
+       qual assunto do currículo escolar?
+       <textarea rows="5" cols="75" name="uso"></textarea>
+
+       <br>
+       <br>
+    
+       Dê uma nota de 0 (zero) a 10 (dez) para o software e, se possível, justifique
+       o porquê de sua nota.
+       <textarea rows="5" cols="75" name="nota"></textarea>
+
+       <br>
+       <br>
+       </center>
+       </td>
+       </tr>
+       </table>
+    </td>
+  </tr>
+</table>
+
+  <br>
+  <br>
+  </td>
+  </tr>
+
+
+  <tr rowspan>
+  <td align="center" width="100%">
+       <table width="100%" bgcolor="#000000" cellspacing="1" cellpadding="5" border="0">
+       <tr>
+       <td align="center" colspan="2" bgcolor="#E0E0E0">
+       <b>Avaliação dos Requisitos Pedagógicos</b>
+       </td>
+       </tr>
+
+       <tr valgin="top">
+       <td align="left" bgcolor="#FFFFFF">
+       Apresenta rigor científico dos conhecimentos transmitidos?
+       </td>
+       <td align="left" bgcolor="#FFFFFF">
+       <input type="radio" name="rigor" value="0">Não &nbsp; &nbsp;
+       <input type="radio" name="rigor" value="2">+ ou &minus; &nbsp; &nbsp;
+       <input type="radio" name="rigor" value="3">Sim
+       <br>
+       <input type="radio" name="rigor" value="4" checked="true">Não se aplica
+       </td>
+       </tr>
+
+       <tr valgin="top">
+       <td align="left" bgcolor="#FFFFFF">
+       Oferece interatividade? Possibilita a interferência ativa do usuário?
+       </td>
+       <td align="left" bgcolor="#FFFFFF">
+       <input type="radio" name="interatividade" value="0">Não &nbsp; &nbsp;
+       <input type="radio" name="interatividade" value="2">+ ou &minus; &nbsp; &nbsp;
+       <input type="radio" name="interatividade" value="3">Sim
+       <br>
+       <input type="radio" name="interatividade" value="4" checked="true">Não se aplica
+       </td>
+       </tr>
+
+       <tr valgin="top">
+       <td align="left" bgcolor="#FFFFFF">
+       Apresenta linguagem adequada para o ensino médio?
+       </td>
+       <td width="210" align="left" bgcolor="#FFFFFF">
+       <input type="radio" name="linguagem" value="0">Não &nbsp; &nbsp;
+       <input type="radio" name="linguagem" value="2">+ ou &minus; &nbsp; &nbsp;
+       <input type="radio" name="linguagem" value="3">Sim
+       <br>
+       <input type="radio" name="linguagem" value="4" checked="true">Não se aplica
+       </td>
+       </tr>
+
+       <tr valgin="top">
+       <td align="left" bgcolor="#FFFFFF">
+       Apresenta o conteúdo contextualizado e coerente
+       com o ensino médio?
+       </td>
+       <td align="left" bgcolor="#FFFFFF">
+       <input type="radio" name="contextualizacao" value="0">Não &nbsp; &nbsp;
+       <input type="radio" name="contextualizacao" value="2">+ ou &minus; &nbsp; &nbsp;
+       <input type="radio" name="contextualizacao" value="3">Sim
+       <br>
+       <input type="radio" name="contextualizacao" value="4" checked="true">Não se aplica
+       </td>
+       </tr>
+
+       <tr valgin="top">
+       <td align="left" bgcolor="#FFFFFF">
+       Incentiva a experimentação e observação de fenômenos do mundo real?
+       </td>
+       <td align="left" bgcolor="#FFFFFF">
+       <input type="radio" name="experimentacao" value="0">Não &nbsp; &nbsp;
+       <input type="radio" name="experimentacao" value="2">+ ou &minus; &nbsp; &nbsp;
+       <input type="radio" name="experimentacao" value="3">Sim
+       <br>
+       <input type="radio" name="experimentacao" value="4" checked="true">Não se aplica
+       </td>
+       </tr>
+
+       <tr valgin="top">
+       <td align="left" bgcolor="#FFFFFF">
+       Possibilita múltiplas abordagens?
+       </td>
+       <td align="left" bgcolor="#FFFFFF">
+       <input type="radio" name="alternativas" value="0">Não &nbsp; &nbsp;
+       <input type="radio" name="alternativas" value="2">+ ou &minus; &nbsp; &nbsp;
+       <input type="radio" name="alternativas" value="3">Sim
+       <br>
+       <input type="radio" name="alternativas" value="4" checked="true">Não se aplica
+       </td>
+       </tr>
+
+       <tr valgin="top">
+       <td align="left" bgcolor="#FFFFFF">
+       Combina adequadamente textos, vídeos e imagens?
+       </td>
+       <td align="left" bgcolor="#FFFFFF">
+       <input type="radio" name="layout" value="0">Não &nbsp; &nbsp;
+       <input type="radio" name="layout" value="2">+ ou &minus; &nbsp; &nbsp;
+       <input type="radio" name="layout" value="3">Sim
+       <br>
+       <input type="radio" name="layout" value="4" checked="true">Não se aplica
+       </td>
+       </tr>
+
+       <tr valgin="top">
+       <td align="left" bgcolor="#FFFFFF">
+       Apresenta dicas e feedback?
+       </td>
+       <td align="left" bgcolor="#FFFFFF">
+       <input type="radio" name="dicas" value="0">Não &nbsp; &nbsp;
+       <input type="radio" name="dicas" value="2">+ ou &minus; &nbsp; &nbsp;
+       <input type="radio" name="dicas" value="3">Sim
+       <br>
+       <input type="radio" name="dicas" value="4" checked="true">Não se aplica
+       </td>
+       </tr>
+
+       <tr valgin="top">
+       <td align="left" bgcolor="#FFFFFF">
+       Apresenta interface de navegação adequada à compreensão do conteúdo?
+       </td>
+       <td align="left" bgcolor="#FFFFFF">
+       <input type="radio" name="navegacao" value="0">Não &nbsp; &nbsp;
+       <input type="radio" name="navegacao" value="2">+ ou &minus; &nbsp; &nbsp;
+       <input type="radio" name="navegacao" value="3">Sim
+       <br>
+       <input type="radio" name="navegacao" value="4" checked="true">Não se aplica
+       </td>
+       </tr>
+
+       <tr valgin="top">
+       <td align="left" bgcolor="#FFFFFF">
+       Tem conexão com o mundo real?
+       </td>
+       <td align="left" bgcolor="#FFFFFF">
+       <input type="radio" name="mundoreal" value="0">Não &nbsp; &nbsp;
+       <input type="radio" name="mundoreal" value="2">+ ou &minus; &nbsp; &nbsp;
+       <input type="radio" name="mundoreal" value="3">Sim
+       <br>
+       <input type="radio" name="mundoreal" value="4" checked="true">Não se aplica
+       </td>
+       </tr>
+
+       <tr>
+       <td align="left" bgcolor="#FFFFFF">
+       Favorece a interdisciplinaridade?
+       </td>
+       <td align="left" bgcolor="#FFFFFF">
+       <input type="radio" name="interdisciplinaridade" value="0">Não &nbsp; &nbsp;
+       <input type="radio" name="interdisciplinaridade" value="2">+ ou &minus; &nbsp; &nbsp;
+       <input type="radio" name="interdisciplinaridade" value="3">Sim
+       <br>
+       <input type="radio" name="interdisciplinaridade" value="4" checked="true">Não se aplica
+       </td>
+       </tr>
+       </table>
+       <br>
+      <br>
+    </td>
+  </tr>
+
+  <tr>
+  <td>
+<table border="0" width="100%" bgcolor="#E0E0E0">
+  <tr rowspan>
+  <td align="center" width="100%">
+       <table border="0" width="100%">
+       <tr>
+       <td colspan="2">
+       <center>
+       <br>
+       <strong>
+       Identificação
+       <br>
+       <br>
+       </strong>
+       <blockquote>
+       <p align="justify">
+       Caso você queira receber informações sobre atualizações deste e
+       de outros softwares desenvolvidos em nosso projeto, por favor,
+       preencha os dados abaixo. Caso você seja professor do ensino
+	   médio, por favor, indique esta informação!
+       </p>
+       </blockquote>    
+       </center>
+       </td>
+       </tr>
+       <tr>
+       <td width="20%" align="right">
+       Nome:
+       </td>
+       <td>
+       <input type="text" size="77" name="nome">
+       </td>
+        </tr>
+       <tr>
+       <td align="right">     
+       E-mail:
+       </td>
+       <td>
+       <input type="text" size="77" name="e_mail">
+       </td>
+       </tr>
+       <tr>
+       <td align="right">     
+       Localidade:
+       </td>
+       <td>
+       <input type="text" size="77" name="localidade">
+       </td>
+       </tr>
+	   <tr>    
+       <td align="right">     
+       Sua conexão:
+       </td>
+       <td> 
+    	   <table width="100%">
+    	   <tr>
+    	   <td width="33%" align="left">
+           <input type="radio" name="conexao" value="internet discada">internet discada
+    	   </td>
+    	   <td width="33%" align="left">   	   
+           <input type="radio" name="conexao" value="internet banda larga">internet banda larga
+    	   </td>
+    	   <td width="33%" align="left">   	   
+           &nbsp; 
+    	   </td>		   
+    	   </tr>
+    	   </table>
+       </td>
+       </tr>	   
+	   <tr> 
+       <td align="right">     
+       Atuação:
+       </td>
+       <td>
+    	   <table width="100%">
+    	   <tr>
+    	   <td width="33%" align="left">	   
+           <input type="radio" name="atuacao" value="ensino fundamental">ensino fundamental
+	       </td>
+    	   <td width="33%" align="left">   	   
+           <input type="radio" name="atuacao" value="ensino médio">ensino médio
+	       </td>
+    	   <td width="33%" align="left">
+           <input type="radio" name="atuacao" value="ensino superior">ensino superior
+		   </td>
+		   </tr>
+		   </table>	          
+       </td>
+	   <tr> 
+       <td align="right">     
+       &nbsp; 
+       </td>
+       <td>
+    	   <table width="100%">
+    	   <tr>
+    	   <td width="33%" align="left">	   
+           <input type="radio" name="categoria" value="professor">professor
+	       </td>
+    	   <td width="33%" align="left">   	   
+           <input type="radio" name="categoria" value="aluno">aluno
+	       </td>
+    	   <td width="33%" align="left">   	   
+           &nbsp; 
+		   </td>
+		   </tr>
+		   </table>	          
+       </td>	   
+       </tr>
+       <tr>	   
+       <td align="right">     
+       Instituição:
+       </td>
+       <td>
+       <input type="text" size="77" name="instituicao">
+       </td>
+       </tr>   	       
+       <tr>
+       <td>
+       <br>
+       <br>
+       </td>
+       </tr>	                                                                                           
+       </table>
+    </td>
+  </tr>
+</table>
+
+  <br>
+  <br>
+  </td>
+  </tr>
+
+
+  <tr>
+  <td>
+<table border="0" width="100%" bgcolor="#E0E0E0">
+  <tr rowspan>
+  <td align="center" width="100%">
+       <table border="0" width="100%">
+       <tr>
+       <td colspan="2">
+       <center>
+       <br>
+       <strong>
+       Informações do seu navegador
+       <br>
+       <br>
+       </strong>
+       </center>
+       </td>
+       </tr>
+    
+       <tr>
+       <td width="20%" align="right">
+       Navegador:
+       </td>
+       <td>
+       <input type="text" size="77" name="navigator">
+       </td>
+        </tr>
+       <tr>
+       <td width="20%" align="right">
+       Versão:
+       </td>
+       <td>
+       <input type="text" size="77" name="version">
+       </td>
+        </tr>
+       <tr>
+       <td width="20%" align="right">
+       Plataforma:
+       </td>
+       <td>
+       <input type="text" size="77" name="platform">
+       </td>
+        </tr>
+       <tr>
+       <td width="20%" align="right">
+       Resolução:
+       </td>
+       <td>
+       <input type="text" size="77" name="resolution">
+       </td>
+        </tr>
+       <tr>
+       <td width="20%" align="right">
+       Java:
+       </td>
+       <td>
+       <input type="text" size="77" name="java">
+       </td>
+       </tr>           
+    
+       <tr>
+       <td>
+       <br>
+       <br>
+       </td>
+       </tr>
+       </table>
+    </td>
+  </tr>
+</table>
+
+  <br>
+  <br>
+  </td>
+  </tr>
+</table>
+
+</div>
+</center>
+
+</td>
+</tr>
+</table>
+
+<center>
+<input type="submit" name="B1" value="Enviar avaliação">
+</center>
+</form>
+
+<table border="0" cellpadding="0" cellspacing="0" width="770" align="center">
+  <tr>
+     <td>
+     <table border="0" cellpadding="0" cellspacing="0" width="770" >
+     <tr>
+     <td  width="385"><div align="right"><img src="banner_final.gif" border="0"></td><td width="385"><div align="left"><img border="0" src="banner_final.gif"></div>
+     </td>
+     </tr>
+     </table>
+     </td>
+  </tr>
+</table>
+</center>
+<br>
+<center>
+Dúvidas? Sugestões? Nós damos suporte! Contacte-nos pelo e-mail:
+<br>
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;">&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;</a>.
+</center></body>
+</html>

@@ -1,0 +1,565 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>Polígonos Regulares</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+a.mainmenu:link { color : #FFFFFF;  background : transparent; text-decoration : none;}
+a.mainmenu:visited {color : #FFFFFF; background : transparent; text-decoration : none;}
+a.mainmenu:hover {color : #FFFF00; background : transparent; text-decoration : none;}
+span.next:hover {cursor:hand}
+body {text-align: center; min-width: 800px;}
+td.id { font-size: xx-small;}
+
+.subscript {font-size:xx-small; vertical-align:bottom;}
+.supscript {font-size:xx-small; vertical-align:top;}
+</style>
+<script type="text/javascript">
+function updateName()
+{
+    n = document.getElementById("lspApplet").getValue("n");
+
+    // Inner angles
+    ianum = (n - 2)*180;
+    iaden = n;
+    value = document.getElementById("lspApplet").evalMathPiper("N(" + ianum + "/" + iaden + ", 200)");
+    if (value.indexOf(".") == -1)
+    {
+       document.getElementById("lspApplet").setValue("iaden", "1");
+       document.getElementById("lspApplet").setValue("iaval", value);
+    }
+    else
+    {
+       idx = value.indexOf(".");
+       value = value.substring(0, idx + 6);
+       document.getElementById("lspApplet").setValue("iaden", "2");
+       document.getElementById("lspApplet").setValue("iaval", value);
+    }
+
+
+    // Central angles
+    canum = 360;
+    caden = n;
+    value = document.getElementById("lspApplet").evalMathPiper("N(" + canum + "/" + caden + ", 200)");
+    if (value.indexOf(".") == -1)
+    {
+       document.getElementById("lspApplet").setValue("caden", "1");
+       document.getElementById("lspApplet").setValue("caval", value);
+    }
+    else
+    {
+       idx = value.indexOf(".");
+       value = value.substring(0, idx + 6);
+       document.getElementById("lspApplet").setValue("caden", "2");
+       document.getElementById("lspApplet").setValue("caval", value);
+    }
+
+
+    // Polygon names
+    document.getElementById("lspApplet").setFixed("name", false);
+
+    if (n == 3)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: triângulo equilátero"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 4)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: quadrado"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 5)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: pentágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 6)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: hexágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 7)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: heptágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 8)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: octógono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 9)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: eneágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 9)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: nonágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 10)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: decágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 11)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: hendecágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 11)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: undecágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 12)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: dodecágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 13)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: tridecágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 14)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: tetradecágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 15)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: pentadecágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 15)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: quindecágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 16)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: hexadecágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 17)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: heptadecágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 18)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: octadecágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 19)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: nonadecágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 20)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: icoságono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 21)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: hendecoságono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 22)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: docoságono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 23)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: tricoságono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 24)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: tetracoságono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 25)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: pentacoságono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 26)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: hexacoságono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 27)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: heptacoságono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 28)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: octacoságono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 29)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: nonacoságono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 30)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: triacontágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 31)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: hentriacontágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 32)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: dotriacontágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 33)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: tritriacontágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 40)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: tetracontágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 50)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: pentacontágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 60)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: hexacontágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 70)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: heptacontágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 80)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: octacontágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 90)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: nonacontágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 100)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: hectágono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    if (n == 1000)
+    {
+       document.getElementById("lspApplet").evalCommand('name = Text["Nome: quiliógono regular"]');
+       document.getElementById("lspApplet").setFixed("name", true);
+       return;
+    };
+
+    document.getElementById("lspApplet").evalCommand('name = Text[" "]');
+    document.getElementById("lspApplet").setFixed("name", true);
+
+}
+</script>
+<link rel="stylesheet" type="text/css" href="css/lightwindow.css" />
+<script type="text/javascript" src="javascript/prototype.js"></script>
+<script type="text/javascript" src="javascript/effects.js"></script>
+<script type="text/javascript" src="javascript/lightwindow-br.js"></script>
+</head>
+
+<body topmargin="0" leftmargin="0" text="#000000" vlink="#ff00ff" bgcolor="#ffffff" link="#0000ff" >
+<script type="text/javascript" src="wz_tooltip.js"></script>
+<center>
+<table width="780" align="center" border="0" cellpadding="0" cellspacing="0" height="63">
+  <tbody><tr>
+    <td valign="top" width="770">
+      <table width="780" border="0" cellpadding="0" cellspacing="0">
+     <tbody><tr>
+         <td><img src="banner_top_ppr_br.gif" width="780" border="0" height="63"></td>
+     </tr>
+     </tbody>
+     </table>
+    </td>
+  </tr>
+</tbody>
+</table>
+<br />
+<table width="500" border="0">
+<tr>
+<td align="left">
+<img width="24" height="24" src='bt_e1w.jpg'/>
+</td>
+<td align="center">
+<img width="24" height="24" src='bt_i1w.jpg' onmouseover="Tip('Clique aqui para acessar a página principal!', FIX, [this, -110, -5], ABOVE, true)" onmouseout="UnTip()" onclick="window.location.href = 'ppr-br.html#pr'" />
+</td>
+<td align="right">
+<img width="24" height="24" src='bt_e1w.jpg'/>
+</td>
+</tr>
+</table>
+<br />
+<center>
+<table border="0" cellpadding="3" cellspacing="0" width="706">
+<tbody><tr bgcolor="#e0e0e0">
+<td align="center">
+<b>PARTE 1</b>
+</td>
+</tr>
+</tbody></table>
+</center>
+
+<br />
+
+<table width="700" border="0" cellpadding="10">
+<tr valign="top">
+<td =align="center">
+<p align="center" style="margin-top: 0; margin-bottom: 0;">
+<b>POLÍGONOS REGULARES</b>
+</p>
+</td>
+</tr>
+</table>
+<br />
+<table width="700" border="0">
+<tr valign="top">
+<td align="center">
+<p align="justify" style="margin-top: 0">
+O aplicativo abaixo é interativo. Clique e arraste a bolinha azul para girar o polígono regular.
+Clique e arraste a bolinha preta para mudar o número de lados.
+</p>
+</td>
+</tr>
+</table>
+<br />
+<p align="center" style="margin-top: 0; margin-bottom: 0;" >
+<applet name="lspApplet" id="lspApplet" code="geogebra.GeoGebraApplet" codebase="." archive="geogebra.jar" width="700" height="402" MAYSCRIPT>
+	<param name="filename" value="ppr-pr-br.ggb">
+    <param name="language" value="pt">
+	<param name="framePossible" value="false">
+	<param name="enableRightClick" value="true">
+	<param name="enableShiftDragZoom" value="false">
+	<param name="showToolBar" value="false">
+	<param name="showToolBarHelp" value="false">
+	Seu navegador não está com a linguagem JAVA instalada ou habilitada!
+	<br>
+	<br>
+	Por favor, verifique se o seu navegador não está bloqueando o acesso ao applet. Para instalar a linguagem JAVA em seu computador, acesse o endereço <a href="http://www.java.com/pt_BR/" target="_new">http://www.java.com/pt_BR/</a>.
+</applet>
+</p>
+<script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+document.getElementById("lspApplet").registerObjectUpdateListener("n", "updateName");
+/*]]>*/
+</script>
+
+
+<br />
+<br />
+
+<a name="exercises"></a>
+<table border="0" cellpadding="3" cellspacing="0" width="700">
+<tbody>
+<tr bgcolor="#e3e3e3">
+<td fgcolor"#ffffff" align="center">
+<b>
+EXERCÍCIOS
+<br />
+</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<table border="0" cellpadding="10" cellspacing="0" width="700" align="center">
+     <tr valign="top">
+     <td align="center">
+	 <p align="justify">
+     Os exercícios enunciados abaixo
+     também estão disponíveis no formulário de acompanhamento do aluno:
+     <a href="ppr-aluno.rtf">ppr-aluno.rtf</a>.
+     </p>
+     </td>
+	 </tr>
+     <tr valign="top">
+     <td bgcolor="#E3E3E3">
+     <table width="97%">
+
+     <tr valign="top">
+     <td>
+     [01]
+     </td>
+     <td>
+     <p align="justify" style="margin-top: 0; margin-bottom:0">
+     Qual é o nome do polígono regular de 11 lados? E o de 27 lados?
+     </p>
+     </td>
+     </tr>
+
+     <tr valign="top">
+     <td>
+     [02]
+     </td>
+     <td>
+     <p align="justify" style="margin-top: 0; margin-bottom:0">
+     Um <i>quiliógono</i> é um polígono com 1000 lados. Calcule a medida dos ângulos internos e ângulos centrais de um quiliógono regular.
+     </p>
+     </td>
+     </tr>
+
+     <tr valign="top">
+     <td>
+     [03]
+     </td>
+     <td>
+     <p align="justify" style="margin-top: 0; margin-bottom:0">
+     Ative as opções &#8220;Exibir ângulos internos&#8221; e &#8220;Exibir ângulos centrais&#8221; do aplicativo. Por que cada ângulo central tem medida
+     </p>
+     <p align="center">
+     <img width="57" height="36" src="ppr-pr-eq-01.gif" />
+     </p>
+     <p align="justify" style="margin-top: 0; margin-bottom:0">
+     e cada ângulo interno tem medida
+     </p>
+     <p align="center">
+     <img width="122" height="36" src="ppr-pr-eq-02.gif" />
+     </p>
+     </td>
+     </tr>
+
+     <tr valign="top">
+     <td>
+     [04]
+     </td>
+     <td>
+     <p align="justify" style="margin-top: 0; margin-bottom:0">
+     Se <i>R</i> é a medida do raio do círculo circunscrito ao polígono regular, qual é a medida
+     do raio <i>r</i> do círculo inscrito em função de <i>R</i>, &theta; e &alpha;?
+     </p>
+     </td>
+     </tr>
+
+     </table>
+     </td>
+     </tr>
+</table>
+</center>
+
+
+<table width="770" align="center" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+     <td>
+     <table width="770" border="0" cellpadding="0" cellspacing="0">
+     <tbody><tr>
+     <td><div align="right"><img name="banner_final" src="banner_final.gif" border="0" width="390" height="33"></div></td><td><div align="left"><div align="right"><img name="banner_final" src="banner_final.gif" border="0" width="390" height="33"></div></div></td>
+     </tr>
+     </tbody></table>
+     </td>
+  </tr>
+</tbody></table>
+
+<br>
+<center>
+<font size="3">
+Dúvidas? Sugestões? Nós damos suporte! Contacte-nos pelo e-mail:
+<br>
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;">&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;</a>.
+</font>
+</center>
+</body>
+</html>

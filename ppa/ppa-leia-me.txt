@@ -1,0 +1,32 @@
+CONTEÚDOS DIGITAIS PARA O ENSINO E APRENDIZAGEM DE MATEMÁTICA E ESTATÍSTICA
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA -- UNIVERSIDADE FEDERAL FLUMINENSE
+http://www.uff.br/cdme/
+http://www.cdme.im-uff.mat.br/
+
+* Para executar o recurso, abra o arquivo
+
+  ppa-testar-sistema-e-iniciar.html
+  
+  com um navegador de internet. Tipicamente, basta dar um clique duplo no nome
+  do arquivo para abrí-lo. Caso contrário, abra o navegador e, então, a partir
+  do menu principal, clique no item "Arquivo". Na janela que aparecerá,
+  escolha a opção "Abrir" e, então, siga as instruções do seu navegador para
+  acessar o arquivo
+
+  ppa-testar-sistema-e-iniciar.html
+
+  na pasta onde o recurso foi salvo. 
+
+* Você não precisa estar conectado na internet para executar o recurso.
+
+* O recurso pode ser executado em qualquer sistema operacional: Windows,
+  Linux e Mac OS. Porém, para executá-lo, é preciso que o computador tenha
+  a linguagem JAVA instalada. A instalação da linguagem JAVA pode ser feita
+  seguindo as orientações disponíveis no seguinte link
+  http://www.java.com/pt_BR/.
+
+* Atenção: é importante que os arquivos deste recurso não estejam em um
+  diretório cujo nome contenha acentos ou espaços. 
+
+* Caso tenha algum questionamento de qualquer natureza, não hesite em nos
+  contactar pelo e-mail: conteudosdigitais@im.uff.br.

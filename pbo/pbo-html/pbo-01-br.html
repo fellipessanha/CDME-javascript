@@ -1,0 +1,623 @@
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<meta charset="UTF-8">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>O Problema da Bobina do Transformador</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+a.mainmenu:link { color : #FFFFFF;  background : transparent; text-decoration : none;}
+a.mainmenu:visited {color : #FFFFFF; background : transparent; text-decoration : none;}
+a.mainmenu:hover {color : #FFFF00; background : transparent; text-decoration : none;}
+span.next:hover {cursor:hand}body {text-align: center; min-width: 800px;}
+/* #menu {position: absolute; left: 50%; width: 800px; margin-left: -210px;} */
+#menu {position: absolute; left: 50%; width: 800px; margin-left: -185px;}
+div.jqDockLabel {border:0px none; padding:0px 4px; font-size:14px; white-space:nowrap; color:#0000FF; background-color:transparent; font-weight: bold;}
+td.id { font-size: xx-small;}
+body, td { font-size: 16px; font-family: "Times New Roman"; }
+.subscript {font-size:xx-small; vertical-align:bottom;}
+.supscript {font-size:xx-small; vertical-align:top;}
+</style>
+<script type='text/javascript' src='jquery-1.2.4.min.js'></script>
+<script type='text/javascript' src='jquery.jqDock.js'></script>
+<script type='text/javascript'>
+var options =
+{ align: 'middle'
+, size: 48
+, labels: true
+};
+jQuery(document).ready(function()
+{
+  jQuery('#menu').jqDock(options);
+});
+</script>
+<script type="text/javascript" src="fc.js"></script>
+</head>
+
+<body bgcolor="#ffffff" leftmargin="0" topmargin="0" onload="initialize();">
+<script type="text/javascript" src="wz_tooltip.js"></script>
+<center>
+<table border="0" cellpadding="0" cellspacing="0" width="770" align="center" height="63">
+  <tr>
+    <td width="770" valign="top">
+      <table border="0" cellpadding="0" cellspacing="0" width="770">
+     <tr>
+         <td><img border="0" src="banner_top_pbo_br.gif" width="770" height="63"/></td>
+     </tr>
+   </table>
+    </td>
+  </tr>
+</table>
+<br>
+<br>
+<div style='text-align: left;' id='menu'>
+  <a href="avaliacao.html">
+  <img src='avaliacao.jpg' alt='avaliacao.jpg' title='Avalie-nos!'/>
+  </a>
+  <img src='pbo-fill.jpg' alt='pbo-fill.jpg' title=''/>
+  <a href="pbo-aluno.rtf" target="_new">
+  <img src='formulario.jpg' alt='formulario.jpg' title='Formulário de Acompanhamento do Aluno!'/>
+  </a>
+  <img src='pbo-fill.jpg' alt='pbo-fill.jpg' title=''/>
+  <a href="guia-do-professor.html">
+  <img src='guia.jpg' alt='guia.jpg' title='Guia do Professor!'/>
+  </a>
+  <img src='pbo-fill.jpg' alt='pbo-fill.jpg' title=''/>
+  <a href="http://www.uff.br/cdme/pbo/pbo-offline.zip">
+  <img src='download-01.jpg' alt='download-01.jpg' title='Download para Uso Offline do Servidor 1!'/>
+  </a>
+  <img src='pbo-fill.jpg' alt='pbo-fill.jpg' title=''/>
+  <a href="http://www.cdme.im-uff.mat.br/pbo/pbo-offline.zip">
+  <img src='download-02.jpg' alt='download-02.jpg' title='Download para Uso Offline do Servidor 2!'/>
+  </a>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<center>
+<table border="0" cellpadding="3" cellspacing="0" width="702">
+<tr>
+<td width="33%" align="left">
+</td>
+<td width="33%" align="center">
+<a href="pbo-02-br.html">[Clique aqui para ir para a Parte 2]</a>
+</td>
+<td width="33%" align="right">
+<a href="#instrucoes">[Instruções no final desta página!]</a>
+</td>
+</tr>
+</tbody>
+</table>
+<br />
+<table border="0" cellpadding="3" cellspacing="0" width="714" style="margin-bottom:20px;margin-top:8px;">
+<tbody>
+<tr bgcolor="#e0e0e0">
+<td align="center">
+<b>PARTE 1</b>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+
+
+<table width="710" border="0" bgcolor="#FFFFFF" cellpadding="1" cellspacing="0" style="margin-bottom:0px;">
+<tr valign="top">
+<td align="center" bgcolor="#FFFFFF">
+<p align="center" style="margin-top: 0px; margin-bottom: 10px;">
+<b>Enunciado do Problema</b>
+</p>
+<p align="justify" style="margin-top: 0px; margin-bottom: 0px;">
+Na construção de um transformador de corrente alternada, insere-se
+na bobina circular do transformador um núcleo de ferro cuja seção transversal tem o formato de uma cruz.
+É importante que esta seção transversal tenha a maior área possível.
+Se o raio da seção transversal circular da bobina mede 18 milímetros e
+se x representa a metade da medida, em milímetros, dos lados da cruz cujas extremidades estão sobre
+a seção circular, quanto deve ser x para que a área A da cruz seja a maior possível?
+</p>
+</td>
+</tr>
+</table>
+
+<br />
+
+<table width="700" border="0" bgcolor="#FFFFFF" cellpadding="1" cellspacing="0" style="margin-bottom:0px;">
+<tr valign="top">
+<td bgcolor="#FFFFFF">
+<script type="text/javascript">
+var paramslspApplet = {"id": "lspApplet", "allowStyleBar": false, "enableShiftDragZoom": false, "useBrowserForJS": false, "showMenuBar": false, "showAlgebraInput": false, "showResetIcon": false, "enableLabelDrags": false, "errorDialogsActive": true, "ggbBase64": "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", "width": 350, "height": 212, "framePossible": false, "enableRightClick": false, "showToolBar": false, "showToolBarHelp": false};
+paramslspApplet.appletOnLoad = function(api) {lspAppletOK = true};
+var lspApplet = new GGBApplet("5.0", paramslspApplet);
+window.addEventListener("load", function(){lspApplet.inject("lspApplet_container", "auto")});
+</script>
+<div id="lspApplet_container"></div>
+</td>
+<td align="center" bgcolor="#FFFFFF">
+<script type="text/javascript">
+var paramsrspApplet = {"id": "rspApplet", "allowStyleBar": false, "enableShiftDragZoom": false, "useBrowserForJS": false, "showMenuBar": false, "showAlgebraInput": false, "showResetIcon": false, "enableLabelDrags": false, "errorDialogsActive": true, "ggbBase64": "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", "width": 350, "height": 212, "framePossible": false, "enableRightClick": false, "showToolBar": false, "showToolBarHelp": false};
+paramsrspApplet.appletOnLoad = function(api) {rspAppletOK = true};
+var rspApplet = new GGBApplet("5.0", paramsrspApplet);
+window.addEventListener("load", function(){rspApplet.inject("rspApplet_container", "auto")});
+</script>
+<div id="rspApplet_container"></div>
+</td>
+</tr>
+<tr valign="top">
+<td bgcolor="#FFFFFF"
+<div id="table">
+<table width="350" bgcolor="#000000" border="0" cellpadding="0" cellspacing="1" style="margin-bottom:10px;">
+<tr bgcolor="#E0E0E0">
+<td align="center" width="50%" >
+<b>x</b>
+</td>
+<td align="center" width="50%">
+<b>A</b>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td align="center" bgcolor="#FFFFFF">
+</td>
+</tr>
+</table>
+<table width="702" bgcolor="#000000" border="0" cellpadding="5" cellspacing="1" style="margin-bottom:10px;">
+<tr>
+<td bgcolor="#FFFFFF">
+<table width="100%">
+<tr>
+<td align="left" bgcolor="#FFFFFF">
+x = <input name="fldx" id="fldx" disabled="true" value="" type="text" style="text-align:left; width:200px; font-weight: bold; position:relative; top:0px; color: #781351;background: #fff8da; border: 1px solid #781351" />
+</td>
+<td width="30%" align="center" bgcolor="#FFFFFF">
+<input type="button" name="btnc" id="btnc" disabled="true" value="Calcular!" onclick='compute()' style="width:100px;" />
+</td>
+<td align="right" bgcolor="#FFFFFF">
+A = <input name="fldv" id="fldv" disabled="true" value="" type="text" style="text-align:right; width:200px; font-weight: bold; position:relative; top:0px; color: #781351;background: #ffffff; border: 1px solid #781351" />
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<center>
+<input type="button" name="btnr" id="btnr" disabled="true" value="Reiniciar!" onclick='reset();' style="width:100px;" />
+</center>
+
+<br />
+<br />
+
+
+<center>
+<a name="instrucoes"></a>
+<table border="0" cellpadding="3" cellspacing="0" width="710">
+<tbody>
+<tr bgcolor="#e0e0e0">
+<td align="center">
+<b>INSTRUÇÕES</b>
+</td>
+</tr>
+</tbody>
+</table>
+<br />
+<table width="710" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+<p align="justify" style="margin-top:0px; margin-bottom:0px" >
+<b>Importante:</b> o desenvolvimento desta atividade é feito através de vários
+exercícios que estão disponíveis no
+<a href="pbo-aluno.rtf">formulário de acompanhamento do aluno</a>.
+<br />
+<br />
+A variável x representa a metade da medida, em milímetros, dos lados da cruz cujas extremidades estão sobre
+o círculo.
+Para alterar o valor de x, digite o número desejado no campo &#8220;x =&#8221;.
+Neste campo, além de números decimais, você poderá usar números em outros formatos, tais como 1/2,
+sqrt(5) (raiz quadrada de 5), sen(8) (seno de 8), pi (o número irracional &pi;), etc.
+Multiplicações podem ser indicadas com um asterisco ou um espaço em branco
+(por exemplo, 2*pi ou 2&nbsp;pi para indicar o número <nobr>2&nbsp;&pi;</nobr>).
+Use parêntesis para agrupar termos (por exemplo, <nobr>3^(1/2)</nobr>
+para indicar a raiz quadrada de 3).
+<br />
+<br />
+Ao pressionar o botão &#8220;Calcular!&#8221;, o aplicativo fará o seguinte:
+(1) ele modificará o formato do desenho da cruz para este valor de x e
+(2) ele calculará a área A correspondente, marcando o par ordenado (x, A) no gráfico e
+acrescentando uma linha na tabela.
+<b>Importante: os valores de x e de A são arredondados para 7 casas decimais.</b>
+<br />
+<br />
+Caso você dê um clique em uma das linhas da tabela, o aplicativo redesenhará o retângulo
+para o respectivo valor de x. Para reiniciar o programa, clique no botão &#8220;Reiniciar!&#8221; ou pressione a tecla F5!
+<br />
+<br />
+Nas versões mais atuais do Firefox, do Internet Explorer e do Google Chrome,
+é possível usar as combinações de teclas indicadas na tabela abaixo para aumentar ou diminuir
+o tamanho da fonte do texto e o tamanho das figuras.
+Isto permite configurar estes navegadores para uma leitura mais agradável.
+</p>
+<p align="center">
+<table width="400" bgcolor="#000000" cellspacing="1" cellpadding="5" border="0">
+    <tr>
+      <th align="center" bgcolor="#DDDDDD">Combinação de Teclas</TH>
+      <th align="center" bgcolor="#DDDDDD">Efeito</TH></TR>
+    <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-01.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Ampliar</td></tr>
+    <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-02.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Reduzir</td></tr>
+     <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-03.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Voltar para a configuração inicial</td></tr>
+</table>
+</p>
+</td>
+</tr>
+</table>
+</center>
+
+<script type="text/javascript">
+
+var check_timer = setInterval("check()", 500);
+
+var lspAppletOK = false;
+var rspAppletOK = false;
+
+var nod = 7;
+var nop_max = 100;
+var nop = 0;
+
+var xArray = new Array(nop_max);
+var yArray = new Array(nop_max);
+
+
+function check()
+{
+   lspApplet.evalCommand("loadValue = 1/3 + 1/3 + 1/3");
+   if (lspApplet.getValue("loadTest") == 0)
+   {
+      return;
+   }
+
+   if ((lspAppletOK == true) && (rspAppletOK == true))
+   {
+      lspApplet.setErrorDialogsActive(false);
+      lspApplet.setMode(40);
+      rspApplet.setErrorDialogsActive(false);
+
+      clearInterval(check_timer);
+
+      document.getElementById("fldx").value = "";
+      document.getElementById("fldv").value = "";
+      document.getElementById("fldx").disabled = false;
+      document.getElementById("btnc").disabled = false;
+      document.getElementById("btnr").disabled = false;
+      // document.getElementById("fldv").disabled = false;
+   }
+}
+
+function updateX()
+{
+   xVal = lspApplet.getValue("xVal");
+   rspApplet.setValue("a", xVal);
+}
+
+function n2s(number)
+{
+   // s = Math.floor(number*Math.pow(10.0, nod))/Math.pow(10.0, nod);
+   lspApplet.evalCommand("rVal = " + number);
+   // s = lspApplet.getValue("sVal");
+   s = lspApplet.getValueString("sVal");
+   s = s.replace(/sVal = /g, "");
+
+   s = s + "";
+   p = s.indexOf(".");
+   if (p == -1)
+   {
+      s = s + ".";
+      h = nod;
+   }
+   else
+   {
+      h = nod - s.substring(p + 1, s.length).length;
+   }
+   for (i = 0; i < h; i++)
+   {
+      s = s + "0";
+   }
+   return(s);
+}
+
+function check_duplicated_entry(number)
+{
+   s = n2s(number);
+   for (i = 0; i < nop; i++)
+   {
+     if (s == xArray[i])
+     {
+        return(true);
+     }
+   }
+   return(false);
+}
+
+function sort_entries()
+{
+   if (nop > 1)
+   {
+      flag = true;
+      while (flag == true)
+      {
+         flag = false;
+         for (i = 0; i < nop - 1; i++)
+         {
+            x1 = parseFloat(xArray[i]);
+            x2 = parseFloat(xArray[i + 1]);
+            if (x1 > x2)
+            {
+               tmp = xArray[i];
+               xArray[i] = xArray[i + 1];
+               xArray[i + 1] = tmp;
+
+               tmp = yArray[i]
+               yArray[i] = yArray[i + 1];
+               yArray[i + 1] = tmp;
+
+               flag = true;
+            }
+         }
+      }
+   }
+}
+
+function onClickCB(i)
+{
+   id = "trid" + i;
+   document.getElementById(id).style.backgroundColor = "#ffff00";
+   xVal = xArray[i];
+   rspApplet.setValue("a", xVal);
+   lspApplet.evalCommand("xVal = " + xVal);
+   document.getElementById("fldx").value = "";
+   document.getElementById("fldv").value = "";
+}
+
+function onMouseOverCB(i)
+{
+   id = "trid" + i;
+   document.getElementById(id).style.backgroundColor = "#ffffb2";
+}
+
+function onMouseOutCB(i)
+{
+   id = "trid" + i;
+   document.getElementById(id).style.backgroundColor = "#ffffff";
+}
+
+function build_table()
+{
+   str = '';
+   str = str + '<table width="350" bgcolor="#000000" border="0" cellpadding="0" cellspacing="1" style="margin-bottom:10px;">\n';
+   str = str + '<tr>\n';
+   str = str + '<td align="center" bgcolor="#E0E0E0" width="50%">\n';
+   str = str + '<b>x</b>\n';
+   str = str + '</td>\n';
+   str = str + '<td align="center" bgcolor="#E0E0E0" width="50%">\n';
+   str = str + '<b>A</b>\n';
+   str = str + '</td>\n';
+   str = str + '</tr>\n';
+
+   for (i = 0; i < nop; i++)
+   {
+      str = str + '<tr bgcolor="#ffffff" id="trid' + i + '" onClick="onClickCB(' + i + ')" onMouseOver="onMouseOverCB(' + i + ')" onMouseOut="onMouseOutCB(' + i + ')">\n';
+      str = str + '<td align="right">\n';
+      str = str + xArray[i] + '&nbsp;\n';
+      str = str + '</td>\n';
+      str = str + '<td align="right" >\n';
+      str = str + yArray[i] + '&nbsp;\n';
+      str = str + '</td>\n';
+      str = str + '</tr>\n';
+   }
+
+   str = str + '</table>\n';
+   document.getElementById("table").innerHTML = str;
+}
+
+function compute()
+{
+   id = "fldx";
+   v = document.getElementById(id).value;
+   v = v.replace(/sen/g, "sin");
+   v = v.replace(/tg/g, "tan");
+   v = v.replace(/,/g, "\.");
+
+   document.getElementById("fldv").value = "";
+
+   if (v == '')
+   {
+      alert('Digite algum valor para x!');
+      document.getElementById(id).style.background = '#ff7777';
+      return;
+   }
+
+   if  (lspApplet.exists("pTest") == true)
+   {
+      lspApplet.deleteObject("pTest")
+   }
+   lspApplet.evalCommand("pTest =" + v);
+   if (lspApplet.isDefined("pTest") == false)
+   {
+      alert('Erro de sintaxe para x!');
+      document.getElementById(id).style.background = '#ff7777';
+      return;
+   }
+   else
+   {
+      xVal = lspApplet.getValue("pTest");
+      xVal = n2s(xVal);
+
+      if ((xVal <= 0.0) || (xVal >= 18.0*Math.sqrt(2.0)/2.0))
+      {
+         alert('Não é possível construir uma cruz inscrita num círculo de raio 18 milímetros para este valor de x:\n' + xVal + '.\n\nLembre-se que os valores de x são arredondados para ' + nod + ' casas decimais!');
+         document.getElementById(id).value = xVal;
+         document.getElementById(id).style.background = '#ff7777';
+         return;
+      }
+
+      if (check_duplicated_entry(xVal) == true)
+      {
+         alert('Valor para x já fornecido anteriormente: ' + xVal + '.\n\nLembre-se que os valores de x são arredondados para ' + nod + ' casas decimais!');
+         document.getElementById(id).value = xVal;
+         document.getElementById(id).style.background = '#ff7777';
+         return;
+      }
+
+      document.getElementById(id).style.background = '#fff8da';
+      rspApplet.setValue("a", xVal);
+      // yVal = rspApplet.getValue("b");
+      yVal = rspApplet.getValueString("b");
+      yVal = yVal.replace(/b = /g, "");
+
+      rspApplet.setVisible("P", true);
+      rspApplet.setVisible("X", true);
+      rspApplet.setVisible("Y", true);
+      rspApplet.setVisible("sPX", true);
+      rspApplet.setVisible("sPY", true);
+      rspApplet.setLayer("P", 1);
+
+
+      rspApplet.evalCommand("P" + nop + "= (" + xVal + "," + yVal + ")");
+      rspApplet.setPointSize("P" + nop, 1);
+      rspApplet.setColor("P" + nop, 0, 0, 0);
+      rspApplet.setFixed("P" + nop, true);
+      rspApplet.setLayer("P" + nop, 0);
+
+      lspApplet.evalCommand("xVal = " + xVal);
+
+      xArray[nop] = n2s(xVal);
+      yArray[nop] = n2s(yVal);
+      document.getElementById("fldv").value = yArray[nop];
+
+      nop++;
+
+      sort_entries();
+      build_table();
+   }
+}
+
+function getCookie(c_name)
+{
+   var i,x,y,ARRcookies=document.cookie.split(";");
+   for (i=0;i<ARRcookies.length;i++)
+   {
+     x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+     y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+     x=x.replace(/^\s+|\s+$/g,"");
+     if (x==c_name)
+     {
+        return unescape(y);
+     }
+   }
+   return(null);
+}
+
+function initialize()
+{
+   wp = getCookie("resetPBO1");
+   document.cookie = "resetPBO2 = 0";
+   if (wp != null)
+   {
+       wp = parseInt(wp);
+       window.scrollTo(0, wp);
+   }
+}
+
+function reset()
+{
+   wp = document.body.scrollTop || document.documentElement.scrollTop;
+
+   document.cookie = "resetPBO1 = " + wp;
+   document.location.reload(true);
+}
+</script>
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="770" align="center">
+  <tr>
+     <td>
+     <table border="0" cellpadding="0" cellspacing="0" width="770" >
+     <tr>
+     <td><div align="right"><img name="banner_final" src="banner_final.gif" border="0" height="33"></td><td><div align="left"><div align="right"><img name="banner_final" src="banner_final.gif" border="0" height="33"></div></td>
+     </tr>
+     </table>
+     </td>
+  </tr>
+</table>
+</center>
+<br>
+<center>
+   <img border="0" src="logomarcas.jpg" width="700" height="30" />
+</center>
+<br>
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/br/">
+<img alt="Creative Commons License" style="border-width:0" src="creative_commons.png" width="88" height="31" />
+</a>
+</center>
+<hr width="770">
+<center>
+<table>
+<tr align="top">
+<td align="center" colspan="1" class="id">
+Responsável:
+<a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br>
+Idealização:
+<a href="http://www.mat.puc-rio.br/pagina.php?id=docentes_gpalis" target="_new">Gilda de La Rocque Palis</a>, Silvana Marini Rodrigues Lopes e <a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br>
+Programação:
+<a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br>
+Revisão:
+<a href="http://www.uff.br/leg/">Ana Maria Martensen Roland Kaleff</a>,
+Anne Michelle Dysman Gomes,
+Carla Cristina de Lima Pracias,
+<a href="http://www.professores.uff.br/dirceuesu/">Dirce Uesu Pesco</a>,
+<a href="http://www.mat.puc-rio.br/pagina.php?id=docentes_gpalis">Gilda de La Rocque Palis</a>,
+<br>
+<a href="http://www.professores.uff.br/hjbortol/">Humberto José Bortolossi</a>,
+José Osorio de Figueiredo,
+Rodrigo Viana Pereira,
+Silvana Marini Rodrigues Lopes,
+Thiago Gomes Pereira,
+<a href="http://www.professores.uff.br/wmrezende/">Wanderley Moura Rezende</a>.
+<br>
+<br>
+Esta atividade foi construída com o software de matemática dinâmica gratuito
+e multiplataforma
+<a href="http://www.geogebra.org" target="_new">GeoGebra</a>.
+<br>
+<br>
+O Problema da Bobina do Transformador 07/02/2011
+<br>
+Atualizações desta atividade estarão disponíveis no endereço
+<a href="http://www.uff.br/cdme/">http://www.uff.br/cdme/</a>.
+<br />
+Endereço alternativo: <a href="http://www.cdme.im-uff.mat.br/">http://www.cdme.im-uff.mat.br/</a>.
+</td></tr>
+</table>
+</center>
+<hr width="770">
+<center>
+<font size="3">
+Dúvidas? Sugestões? Nós damos suporte! Contacte-nos pelo e-mail:
+<br>
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;">&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;</a>.
+</font>
+</center>
+</body>
+</html>

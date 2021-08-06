@@ -1,0 +1,738 @@
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<meta charset="UTF-8">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>O Problema do Caminho para A Horta</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+a.mainmenu:link { color : #FFFFFF;  background : transparent; text-decoration : none;}
+a.mainmenu:visited {color : #FFFFFF; background : transparent; text-decoration : none;}
+a.mainmenu:hover {color : #FFFF00; background : transparent; text-decoration : none;}
+span.next:hover {cursor:hand}body {text-align: center; min-width: 800px;}
+/* #menu {position: absolute; left: 50%; width: 800px; margin-left: -210px;} */
+#menu {position: absolute; left: 50%; width: 800px; margin-left: -185px;}
+div.jqDockLabel {border:0px none; padding:0px 4px; font-size:14px; white-space:nowrap; color:#0000FF; background-color:transparent; font-weight: bold;}
+td.id { font-size: xx-small;}
+body, td { font-size: 16px; font-family: "Times New Roman"; }
+.subscript {font-size:xx-small; vertical-align:bottom;}
+.supscript {font-size:xx-small; vertical-align:top;}
+</style>
+<script type='text/javascript' src='jquery-1.2.4.min.js'></script>
+<script type='text/javascript' src='jquery.jqDock.js'></script>
+<script type='text/javascript'>
+var options =
+{ align: 'middle'
+, size: 48
+, labels: true
+};
+jQuery(document).ready(function()
+{
+  jQuery('#menu').jqDock(options);
+});
+</script>
+<script type="text/javascript" src="fc.js"></script>
+</head>
+
+<body bgcolor="#ffffff" leftmargin="0" topmargin="0" onload="initialize();">
+<script type="text/javascript" src="wz_tooltip.js"></script>
+<center>
+<table border="0" cellpadding="0" cellspacing="0" width="770" align="center" height="63">
+  <tr>
+    <td width="770" valign="top">
+      <table border="0" cellpadding="0" cellspacing="0" width="770">
+     <tr>
+         <td><img border="0" src="banner_top_pch_br.gif" width="770" height="63"/></td>
+     </tr>
+   </table>
+    </td>
+  </tr>
+</table>
+<br>
+<br>
+<div style='text-align: left;' id='menu'>
+  <a href="avaliacao.html">
+  <img src='avaliacao.jpg' alt='avaliacao.jpg' title='Avalie-nos!'/>
+  </a>
+  <img src='pch-fill.jpg' alt='pch-fill.jpg' title=''/>
+  <a href="pch-aluno.rtf" target="_new">
+  <img src='formulario.jpg' alt='formulario.jpg' title='Formulário de Acompanhamento do Aluno!'/>
+  </a>
+  <img src='pch-fill.jpg' alt='pch-fill.jpg' title=''/>
+  <a href="guia-do-professor.html">
+  <img src='guia.jpg' alt='guia.jpg' title='Guia do Professor!'/>
+  </a>
+  <img src='pch-fill.jpg' alt='pch-fill.jpg' title=''/>
+  <a href="http://www.uff.br/cdme/pch/pch-offline.zip">
+  <img src='download-01.jpg' alt='download-01.jpg' title='Download para Uso Offline do Servidor 1!'/>
+  </a>
+  <img src='pch-fill.jpg' alt='pch-fill.jpg' title=''/>
+  <a href="http://www.cdme.im-uff.mat.br/pch/pch-offline.zip">
+  <img src='download-02.jpg' alt='download-02.jpg' title='Download para Uso Offline do Servidor 2!'/>
+  </a>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<center>
+<table border="0" cellpadding="3" cellspacing="0" width="702">
+<tr>
+<td width="33%" align="left">
+</td>
+<td width="33%" align="center">
+<a href="pch-01-br.html">[Clique aqui para ir para a Parte 1]</a>
+</td>
+<td width="33%" align="right">
+<a href="#instrucoes">[Instruções no final desta página!]</a>
+</td>
+</tr>
+</tbody>
+</table>
+<br />
+<table border="0" cellpadding="3" cellspacing="0" width="714" style="margin-bottom:20px;margin-top:8px;">
+<tbody>
+<tr bgcolor="#e0e0e0">
+<td align="center">
+<b>PARTE 2</b>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+
+<table width="710" border="0" bgcolor="#FFFFFF" cellpadding="1" cellspacing="0" style="margin-bottom:0px;">
+<tr valign="top">
+<td align="center" bgcolor="#FFFFFF">
+<p align="center" style="margin-top: 0px; margin-bottom: 10px;">
+<b>Enunciado do Problema</b>
+</p>
+<p align="justify" style="margin-top: 0px; margin-bottom: 0px;">
+Um agricultor está em sua casa C situada a 80 metros da margem retilínea de um rio.
+Ele quer encher primeiro o seu regador de água em um ponto M na margem deste rio
+e, depois, se dirigir
+para sua horta H, situada a 50 metros da margem do rio.
+A distância entre os pés A e B das perpendiculares traçadas de C e H
+sobre a margem do rio é igual a 100 metros.
+Considere um sistema de coordenadas onde <nobr>A = (0, 0),</nobr>
+<nobr>B = (100, 0),</nobr> <nobr>C = (0, 80), </nobr>
+<nobr>H = (100, 50)</nobr> e <nobr>M = (x, 0).</nobr>
+Quanto deve ser x, a abscissa do ponto M sobre o eixo x,
+para que o comprimento d do trajeto casa (C), rio (M) e horta (H)
+seja o menor possível?
+</p>
+</td>
+</tr>
+</table>
+
+<br />
+
+
+<table width="700" border="0" bgcolor="#FFFFFF" cellpadding="1" cellspacing="0" style="margin-bottom:0px;">
+<tr valign="top">
+<td bgcolor="#FFFFFF">
+<script type="text/javascript">
+var paramslspApplet = {"id": "lspApplet", "allowStyleBar": false, "enableShiftDragZoom": true, "useBrowserForJS": false, "showMenuBar": false, "showAlgebraInput": false, "showResetIcon": false, "enableLabelDrags": false, "errorDialogsActive": true, "ggbBase64": "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", "width": 350, "height": 239, "framePossible": false, "enableRightClick": false, "showToolBar": true, "showToolBarHelp": true};
+paramslspApplet.appletOnLoad = function(api) {lspAppletOK = true};
+var lspApplet = new GGBApplet("5.0", paramslspApplet);
+window.addEventListener("load", function(){lspApplet.inject("lspApplet_container", "auto")});
+</script>
+<div id="lspApplet_container"></div>
+</td>
+<td align="center" bgcolor="#FFFFFF">
+<script type="text/javascript">
+var paramsrspApplet = {"id": "rspApplet", "allowStyleBar": false, "enableShiftDragZoom": true, "useBrowserForJS": false, "showMenuBar": false, "showAlgebraInput": false, "showResetIcon": false, "enableLabelDrags": false, "errorDialogsActive": true, "ggbBase64": "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", "width": 350, "height": 239, "framePossible": false, "enableRightClick": false, "showToolBar": true, "showToolBarHelp": true};
+paramsrspApplet.appletOnLoad = function(api) {rspAppletOK = true};
+var rspApplet = new GGBApplet("5.0", paramsrspApplet);
+window.addEventListener("load", function(){rspApplet.inject("rspApplet_container", "auto")});
+</script>
+<div id="rspApplet_container"></div>
+</td>
+</tr>
+</table>
+
+
+<table width="702" bgcolor="#000000" border="0" cellpadding="5" cellspacing="1" style="margin-bottom:10px;">
+<tr>
+<td bgcolor="#FFFFFF">
+<table width="100%">
+<tr>
+<td align="right" bgcolor="#FFFFFF">
+d = f(x)
+</td>
+<td align="center" bgcolor="#FFFFFF">
+=
+</td>
+<td align="left" bgcolor="#FFFFFF">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="fexp" id="fexp" disabled="true" value="" type="text" style="text-align:left; width:570px; font-weight: bold; position:relative; top:0px; color: #781351;background: #fff8da; border: 1px solid #781351" />
+</td>
+</tr>
+<tr>
+<td align="right" bgcolor="#FFFFFF">
+Domínio
+</td>
+<td align="center" bgcolor="#FFFFFF">
+=
+</td>
+<td align="left" bgcolor="#FFFFFF">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <select id="lint" name="lint" disabled="true" style="position:relative; top:3px;">
+       <option value="("> &nbsp;(&nbsp; </option>
+       <option value="["> &nbsp;[&nbsp; </option>
+       </select>
+       a, b
+       <select id="rint" name="rint" disabled="true" style="position:relative; top:3px;">
+       <option value=")"> &nbsp;)&nbsp; </option>
+       <option value="]"> &nbsp;]&nbsp; </option>
+       </select>
+</td>
+</tr>
+<tr>
+<td align="right" bgcolor="#FFFFFF">
+a
+</td>
+<td align="center" bgcolor="#FFFFFF">
+=
+</td>
+<td align="left" bgcolor="#FFFFFF">
+<input type="radio" id="ltf" disabled="true" name="ltype" onclick="    document.getElementById('xmin').disabled = false;" checked="true" />
+<input name="xmin" id="xmin" disabled="true" type="text" style="text-align:left; width:500px; font-weight: bold; position:relative; top:0px; color: #781351;background: #fff8da; border: 1px solid #781351" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" id="lti" disabled="true" name="ltype" onclick="document.getElementById('xmin').disabled = true;document.getElementById('lint').selectedIndex = 0;" /> &minus;&infin;
+</td>
+</tr>
+<tr>
+<td align="right" bgcolor="#FFFFFF">
+b
+</td>
+<td align="center" bgcolor="#FFFFFF">
+=
+</td>
+<td align="left" bgcolor="#FFFFFF">
+<input type="radio" id="rtf" disabled="true" name="rtype" onclick="document.getElementById('xmax').disabled = false;" checked="true" />
+<input name="xmax" id="xmax" disabled="true" type="text" style="text-align:left; width:500px; font-weight: bold; position:relative; top:0px; color: #781351;background: #fff8da; border: 1px solid #781351" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" id="rti" disabled="true" name="rtype" onclick="document.getElementById('xmax').disabled = true;document.getElementById('rint').selectedIndex = 0;" /> +&infin;
+</td>
+</tr>
+<tr>
+<td colspan="3" align="center" bgcolor="#FFFFFF">
+<input type="button" name="btnc" id="btnc" disabled="true" value="Conferir!" onclick='compute()' style="width:100px;" />
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<center>
+<input type="button" name="btnr" id="btnr" disabled="true" value="Reiniciar!" onclick='reset();' style="width:100px;" />
+</center>
+
+<br />
+<br />
+
+
+<center>
+<a name="instrucoes"></a>
+<table border="0" cellpadding="3" cellspacing="0" width="710">
+<tbody>
+<tr bgcolor="#e0e0e0">
+<td align="center">
+<b>INSTRUÇÕES</b>
+</td>
+</tr>
+</tbody>
+</table>
+<br />
+<table width="710" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+<p align="justify" style="margin-top:0px; margin-bottom:0px" >
+Neste módulo você deve explicitar a função que modela o problema,
+indicando uma expressão para a função e o seu domínio. Preencha os campos acima
+e, então, clique no botão &#8220;Conferir!&#8221;
+para conferir sua resposta. Além de conferir sua resposta,
+o programa também desenhará na cor preta
+o gráfico da função que você forneceu. Para visualizar o gráfico da
+função correta (desenhado em cinza claro), habilite a opção &#8220;Gráfico&#8221;.
+<br />
+<br />
+O domínio da função que modela o problema é indicado
+usando-se a notação de intervalos. Inicialmente, você deve especificar como
+são os extremos do intervalo:
+<nobr>(a, b)</nobr>, <nobr>(a, b]</nobr>, <nobr>[a, b)</nobr>
+ou <nobr>[a, b]</nobr>. Para isto, clique nos seletores e escolha entre as opções
+&#8220;(&#8221;, &#8220;[&#8221;, &#8220;]&#8221; e &#8220;)&#8221;.
+Depois, você deve especificar os valores de &#8220;a&#8221; e &#8220;b&#8221;.
+Se &#8220;a&#8221; for igual a <nobr>&minus;&infin;</nobr>,
+clique na bolinha à esquerda de <nobr>&minus;&infin;</nobr>.
+Caso contrário, clique na bolinha à esquerda do campo de entrada e digite
+o valor de &#8220;a&#8221;.  O valor de &#8220;b&#8221; é especificado
+de modo análogo.
+<br />
+<br />
+Nos campos &#8220;a&#8221;
+e &#8220;b&#8221; você poderá usar números tais como 7, 1/2,
+sqrt(5) (raiz quadrada de 5), sen(8) (seno de 8), pi (o número irracional &pi;), etc.
+<b>Importante: intencionalmente, números com pontos ou vírgulas decimais não são permitidos neste módulo</b>.
+Multiplicações podem ser indicadas com um asterisco ou um espaço em branco
+(por exemplo, 2*pi ou 2&nbsp;pi para indicar o número <nobr>2&nbsp;&pi;</nobr>).
+Use parêntesis para agrupar termos (por exemplo, <nobr>3^(1/2)</nobr>
+para indicar a raiz quadrada de 3).
+<br />
+<br />
+No campo &#8220;d = f(x)&#8221;
+você poderá usar expressões como sqrt(x) (raiz quadrada de x), sen(x) (seno de x),
+2^x <nobr>(2 elevado</nobr> <nobr>a x),</nobr> abs(x) (módulo de x).  Use parêntesis para agrupar termos (por exemplo, <nobr>1/(2 + x)).</nobr>
+Multiplicações podem ser indicadas com um asterisco ou com um espaço em branco
+(por exemplo, <nobr>x*cos(x)</nobr> ou <nobr>x&nbsp;cos(x)</nobr>). Em alguns casos,
+não é necessário usar nem asteriscos e nem espaços em branco, pois
+a multiplicação é identificada automaticamente (por exemplo,
+<nobr>2x</nobr>).
+<br />
+<br />
+Clique e arraste o ponto M. Se a opção &#8220;Rastro&#8221; estiver habilitada,
+o programa irá exibir alguns pontos do gráfico da função que modela o problema durante o processo.
+Para reiniciar o programa, clique no botão &#8220;Reiniciar!&#8221; ou pressione a tecla F5!
+Caso você queira ajustar a janela de visualização, use
+os ícones
+</p>
+<p align="center">
+<table>
+<tr valign="middle">
+<td>
+<img width="44" height="43" src="geogebra-n-zoom-out.jpg" />
+</td>
+<td>
+,&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+<img width="44" height="43" src="geogebra-n-zoom-in.jpg" />
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+e
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+<img width="44" height="43" src="geogebra-n-translate-view.jpg" />
+</td>
+</tr>
+</table>
+</p>
+<p align="justify">
+para reduzir (<i>zoom out</i>), ampliar (<i>zoom in</i>) e transladar
+a janela de visualização, respectivamente. Para ampliar ou reduzir, clique no ícone correspondente
+e, então, dê cliques sucessivos na janela de visualização.
+Para efetuar uma translação, clique no ícone correspondente e, então,
+clique e arraste a janela de visualização. Para mudar a posição do ponto M,
+ative a ferramenta cujo o ícone é a seta branca
+</p>
+<p align="center">
+<table>
+<tr valign="middle">
+<td>
+<img width="44" height="43" src="geogebra-n-move.jpg" />
+</td>
+</tr>
+</table>
+</p>
+<p align="justify">
+e, então, clique e arraste o ponto M. Use também a seta branca para habilitar a opção &#8220;Dica&#8221;.
+<br />
+<br />
+Nas versões mais atuais do Firefox, do Internet Explorer e do Google Chrome,
+é possível usar as combinações de teclas indicadas na tabela abaixo para aumentar ou diminuir
+o tamanho da fonte do texto e o tamanho das figuras.
+Isto permite configurar estes navegadores para uma leitura mais agradável.
+</p>
+<p align="center">
+<table width="400" bgcolor="#000000" cellspacing="1" cellpadding="5" border="0">
+    <tr>
+      <th align="center" bgcolor="#DDDDDD">Combinação de Teclas</TH>
+      <th align="center" bgcolor="#DDDDDD">Efeito</TH></TR>
+    <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-01.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Ampliar</td></tr>
+    <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-02.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Reduzir</td></tr>
+     <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-03.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Voltar para a configuração inicial</td></tr>
+</table>
+</p>
+</td>
+</tr>
+</table>
+</center>
+
+<script type="text/javascript">
+var check_timer = setInterval("check()", 500);
+
+var lspAppletOK = false;
+var rspAppletOK = false;
+var jvxAppletOK = true;
+
+var ltiChecked = false;
+var rtiChecked = false;
+
+var notMax = 7;
+var notVal = 0;
+
+
+function check()
+{
+   lspApplet.evalCommand("loadValue = 1/3 + 1/3 + 1/3");
+   if (lspApplet.getValue("loadTest") == 0)
+   {
+      return;
+   }
+
+   if ((lspAppletOK == true) && (rspAppletOK == true) &&
+       (jvxAppletOK == true))
+   {
+      lspApplet.setErrorDialogsActive(false);
+      lspApplet.setFixed("M", false);
+      lspApplet.registerObjectUpdateListener("M", "updateX");
+
+      rspApplet.setErrorDialogsActive(false);
+      rspApplet.registerObjectUpdateListener("showTrace", "updateTrace");
+
+      document.getElementById("fexp").disabled = false;
+      document.getElementById("xmin").disabled = false;
+      document.getElementById("xmax").disabled = false;
+      document.getElementById("btnc").disabled = false;
+      document.getElementById("btnr").disabled = false;
+      document.getElementById("lint").disabled = false;
+      document.getElementById("rint").disabled = false;
+      document.getElementById("ltf").disabled = false;
+      document.getElementById("lti").disabled = false;
+      document.getElementById("rti").disabled = false;
+      document.getElementById("rtf").disabled = false;
+
+      clearInterval(check_timer);
+   }
+}
+
+function updateX()
+{
+   xVal = lspApplet.getValue("xVal");
+   rspApplet.setValue("aGGB", xVal);
+   document.getElementById("jvxApplet").xVal = xVal;
+   document.getElementById("jvxApplet").updateCylinder();
+}
+
+function updateTrace()
+{
+   var showTrace = true;
+   if (rspApplet.getValue("showTrace") == 0)
+   {
+      showTrace = false;
+   }
+   rspApplet.setTrace("PGGB", showTrace);
+}
+
+function compute()
+{
+   var uMin;
+   var uMax;
+   var uGGB;
+
+   // Function expression test
+   id = "fexp";
+   v = document.getElementById(id).value;
+   v = v.replace(/sen/g, "sin");
+   v = v.replace(/tg/g, "tan");
+   v = v.replace(/,/g, "\.");
+
+   if (v == '')
+   {
+      alert('Digite algum valor para o campo indicado!');
+      document.getElementById(id).style.background = '#ff7777';
+      return;
+   }
+
+   if (v.indexOf(".") != -1)
+   {
+      alert('Dê sua resposta sem usar números com pontos ou vírgulas decimais!');
+      document.getElementById(id).style.background = '#ff7777';
+      return;
+   }
+
+   if  (rspApplet.exists("pTest") == true)
+   {
+      rspApplet.deleteObject("pTest")
+   }
+
+
+   rspApplet.evalCommand("pTest(x) = " + v);
+   rspApplet.setVisible("pTest", false);
+   if (rspApplet.isDefined("pTest") == false)
+   {
+      alert('Erro de sintaxe para o campo indicado!');
+      document.getElementById(id).style.background = '#ff7777';
+      return;
+   }
+   else
+   {
+      document.getElementById(id).style.background = '#fff8da';
+      uGGB = v;
+   }
+
+   // xMin test
+   id = "xmin";
+   v = document.getElementById(id).value;
+   v = v.replace(/sen/g, "sin");
+   v = v.replace(/tg/g, "tan");
+   v = v.replace(/,/g, "\.");
+
+   if (document.getElementById("lti").checked == false)
+   {
+       ltiChecked = false;
+       if (v == '')
+       {
+          alert('Digite algum valor para o campo indicado!');
+          document.getElementById(id).style.background = '#ff7777';
+          return;
+       }
+
+       if (v.indexOf(".") != -1)
+       {
+          alert('Dê sua resposta sem usar números com pontos ou vírgulas decimais!');
+          document.getElementById(id).style.background = '#ff7777';
+          return;
+       }
+
+       if  (lspApplet.exists("pTest") == true)
+       {
+          lspApplet.deleteObject("pTest")
+       }
+       lspApplet.evalCommand("pTest =" + v);
+       if (lspApplet.isDefined("pTest") == false)
+       {
+          alert('Erro de sintaxe para o campo indicado!');
+          document.getElementById(id).style.background = '#ff7777';
+          return;
+       }
+       else
+       {
+          xVal = lspApplet.getValue("pTest");
+
+          document.getElementById(id).style.background = '#fff8da';
+          uMin = v;
+       }
+   }
+   else
+   {
+       ltiChecked = true;
+       var infVal = "\u221e";
+       uMin = "-" + infVal;
+   }
+
+   // xMax test
+   id = "xmax";
+   v = document.getElementById(id).value;
+   v = v.replace(/sen/g, "sin");
+   v = v.replace(/tg/g, "tan");
+   v = v.replace(/,/g, "\.");
+
+   if (document.getElementById("rti").checked == false)
+   {
+       rtiChecked = false;
+       if (v == '')
+       {
+          alert('Digite algum valor para o campo indicado!');
+          document.getElementById(id).style.background = '#ff7777';
+          return;
+       }
+
+       if (v.indexOf(".") != -1)
+       {
+          alert('Dê sua resposta sem usar números com pontos ou vírgulas decimais!');
+          document.getElementById(id).style.background = '#ff7777';
+          return;
+       }
+
+       if  (lspApplet.exists("pTest") == true)
+       {
+          lspApplet.deleteObject("pTest")
+       }
+       lspApplet.evalCommand("pTest =" + v);
+       if (lspApplet.isDefined("pTest") == false)
+       {
+          alert('Erro de sintaxe para o campo indicado!');
+          document.getElementById(id).style.background = '#ff7777';
+          return;
+       }
+       else
+       {
+          xVal = lspApplet.getValue("pTest");
+
+          document.getElementById(id).style.background = '#fff8da';
+          uMax = v;
+       }
+   }
+   else
+   {
+       rtiChecked = true;
+       var infVal = "\u221e";
+       uMax = infVal;
+   }
+
+   // rspApplet.setVisible("hGGB", true);
+   // rspApplet.evalCommand("pList = {" + uMin + ", " + uMax + ", " + uGGB + "}");
+      rspApplet.evalCommand("uMin = " + uMin);
+      rspApplet.evalCommand("uMax = " + uMax);
+      rspApplet.evalCommand("uGGB(x) = " + uGGB);
+      rspApplet.deleteObject("hGGB");
+      rspApplet.evalCommand("hGGB(x) = Função[" + uGGB + ", " + uMin + ", " + uMax + "]");
+   // rspApplet.setColor("hGGB", 0, 0, 255);
+
+   // Check answer
+   notVal++;
+
+   isOK = true;
+
+   // fexp
+   if ((rspApplet.getValue("fB") == 0) ||
+       (rspApplet.getValue("iB") == 0))
+   {
+      alert("A expressão para a função não está correta! Tentativa " + notVal + " de " + notMax + "!");
+      isOK = false;
+   }
+   else
+   {
+       // rint and lint
+       if ((document.getElementById('lint').selectedIndex == 1) ||
+           (document.getElementById('rint').selectedIndex == 1))
+       {
+          alert("O domínio não está correto! Tentativa " + notVal + " de " + notMax + "!");
+          isOK = false;
+       }
+       else
+       {
+           // xMin and xMax
+           // 0 = false, 1 = true
+           if ((document.getElementById("ltf").checked == true) ||
+               (document.getElementById("rtf").checked == true))
+           {
+              alert("O domínio não está correto! Tentativa " + notVal + " de " + notMax + "!");
+              isOK = false
+           }
+        }
+   }
+
+   if (isOK == true)
+   {
+       document.getElementById("fexp").disabled = true;
+       document.getElementById("xmin").disabled = true;
+       document.getElementById("xmax").disabled = true;
+       document.getElementById("btnc").disabled = true;
+       document.getElementById("lint").disabled = true;
+       document.getElementById("rint").disabled = true;
+       document.getElementById("ltf").disabled = true;
+       document.getElementById("lti").disabled = true;
+       document.getElementById("rti").disabled = true;
+       document.getElementById("rtf").disabled = true;
+
+       alert("Parabéns!");
+   }
+   else
+   {
+      if (notVal == notMax)
+      {
+           rspApplet.deleteObject("hGGB");
+
+           document.getElementById("fexp").value = "sqrt(x^2 + 80^2) + sqrt((x - 100)^2 + 50^2)";
+           document.getElementById("lint").selectedIndex = 0;
+           document.getElementById("rint").selectedIndex = 0;
+           document.getElementById("lti").checked = true;
+           document.getElementById("xmin").value = "";
+           document.getElementById("rti").checked = true;
+           document.getElementById("xmax").value = "";
+
+           document.getElementById("fexp").disabled = true;
+           document.getElementById("xmin").disabled = true;
+           document.getElementById("xmax").disabled = true;
+           document.getElementById("btnc").disabled = true;
+           document.getElementById("lint").disabled = true;
+           document.getElementById("rint").disabled = true;
+           document.getElementById("ltf").disabled = true;
+           document.getElementById("lti").disabled = true;
+           document.getElementById("rti").disabled = true;
+           document.getElementById("rtf").disabled = true;
+
+           alert("Número máximo de tentativas atingido!\nAs respostas corretas estão apresentadas nos vários campos!");
+      }
+   }
+}
+
+function getCookie(c_name)
+{
+   var i,x,y,ARRcookies=document.cookie.split(";");
+   for (i=0;i<ARRcookies.length;i++)
+   {
+     x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+     y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+     x=x.replace(/^\s+|\s+$/g,"");
+     if (x==c_name)
+     {
+        return unescape(y);
+     }
+   }
+   return(null);
+}
+
+function initialize()
+{
+   wp = getCookie("resetPCH2");
+   document.cookie = "resetPCH1 = 0";
+   if (wp != null)
+   {
+       wp = parseInt(wp);
+       window.scrollTo(0, wp);
+   }
+}
+
+function reset()
+{
+   wp = document.body.scrollTop || document.documentElement.scrollTop;
+
+   document.cookie = "resetPCH2 = " + wp;
+   document.location.reload(true);
+}
+</script>
+
+
+<table width="770" align="center" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+     <td>
+     <table width="770" border="0" cellpadding="0" cellspacing="0">
+     <tbody><tr>
+     <td><div align="right"><img name="banner_final" src="banner_final.gif" border="0" width="390" height="33"></div></td><td><div align="left"><div align="right"><img name="banner_final" src="banner_final.gif" border="0" width="390" height="33"></div></div></td>
+     </tr>
+     </tbody></table>
+     </td>
+  </tr>
+</tbody>
+</table>
+<br>
+<center>
+<font size="3">
+Dúvidas? Sugestões? Nós damos suporte! Contacte-nos pelo e-mail:
+<br>
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;">&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;</a>.
+</font>
+</center>
+</body>
+</html>
+

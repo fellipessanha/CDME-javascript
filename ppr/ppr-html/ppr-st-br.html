@@ -1,0 +1,796 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>Polígonos Regulares</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+a.mainmenu:link { color : #FFFFFF;  background : transparent; text-decoration : none;}
+a.mainmenu:visited {color : #FFFFFF; background : transparent; text-decoration : none;}
+a.mainmenu:hover {color : #FFFF00; background : transparent; text-decoration : none;}
+span.next:hover {cursor:hand}
+body {text-align: center; min-width: 800px;}
+td.id { font-size: xx-small;}
+
+.subscript {font-size:xx-small; vertical-align:bottom;}
+.supscript {font-size:xx-small; vertical-align:top;}
+</style>
+<link rel="stylesheet" type="text/css" href="css/lightwindow.css" />
+<script type="text/javascript" src="javascript/prototype.js"></script>
+<script type="text/javascript" src="javascript/effects.js"></script>
+<script type="text/javascript" src="javascript/lightwindow-br.js"></script>
+</head>
+
+<body topmargin="0" leftmargin="0" text="#000000" vlink="#ff00ff" bgcolor="#ffffff" link="#0000ff" >
+<script type="text/javascript" src="wz_tooltip.js"></script>
+<center>
+<table width="780" align="center" border="0" cellpadding="0" cellspacing="0" height="63">
+  <tbody><tr>
+    <td valign="top" width="770">
+      <table width="780" border="0" cellpadding="0" cellspacing="0">
+     <tbody><tr>
+         <td><img src="banner_top_ppr_br.gif" width="780" border="0" height="63"></td>
+     </tr>
+     </tbody>
+     </table>
+    </td>
+  </tr>
+</tbody>
+</table>
+<br />
+<table width="500" border="0">
+<tr>
+<td align="left">
+<img width="24" height="24" src='bt_e1w.jpg'/>
+</td>
+<td align="center">
+<img width="24" height="24" src='bt_i1w.jpg' onmouseover="Tip('Clique aqui para acessar a página principal!', FIX, [this, -110, -5], ABOVE, true)" onmouseout="UnTip()" onclick="window.location.href = 'ppr-br.html#mt'" />
+</td>
+<td align="right">
+<img width="24" height="24" src='bt_e1w.jpg'/>
+</td>
+</tr>
+</table>
+<br />
+<center>
+<table border="0" cellpadding="3" cellspacing="0" width="706">
+<tbody><tr bgcolor="#e0e0e0">
+<td align="center">
+<b>PARTE 3</b>
+</td>
+</tr>
+</tbody></table>
+</center>
+
+<br />
+
+<table width="700" border="0" cellpadding="10">
+<tr valign="top">
+<td =align="center">
+<p align="center" style="margin-top: 0; margin-bottom: 0;">
+<b>PAVIMENTAÇÃO DO PLANO COM POLÍGONOS REGULARES DE TIPOS DIFERENTES</b>
+</p>
+</td>
+</tr>
+</table>
+<br />
+<table width="700" border="0">
+<tr valign="top">
+<td align="center">
+<p align="justify" style="margin-top: 0;margin-bottom:0">
+O objetivo deste módulo é determinar, de maneira sistemática, todas as pavimentações lado-lado do plano que usam
+tipos diferentes de polígonos regulares e que possuem a seguinte propriedade
+adicional: a distribuição de polígonos ao redor de cada vértice é a mesma.
+Pavimentações com estas características são denominadas arquimedianas.
+A pavimentação parcial (a) na figura abaixo não é arquimediana, pois em torno do vértice A temos
+a ordem triângulo, triângulo, hexágono e hexágono, enquanto que em torno do vértice B
+a ordem é hexágono, triângulo, hexágono e triângulo. A pavimentação parcial (b) é arquimediana.
+</p>
+<p align="center" style="margin-top: 0;magin-bottom:0">
+           <table>
+           <tr>
+           <td align="center">
+           <img width="231" height="156" src="fig-tile-15-p.jpg" />
+           </td>
+           <td align="center">
+           &nbsp;&nbsp;&nbsp;&nbsp;
+           </td>
+           <td align="center">
+           <img width="231" height="155" src="fig-tile-16-p.jpg" />
+           </td>
+           </tr>
+           <tr>
+           <td align="center">
+           (a)
+           </td>
+           <td align="center">
+           &nbsp;&nbsp;&nbsp;&nbsp;
+           </td>
+           <td align="center">
+           (b)
+           </td>
+           </tr>
+           </table>
+</p>
+<p align="justify">
+<a href="ppr-it-st-br.html">Clique aqui para ver uma animação ensinando como usar o programa!</a>
+Para reiniciar a construção, clique no ícone <img width="10" height="11" src="reset.gif" />.
+</p>
+</td>
+</tr>
+</table>
+<br />
+<p align="center" style="margin-top: 0; margin-bottom: 0;" >
+<applet name="lspApplet" id="lspApplet" code="geogebra.GeoGebraApplet" codebase="." archive="geogebra.jar" width="700" height="452" MAYSCRIPT>
+	<param name="filename" value="ppr-st-br.ggb">
+    <param name="language" value="pt">
+	<param name="framePossible" value="false">
+	<param name="enableRightClick" value="false">
+	<param name="enableShiftDragZoom" value="false">
+	<param name="showToolBar" value="true">
+	<param name="showToolBarHelp" value="false">
+    <param name="customToolBar" value="0 | 6 | 1001 1002 1003 1004 1005 1006 1007 1008 1009 1010 1011 1012 | 1014 1013 1015 1016 1017 1018 1019 1020 1021 1022 1023 1024 | 1028 1025 1026 1027 1029 1030 1031 1032 1033 1034 1035 1036 | 1039 1037 1038 1040 1041 1042 1043 1044 1045 1046 1047 1048 | 1049 1050 1051 1052 1053 1054 1055 1056 1057 1058 1059 1060 | 1062 1061 1063 1064 1065 1066 1067 1068 1069 1070 1071 1072 | 1076 1073 1074 1075 1077 1078 1079 1080 1081 1082 1083 1084 | 1087 1085 1086 1088 1089 1090 1091 1092 1093 1094 1095 1096 | 1097 1098 1099 1100 1101 1102 1103 1104 1105 1106 1107 1108 | 1110 1109 1111 1112 1113 1114 1115 1116 1117 1118 1119 1120 | 1124 1121 1122 1123 1125 1126 1127 1128 1129 1130 1131 1132 | 1135 1133 1134 1136 1137 1138 1139 1140 1141 1142 1143 1144 | 1145 1146 1147 1148 1149 1150 1151 1152 1153 1154 1155 1156  "  >
+    <param name="showReseticon" value="true" >
+	Seu navegador não está com a linguagem JAVA instalada ou habilitada!
+	<br>
+	<br>
+	Por favor, verifique se o seu navegador não está bloqueando o acesso ao applet. Para instalar a linguagem JAVA em seu computador, acesse o endereço <a href="http://www.java.com/pt_BR/" target="_new">http://www.java.com/pt_BR/</a>.
+</applet>
+</p>
+
+<br />
+<br />
+<br />
+
+<a name="exercises"></a>
+<table border="0" cellpadding="3" cellspacing="0" width="700">
+<tbody>
+<tr bgcolor="#e3e3e3">
+<td fgcolor"#ffffff" align="center">
+<b>
+EXERCÍCIOS
+<br />
+</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<table border="0" cellpadding="10" cellspacing="0" width="700" align="center">
+     <tr valign="top">
+     <td align="center">
+	 <p align="justify">
+     Os exercícios enunciados abaixo
+     também estão disponíveis no formulário de acompanhamento do aluno:
+     <a href="ppr-aluno.rtf">ppr-aluno.rtf</a>.
+     O objetivo é determinar, de maneira sistemática, todas as pavimentações lado-lado arquimedianas do plano.
+     </p>
+     </td>
+	 </tr>
+     <tr valign="top">
+     <td bgcolor="#E3E3E3">
+     <table width="97%">
+
+     <tr valign="top">
+     <td>
+     [01]
+     </td>
+     <td>
+     <p align="justify" style="margin-top: 0; margin-bottom:0">
+     Seja k o número de polígonos incidindo em cada nó
+     da pavimentação. Mostre que <nobr>3 &le; k &le; 6.</nobr>
+     Dica: o ângulo interno de qualquer polígono regular é maior do que
+     ou igual a 60&deg;.
+     </p>
+     </td>
+     </tr>
+
+     <tr valign="top">
+     <td>
+     [02]
+     </td>
+     <td>
+     <p align="justify" style="margin-top: 0; margin-bottom:0">
+     <b>(Caso k = 3: três polígonos regulares incidindo em cada vértice)</b>
+     Sejam <nobr>n<span class="subscript">1</span></nobr>,
+     <nobr>n<span class="subscript">2</span></nobr> e
+     <nobr>n<span class="subscript">3</span></nobr> o número de lados de cada um dos três
+     polígonos regulares incidindo em um vértice da pavimentação.
+     Podemos supor, sem perda de generalidade, que
+     <nobr>n<span class="subscript">1</span></nobr> &le;
+     <nobr>n<span class="subscript">2</span></nobr> &le;
+     <nobr>n<span class="subscript">3</span>.</nobr>
+     </p>
+
+     <p align="center" style="margin-top: 0; margin-bottom:0">
+         <table width="100%">
+
+         <tr valign="top">
+         <td>
+         (a)
+         </td>
+         <td>
+         <p align="justify" style="margin-top: 0; margin-bottom:0">
+         Verifique que
+         <nobr>1/n<span class="subscript">1</span></nobr> +
+         <nobr>1/n<span class="subscript">2</span></nobr> +
+         <nobr>1/n<span class="subscript">3</span></nobr> = <nobr>1/2.</nobr>
+         Em particular, segue-se que
+         <nobr>1/n<span class="subscript">2</span></nobr> +
+         <nobr>1/n<span class="subscript">3</span></nobr> =
+         <nobr>(n<span class="subscript">1</span> &minus; 2)/(2 n<span class="subscript">1</span>).</nobr>
+         </p>
+         </td>
+         </tr>
+
+         <tr valign="top">
+         <td>
+         (b)
+         </td>
+         <td>
+         <p align="justify" style="margin-top: 0; margin-bottom:0">
+         Verifique
+         que
+         3 &le;
+         <nobr>n<span class="subscript">1</span></nobr> &le;
+         6.
+         </p>
+         </td>
+         </tr>
+
+         <tr valign="top">
+         <td>
+         (c)
+         </td>
+         <td>
+         <p align="justify" style="margin-top: 0; margin-bottom:0">
+         Verifique
+         que
+         <nobr>1/n<span class="subscript">2</span></nobr> +
+         <nobr>1/n<span class="subscript">2</span></nobr> &ge;
+         <nobr>(n<span class="subscript">1</span> &minus; 2)/(2 n<span class="subscript">1</span>).</nobr>
+         Em particular, conclua que
+         <nobr>n<span class="subscript">2</span></nobr> &le;
+         <nobr>4n<span class="subscript">1</span>/(n<span class="subscript">1</span> &minus; 2).</nobr>
+         </p>
+         </td>
+         </tr>
+
+         <tr valign="top">
+         <td>
+         (d)
+         </td>
+         <td>
+         <p align="justify" style="margin-top: 0; margin-bottom:0">
+         <b>(Subcaso <nobr>n<span class="subscript">1</span> = 3</nobr>)</b>
+         De (a) segue-se que
+         <nobr>1/n<span class="subscript">2</span></nobr> +
+         <nobr>1/n<span class="subscript">3</span></nobr> =
+         <nobr>1/6</nobr>, ou ainda, que
+         <nobr>1/n<span class="subscript">3</span></nobr> =
+         <nobr>(n<span class="subscript">2</span> &minus; 6)/(6 n<span class="subscript">2</span>).</nobr>
+         Como <nobr>n<span class="subscript">3</span></nobr> &gt; 0, segue-se que
+         <nobr>n<span class="subscript">2</span></nobr> &gt; 6. De (c), segue-se que
+         <nobr>n<span class="subscript">2</span></nobr> &le; 12. Logo,
+         7 &le;
+         <nobr>n<span class="subscript">2</span></nobr> &le; 12. Temos então as seguintes
+         possibilidades para este subcaso:
+         </p>
+         <p align="center">
+         <nobr>(<nobr>n<span class="subscript">1</span></nobr>, <nobr>n<span class="subscript">2</span></nobr>, <nobr>n<span class="subscript">3</span></nobr>) = <nobr>(3, 7, 42),</nobr></nobr> &nbsp;&nbsp;&nbsp;
+         <nobr>(<nobr>n<span class="subscript">1</span></nobr>, <nobr>n<span class="subscript">2</span></nobr>, <nobr>n<span class="subscript">3</span></nobr>) = <nobr>(3, 8, 24),</nobr></nobr> &nbsp;&nbsp;&nbsp;
+         <nobr>(<nobr>n<span class="subscript">1</span></nobr>, <nobr>n<span class="subscript">2</span></nobr>, <nobr>n<span class="subscript">3</span></nobr>) = <nobr>(3, 9, 18),</nobr></nobr><br />
+         <nobr>(<nobr>n<span class="subscript">1</span></nobr>, <nobr>n<span class="subscript">2</span></nobr>, <nobr>n<span class="subscript">3</span></nobr>) = <nobr>(3, 10, 15),</nobr></nobr> &nbsp;&nbsp;&nbsp;
+         <nobr>(<nobr>n<span class="subscript">1</span></nobr>, <nobr>n<span class="subscript">2</span></nobr>, <nobr>n<span class="subscript">3</span></nobr>) = <nobr>(3, 12, 12).</nobr></nobr>
+         </p>
+         <p align="justify" style="margin-bottom:0">
+         A configuração (<nobr>n<span class="subscript">1</span></nobr>, <nobr>n<span class="subscript">2</span></nobr>, <nobr>n<span class="subscript">3</span></nobr>) = (3, 7, 42)
+         não é válida. Para ver isto, usaremos o argumento das &#8220;pétalas&#8221;: na figura abaixo,
+         suponha que a ordem dos polígonos em torno do vértice C seja 3 (triângulo equilátero), <nobr>a = 7</nobr> e <nobr>b = 42.</nobr>
+         Então, a ordem dos polígonos em torno do vértice A deve ser, obrigatoriamente, 3 (triângulo equilátero), <nobr>b = 42</nobr>
+         e <nobr>c = 7.</nobr> Por outro lado, se considerarmos os polígonos em torno do vértice B, veremos
+         que <nobr>a = 7</nobr> e <nobr>c = 42</nobr>, uma contradição. De fato, este raciocínio mostra que
+         a = b = c. Por este motivo, as configurações <nobr>(3, 8, 24)</nobr>, <nobr>(3, 9, 18)</nobr>,
+         e <nobr>(3, 10, 15)</nobr> também não são válidas. Logo, para este caso, apenas a configuração <nobr>(3, 12, 12)</nobr> sobrou.
+         </p>
+         <p align="center" style="margin-top: 0; margin-bottom:0">
+         <img width="220" height="190" src="fig-tile-17-p.gif" />
+         </p>
+         </td>
+         </tr>
+
+
+         <tr valign="top">
+         <td>
+         (e)
+         </td>
+         <td>
+         <p align="justify" style="margin-top: 0; margin-bottom:0">
+         <b>(Subcaso <nobr>n<span class="subscript">1</span> = 4</nobr>)</b>
+         Verifique que, neste subcaso,
+         5 &le; <nobr>n<span class="subscript">2</span></nobr> &le; 8 e, como
+         <nobr>n<span class="subscript">3</span></nobr> deve ser um número inteiro,
+         os únicos candidatos são
+         </p>
+         <p align="center">
+         <nobr>(<nobr>n<span class="subscript">1</span></nobr>, <nobr>n<span class="subscript">2</span></nobr>, <nobr>n<span class="subscript">3</span></nobr>) = <nobr>(4, 5, 20),</nobr></nobr> &nbsp;&nbsp;&nbsp;
+         <nobr>(<nobr>n<span class="subscript">1</span></nobr>, <nobr>n<span class="subscript">2</span></nobr>, <nobr>n<span class="subscript">3</span></nobr>) = <nobr>(4, 6, 12),</nobr></nobr> &nbsp;&nbsp;&nbsp;
+         <nobr>(<nobr>n<span class="subscript">1</span></nobr>, <nobr>n<span class="subscript">2</span></nobr>, <nobr>n<span class="subscript">3</span></nobr>) = <nobr>(4, 8, 8).</nobr></nobr>
+         </p>
+         <p align="justify">
+         O argumento das &#8220;pétalas&#8221; exclui o caso <nobr>(4, 5, 20).</nobr>
+         Sobram, portanto, as configurações <nobr>(4, 6, 12)</nobr> e <nobr>(4, 8, 8).</nobr>
+         </p>
+         </td>
+         </tr>
+
+         <tr valign="top">
+         <td>
+         (f)
+         </td>
+         <td>
+         <p align="justify" style="margin-top: 0; margin-bottom:0">
+         <b>(Subcaso <nobr>n<span class="subscript">1</span> = 5</nobr>)</b>
+         Verifique que, neste subcaso,
+         5 &le; <nobr>n<span class="subscript">2</span></nobr> &le; 6 e, como
+         <nobr>n<span class="subscript">3</span></nobr> deve ser um número inteiro,
+         a única configuração canditata é <nobr>(5, 5, 10).</nobr> Use o argumento
+         das <nobr>pétalas</nobr> para mostrar que esta configuração não é válida.
+         </p>
+         </td>
+         </tr>
+
+
+         <tr valign="top">
+         <td>
+         (g)
+         </td>
+         <td>
+         <p align="justify" style="margin-top: 0; margin-bottom:0">
+         <b>(Subcaso <nobr>n<span class="subscript">1</span> = 6</nobr>)</b>
+         Verifique que, neste subcaso,
+         <nobr>n<span class="subscript">2</span></nobr> = 6 e, portanto,
+         <nobr>n<span class="subscript">3</span></nobr> = 6.
+         A configuração  <nobr>(6, 6, 6)</nobr> usa apenas um tipo
+         de polígono regular e ela foi estudada na <a href="ppr-mt-br.html">Parte 2</a>.
+         </p>
+         </td>
+         </tr>
+         </table>
+     </p>
+     <p align="justify">
+     <b>Observação.</b> Para o caso k = 3 (três polígonos regulares incidindo em cada vértice),
+     uma vez fixada para todos os nós da pavimentação,
+     a ordem em que os polígonos são colocados é irrelevante. Por exemplo,
+     a escolha <nobr>(4, 6, 12)</nobr> gera a mesma pavimentação que
+     <nobr>(4, 12, 6).</nobr> Para os casos k &gt; 3, escolhas diferentes podem gerar
+     pavimentações diferentes.
+     </p>
+     </td>
+     </tr>
+
+
+     <tr valign="top">
+     <td>
+     [03]
+     </td>
+     <td>
+     <p align="justify" style="margin-top: 0; margin-bottom:0">
+     <b>(Caso k = 4: quatro polígonos regulares incidindo em cada vértice)</b>
+     Sejam <nobr>n<span class="subscript">1</span></nobr>,
+     <nobr>n<span class="subscript">2</span></nobr>,
+     <nobr>n<span class="subscript">3</span></nobr> e
+     <nobr>n<span class="subscript">4</span></nobr> o número de lados de cada um dos quatro
+     polígonos regulares incidindo em um vértice da pavimentação.
+     Podemos supor, sem perda de generalidade, que
+     <nobr>n<span class="subscript">1</span></nobr> &le;
+     <nobr>n<span class="subscript">2</span></nobr> &le;
+     <nobr>n<span class="subscript">3</span></nobr> &le;
+     <nobr>n<span class="subscript">4</span>.</nobr>
+     </p>
+     <p align="center" style="margin-top: 0; margin-bottom:0">
+         <table width="100%">
+
+         <tr valign="top">
+         <td>
+         (a)
+         </td>
+         <td>
+         <p align="justify" style="margin-top: 0; margin-bottom:0">
+         Verifique que
+         <nobr>1/n<span class="subscript">1</span></nobr> +
+         <nobr>1/n<span class="subscript">2</span></nobr> +
+         <nobr>1/n<span class="subscript">3</span></nobr> +
+         <nobr>1/n<span class="subscript">4</span></nobr> = <nobr>1.</nobr>
+         Em particular, segue-se que
+         <nobr>1/n<span class="subscript">2</span></nobr> +
+         <nobr>1/n<span class="subscript">3</span></nobr> +
+         <nobr>1/n<span class="subscript">4</span></nobr> =
+         <nobr>(n<span class="subscript">1</span> &minus; 1)/n<span class="subscript">1</span>.</nobr>
+         </p>
+         </td>
+         </tr>
+
+         <tr valign="top">
+         <td>
+         (b)
+         </td>
+         <td>
+         <p align="justify" style="margin-top: 0; margin-bottom:0">
+         Verifique
+         que
+         3 &le;
+         <nobr>n<span class="subscript">1</span></nobr> &le;
+         4.
+         </p>
+         </td>
+         </tr>
+
+
+         <tr valign="top">
+         <td>
+         (c)
+         </td>
+         <td>
+         <p align="justify" style="margin-top: 0; margin-bottom:0">
+         Verifique
+         que
+         <nobr>1/n<span class="subscript">2</span></nobr> +
+         <nobr>1/n<span class="subscript">2</span></nobr> +
+         <nobr>1/n<span class="subscript">2</span></nobr> &ge;
+         <nobr>(n<span class="subscript">1</span> &minus; 1)/n<span class="subscript">1</span>.</nobr>
+         Em particular, conclua que
+         <nobr>n<span class="subscript">2</span></nobr> &le;
+         <nobr>3 n<span class="subscript">1</span>/(n<span class="subscript">1</span> &minus; 1).</nobr>
+         Portanto, se <nobr>n<span class="subscript">1</span></nobr> = 3, então
+         <nobr>n<span class="subscript">2</span></nobr> &le; 4 mas, como
+         <nobr>n<span class="subscript">2</span></nobr> &ge; <nobr>n<span class="subscript">1</span></nobr>,
+         segue-se que <nobr>n<span class="subscript">2</span></nobr> = 3 ou
+         <nobr>n<span class="subscript">2</span></nobr> = 4.
+         Também, se <nobr>n<span class="subscript">1</span></nobr> = 4, então
+         <nobr>n<span class="subscript">2</span></nobr> &le; 4 mas, como
+         <nobr>n<span class="subscript">2</span></nobr> &ge; <nobr>n<span class="subscript">1</span></nobr>,
+         segue-se que <nobr>n<span class="subscript">2</span></nobr> = 4.
+         </p>
+         </td>
+         </tr>
+
+         <tr valign="top">
+         <td>
+         (d)
+         </td>
+         <td>
+         <p align="justify" style="margin-top: 0; margin-bottom:0">
+         <b>(Subcaso <nobr>n<span class="subscript">1</span> = 3</nobr> e
+         <nobr>n<span class="subscript">2</span> = 3</nobr>)</b>
+         Use o item (a) para mostrar que <nobr>n<span class="subscript">3</span></nobr> &ge; 4.
+         Lembrando que
+         <nobr>n<span class="subscript">3</span></nobr> &le; <nobr>n<span class="subscript">4</span></nobr>,
+         use (a) para mostrar que <nobr>n<span class="subscript">3</span></nobr> &le; 6.
+         Assim, 4 &le; <nobr>n<span class="subscript">3</span></nobr> &le; 6. Usando mais uma vez o item (a)
+         e lembrando que <nobr>n<span class="subscript">4</span></nobr> é um número inteiro,
+         temos então as seguintes possibilidades para este subcaso:
+         </p>
+         <p align="center">
+          <nobr>(3, 3, 4, 12)</nobr>&nbsp;&nbsp;&nbsp; e &nbsp;&nbsp;&nbsp;
+          <nobr>(3, 3, 6, 6).</nobr>
+         </p>
+         <p align="justify">
+         Também precisamos considerar as seguintes permutações na ordem em que os
+         polígonos são colocados em torno de cada nó da pavimentação:
+         </p>
+         <p align="center">
+          <nobr>(3, 4, 3, 12)</nobr>&nbsp;&nbsp;&nbsp; e &nbsp;&nbsp;&nbsp;
+          <nobr>(3, 6, 3, 6).</nobr>
+         </p>
+         <p align="justify">
+         As configurações <nobr>(3, 3, 4, 12)</nobr> e
+         <nobr>(3, 3, 6, 6)</nobr> não são válidas:
+         use o software desta atividade
+         para verificar que estas configurações implicam na existência de outro
+         vértice do tipo <nobr>(3, 3, 3, ..., ...)</nobr>, o que viola
+         a condição de que a distribuição de polígonos ao redor de cada vértice é a mesma.
+         A configuração <nobr>(3, 4, 3, 12)</nobr> também não é válida:
+         use o software desta atividade para verificar que a existência de um
+         nó <nobr>(3, 4, 3, 12)</nobr> implica na existência de um nó <nobr>(3, 12, 12),</nobr>
+         o que viola
+         a condição de que a distribuição de polígonos ao redor de cada vértice é a mesma.
+         Sobra, portanto, a configuração <nobr>(3, 6, 3, 6).</nobr>
+         </p>
+         </td>
+         </tr>
+
+
+         <tr valign="top">
+         <td>
+         (e)
+         </td>
+         <td>
+         <p align="justify" style="margin-top: 0; margin-bottom:0">
+         <b>(Subcaso <nobr>n<span class="subscript">1</span> = 3</nobr> e
+         <nobr>n<span class="subscript">2</span> = 4</nobr>)</b>
+         Use o item (a) para mostrar que <nobr>n<span class="subscript">3</span></nobr> &ge; 3.
+         Entretanto, como <nobr>n<span class="subscript">3</span></nobr> &ge; <nobr>n<span class="subscript">2</span></nobr>,
+         segue-se que <nobr>n<span class="subscript">3</span></nobr> &ge; 4.
+         Lembrando que
+         <nobr>n<span class="subscript">3</span></nobr> &le; <nobr>n<span class="subscript">4</span></nobr>,
+         use (a) para mostrar que <nobr>n<span class="subscript">3</span></nobr> &le; 4.
+         Assim, <nobr>n<span class="subscript">3</span></nobr> = 4. Usando mais uma vez o item (a),
+         temos então a seguinte possibilidade para este subcaso:
+         </p>
+         <p align="center">
+          <nobr>(3, 4, 4, 6).</nobr>
+         </p>
+         <p align="justify">
+         Também precisamos considerar a seguinte permutação na ordem em que os
+         polígonos são colocados em torno de cada nó da pavimentação:
+         </p>
+         <p align="center">
+          <nobr>(3, 4, 6, 4).</nobr>
+         </p>
+         <p align="justify">
+         A configuração <nobr>(3, 4, 4, 6)</nobr> não é válida: use o software desta atividade
+         para verificar que a existência de um vértice <nobr>(3, 4, 4 6)</nobr>
+         implica na existência de um vértice do tipo <nobr>(3, 4, 6, 4)</nobr>, o que viola
+         a condição de que a distribuição de polígonos ao redor de cada vértice é a mesma.
+         Sobra, portanto, a configuração <nobr>(3, 4, 6, 4).</nobr>
+         </p>
+         </td>
+         </tr>
+
+
+         <tr valign="top">
+         <td>
+         (f)
+         </td>
+         <td>
+         <p align="justify" style="margin-top: 0; margin-bottom:0">
+         <b>(Subcaso <nobr>n<span class="subscript">1</span> = 4</nobr> e
+         <nobr>n<span class="subscript">2</span> = 4</nobr>)</b>
+         Lembrando que
+         <nobr>n<span class="subscript">3</span></nobr> &le; <nobr>n<span class="subscript">4</span></nobr>,
+         use (a) para mostrar que <nobr>n<span class="subscript">3</span></nobr> &le; 4.
+         Como   <nobr>n<span class="subscript">3</span></nobr> &ge; <nobr>n<span class="subscript">2</span></nobr> = 4,
+         segue-se que <nobr>n<span class="subscript">3</span></nobr> = 4. Logo, por (a),
+         <nobr>n<span class="subscript">4</span></nobr> = 4. A configuração <nobr>(4, 4, 4, 4)</nobr>
+         usa apenas um tipo
+         de polígono regular e ela foi estudada na <a href="ppr-mt-br.html">Parte 2</a>.
+         </p>
+
+         </td>
+         </tr>
+         </table>
+     </p>
+     </td>
+     </tr>
+
+
+     <tr valign="top">
+     <td>
+     [04]
+     </td>
+     <td>
+     <p align="justify" style="margin-top: 0; margin-bottom:0">
+     <b>(Caso k = 5: cinco polígonos regulares incidindo em cada vértice)</b>
+     Sejam <nobr>n<span class="subscript">1</span></nobr>,
+     <nobr>n<span class="subscript">2</span></nobr>,
+     <nobr>n<span class="subscript">3</span></nobr>,
+     <nobr>n<span class="subscript">4</span></nobr> e
+     <nobr>n<span class="subscript">5</span></nobr> o número de lados de cada um dos cinco
+     polígonos regulares incidindo em um vértice da pavimentação.
+     Podemos supor, sem perda de generalidade, que
+     <nobr>n<span class="subscript">1</span></nobr> &le;
+     <nobr>n<span class="subscript">2</span></nobr> &le;
+     <nobr>n<span class="subscript">3</span></nobr> &le;
+     <nobr>n<span class="subscript">4</span></nobr> &le;
+     <nobr>n<span class="subscript">5</span>.</nobr>
+     </p>
+     <p align="center" style="margin-top: 0; margin-bottom:0">
+         <table width="100%">
+
+         <tr valign="top">
+         <td>
+         (a)
+         </td>
+         <td>
+         <p align="justify" style="margin-top: 0; margin-bottom:0">
+         Verifique que
+         <nobr>1/n<span class="subscript">1</span></nobr> +
+         <nobr>1/n<span class="subscript">2</span></nobr> +
+         <nobr>1/n<span class="subscript">3</span></nobr> +
+         <nobr>1/n<span class="subscript">4</span></nobr> +
+         <nobr>1/n<span class="subscript">5</span></nobr> = <nobr>3/2.</nobr>
+         Em particular, segue-se que
+         <nobr>1/n<span class="subscript">2</span></nobr> +
+         <nobr>1/n<span class="subscript">3</span></nobr> +
+         <nobr>1/n<span class="subscript">4</span></nobr> +
+         <nobr>1/n<span class="subscript">5</span></nobr> =
+         <nobr>(3 n<span class="subscript">1</span> &minus; 2)/(2 n<span class="subscript">1</span>).</nobr>
+         </p>
+         </td>
+         </tr>
+
+         <tr valign="top">
+         <td>
+         (b)
+         </td>
+         <td>
+         <p align="justify" style="margin-top: 0; margin-bottom:0">
+         Verifique
+         que
+         <nobr>n<span class="subscript">1</span></nobr> = 3.
+         </p>
+         </td>
+         </tr>
+
+
+         <tr valign="top">
+         <td>
+         (c)
+         </td>
+         <td>
+         <p align="justify" style="margin-top: 0; margin-bottom:0">
+         Verifique
+         que
+         <nobr>1/n<span class="subscript">2</span></nobr> +
+         <nobr>1/n<span class="subscript">2</span></nobr> +
+         <nobr>1/n<span class="subscript">2</span></nobr> +
+         <nobr>1/n<span class="subscript">2</span></nobr> &ge;
+         <nobr>(3 n<span class="subscript">1</span> &minus; 2)/(2 n<span class="subscript">1</span>).</nobr>
+         Em particular, conclua que
+         <nobr>n<span class="subscript">2</span></nobr> &le;
+         <nobr>8 n<span class="subscript">1</span>/(3 n<span class="subscript">1</span> &minus; 2)</nobr> = <nobr>24/7.</nobr>
+         Como <nobr>n<span class="subscript">2</span></nobr> &ge; <nobr>n<span class="subscript">1</span></nobr> = 3, segue-se que
+         <nobr>n<span class="subscript">2</span></nobr> = 3.
+         </p>
+         </td>
+         </tr>
+
+         <tr valign="top">
+         <td>
+         (d)
+         </td>
+         <td>
+         <p align="justify" style="margin-top: 0; margin-bottom:0">
+         Verifique
+         que
+         <nobr>1/n<span class="subscript">3</span></nobr> +
+         <nobr>1/n<span class="subscript">4</span></nobr> +
+         <nobr>1/n<span class="subscript">5</span></nobr> = <nobr>5/6.</nobr>
+         Conclua que
+         <nobr>1/n<span class="subscript">3</span></nobr> +
+         <nobr>1/n<span class="subscript">3</span></nobr> +
+         <nobr>1/n<span class="subscript">3</span></nobr> &ge; <nobr>5/6.</nobr>
+         Logo, <nobr>n<span class="subscript">3</span></nobr> &le; <nobr>18/5.</nobr>
+         Como <nobr>n<span class="subscript">3</span></nobr> &ge; <nobr>n<span class="subscript">2</span></nobr> = 3, segue-se que
+         <nobr>n<span class="subscript">3</span></nobr> = 3.
+         </p>
+         </td>
+         </tr>
+
+         <tr valign="top">
+         <td>
+         (e)
+         </td>
+         <td>
+         <p align="justify" style="margin-top: 0; margin-bottom:0">
+         Verifique
+         que
+         <nobr>1/n<span class="subscript">4</span></nobr> +
+         <nobr>1/n<span class="subscript">5</span></nobr> = <nobr>1/2.</nobr>
+         Conclua que
+         <nobr>1/n<span class="subscript">4</span></nobr> +
+         <nobr>1/n<span class="subscript">4</span></nobr> &ge; <nobr>1/2.</nobr>
+         Logo, <nobr>n<span class="subscript">4</span></nobr> &le; <nobr>4.</nobr>
+         Como <nobr>n<span class="subscript">4</span></nobr> &ge; <nobr>n<span class="subscript">3</span></nobr> = 3, segue-se que
+         <nobr>n<span class="subscript">4</span></nobr> = 3 ou
+         <nobr>n<span class="subscript">4</span></nobr> = 4.
+         Se <nobr>n<span class="subscript">4</span></nobr> = 3, então
+         <nobr>n<span class="subscript">5</span></nobr> = 6 e,
+         se <nobr>n<span class="subscript">4</span></nobr> = 4, então
+         <nobr>n<span class="subscript">4</span></nobr> = 4.
+         Temos então as seguintes possibilidades para o caso k = 5:
+         </p>
+         <p align="center">
+          <nobr>(3, 3, 3, 3, 6)</nobr>&nbsp;&nbsp;&nbsp; e &nbsp;&nbsp;&nbsp;&nbsp;
+          <nobr>(3, 3, 3, 4, 4).</nobr>
+         </p>
+         <p align="justify">
+         Também precisamos considerar a seguinte permutação na ordem em que os
+         polígonos são colocados em torno de cada nó da pavimentação:
+         </p>
+         <p align="center">
+          <nobr>(3, 3, 4, 3, 4).</nobr>
+         </p>
+         <p align="justify">
+         Todas estas configurações são válidas.
+         </p>
+         </td>
+         </tr>
+         </table>
+     </p>
+     </td>
+     </tr>
+
+
+     <tr valign="top">
+     <td>
+     [05]
+     </td>
+     <td>
+     <p align="justify" style="margin-top: 0; margin-bottom:0">
+     <b>(Caso k = 6: seis polígonos regulares incidindo em cada vértice)</b>
+     Sejam <nobr>n<span class="subscript">1</span></nobr>,
+     <nobr>n<span class="subscript">2</span></nobr>,
+     <nobr>n<span class="subscript">3</span></nobr>,
+     <nobr>n<span class="subscript">4</span></nobr>,
+     <nobr>n<span class="subscript">5</span></nobr> e
+     <nobr>n<span class="subscript">6</span></nobr> o número de lados de cada um dos cinco
+     polígonos regulares incidindo em um vértice da pavimentação.
+     Verifique que
+     <nobr>1/n<span class="subscript">1</span></nobr> +
+     <nobr>1/n<span class="subscript">2</span></nobr> +
+     <nobr>1/n<span class="subscript">3</span></nobr> +
+     <nobr>1/n<span class="subscript">4</span></nobr> +
+     <nobr>1/n<span class="subscript">5</span></nobr> +
+     <nobr>1/n<span class="subscript">6</span></nobr> = <nobr>2.</nobr>
+     Conclua que
+     <nobr>n<span class="subscript">1</span></nobr> =
+     <nobr>n<span class="subscript">2</span></nobr> =
+     <nobr>n<span class="subscript">3</span></nobr> =
+     <nobr>n<span class="subscript">4</span></nobr> =
+     <nobr>n<span class="subscript">5</span></nobr> =
+     <nobr>n<span class="subscript">6</span></nobr> = 3.
+     A configuração <nobr>(3, 3, 3, 3, 3, 3)</nobr> usa apenas um tipo de polígono regular e ela foi estudada na
+     <a href="ppr-mt-br.html">Parte 2</a>.
+     </p>
+     </td>
+     </tr>
+     </table>
+     </td>
+     </tr>
+     <tr valign="top">
+     <td align="center">
+	 <p align="justify">
+     Moral: existem 8 pavimentações arquimedianas. São elas:
+     <nobr>(3, 12, 12),</nobr>
+     <nobr>(4, 6, 12),</nobr>
+     <nobr>(4, 8, 8),</nobr>
+     <nobr>(3, 6, 3, 6),</nobr>
+     <nobr>(3, 4, 6, 4),</nobr>
+     <nobr>(3, 3, 3, 3, 6),</nobr>
+     <nobr>(3, 3, 3, 4, 4)</nobr> e
+     <nobr>(3, 3, 4, 3, 4).</nobr>
+     </p>
+     </td>
+	 </tr>
+
+</table>
+
+
+
+</center>
+
+
+
+<table width="770" align="center" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+     <td>
+     <table width="770" border="0" cellpadding="0" cellspacing="0">
+     <tbody><tr>
+     <td><div align="right"><img name="banner_final" src="banner_final.gif" border="0" width="390" height="33"></div></td><td><div align="left"><div align="right"><img name="banner_final" src="banner_final.gif" border="0" width="390" height="33"></div></div></td>
+     </tr>
+     </tbody></table>
+     </td>
+  </tr>
+</tbody></table>
+
+<br>
+<center>
+<font size="3">
+Dúvidas? Sugestões? Nós damos suporte! Contacte-nos pelo e-mail:
+<br>
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;">&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;</a>.
+</font>
+</center>
+</body>
+</html>

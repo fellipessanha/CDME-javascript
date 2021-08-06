@@ -1,0 +1,616 @@
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<meta charset="UTF-8">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>Um Problema Geométrico</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+a.mainmenu:link { color : #FFFFFF;  background : transparent; text-decoration : none;}
+a.mainmenu:visited {color : #FFFFFF; background : transparent; text-decoration : none;}
+a.mainmenu:hover {color : #FFFF00; background : transparent; text-decoration : none;}
+span.next:hover {cursor:hand}body {text-align: center; min-width: 800px;}
+/* #menu {position: absolute; left: 50%; width: 800px; margin-left: -210px;} */
+#menu {position: absolute; left: 50%; width: 800px; margin-left: -185px;}
+div.jqDockLabel {border:0px none; padding:0px 4px; font-size:14px; white-space:nowrap; color:#0000FF; background-color:transparent; font-weight: bold;}
+td.id { font-size: xx-small;}
+body, td { font-size: 16px; font-family: "Times New Roman"; }
+.subscript {font-size:xx-small; vertical-align:bottom;}
+.supscript {font-size:xx-small; vertical-align:top;}
+</style>
+<script type='text/javascript' src='jquery-1.2.4.min.js'></script>
+<script type='text/javascript' src='jquery.jqDock.js'></script>
+<script type='text/javascript'>
+var options =
+{ align: 'middle'
+, size: 48
+, labels: true
+};
+jQuery(document).ready(function()
+{
+  jQuery('#menu').jqDock(options);
+});
+</script>
+<script type="text/javascript" src="fc.js"></script>
+</head>
+
+<body bgcolor="#ffffff" leftmargin="0" topmargin="0" onload="initialize();">
+<script type="text/javascript" src="wz_tooltip.js"></script>
+<center>
+<table border="0" cellpadding="0" cellspacing="0" width="770" align="center" height="63">
+  <tr>
+    <td width="770" valign="top">
+      <table border="0" cellpadding="0" cellspacing="0" width="770">
+     <tr>
+         <td><img border="0" src="banner_top_pge_br.gif" width="770" height="63"/></td>
+     </tr>
+   </table>
+    </td>
+  </tr>
+</table>
+<br>
+<br>
+<div style='text-align: left;' id='menu'>
+  <a href="avaliacao.html">
+  <img src='avaliacao.jpg' alt='avaliacao.jpg' title='Avalie-nos!'/>
+  </a>
+  <img src='pge-fill.jpg' alt='pge-fill.jpg' title=''/>
+  <a href="pge-aluno.rtf" target="_new">
+  <img src='formulario.jpg' alt='formulario.jpg' title='Formulário de Acompanhamento do Aluno!'/>
+  </a>
+  <img src='pge-fill.jpg' alt='pge-fill.jpg' title=''/>
+  <a href="guia-do-professor.html">
+  <img src='guia.jpg' alt='guia.jpg' title='Guia do Professor!'/>
+  </a>
+  <img src='pge-fill.jpg' alt='pge-fill.jpg' title=''/>
+  <a href="http://www.uff.br/cdme/pge/pge-offline.zip">
+  <img src='download-01.jpg' alt='download-01.jpg' title='Download para Uso Offline do Servidor 1!'/>
+  </a>
+  <img src='pge-fill.jpg' alt='pge-fill.jpg' title=''/>
+  <a href="http://www.cdme.im-uff.mat.br/pge/pge-offline.zip">
+  <img src='download-02.jpg' alt='download-02.jpg' title='Download para Uso Offline do Servidor 2!'/>
+  </a>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<center>
+<table border="0" cellpadding="3" cellspacing="0" width="702">
+<tr>
+<td width="33%" align="left">
+</td>
+<td width="33%" align="center">
+<a href="pge-02-br.html">[Clique aqui para ir para a Parte 2]</a>
+</td>
+<td width="33%" align="right">
+<a href="#instrucoes">[Instruções no final desta página!]</a>
+</td>
+</tr>
+</tbody>
+</table>
+<br />
+<table border="0" cellpadding="3" cellspacing="0" width="714" style="margin-bottom:20px;margin-top:8px;">
+<tbody>
+<tr bgcolor="#e0e0e0">
+<td align="center">
+<b>PARTE 1</b>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+
+
+<table width="710" border="0" bgcolor="#FFFFFF" cellpadding="1" cellspacing="0" style="margin-bottom:0px;">
+<tr valign="top">
+<td align="center" bgcolor="#FFFFFF">
+<p align="center" style="margin-top: 0px; margin-bottom: 10px;">
+<b>Enunciado do Problema</b>
+</p>
+<p align="justify" style="margin-top: 0px; margin-bottom: 0px;">
+Considere pontos A, B, C, H e M no plano.
+O ponto H pertence ao segmento de extremidades B e C, de modo
+que a distância entre B e H é igual a <nobr>2 m</nobr>
+e a distância entre H e C é igual a <nobr>3 m.</nobr>
+O segmento AH é perpendicular ao segmento BC e ele tem medida
+igual a <nobr>5 m.</nobr>
+O ponto M pertence ao segmento de extremidades A e H.
+Quanto deve ser x, a medida em metros da distância entre os pontos A e M,
+para que o comprimento total L de fios ligando M aos pontos A, B e C seja o menor possível?
+</p>
+</td>
+</tr>
+</table>
+
+<br />
+
+<table width="700" border="0" bgcolor="#FFFFFF" cellpadding="1" cellspacing="0" style="margin-bottom:0px;">
+<tr valign="top">
+<td rowspan="2" bgcolor="#FFFFFF">
+<script type="text/javascript">
+var paramslspApplet = {"id": "lspApplet", "allowStyleBar": false, "enableShiftDragZoom": false, "useBrowserForJS": false, "showMenuBar": false, "showAlgebraInput": false, "showResetIcon": false, "enableLabelDrags": false, "errorDialogsActive": true, "ggbBase64": "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", "width": 350, "height": 212, "framePossible": false, "enableRightClick": false, "showToolBar": false, "showToolBarHelp": false};
+paramslspApplet.appletOnLoad = function(api) {lspAppletOK = true};
+var lspApplet = new GGBApplet("5.0", paramslspApplet);
+window.addEventListener("load", function(){lspApplet.inject("lspApplet_container", "auto")});
+</script>
+<div id="lspApplet_container"></div>
+<div id="table">
+<table width="350" bgcolor="#000000" border="0" cellpadding="0" cellspacing="1" >
+<tr valign="top" bgcolor="#E0E0E0">
+<td align="center" width="50%" >
+<b>x</b>
+</td>
+<td align="center" width="50%">
+<b>L</b>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td align="center" bgcolor="#FFFFFF">
+<script type="text/javascript">
+var paramsrspApplet = {"id": "rspApplet", "allowStyleBar": false, "enableShiftDragZoom": false, "useBrowserForJS": false, "showMenuBar": false, "showAlgebraInput": false, "showResetIcon": false, "enableLabelDrags": false, "errorDialogsActive": true, "ggbBase64": "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", "width": 350, "height": 424, "framePossible": false, "enableRightClick": false, "showToolBar": false, "showToolBarHelp": false};
+paramsrspApplet.appletOnLoad = function(api) {rspAppletOK = true};
+var rspApplet = new GGBApplet("5.0", paramsrspApplet);
+window.addEventListener("load", function(){rspApplet.inject("rspApplet_container", "auto")});
+</script>
+<div id="rspApplet_container"></div>
+
+</td>
+</tr>
+</table>
+
+<table width="702" bgcolor="#000000" border="0" cellpadding="5" cellspacing="1" style="margin-bottom:10px;">
+<tr>
+<td bgcolor="#FFFFFF">
+<table width="100%">
+<tr>
+<td align="left" bgcolor="#FFFFFF">
+x = <input name="fldx" id="fldx" disabled="true" value="" type="text" style="text-align:left; width:200px; font-weight: bold; position:relative; top:0px; color: #781351;background: #fff8da; border: 1px solid #781351" />
+</td>
+<td width="30%" align="center" bgcolor="#FFFFFF">
+<input type="button" name="btnc" id="btnc" disabled="true" value="Calcular!" onclick='compute()' style="width:100px;" />
+</td>
+<td align="right" bgcolor="#FFFFFF">
+L = <input name="fldv" id="fldv" disabled="true" value="" type="text" style="text-align:right; width:200px; font-weight: bold; position:relative; top:0px; color: #781351;background: #ffffff; border: 1px solid #781351" />
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<center>
+<input type="button" name="btnr" id="btnr" disabled="true" value="Reiniciar!" onclick='reset();' style="width:100px;" />
+</center>
+
+<br />
+<br />
+
+
+<center>
+<a name="instrucoes"></a>
+<table border="0" cellpadding="3" cellspacing="0" width="710">
+<tbody>
+<tr bgcolor="#e0e0e0">
+<td align="center">
+<b>INSTRUÇÕES</b>
+</td>
+</tr>
+</tbody>
+</table>
+<br />
+<table width="710" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+<p align="justify" style="margin-top:0px; margin-bottom:0px" >
+<b>Importante:</b> o desenvolvimento desta atividade é feito através de vários
+exercícios que estão disponíveis no
+<a href="pge-aluno.rtf">formulário de acompanhamento do aluno</a>.
+<br />
+<br />
+A variável x representa a medida, em metros, do segmento AP.
+Para alterar o valor de x, digite o número desejado no campo &#8220;x =&#8221;.
+Neste campo, além de números decimais, você poderá usar números em outros formatos, tais como 1/2,
+sqrt(5) (raiz quadrada de 5), sen(8) (seno de 8), pi (o número irracional &pi;), etc.
+Multiplicações podem ser indicadas com um asterisco ou um espaço em branco
+(por exemplo, 2*pi ou 2&nbsp;pi para indicar o número <nobr>2&nbsp;&pi;</nobr>).
+Use parêntesis para agrupar termos (por exemplo, <nobr>3^(1/2)</nobr>
+para indicar a raiz quadrada de 3).
+<br />
+<br />
+Ao pressionar o botão &#8220;Calcular!&#8221;, o aplicativo fará o seguinte:
+(1) ele modificará o formato do desenho da configuração geométrica dos fios para este valor de x e
+(2) ele calculará o comprimento total L dos fios correspondente, marcando o par ordenado (x, L) no gráfico e
+acrescentando uma linha na tabela.
+<b>Importante: os valores de x e de L são arredondados para 7 casas decimais.</b>
+<br />
+<br />
+Caso você dê um clique em uma das linhas da tabela, o aplicativo redesenhará a configuração geométrica dos fios
+para o respectivo valor de x. Para reiniciar o programa, pressione a tecla F5!
+<br />
+<br />
+Nas versões mais atuais do Firefox, do Internet Explorer e do Google Chrome,
+é possível usar as combinações de teclas indicadas na tabela abaixo para aumentar ou diminuir
+o tamanho da fonte do texto e o tamanho das figuras.
+Isto permite configurar estes navegadores para uma leitura mais agradável.
+</p>
+<p align="center">
+<table width="400" bgcolor="#000000" cellspacing="1" cellpadding="5" border="0">
+    <tr>
+      <th align="center" bgcolor="#DDDDDD">Combinação de Teclas</TH>
+      <th align="center" bgcolor="#DDDDDD">Efeito</TH></TR>
+    <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-01.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Ampliar</td></tr>
+    <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-02.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Reduzir</td></tr>
+     <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-03.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Voltar para a configuração inicial</td></tr>
+</table>
+</p>
+</td>
+</tr>
+</table>
+</center>
+
+<script type="text/javascript">
+
+var check_timer = setInterval("check()", 500);
+
+var lspAppletOK = false;
+var rspAppletOK = false;
+
+var nod = 7;
+var nop_max = 100;
+var nop = 0;
+
+var xArray = new Array(nop_max);
+var yArray = new Array(nop_max);
+
+
+function check()
+{
+   lspApplet.evalCommand("loadValue = 1/3 + 1/3 + 1/3");
+   if (lspApplet.getValue("loadTest") == 0)
+   {
+      return;
+   }
+
+   if ((lspAppletOK == true) && (rspAppletOK == true))
+   {
+      lspApplet.setErrorDialogsActive(false);
+      lspApplet.setMode(40);
+      rspApplet.setErrorDialogsActive(false);
+
+      clearInterval(check_timer);
+
+      document.getElementById("fldx").value = "";
+      document.getElementById("fldv").value = "";
+      document.getElementById("fldx").disabled = false;
+      document.getElementById("btnc").disabled = false;
+      document.getElementById("btnr").disabled = false;
+      // document.getElementById("fldv").disabled = false;
+   }
+}
+
+function updateX()
+{
+   xVal = lspApplet.getValue("xVal");
+   rspApplet.setValue("a", xVal);
+}
+
+function n2s(number)
+{
+   // s = Math.floor(number*Math.pow(10.0, nod))/Math.pow(10.0, nod);
+   lspApplet.evalCommand("rVal = " + number);
+   s = lspApplet.getValue("sVal");
+
+   s = s + "";
+   p = s.indexOf(".");
+   if (p == -1)
+   {
+      s = s + ".";
+      h = nod;
+   }
+   else
+   {
+      h = nod - s.substring(p + 1, s.length).length;
+   }
+   for (i = 0; i < h; i++)
+   {
+      s = s + "0";
+   }
+   return(s);
+}
+
+function check_duplicated_entry(number)
+{
+   s = n2s(number);
+   for (i = 0; i < nop; i++)
+   {
+     if (s == xArray[i])
+     {
+        return(true);
+     }
+   }
+   return(false);
+}
+
+function sort_entries()
+{
+   if (nop > 1)
+   {
+      flag = true;
+      while (flag == true)
+      {
+         flag = false;
+         for (i = 0; i < nop - 1; i++)
+         {
+            x1 = parseFloat(xArray[i]);
+            x2 = parseFloat(xArray[i + 1]);
+            if (x1 > x2)
+            {
+               tmp = xArray[i];
+               xArray[i] = xArray[i + 1];
+               xArray[i + 1] = tmp;
+
+               tmp = yArray[i]
+               yArray[i] = yArray[i + 1];
+               yArray[i + 1] = tmp;
+
+               flag = true;
+            }
+         }
+      }
+   }
+}
+
+function onClickCB(i)
+{
+   id = "trid" + i;
+   document.getElementById(id).style.backgroundColor = "#ffff00";
+   xVal = xArray[i];
+   rspApplet.setValue("a", xVal);
+   lspApplet.evalCommand("xVal = " + xVal);
+   document.getElementById("fldx").value = "";
+   document.getElementById("fldv").value = "";
+}
+
+function onMouseOverCB(i)
+{
+   id = "trid" + i;
+   document.getElementById(id).style.backgroundColor = "#ffffb2";
+}
+
+function onMouseOutCB(i)
+{
+   id = "trid" + i;
+   document.getElementById(id).style.backgroundColor = "#ffffff";
+}
+
+function build_table()
+{
+   str = '';
+   str = str + '<table width="350" bgcolor="#000000" border="0" cellpadding="0" cellspacing="1" style="margin-bottom:10px;">\n';
+   str = str + '<tr>\n';
+   str = str + '<td align="center" bgcolor="#E0E0E0" width="50%">\n';
+   str = str + '<b>x</b>\n';
+   str = str + '</td>\n';
+   str = str + '<td align="center" bgcolor="#E0E0E0" width="50%">\n';
+   str = str + '<b>L</b>\n';
+   str = str + '</td>\n';
+   str = str + '</tr>\n';
+
+   for (i = 0; i < nop; i++)
+   {
+      str = str + '<tr bgcolor="#ffffff" id="trid' + i + '" onClick="onClickCB(' + i + ')" onMouseOver="onMouseOverCB(' + i + ')" onMouseOut="onMouseOutCB(' + i + ')">\n';
+      str = str + '<td align="right">\n';
+      str = str + xArray[i] + '&nbsp;\n';
+      str = str + '</td>\n';
+      str = str + '<td align="right" >\n';
+      str = str + yArray[i] + '&nbsp;\n';
+      str = str + '</td>\n';
+      str = str + '</tr>\n';
+   }
+
+   str = str + '</table>\n';
+   document.getElementById("table").innerHTML = str;
+}
+
+function compute()
+{
+   id = "fldx";
+   v = document.getElementById(id).value;
+   v = v.replace(/sen/g, "sin");
+   v = v.replace(/tg/g, "tan");
+   v = v.replace(/,/g, "\.");
+
+   document.getElementById("fldv").value = "";
+
+   if (v == '')
+   {
+      alert('Digite algum valor para x!');
+      document.getElementById(id).style.background = '#ff7777';
+      return;
+   }
+
+   if  (lspApplet.exists("pTest") == true)
+   {
+      lspApplet.deleteObject("pTest")
+   }
+   lspApplet.evalCommand("pTest =" + v);
+   if (lspApplet.isDefined("pTest") == false)
+   {
+      alert('Erro de sintaxe para x!');
+      document.getElementById(id).style.background = '#ff7777';
+      return;
+   }
+   else
+   {
+      xVal = lspApplet.getValue("pTest");
+      xVal = n2s(xVal);
+
+      if ((xVal < 0.0) || (xVal > 5.0))
+      {
+         alert('O problema não está definido para este valor de x:\n' + xVal + '.\n\nLembre-se que os valores de x são arredondados para ' + nod + ' casas decimais!');
+         document.getElementById(id).value = xVal;
+         document.getElementById(id).style.background = '#ff7777';
+         return;
+      }
+
+      if (check_duplicated_entry(xVal) == true)
+      {
+         alert('Valor para x já fornecido anteriormente: ' + xVal + '.\n\nLembre-se que os valores de x são arredondados para ' + nod + ' casas decimais!');
+         document.getElementById(id).value = xVal;
+         document.getElementById(id).style.background = '#ff7777';
+         return;
+      }
+
+      document.getElementById(id).style.background = '#fff8da';
+      rspApplet.setValue("a", xVal);
+      yVal = rspApplet.getValue("b");
+      rspApplet.setVisible("P", true);
+      rspApplet.setVisible("X", true);
+      rspApplet.setVisible("Y", true);
+      rspApplet.setVisible("sPX", true);
+      rspApplet.setVisible("sPY", true);
+      rspApplet.setLayer("P", 1);
+
+
+      rspApplet.evalCommand("P" + nop + "= (" + xVal + "," + yVal + ")");
+      rspApplet.setPointSize("P" + nop, 1);
+      rspApplet.setColor("P" + nop, 0, 0, 0);
+      rspApplet.setFixed("P" + nop, true);
+      rspApplet.setLayer("P" + nop, 0);
+
+      lspApplet.evalCommand("xVal = " + xVal);
+
+      xArray[nop] = n2s(xVal);
+      yArray[nop] = n2s(yVal);
+      document.getElementById("fldv").value = yArray[nop];
+
+      nop++;
+
+      sort_entries();
+      build_table();
+   }
+}
+
+function getCookie(c_name)
+{
+   var i,x,y,ARRcookies=document.cookie.split(";");
+   for (i=0;i<ARRcookies.length;i++)
+   {
+     x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+     y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+     x=x.replace(/^\s+|\s+$/g,"");
+     if (x==c_name)
+     {
+        return unescape(y);
+     }
+   }
+   return(null);
+}
+
+function initialize()
+{
+   wp = getCookie("resetPGE1");
+   document.cookie = "resetPGE2 = 0";
+   if (wp != null)
+   {
+       wp = parseInt(wp);
+       window.scrollTo(0, wp);
+   }
+}
+
+function reset()
+{
+   wp = document.body.scrollTop || document.documentElement.scrollTop;
+
+   document.cookie = "resetPGE1 = " + wp;
+   document.location.reload(true);
+}
+</script>
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="770" align="center">
+  <tr>
+     <td>
+     <table border="0" cellpadding="0" cellspacing="0" width="770" >
+     <tr>
+     <td><div align="right"><img name="banner_final" src="banner_final.gif" border="0" height="33"></td><td><div align="left"><div align="right"><img name="banner_final" src="banner_final.gif" border="0" height="33"></div></td>
+     </tr>
+     </table>
+     </td>
+  </tr>
+</table>
+</center>
+<br>
+<center>
+   <img border="0" src="logomarcas.jpg" width="700" height="30" />
+</center>
+<br>
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/br/">
+<img alt="Creative Commons License" style="border-width:0" src="creative_commons.png" width="88" height="31" />
+</a>
+</center>
+<hr width="770">
+<center>
+<table>
+<tr align="top">
+<td align="center" colspan="1" class="id">
+Responsável:
+<a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br>
+Idealização:
+<a href="http://www.mat.puc-rio.br/pagina.php?id=docentes_gpalis" target="_new">Gilda de La Rocque Palis</a>, Silvana Marini Rodrigues Lopes e <a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br>
+Programação:
+<a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br>
+Revisão:
+<a href="http://www.uff.br/leg/">Ana Maria Martensen Roland Kaleff</a>,
+Anne Michelle Dysman Gomes,
+Carla Cristina de Lima Pracias,
+<a href="http://www.professores.uff.br/dirceuesu/">Dirce Uesu Pesco</a>,
+<a href="http://www.mat.puc-rio.br/pagina.php?id=docentes_gpalis">Gilda de La Rocque Palis</a>,
+<br>
+<a href="http://www.professores.uff.br/hjbortol/">Humberto José Bortolossi</a>,
+José Osorio de Figueiredo,
+Rodrigo Viana Pereira,
+Silvana Marini Rodrigues Lopes,
+Thiago Gomes Pereira,
+<a href="http://www.professores.uff.br/wmrezende/">Wanderley Moura Rezende</a>.
+<br>
+<br>
+Esta atividade foi construída com o software de matemática dinâmica gratuito
+e multiplataforma
+<a href="http://www.geogebra.org" target="_new">GeoGebra</a>.
+<br>
+<br>
+Um Problema Geométrico Versão 07/02/2011
+<br>
+Atualizações desta atividade estarão disponíveis no endereço
+<a href="http://www.uff.br/cdme/">http://www.uff.br/cdme/</a>.
+<br />
+Endereço alternativo: <a href="http://www.cdme.im-uff.mat.br/">http://www.cdme.im-uff.mat.br/</a>.
+</td></tr>
+</table>
+</center>
+<hr width="770">
+<center>
+<font size="3">
+Dúvidas? Sugestões? Nós damos suporte! Contacte-nos pelo e-mail:
+<br>
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;">&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;</a>.
+</font>
+</center>
+</body>
+</html>

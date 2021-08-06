@@ -1,0 +1,622 @@
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<meta charset="UTF-8">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>O Problema do Barbante: Quadrado e Círculo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+a.mainmenu:link { color : #FFFFFF;  background : transparent; text-decoration : none;}
+a.mainmenu:visited {color : #FFFFFF; background : transparent; text-decoration : none;}
+a.mainmenu:hover {color : #FFFF00; background : transparent; text-decoration : none;}
+span.next:hover {cursor:hand}body {text-align: center; min-width: 800px;}
+/* #menu {position: absolute; left: 50%; width: 800px; margin-left: -210px;} */
+#menu {position: absolute; left: 50%; width: 800px; margin-left: -185px;}
+div.jqDockLabel {border:0px none; padding:0px 4px; font-size:14px; white-space:nowrap; color:#0000FF; background-color:transparent; font-weight: bold;}
+td.id { font-size: xx-small;}
+body, td { font-size: 16px; font-family: "Times New Roman"; }
+.subscript {font-size:xx-small; vertical-align:bottom;}
+.supscript {font-size:xx-small; vertical-align:top;}
+</style>
+<script type='text/javascript' src='jquery-1.2.4.min.js'></script>
+<script type='text/javascript' src='jquery.jqDock.js'></script>
+<script type='text/javascript'>
+var options =
+{ align: 'middle'
+, size: 48
+, labels: true
+};
+jQuery(document).ready(function()
+{
+  jQuery('#menu').jqDock(options);
+});
+</script>
+<script type="text/javascript" src="fc.js"></script>
+</head>
+
+<body bgcolor="#ffffff" leftmargin="0" topmargin="0" onload="initialize();">
+<script type="text/javascript" src="wz_tooltip.js"></script>
+<center>
+<table border="0" cellpadding="0" cellspacing="0" width="770" align="center" height="63">
+  <tr>
+    <td width="770" valign="top">
+      <table border="0" cellpadding="0" cellspacing="0" width="770">
+     <tr>
+         <td><img border="0" src="banner_top_pbc_br.gif" width="770" height="63"/></td>
+     </tr>
+   </table>
+    </td>
+  </tr>
+</table>
+<br>
+<br>
+<div style='text-align: left;' id='menu'>
+  <a href="avaliacao.html">
+  <img src='avaliacao.jpg' alt='avaliacao.jpg' title='Avalie-nos!'/>
+  </a>
+  <img src='pbc-fill.jpg' alt='pbc-fill.jpg' title=''/>
+  <a href="pbc-aluno.rtf" target="_new">
+  <img src='formulario.jpg' alt='formulario.jpg' title='Formulário de Acompanhamento do Aluno!'/>
+  </a>
+  <img src='pbc-fill.jpg' alt='pbc-fill.jpg' title=''/>
+  <a href="guia-do-professor.html">
+  <img src='guia.jpg' alt='guia.jpg' title='Guia do Professor!'/>
+  </a>
+  <img src='pbc-fill.jpg' alt='pbc-fill.jpg' title=''/>
+  <a href="http://www.uff.br/cdme/pbc/pbc-offline.zip">
+  <img src='download-01.jpg' alt='download-01.jpg' title='Download para Uso Offline do Servidor 1!'/>
+  </a>
+  <img src='pbc-fill.jpg' alt='pbc-fill.jpg' title=''/>
+  <a href="http://www.cdme.im-uff.mat.br/pbc/pbc-offline.zip">
+  <img src='download-02.jpg' alt='download-02.jpg' title='Download para Uso Offline do Servidor 2!'/>
+  </a>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<center>
+<table border="0" cellpadding="3" cellspacing="0" width="702">
+<tr>
+<td width="33%" align="left">
+</td>
+<td width="33%" align="center">
+<a href="pbc-02-br.html">[Clique aqui para ir para a Parte 2]</a>
+</td>
+<td width="33%" align="right">
+<a href="#instrucoes">[Instruções no final desta página!]</a>
+</td>
+</tr>
+</tbody>
+</table>
+<br />
+<table border="0" cellpadding="3" cellspacing="0" width="714" style="margin-bottom:20px;margin-top:8px;">
+<tbody>
+<tr bgcolor="#e0e0e0">
+<td align="center">
+<b>PARTE 1</b>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+
+
+<table width="710" border="0" bgcolor="#FFFFFF" cellpadding="1" cellspacing="0" style="margin-bottom:0px;">
+<tr valign="top">
+<td align="center" bgcolor="#FFFFFF">
+<p align="center" style="margin-top: 0px; margin-bottom: 10px;">
+<b>Enunciado do Problema</b>
+</p>
+<p align="justify" style="margin-top: 0px; margin-bottom: 0px;">
+Um fio de barbante de 10 metros de comprimento pode ser usado ou para construir um quadrado, ou
+para construir um círculo ou
+ele pode ser cortado em dois pedaços (não necessariamente de mesmo tamanho) de modo que
+um dos pedaços é usado para construir um quadrado e o outro pedaço é usado para construir
+um círculo.
+Quanto deve ser x, a medida em metros do pedaço do barbante
+usado para construir o quadrado, para que a soma S das áreas
+das figuras produzidas seja a maior possível?
+Quanto deve ser x, a medida em metros do pedaço do barbante
+usado para construir o quadrado, para que a soma S das áreas
+das figuras produzidas seja a menor possível?
+</p>
+</td>
+</tr>
+</table>
+
+<br />
+
+<table width="700" border="0" bgcolor="#FFFFFF" cellpadding="1" cellspacing="0" style="margin-bottom:0px;">
+<tr valign="top">
+<td rowspan="2" bgcolor="#FFFFFF">
+<script type="text/javascript">
+var paramslspApplet = {"id": "lspApplet", "allowStyleBar": false, "enableShiftDragZoom": false, "useBrowserForJS": false, "showMenuBar": false, "showAlgebraInput": false, "showResetIcon": false, "enableLabelDrags": false, "errorDialogsActive": true, "ggbBase64": "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", "width": 350, "height": 424, "framePossible": false, "enableRightClick": false, "showToolBar": false, "showToolBarHelp": false};
+paramslspApplet.appletOnLoad = function(api) {lspAppletOK = true};
+var lspApplet = new GGBApplet("5.0", paramslspApplet);
+window.addEventListener("load", function(){lspApplet.inject("lspApplet_container", "auto")});
+</script>
+<div id="lspApplet_container"></div>
+</td>
+<td align="center" bgcolor="#FFFFFF">
+<script type="text/javascript">
+var paramsrspApplet = {"id": "rspApplet", "allowStyleBar": false, "enableShiftDragZoom": false, "useBrowserForJS": false, "showMenuBar": false, "showAlgebraInput": false, "showResetIcon": false, "enableLabelDrags": false, "errorDialogsActive": true, "ggbBase64": "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", "width": 350, "height": 212, "framePossible": false, "enableRightClick": false, "showToolBar": false, "showToolBarHelp": false};
+paramsrspApplet.appletOnLoad = function(api) {rspAppletOK = true};
+var rspApplet = new GGBApplet("5.0", paramsrspApplet);
+window.addEventListener("load", function(){rspApplet.inject("rspApplet_container", "auto")});
+</script>
+<div id="rspApplet_container"></div>
+<div id="table">
+<table width="350" bgcolor="#000000" border="0" cellpadding="0" cellspacing="1" >
+<tr valign="top" bgcolor="#E0E0E0">
+<td align="center" width="50%" >
+<b>x</b>
+</td>
+<td align="center" width="50%">
+<b>S</b>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+
+<table width="702" bgcolor="#000000" border="0" cellpadding="5" cellspacing="1" style="margin-bottom:10px;">
+<tr>
+<td bgcolor="#FFFFFF">
+<table width="100%">
+<tr>
+<td align="left" bgcolor="#FFFFFF">
+x = <input name="fldx" id="fldx" disabled="true" value="" type="text" style="text-align:left; width:200px; font-weight: bold; position:relative; top:0px; color: #781351;background: #fff8da; border: 1px solid #781351" />
+</td>
+<td width="30%" align="center" bgcolor="#FFFFFF">
+<input type="button" name="btnc" id="btnc" disabled="true" value="Calcular!" onclick='compute()' style="width:100px;" />
+</td>
+<td align="right" bgcolor="#FFFFFF">
+S = <input name="fldv" id="fldv" disabled="true" value="" type="text" style="text-align:right; width:200px; font-weight: bold; position:relative; top:0px; color: #781351;background: #ffffff; border: 1px solid #781351" />
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<center>
+<input type="button" name="btnr" id="btnr" disabled="true" value="Reiniciar!" onclick='reset();' style="width:100px;" />
+</center>
+
+<br />
+<br />
+
+
+<center>
+<a name="instrucoes"></a>
+<table border="0" cellpadding="3" cellspacing="0" width="710">
+<tbody>
+<tr bgcolor="#e0e0e0">
+<td align="center">
+<b>INSTRUÇÕES</b>
+</td>
+</tr>
+</tbody>
+</table>
+<br />
+<table width="710" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+<p align="justify" style="margin-top:0px; margin-bottom:0px" >
+<b>Importante:</b> o desenvolvimento desta atividade é feito através de vários
+exercícios que estão disponíveis no
+<a href="pbc-aluno.rtf">formulário de acompanhamento do aluno</a>.
+<br />
+<br />
+A variável x representa a medida, em metros, do comprimento do pedaço de barbante usado para se construir
+o quadrado. Se <nobr>x = 10,</nobr> então todo o barbante é usado para se construir um quadrado
+e nenhum círculo é construído.
+Se <nobr>x = 0,</nobr> então todo o barbante é usado para se construir um círculo
+e nenhum quadrado é construído.
+Para alterar o valor de x, digite o número desejado no campo &#8220;x =&#8221;.
+Neste campo, além de números decimais, você poderá usar números em outros formatos, tais como 1/2,
+sqrt(5) (raiz quadrada de 5), sen(8) (seno de 8), pi (o número irracional &pi;), etc.
+Multiplicações podem ser indicadas com um asterisco ou um espaço em branco
+(por exemplo, 2*pi ou 2&nbsp;pi para indicar o número <nobr>2&nbsp;&pi;</nobr>).
+Use parêntesis para agrupar termos (por exemplo, <nobr>3^(1/2)</nobr>
+para indicar a raiz quadrada de 3).
+<br />
+<br />
+Ao pressionar o botão &#8220;Calcular!&#8221;, o aplicativo fará o seguinte:
+(1) ele modificará os formatos do quadrado e do círculo para este valor de x e
+(2) ele calculará a soma S das áreas do quadrado e do círculo correspondente,
+marcando o par ordenado (x, S) no gráfico e
+acrescentando uma linha na tabela.
+<b>Importante: os valores de x e de S são arredondados para 7 casas decimais.</b>
+<br />
+<br />
+Caso você dê um clique em uma das linhas da tabela, o aplicativo redesenhará os formatos do quadrado e do círculo
+para o respectivo valor de x. Para reiniciar o programa, pressione a tecla F5!
+<br />
+<br />
+Nas versões mais atuais do Firefox, do Internet Explorer e do Google Chrome,
+é possível usar as combinações de teclas indicadas na tabela abaixo para aumentar ou diminuir
+o tamanho da fonte do texto e o tamanho das figuras.
+Isto permite configurar estes navegadores para uma leitura mais agradável.
+</p>
+<p align="center">
+<table width="400" bgcolor="#000000" cellspacing="1" cellpadding="5" border="0">
+    <tr>
+      <th align="center" bgcolor="#DDDDDD">Combinação de Teclas</TH>
+      <th align="center" bgcolor="#DDDDDD">Efeito</TH></TR>
+    <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-01.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Ampliar</td></tr>
+    <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-02.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Reduzir</td></tr>
+     <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-03.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Voltar para a configuração inicial</td></tr>
+</table>
+</p>
+</td>
+</tr>
+</table>
+</center>
+
+<script type="text/javascript">
+
+var check_timer = setInterval("check()", 500);
+
+var lspAppletOK = false;
+var rspAppletOK = false;
+
+var nod = 7;
+var nop_max = 100;
+var nop = 0;
+
+var xArray = new Array(nop_max);
+var yArray = new Array(nop_max);
+
+
+function check()
+{
+   lspApplet.evalCommand("loadValue = 1/3 + 1/3 + 1/3");
+   if (lspApplet.getValue("loadTest") == 0)
+   {
+      return;
+   }
+
+   if ((lspAppletOK == true) && (rspAppletOK == true))
+   {
+      lspApplet.setErrorDialogsActive(false);
+      lspApplet.setMode(40);
+      rspApplet.setErrorDialogsActive(false);
+
+      clearInterval(check_timer);
+
+      document.getElementById("fldx").value = "";
+      document.getElementById("fldv").value = "";
+      document.getElementById("fldx").disabled = false;
+      document.getElementById("btnc").disabled = false;
+      document.getElementById("btnr").disabled = false;
+      // document.getElementById("fldv").disabled = false;
+   }
+}
+
+function updateX()
+{
+   xVal = lspApplet.getValue("xVal");
+   rspApplet.setValue("a", xVal);
+}
+
+function n2s(number)
+{
+   // s = Math.floor(number*Math.pow(10.0, nod))/Math.pow(10.0, nod);
+   lspApplet.evalCommand("rVal = " + number);
+   s = lspApplet.getValue("sVal");
+
+   s = s + "";
+   p = s.indexOf(".");
+   if (p == -1)
+   {
+      s = s + ".";
+      h = nod;
+   }
+   else
+   {
+      h = nod - s.substring(p + 1, s.length).length;
+   }
+   for (i = 0; i < h; i++)
+   {
+      s = s + "0";
+   }
+   return(s);
+}
+
+function check_duplicated_entry(number)
+{
+   s = n2s(number);
+   for (i = 0; i < nop; i++)
+   {
+     if (s == xArray[i])
+     {
+        return(true);
+     }
+   }
+   return(false);
+}
+
+function sort_entries()
+{
+   if (nop > 1)
+   {
+      flag = true;
+      while (flag == true)
+      {
+         flag = false;
+         for (i = 0; i < nop - 1; i++)
+         {
+            x1 = parseFloat(xArray[i]);
+            x2 = parseFloat(xArray[i + 1]);
+            if (x1 > x2)
+            {
+               tmp = xArray[i];
+               xArray[i] = xArray[i + 1];
+               xArray[i + 1] = tmp;
+
+               tmp = yArray[i]
+               yArray[i] = yArray[i + 1];
+               yArray[i + 1] = tmp;
+
+               flag = true;
+            }
+         }
+      }
+   }
+}
+
+function onClickCB(i)
+{
+   id = "trid" + i;
+   document.getElementById(id).style.backgroundColor = "#ffff00";
+   xVal = xArray[i];
+   rspApplet.setValue("a", xVal);
+   lspApplet.evalCommand("xVal = " + xVal);
+   document.getElementById("fldx").value = "";
+   document.getElementById("fldv").value = "";
+}
+
+function onMouseOverCB(i)
+{
+   id = "trid" + i;
+   document.getElementById(id).style.backgroundColor = "#ffffb2";
+}
+
+function onMouseOutCB(i)
+{
+   id = "trid" + i;
+   document.getElementById(id).style.backgroundColor = "#ffffff";
+}
+
+function build_table()
+{
+   str = '';
+   str = str + '<table width="350" bgcolor="#000000" border="0" cellpadding="0" cellspacing="1" style="margin-bottom:10px;">\n';
+   str = str + '<tr>\n';
+   str = str + '<td align="center" bgcolor="#E0E0E0" width="50%">\n';
+   str = str + '<b>x</b>\n';
+   str = str + '</td>\n';
+   str = str + '<td align="center" bgcolor="#E0E0E0" width="50%">\n';
+   str = str + '<b>S</b>\n';
+   str = str + '</td>\n';
+   str = str + '</tr>\n';
+
+   for (i = 0; i < nop; i++)
+   {
+      str = str + '<tr bgcolor="#ffffff" id="trid' + i + '" onClick="onClickCB(' + i + ')" onMouseOver="onMouseOverCB(' + i + ')" onMouseOut="onMouseOutCB(' + i + ')">\n';
+      str = str + '<td align="right">\n';
+      str = str + xArray[i] + '&nbsp;\n';
+      str = str + '</td>\n';
+      str = str + '<td align="right" >\n';
+      str = str + yArray[i] + '&nbsp;\n';
+      str = str + '</td>\n';
+      str = str + '</tr>\n';
+   }
+
+   str = str + '</table>\n';
+   document.getElementById("table").innerHTML = str;
+}
+
+function compute()
+{
+   id = "fldx";
+   v = document.getElementById(id).value;
+   v = v.replace(/sen/g, "sin");
+   v = v.replace(/tg/g, "tan");
+   v = v.replace(/,/g, "\.");
+
+   document.getElementById("fldv").value = "";
+
+   if (v == '')
+   {
+      alert('Digite algum valor para x!');
+      document.getElementById(id).style.background = '#ff7777';
+      return;
+   }
+
+   if  (lspApplet.exists("pTest") == true)
+   {
+      lspApplet.deleteObject("pTest")
+   }
+   lspApplet.evalCommand("pTest =" + v);
+   if (lspApplet.isDefined("pTest") == false)
+   {
+      alert('Erro de sintaxe para x!');
+      document.getElementById(id).style.background = '#ff7777';
+      return;
+   }
+   else
+   {
+      xVal = lspApplet.getValue("pTest");
+      xVal = n2s(xVal);
+
+      if ((xVal < 0.0) || (xVal > 10.0))
+      {
+         alert('O problema não está definido para este valor de x:\n' + xVal + '.\n\nLembre-se que os valores de x são arredondados para ' + nod + ' casas decimais!');
+         document.getElementById(id).value = xVal;
+         document.getElementById(id).style.background = '#ff7777';
+         return;
+      }
+
+      if (check_duplicated_entry(xVal) == true)
+      {
+         alert('Valor para x já fornecido anteriormente: ' + xVal + '.\n\nLembre-se que os valores de x são arredondados para ' + nod + ' casas decimais!');
+         document.getElementById(id).value = xVal;
+         document.getElementById(id).style.background = '#ff7777';
+         return;
+      }
+
+      document.getElementById(id).style.background = '#fff8da';
+      rspApplet.setValue("a", xVal);
+      yVal = rspApplet.getValue("b");
+      rspApplet.setVisible("P", true);
+      rspApplet.setVisible("X", true);
+      rspApplet.setVisible("Y", true);
+      rspApplet.setVisible("sPX", true);
+      rspApplet.setVisible("sPY", true);
+      rspApplet.setLayer("P", 1);
+
+
+      rspApplet.evalCommand("P" + nop + "= (" + xVal + "," + yVal + ")");
+      rspApplet.setPointSize("P" + nop, 1);
+      rspApplet.setColor("P" + nop, 0, 0, 0);
+      rspApplet.setFixed("P" + nop, true);
+      rspApplet.setLayer("P" + nop, 0);
+
+      lspApplet.evalCommand("xVal = " + xVal);
+
+      xArray[nop] = n2s(xVal);
+      yArray[nop] = n2s(yVal);
+      document.getElementById("fldv").value = yArray[nop];
+
+      nop++;
+
+      sort_entries();
+      build_table();
+   }
+}
+
+function getCookie(c_name)
+{
+   var i,x,y,ARRcookies=document.cookie.split(";");
+   for (i=0;i<ARRcookies.length;i++)
+   {
+     x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+     y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+     x=x.replace(/^\s+|\s+$/g,"");
+     if (x==c_name)
+     {
+        return unescape(y);
+     }
+   }
+   return(null);
+}
+
+function initialize()
+{
+   wp = getCookie("resetPBC1");
+   document.cookie = "resetPBC2 = 0";
+   if (wp != null)
+   {
+       wp = parseInt(wp);
+       window.scrollTo(0, wp);
+   }
+}
+
+function reset()
+{
+   wp = document.body.scrollTop || document.documentElement.scrollTop;
+
+   document.cookie = "resetPBC1 = " + wp;
+   document.location.reload(true);
+}
+</script>
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="770" align="center">
+  <tr>
+     <td>
+     <table border="0" cellpadding="0" cellspacing="0" width="770" >
+     <tr>
+     <td><div align="right"><img name="banner_final" src="banner_final.gif" border="0" height="33"></td><td><div align="left"><div align="right"><img name="banner_final" src="banner_final.gif" border="0" height="33"></div></td>
+     </tr>
+     </table>
+     </td>
+  </tr>
+</table>
+</center>
+<br>
+<center>
+   <img border="0" src="logomarcas.jpg" width="700" height="30" />
+</center>
+<br>
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/br/">
+<img alt="Creative Commons License" style="border-width:0" src="creative_commons.png" width="88" height="31" />
+</a>
+</center>
+<hr width="770">
+<center>
+<table>
+<tr align="top">
+<td align="center" colspan="1" class="id">
+Responsável:
+<a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br>
+Idealização:
+<a href="http://www.mat.puc-rio.br/pagina.php?id=docentes_gpalis" target="_new">Gilda de La Rocque Palis</a>, Silvana Marini Rodrigues Lopes e <a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br>
+Programação:
+<a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br>
+Revisão:
+<a href="http://www.uff.br/leg/">Ana Maria Martensen Roland Kaleff</a>,
+Anne Michelle Dysman Gomes,
+Carla Cristina de Lima Pracias,
+<a href="http://www.professores.uff.br/dirceuesu/">Dirce Uesu Pesco</a>,
+<a href="http://www.mat.puc-rio.br/pagina.php?id=docentes_gpalis">Gilda de La Rocque Palis</a>,
+<br>
+<a href="http://www.professores.uff.br/hjbortol/">Humberto José Bortolossi</a>,
+José Osorio de Figueiredo,
+Rodrigo Viana Pereira,
+Silvana Marini Rodrigues Lopes,
+Thiago Gomes Pereira,
+<a href="http://www.professores.uff.br/wmrezende/">Wanderley Moura Rezende</a>.
+<br>
+<br>
+Esta atividade foi construída com o software de matemática dinâmica gratuito
+e multiplataforma
+<a href="http://www.geogebra.org" target="_new">GeoGebra</a>.
+<br>
+<br>
+O Problema do Barbante: Quadrado e Círculo Versão 07/02/2011
+<br>
+Atualizações desta atividade estarão disponíveis no endereço
+<a href="http://www.uff.br/cdme/">http://www.uff.br/cdme/</a>.
+<br />
+Endereço alternativo: <a href="http://www.cdme.im-uff.mat.br/">http://www.cdme.im-uff.mat.br/</a>.
+</td></tr>
+</table>
+</center>
+<hr width="770">
+<center>
+<font size="3">
+Dúvidas? Sugestões? Nós damos suporte! Contacte-nos pelo e-mail:
+<br>
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;">&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;</a>.
+</font>
+</center>
+</body>
+</html>

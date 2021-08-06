@@ -1,0 +1,650 @@
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<meta charset="UTF-8">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>O Problema da Caixa</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+a.mainmenu:link { color : #FFFFFF;  background : transparent; text-decoration : none;}
+a.mainmenu:visited {color : #FFFFFF; background : transparent; text-decoration : none;}
+a.mainmenu:hover {color : #FFFF00; background : transparent; text-decoration : none;}
+span.next:hover {cursor:hand}body {text-align: center; min-width: 800px;}
+/* #menu {position: absolute; left: 50%; width: 800px; margin-left: -210px;} */
+#menu {position: absolute; left: 50%; width: 800px; margin-left: -185px;}
+div.jqDockLabel {border:0px none; padding:0px 4px; font-size:14px; white-space:nowrap; color:#0000FF; background-color:transparent; font-weight: bold;}
+td.id { font-size: xx-small;}
+body, td { font-size: 16px; font-family: "Times New Roman"; }
+.subscript {font-size:xx-small; vertical-align:bottom;}
+.supscript {font-size:xx-small; vertical-align:top;}
+</style>
+<script type='text/javascript' src='jquery-1.2.4.min.js'></script>
+<script type='text/javascript' src='jquery.jqDock.js'></script>
+<script type='text/javascript'>
+var options =
+{ align: 'middle'
+, size: 48
+, labels: true
+};
+jQuery(document).ready(function()
+{
+  jQuery('#menu').jqDock(options);
+});
+</script>
+<script type="text/javascript" src="fc.js"></script>
+</head>
+
+<body bgcolor="#ffffff" leftmargin="0" topmargin="0" onload="initialize();">
+<script type="text/javascript" src="wz_tooltip.js"></script>
+<center>
+<table border="0" cellpadding="0" cellspacing="0" width="770" align="center" height="63">
+  <tr>
+    <td width="770" valign="top">
+      <table border="0" cellpadding="0" cellspacing="0" width="770">
+     <tr>
+         <td><img border="0" src="banner_top_pdc_br.gif" width="770" height="63"/></td>
+     </tr>
+   </table>
+    </td>
+  </tr>
+</table>
+<br>
+<br>
+<div style='text-align: left;' id='menu'>
+  <a href="avaliacao.html">
+  <img src='avaliacao.jpg' alt='avaliacao.jpg' title='Avalie-nos!'/>
+  </a>
+  <img src='pdc-fill.jpg' alt='pdc-fill.jpg' title=''/>
+  <a href="pdc-aluno.rtf" target="_new">
+  <img src='formulario.jpg' alt='formulario.jpg' title='Formulário de Acompanhamento do Aluno!'/>
+  </a>
+  <img src='pdc-fill.jpg' alt='pdc-fill.jpg' title=''/>
+  <a href="guia-do-professor.html">
+  <img src='guia.jpg' alt='guia.jpg' title='Guia do Professor!'/>
+  </a>
+  <img src='pdc-fill.jpg' alt='pdc-fill.jpg' title=''/>
+  <a href="http://www.uff.br/cdme/pdc/pdc-offline.zip">
+  <img src='download-01.jpg' alt='download-01.jpg' title='Download para Uso Offline do Servidor 1!'/>
+  </a>
+  <img src='pdc-fill.jpg' alt='pdc-fill.jpg' title=''/>
+  <a href="http://www.cdme.im-uff.mat.br/pdc/pdc-offline.zip">
+  <img src='download-02.jpg' alt='download-02.jpg' title='Download para Uso Offline do Servidor 2!'/>
+  </a>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<center>
+<table border="0" cellpadding="3" cellspacing="0" width="702">
+<tr>
+<td width="33%" align="left">
+</td>
+<td width="33%" align="center">
+<a href="pdc-02-br.html">[Clique aqui para ir para a Parte 2]</a>
+</td>
+<td width="33%" align="right">
+<a href="#instrucoes">[Instruções no final desta página!]</a>
+</td>
+</tr>
+</tbody>
+</table>
+<br />
+<table border="0" cellpadding="3" cellspacing="0" width="714" style="margin-bottom:20px;margin-top:8px;">
+<tbody>
+<tr bgcolor="#e0e0e0">
+<td align="center">
+<b>PARTE 1</b>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+
+
+<table width="710" border="0" bgcolor="#FFFFFF" cellpadding="1" cellspacing="0" style="margin-bottom:0px;">
+<tr valign="top">
+<td align="center" bgcolor="#FFFFFF">
+<p align="center" style="margin-top: 0px; margin-bottom: 10px;">
+<b>Enunciado do Problema</b>
+</p>
+<p align="justify" style="margin-top: 0px; margin-bottom: 0px;">
+Quadrados iguais são cortados dos cantos de uma folha de papelão
+retangular medindo <nobr>30 cm</nobr> por <nobr>50 cm</nobr>.
+As abas que sobram são então dobradas para cima de modo a formar
+uma caixa sem tampa.
+Quanto deve ser x, a medida em centímetros dos lados dos quadrados que são retirados da folha de papelão,
+para que o volume V da caixa seja o maior possível?
+</p>
+</td>
+</tr>
+</table>
+
+<br />
+
+<table width="700" border="0" bgcolor="#FFFFFF" cellpadding="1" cellspacing="0" style="margin-bottom:0px;">
+<tr valign="top">
+<td bgcolor="#FFFFFF">
+<script type="text/javascript">
+var paramslspApplet = {"id": "lspApplet", "allowStyleBar": false, "enableShiftDragZoom": false, "useBrowserForJS": false, "showMenuBar": false, "showAlgebraInput": false, "showResetIcon": false, "enableLabelDrags": false, "errorDialogsActive": true, "ggbBase64": "UEsDBBQACAgIAOKF1lIAAAAAAAAAAAAAAAASAAAAZ2VvZ2VicmFfbWFjcm8ueG1s7Vtbc5s4FH5uf4WGp2TbYCQQl5nQDna6s2l6nfZtZx9kkG22GLyAs3Z+/R4hcG1jJ8YmrpttHgw5yEfSd75z0SG5fD0bR+iWp1mYxK6CVU1BPPaTIIyHrjLNBxe28vrV88shT4a8nzI0SNIxy11FV4kC8jHz0wT54+ADG3NX6SXjCcuyREF5kkSbZH/waOIqCgr9JP49jLi4z0bJv9fxV3jaZamr5OmUL3Rfx5NpjpjmKtcKYthV3sKFuMqN0qmGfJzm1ZhhIQXVGSjxc9gTysNczsKm+ShJxV3AciGBkTziYx7nKJ9PQDJJwjhXUMT6PBLzvXr+7FKsDSX9v7mflyurng9YlHEx37NLeN5LoiRFoB4AHBaffVchlMK80WTEQALQFoMjNucpumWRGFVKQOH7JOArUhaHgLTYQpbziVCAAaoJ50FpJ7louJmAysJeS0vykyQNMjRzlQtNtQxdx45DTWzqFjFhUXNXoaqpYduiukOIqRmOraA7qblQUIDxJbwrF6UXyHZKwB6A7u0Th85UMbEsTKmDTUvHFm4PupsnAt0H9qGAqrjeyetO4PjJeMziAMUyeISpH/ECk3A9EtyUMHx3f18qK1XUkIa4EPoLJP1CaxTG/Es+jzjKR6H/LeZZBgh+32bnYHNo+xtjp8XxcMjjW1hakmYIzbTSTnNNTojuKskMF4wWz3ApusNLtAW7p+EMedV4rxrlQbwlWDVtqms2RAzDgMABHPP0cgrPEDd1V/EozFh3Frnsf2K5tUx8ugpwzA8Hob8HH24kH65rfAia8CH4xYcGfLjAWKVUN8GkFtUoNnelA1E1y9R0ih1iG5ZNCDmED9dxDrULbHaNEr6kRFCjhCcfdGUVAZ+w6PtZshqfvf3is2kUDBCXvrzsy4EWQux9++s+8f3F0yj60Vv8GXKsV1Xb6w7Em8RU/iumNoip2FJtDVtE07BjGsTA+lpQNVRCCbZsrImw6hhVTDVUvFLKW62n2O42Ogya0GHwiw4N6GCpumk7GrFNg5qWSdbIAJnUMiEF29ixiG4YDnkMNmxLsFwSYiDzKKk2tMSMXpO02vvRMfk4UbWsVHs1sIZN3Gh4JDc66CB5Qo5kqLZORdFp27rtmLZ1rFq1s9yJEr8X/ap62+wdj4f56J3AcblzVhPv3zxbLXujQBa+Ubali7bs2yM59k2LrbU9i+iTa3IQyUhxGqIFJVtqAu1ZhJ8ePrQtfOLpmKdLITCSp3X46rRUYKh0Q8iTy6q+VYC4c+WAdwQNHw7a9jTyDsLo5tK8W0si7P4kIiLyAgq2Zw5ZBfRxa7HvRKr8rGKRRdVGaWYtXofjSRT6YX4/9B9TiGrDJGbRdiOwmhH6DYzQ/6mMcFF5s1b5sqb9aDN0t5nhgVbwihn27QSfihnIMbzhvi5BVO+zHaX1ekwDnFA9C4c61Vrvv1/IYkTUrXjBh/Y7ABtMfZSO0P/U1DZxNpmatmXqbcf7QFq7L48Ai7W2eLzfyaCPcb5fKtodqBkbFaWNeiP+dvCumoB3dUrg0f3B47NJCq4kKuRy4VMFgdBVzs5mZ945ukCzs975OeqgqzDLWezzP72XqPfXS3Q2l8/nG5+fV64p3VFBnRqi1ZPFxKcfherVLy4TfrOqq9CzEhp8luY8C1nc8MyVrZ+5sEqexpmrTk3vU8VNwUmgXpSh34Cf0/OXBQsryRwkC/6Vflun31r749MpefQiHMKddahHe59XYHtRg+3FAbB9PknYsK3qh8LWXWLbVY1tVwexrXtSbKNtsq37eQW2FzXYDmBb96TYRvdn22rN8oUPhXytYunJiuWqVqg88HovK7X9RC/4tjeVHKtqIR58jC4wjETCWdSIQNtMLmRpf984n3wFpR/jrymLM/HHtXJMlTW3G/J9GEjC7mjJN01Kzjen8zqOEJW2U65vpr5I9AIxyC7rkD3wUm6d/Md6LddOF4mourP8Y5srTSXDbq2ndARn2Gzabmnabt20o2amHT0l05rtdW0fxbRb35p2qv9CePUfUEsHCAvi0KTxBQAAtzAAAFBLAwQUAAgICADihdZSAAAAAAAAAAAAAAAADAAAAGdlb2dlYnJhLnhtbO1d23KbyBZ9PvMVlB6mkpnI4SbLqrFnSrYT52In49hxqjI140KiJWEjkAElUr7gzFfM43k6X3H+ZL7k9IUGRAtEo0toMnmIJUANvdbee+3u3sDhL7OxLX0Cnm+5zlFD2ZMbEnD6rmk5w6PGNBg0Dxq//Pzd4RC4Q9DzDGngemMjOGpoe2oDbZ9aP3/3r0N/5H6WDBsfcmOBz0eNgWH7oCH5Ew8Ypj8CIFjYbkxnlm0Z3vxt7w70A/+oEXhTtJ208dKZTIPo4P7YPLf8IDzmKT7hxLaCU+uTZQJPst3+UWO/BS8dfroBXmD1Dfuooctki3rUUFM74SYN7R25nvXFdQJ0eNy4bfSADQG4CuY2kKRPaK9Kdg3gwZLkW18ABAtvO3yKMTgE075tmZbhoH7iS4QHSdJnywxG8Gy6Cs8GrOEIdkPpdEhrfdf1zKu5H4CxNPsIPBfuayt7nbaitBRN7XT0zoHWkOZkV0fZ0zS9rXT0fVVXZK0F4YV9AYiM/QMFblU1ra0rqgz3zDN34TODT1cgCGAffcmYAT+CeuhZ5sKXl/6xa8ebJq7lBCfGJJh62EK0cBOG6qgBIfVQH7vO0AbhNgUSOAL9+547uyK4aaTp6/kE/wRfUG944tquJ3mILHj9w/Bvj/zFx6ArjY6S8TEyPiJsAzUa7Vc6Kj4C/+2Rv4RdyyGXFvZcob1WZHoay5fQBtg4Muyo89gujhoNaepYwTn9Ag3qPu4q+sGb6bgHPSppUlGbyqbaPHyasrjDe+A5wCZ25UBup+7UJ8ZLzoUvxAR9awy/kh0KRRbx9R5eAdlsgqEH6JUTjySI4b1y0nhTmw+f0qtAF+HDi+0HMLLADgWoM8jxA+h06JNpBGgLch0bjAH0qwAbhDMdA8/qR9DMbgy7gU4IzzINz9XaCy8CBx4Xx5A0pIlOwwMy7AYGnMnIgJ/2FOr7cxhR8Em0RDS4cM3w1ApFDMKIuwa9d0IagNEOADOMokFo3dIENol9JbogSB3p8cq+Q595ke67Ju+i82olOv+BIb5GnZ9BbfSR7tLrPobaO4MtPmo+Qn1/LD2V1D35iYSsgHx+TFvHQbchPWVADHdELZaDal/HWKE/PfInQksuiFYySvjS7KjRVJHXSnMUddCHLwQufBTRECSYseflY3XxhoI1e3T8+Ik0h/9LTQkFC16QYFM7QGl5NMlDSeZGaWUcvTBmaY9SdhJLv5JHPcs0EogEr508q6QzcVtJ3x2PDceUHGMMu3gFhmg77pqFsm7JkHEkMhTUY9KZaUB3GKS1sA0GMD9sjSJiNBYzrmAEExsHcoQ6GtG6YesrDaqSxlRrR85RqA/gwSHH+CR3s8ZwmNK3gghGG1nvSyeAmRzAiRGboN0DMEGZ8Vvn2jMcH423yDGJxC8vLsYWf/EGmzz8wx0RV1l6nNhmEYKT94Lh8O1g4IMAMUDg5xcU/lDJAIeCwrkLB00hgEbPfxTGC4ghgpBFbVmIJW1k5auFo2f+xZ4l45r0oxSdeCHG4S283J9VSgzlDTI8TzGMciyIFEyrpB+kBP2reZ5n8azLGyb6Kib6DBE9TxJ9xu3YVxUid6PcnmSkzvjri8flsueTSgp+cxPpcyJ7PmECyAm3XVUrg5bLI7WYHJ1D0U9lRickMzpmMqNhfmaE8ocIjaFQaVFTk1N5UbMdj8PXTozyDbX3+WYxYGNPhmG7jD6TxlIxW10vZi9azInl9e0MmwlT7d8unkjHvzP2c59vP33XSXTkXgADKmYY1hA4n+C1uZ4vSTM5HPDNZWpsdMsMAtgkdqiEm74oCceGA0jPmkldenyXHtVVjxoHJHh2tbDVro4SVPyplRwBp80UjkH71gDivtJMXyTjKYmhyajKG09fVCqexsqz5mDzrReM3KHrQFTYyPqCeMmQ8Yw7jsh6J4BjJKCNlEqLQqsmbye0FohTF1naZvLEJlMACioUm9qynBObiMutGZx6YXCaS0dYK5fFnwUv6glAYexF0TiCupCyngdBrAp4UG4sOyOe1GM8acQRy0ZCsdBU0kmiuqsc8XX+YGYdIX5dKSGWNyXES8P/69BocZKcNtwHHgl4EMByKyQByjIJkKP0dAMKcB57yGtmGuk193D/vEJesWWnOF8cux0/kS7YsZvH4xzeP87B4xx6mx27NTfrHWe3Suwf0erMb94T6e53PJhLb+OeU4cnqM5U4jrjubxevi3Zx+I2qyQ6GC8aNZV9smwk5/V/YM2AubiStiyJ3PCi+9jw7s+BMwxGCrPwXqSUZfVCWxXW3XMh8MHE8PBpCBAMDnvqpqNdJXGYLe++Xp/yi9zu265h3qBupwHYSUXX8tCw9foT1Olr4AehvEQY/PEILUdJf//5l4RPwApIz3VtYDgNpqUUeglkthl5c0JrcRNwXDN9+e1vxPq9JQsPSn36zhi+H6/aeO7UMR8hAKQfJCR6fzyChvAYrcnG34qs3vh5GJZbb88P2BeW81WCVQXsdfatVQp26QggXmRcp/C2W8V8fxOFA6fLcFqryuK0ilCtXTqwvK6yS2YTTpkZhH7+DEK6rrIvwBxCjOp26wd2VFj5PJ4i6OJJge5aZXbPqzSFVr6OcmW9TFhJ3GUsHuRb/MJKCBDK3Km1t7ZeLlO0WomNNwMO9Adio78b8JdOHp8WKfyZ5FOxOHk8EYCLCk0eLyv8aW628udlrAunWBdO11pwfFlFXSgzUcwA9Sq/Zp0XqFcVAipRp75m2likQmrAhBCLI5pbAkSQBLItJndU1J0Vn14kF4bOGaM957+xZjcLQTvwbw6zxSgiw71jDNfmMFxbKMONxjzNHWeBuVScZxEx5iBiLDoR+1sqsWQDyHUcPl4xdRevuMPHdZWCx6Yk71fXnkN7XV6LiiRPJaVJGiqrY5Jn1/7ff+Gv3TDETHCsgb8Y4Q/wN/f4A8z7hrdKvpFPwguJcu247XIGTx5pk09N+mEnsc0rfDafPbebnjya3JbtUCFjy+7ROhNz6TSgtUEf3s4MUi4HIwE5iEbWEQUiM3AvIANNxg2auth+MBSQhSihEMYRmLzkMs5L3jB5Cf/zAi6rmJesvYSzPDEJq6TfkDTjkiQZ59mJiUqOv79VyS8c8osHmpbYpdMStV5pCUJItFDAPIRF7GjsCEcAdXadMrDJsd1XYOBBQD1s1swLbAE5iERPFyczLKK29PYLop1nRDtfZ6utRo63qdr65BdD/F1HIqOVVFutXmprC6i27PCn8jaeT4IvHAVsnBGcgqGAflA3N0BBWTQOmMSz8hwUkduzBbm9JuL5Kltu9fCZHbdaKLd01j0gcntXenCr10tuh3Uw8eqnlCvkVsDEvm6Dq0A4BtiUR/A5hjsB3UA8L2Dm3N/Fc+5XTCnRFfec+7sqzblvqoA8dxLggq7tvyM5xlV2XtKi0wBhXjKmeYlHp939W7VkZtKqV2ZiC5yZCLMAl8vAWMB4zE7FCF6Q4QlIgngL0SvS8xpMxVR/jFTkPsWw0pydaDdWDeiZN0CU9isevdzG/UOC+FQROqOahTSdPV46e6LRKdzAoQifbwiflwyffV4++6LxKd6CfxFCLwmhbBmRyUuoKRqh4k1wFSE0MWRNUwp4KQWiUVpHCX1HV0ZYCV0xkcBK6C4K97ZApzDDjCJ8XhE+r5dIKCeffdH4rGfEvSaEsouVJi+hpmiECrhCUYTRV4RR9qYvwMsoEI3RWnpoWFxwwfA54OVzIBqftZTQ6BbNNJ8jXj5HovEp3uw3h4Oys34WL6GW8ITWYhr3dda0wh0voXeiESp6fV7utAI7CnV4CXVEI1TA4m+OceiSJxvwMjoRjVEBa8kLpUX0cTfvGE4feDl9EI1TAesCinB6krWAFvAyGhRiVC1Lqbztudx2qxibqgB0siMXY9XtYezydpHqqerQycz9ocep1YDRy6wHnfZ4Ge0JxmgtHTR8cOpLhs4+L519wehkJ+dr4Z/Psx4DbfISav5DaBUI7WatnwFeQoFghDJzubWIuOFiC/vu5wEvn4N/+KwAn8dZiy0jXj5HgvEperwlr4k7R73Mepo/uacl8WpBfG8L86K9NPXWbfh4jLv4vhiN/PY9n01YpW8a+ToarO5pneS/g/3FQdB+xecoVk3OC8VGNGJJeKjQ+I/Fwn+VN4jlDIt3Rb6v0MukosRCXfNBhNmKcEqHVSUVwaGKMKGK8EAV4YZPERyxfCDmZk+Xk/9abaII2v7ewvZ9cTyCXRgSipom87owRRZbHx7EImCVbwjsGoticVMhsdCYYUtRrVjsYfYLyFX2zdOtJSZXCIEsm/tKr/MsKpfRoDgll2pBufSoXPpULgMqlx/45NLbeEjou45pESzh4W/Do2dX8MvxDoPGstyS6qk4cYK9NblmdDHRRm/TaCAiP0Hd+FnlTqoukjstyu6HCsluU+1Au8ePrlHRh20M0sKb6U/Kqo5xGz5mr4c/qGhRUye//cinOqilb8lNxPISthKhZmzVTHT6deNnhTeJlcItas7HSmpOc3uiE1XQlBQdk4oOoKIzoKLT5X8mQU0dZelMuvijHVA3vtgaHLGVZ1A3glY6lFiZ3KL2dHfz0t+id7rtQHyiar+S4jOk4jOi4mNR8TnmFZ/ht+YrYrkKW21UM7rqpj1W3Qha5U9i5XKL0nNcTenZnvJEN2qVVJ47qjz3VHlsqjwnvMpzVzdPqXkZ3X3d+ErfGtQRWnjsutGz0p30A5HcaVF5TiqlPE1VjUY9HV7tYV/l8Azd4k1f5nDJvMzhkvtlDs92gxbv6xzWfoVytlCHN2w+o+904JfqMZVqh0r1hEr1c16pHn9rsUWs0MIWm9aMrnop9aRu9NS5Yv55pYR6szodgFngUqn+/mHqBj/NyJ8Gq8jo4Ebql9U20IELL94HnjWIGPMhPMheG9S2qJcFhhf8igAkYBzfKomW3w4GPgjwEj0Gvyi0WmlotfpC+3EpsE1F5YJWLw2tXl9on2dYbVMLp5UKgtsqDW6rvuB2M8AlUlcU2v3S0O7XF9oPGwkJ7dLQtusL7UlWSFD5QsLBAriaLPXHHAAfFAe4WvDd5GQBekHoOgvQtTih64gK3fsMp9aJ4RXw6tCrSHNoBkn6fhj8JMFOSH//+z8S2WLDLejThTFbNo/Uc10bGPFrKsM20ZUlbvWhg4JN3uvDhTTvKz+PF2qmT8PCM2YOKHopZ5tWSLdohXSL/MbEH3RU+9zKnxPKfOFnezeDWcT233/+JUXIJkn4Ci8GRViW63ghs9rK6/iYW0fbYt852heQA+bxDoJzYArIAXsPteAkGAKSED9YShgSOB6eyj5q8+FWz1dY9r74Hc0TF5LWbUzn14r46GEjaeI9XuK9uhIvYNzleNgj+3BAn5d5v67M1zTYR+OwNPMBL/NBaeYzFbwi1Ivn8+xUxGmyouWaqWi55q5oOa1mRQt/QQs0cMeHIGLc0fchcIeg5xk//x9QSwcIf76BFwYQAAA86wAAUEsBAhQAFAAICAgA4oXWUgvi0KTxBQAAtzAAABIAAAAAAAAAAAAAAAAAAAAAAGdlb2dlYnJhX21hY3JvLnhtbFBLAQIUABQACAgIAOKF1lJ/voEXBhAAADzrAAAMAAAAAAAAAAAAAAAAADEGAABnZW9nZWJyYS54bWxQSwUGAAAAAAIAAgB6AAAAcRYAAAAA", "width": 350, "height": 212, "framePossible": false, "enableRightClick": false, "showToolBar": false, "showToolBarHelp": false};
+paramslspApplet.appletOnLoad = function(api) {lspAppletOK = true};
+var lspApplet = new GGBApplet("5.0", paramslspApplet);
+window.addEventListener("load", function(){lspApplet.inject("lspApplet_container", "auto")});
+</script>
+<div id="lspApplet_container"></div>
+</td>
+<td align="center" bgcolor="#FFFFFF">
+<applet name="jvxApplet" id="jvxApplet" code="PDC.class"
+        width="354"
+        height="214"
+        archive="javaview.jar,jvx.jar"
+        border="0"
+        alt="O Problema da Caixa"
+        style="margin-bottom:0px;margin-left:5px;">
+<param name="panel" value="project">
+   Por favor, verifique se o seu navegador não está bloqueando o acesso ao applet. Para instalar a linguagem JAVA em seu computador, acesse o endereço <a href="http://www.java.com/pt_BR/" target="_new">http://www.java.com/pt_BR/</a>.
+</applet>
+</td>
+</tr>
+<tr valign="top">
+<td bgcolor="#FFFFFF"
+<div id="table">
+<table width="350" bgcolor="#000000" border="0" cellpadding="0" cellspacing="1" style="margin-bottom:10px;">
+<tr bgcolor="#E0E0E0">
+<td align="center" width="50%" >
+<b>x</b>
+</td>
+<td align="center" width="50%">
+<b>V</b>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td align="center" bgcolor="#FFFFFF">
+<script type="text/javascript">
+var paramsrspApplet = {"id": "rspApplet", "allowStyleBar": false, "enableShiftDragZoom": false, "useBrowserForJS": false, "showMenuBar": false, "showAlgebraInput": false, "showResetIcon": false, "enableLabelDrags": false, "errorDialogsActive": true, "ggbBase64": "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", "width": 350, "height": 212, "framePossible": false, "enableRightClick": false, "showToolBar": false, "showToolBarHelp": false};
+paramsrspApplet.appletOnLoad = function(api) {rspAppletOK = true};
+var rspApplet = new GGBApplet("5.0", paramsrspApplet);
+window.addEventListener("load", function(){rspApplet.inject("rspApplet_container", "auto")});
+</script>
+<div id="rspApplet_container"></div>
+</td>
+</tr>
+</table>
+<table width="702" bgcolor="#000000" border="0" cellpadding="5" cellspacing="1" style="margin-bottom:10px;">
+<tr>
+<td bgcolor="#FFFFFF">
+<table width="100%">
+<tr>
+<td align="left" bgcolor="#FFFFFF">
+x = <input name="fldx" id="fldx" disabled="true" value="" type="text" style="text-align:left; width:200px; font-weight: bold; position:relative; top:0px; color: #781351;background: #fff8da; border: 1px solid #781351" />
+</td>
+<td width="30%" align="center" bgcolor="#FFFFFF">
+<input type="button" name="btnc" id="btnc" disabled="true" value="Calcular!" onclick='compute()' style="width:100px;" />
+</td>
+<td align="right" bgcolor="#FFFFFF">
+V = <input name="fldv" id="fldv" disabled="true" value="" type="text" style="text-align:right; width:200px; font-weight: bold; position:relative; top:0px; color: #781351;background: #ffffff; border: 1px solid #781351" />
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<center>
+<input type="button" name="btnr" id="btnr" disabled="true" value="Reiniciar!" onclick='reset();' style="width:100px;" />
+</center>
+
+<br />
+<br />
+
+<center>
+<a name="instrucoes"></a>
+<table border="0" cellpadding="3" cellspacing="0" width="710">
+<tbody>
+<tr bgcolor="#e0e0e0">
+<td align="center">
+<b>INSTRUÇÕES</b>
+</td>
+</tr>
+</tbody>
+</table>
+<br />
+<table width="710" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+<p align="justify" style="margin-top:0px; margin-bottom:0px" >
+<b>Importante:</b> o desenvolvimento desta atividade é feito através de vários
+exercícios que estão disponíveis no
+<a href="pdc-aluno.rtf">formulário de acompanhamento do aluno</a>.
+<br />
+<br />
+Clique e arraste o Modelo 3D para girá-lo. Para abrir e fechar as abas
+da caixa do Modelo 3D, clique na janela e, então, pressione as teclas <b>1</b> (para abrir)
+e <b>2</b> (para fechar). Para ampliar ou reduzir o Modelo 3D, clique com o botão direito
+do mouse e, mantendo-o pressionado, arraste o mouse.
+<br />
+<br />
+A variável x representa a medida, em centímetros, dos lados dos quadrados que são retirados da peça retangular.
+Para alterar o valor de x, digite o número desejado no campo &#8220;x =&#8221;.
+Neste campo, além de números decimais, você poderá usar números em outros formatos, tais como 1/2,
+sqrt(5) (raiz quadrada de 5), sen(8) (seno de 8), pi (o número irracional &pi;), etc.
+Multiplicações podem ser indicadas com um asterisco ou um espaço em branco
+(por exemplo, 2*pi ou 2&nbsp;pi para indicar o número <nobr>2&nbsp;&pi;</nobr>).
+Use parêntesis para agrupar termos (por exemplo, <nobr>3^(1/2)</nobr>
+para indicar a raiz quadrada de 3).
+<br />
+<br />
+Ao pressionar o botão &#8220;Calcular!&#8221;, o aplicativo fará o seguinte:
+(1) ele modificará o formato do desenho da caixa para este valor de x e
+(2) ele calculará o volume V da caixa correspondente, marcando o par ordenado (x, V) no gráfico e
+acrescentando uma linha na tabela.
+<b>Importante: os valores de x e de V são arredondados para 7 casas decimais.</b>
+<br />
+<br />
+Caso você dê um clique em uma das linhas da tabela, o aplicativo redesenhará a caixa
+para o respectivo valor de x. Para reiniciar o programa, clique no botão &#8220;Reiniciar!&#8221; ou pressione a tecla F5!
+<br />
+<br />
+Nas versões mais atuais do Firefox, do Internet Explorer e do Google Chrome,
+é possível usar as combinações de teclas indicadas na tabela abaixo para aumentar ou diminuir
+o tamanho da fonte do texto e o tamanho das figuras.
+Isto permite configurar estes navegadores para uma leitura mais agradável.
+</p>
+<p align="center">
+<table width="400" bgcolor="#000000" cellspacing="1" cellpadding="5" border="0">
+    <tr>
+      <th align="center" bgcolor="#DDDDDD">Combinação de Teclas</TH>
+      <th align="center" bgcolor="#DDDDDD">Efeito</TH></TR>
+    <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-01.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Ampliar</td></tr>
+    <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-02.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Reduzir</td></tr>
+     <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-03.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Voltar para a configuração inicial</td></tr>
+</table>
+</p>
+</td>
+</tr>
+</table>
+</center>
+
+<script type="text/javascript">
+
+var check_timer = setInterval("check()", 500);
+
+var lspAppletOK = false;
+var rspAppletOK = false;
+var jvxAppletOK = true;
+
+var nod = 7;
+var nop_max = 100;
+var nop = 0;
+
+var xArray = new Array(nop_max);
+var yArray = new Array(nop_max);
+
+
+function check()
+{
+   lspApplet.evalCommand("loadValue = 1/3 + 1/3 + 1/3");
+   if (lspApplet.getValue("loadTest") == 0)
+   {
+      return;
+   }
+
+   if ((lspAppletOK == true) && (rspAppletOK == true) &&
+       (jvxAppletOK == true))
+   {
+      lspApplet.setErrorDialogsActive(false);
+      lspApplet.setMode(40);
+      rspApplet.setErrorDialogsActive(false);
+
+      clearInterval(check_timer);
+
+      document.getElementById("fldx").value = "";
+      document.getElementById("fldv").value = "";
+      document.getElementById("fldx").disabled = false;
+      document.getElementById("btnc").disabled = false;
+      document.getElementById("btnr").disabled = false;
+      // document.getElementById("fldv").disabled = false;
+   }
+}
+
+function updateX()
+{
+   xVal = lspApplet.getValue("xVal");
+   rspApplet.setValue("a", xVal);
+   document.getElementById("jvxApplet").xVal = xVal;
+   document.getElementById("jvxApplet").updateBox();
+}
+
+function n2s(number)
+{
+   // s = Math.floor(number*Math.pow(10.0, nod))/Math.pow(10.0, nod);
+   lspApplet.evalCommand("rVal = " + number);
+   // s = lspApplet.getValue("sVal");
+   s = lspApplet.getValueString("sVal");
+   s = s.replace(/sVal = /g, "");
+
+   s = s + "";
+   p = s.indexOf(".");
+   if (p == -1)
+   {
+      s = s + ".";
+      h = nod;
+   }
+   else
+   {
+      h = nod - s.substring(p + 1, s.length).length;
+   }
+   for (i = 0; i < h; i++)
+   {
+      s = s + "0";
+   }
+   return(s);
+}
+
+function check_duplicated_entry(number)
+{
+   s = n2s(number);
+   for (i = 0; i < nop; i++)
+   {
+     if (s == xArray[i])
+     {
+        return(true);
+     }
+   }
+   return(false);
+}
+
+function sort_entries()
+{
+   if (nop > 1)
+   {
+      flag = true;
+      while (flag == true)
+      {
+         flag = false;
+         for (i = 0; i < nop - 1; i++)
+         {
+            x1 = parseFloat(xArray[i]);
+            x2 = parseFloat(xArray[i + 1]);
+            if (x1 > x2)
+            {
+               tmp = xArray[i];
+               xArray[i] = xArray[i + 1];
+               xArray[i + 1] = tmp;
+
+               tmp = yArray[i]
+               yArray[i] = yArray[i + 1];
+               yArray[i + 1] = tmp;
+
+               flag = true;
+            }
+         }
+      }
+   }
+}
+
+function onClickCB(i)
+{
+   id = "trid" + i;
+   document.getElementById(id).style.backgroundColor = "#ffff00";
+   xVal = xArray[i];
+   rspApplet.setValue("a", xVal);
+   document.getElementById("jvxApplet").xVal = xVal;
+   document.getElementById("jvxApplet").updateBox();
+   lspApplet.evalCommand("xVal = " + xVal);
+   document.getElementById("fldx").value = "";
+   document.getElementById("fldv").value = "";
+}
+
+
+function onMouseOverCB(i)
+{
+   id = "trid" + i;
+   document.getElementById(id).style.backgroundColor = "#ffffb2";
+}
+
+function onMouseOutCB(i)
+{
+   id = "trid" + i;
+   document.getElementById(id).style.backgroundColor = "#ffffff";
+}
+
+function build_table()
+{
+   str = '';
+   str = str + '<table width="350" bgcolor="#000000" border="0" cellpadding="0" cellspacing="1" style="margin-bottom:10px;">\n';
+   str = str + '<tr>\n';
+   str = str + '<td align="center" bgcolor="#E0E0E0" width="50%">\n';
+   str = str + '<b>x</b>\n';
+   str = str + '</td>\n';
+   str = str + '<td align="center" bgcolor="#E0E0E0" width="50%">\n';
+   str = str + '<b>V</b>\n';
+   str = str + '</td>\n';
+   str = str + '</tr>\n';
+
+   for (i = 0; i < nop; i++)
+   {
+      str = str + '<tr bgcolor="#ffffff" id="trid' + i + '" onClick="onClickCB(' + i + ')" onMouseOver="onMouseOverCB(' + i + ')" onMouseOut="onMouseOutCB(' + i + ')">\n';
+      str = str + '<td align="right">\n';
+      str = str + xArray[i] + '&nbsp;\n';
+      str = str + '</td>\n';
+      str = str + '<td align="right" >\n';
+      str = str + yArray[i] + '&nbsp;\n';
+      str = str + '</td>\n';
+      str = str + '</tr>\n';
+   }
+
+   str = str + '</table>\n';
+   document.getElementById("table").innerHTML = str;
+}
+
+function compute()
+{
+   id = "fldx";
+   v = document.getElementById(id).value;
+   v = v.replace(/sen/g, "sin");
+   v = v.replace(/tg/g, "tan");
+   v = v.replace(/,/g, "\.");
+
+   document.getElementById("fldv").value = "";
+
+   if (v == '')
+   {
+      alert('Digite algum valor para x!');
+      document.getElementById(id).style.background = '#ff7777';
+      return;
+   }
+
+   if  (lspApplet.exists("pTest") == true)
+   {
+      lspApplet.deleteObject("pTest")
+   }
+   lspApplet.evalCommand("pTest =" + v);
+   if (lspApplet.isDefined("pTest") == false)
+   {
+      alert('Erro de sintaxe para x!');
+      document.getElementById(id).style.background = '#ff7777';
+      return;
+   }
+   else
+   {
+      xVal = lspApplet.getValue("pTest");
+      xVal = n2s(xVal);
+
+      if ((xVal <= 0.0) || (xVal >= 15.0))
+      {
+         alert('Não é possível construir uma caixa para este valor de x:\n' + xVal + '.\n\nLembre-se que os valores de x são arredondados para ' + nod + ' casas decimais!');
+         document.getElementById(id).value = xVal;
+         document.getElementById(id).style.background = '#ff7777';
+         return;
+      }
+
+      if (check_duplicated_entry(xVal) == true)
+      {
+         alert('Valor para x já fornecido anteriormente: ' + xVal + '.\n\nLembre-se que os valores de x são arredondados para ' + nod + ' casas decimais!');
+         document.getElementById(id).value = xVal;
+         document.getElementById(id).style.background = '#ff7777';
+         return;
+      }
+
+      document.getElementById(id).style.background = '#fff8da';
+      rspApplet.setValue("a", xVal);
+      // yVal = rspApplet.getValue("b");
+      yVal = rspApplet.getValueString("b");
+      yVal = yVal.replace(/b = /g, "");
+
+      rspApplet.setVisible("P", true);
+      rspApplet.setVisible("X", true);
+      rspApplet.setVisible("Y", true);
+      rspApplet.setVisible("sPX", true);
+      rspApplet.setVisible("sPY", true);
+      rspApplet.setLayer("P", 1);
+
+
+      rspApplet.evalCommand("P" + nop + "= (" + xVal + "," + yVal + ")");
+      rspApplet.setPointSize("P" + nop, 1);
+      rspApplet.setColor("P" + nop, 0, 0, 0);
+      rspApplet.setFixed("P" + nop, true);
+      rspApplet.setLayer("P" + nop, 0);
+
+      document.getElementById("jvxApplet").xVal = xVal;
+      document.getElementById("jvxApplet").updateBox();
+
+      lspApplet.evalCommand("xVal = " + xVal);
+
+      xArray[nop] = n2s(xVal);
+      yArray[nop] = n2s(yVal);
+      document.getElementById("fldv").value = yArray[nop];
+
+      nop++;
+
+      sort_entries();
+      build_table();
+   }
+}
+
+function getCookie(c_name)
+{
+   var i,x,y,ARRcookies=document.cookie.split(";");
+   for (i=0;i<ARRcookies.length;i++)
+   {
+     x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+     y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+     x=x.replace(/^\s+|\s+$/g,"");
+     if (x==c_name)
+     {
+        return unescape(y);
+     }
+   }
+   return(null);
+}
+
+function initialize()
+{
+   wp = getCookie("resetPDC1");
+   document.cookie = "resetPDC2 = 0";
+   if (wp != null)
+   {
+       wp = parseInt(wp);
+       window.scrollTo(0, wp);
+   }
+}
+
+function reset()
+{
+   wp = document.body.scrollTop || document.documentElement.scrollTop;
+
+   document.cookie = "resetPDC1 = " + wp;
+   document.location.reload(true);
+}
+</script>
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="770" align="center">
+  <tr>
+     <td>
+     <table border="0" cellpadding="0" cellspacing="0" width="770" >
+     <tr>
+     <td><div align="right"><img name="banner_final" src="banner_final.gif" border="0" height="33"></td><td><div align="left"><div align="right"><img name="banner_final" src="banner_final.gif" border="0" height="33"></div></td>
+     </tr>
+     </table>
+     </td>
+  </tr>
+</table>
+</center>
+<br>
+<center>
+   <img border="0" src="logomarcas.jpg" width="700" height="30" />
+</center>
+<br>
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/br/">
+<img alt="Creative Commons License" style="border-width:0" src="creative_commons.png" width="88" height="31" />
+</a>
+</center>
+<hr width="770">
+<center>
+<table>
+<tr align="top">
+<td align="center" colspan="1" class="id">
+Responsável:
+<a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br>
+Idealização:
+<a href="http://www.mat.puc-rio.br/pagina.php?id=docentes_gpalis" target="_new">Gilda de La Rocque Palis</a>, Silvana Marini Rodrigues Lopes e <a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br>
+Programação:
+<a href="http://www.professores.uff.br/hjbortol/" target="_new">Humberto José Bortolossi</a>.
+<br>
+Revisão:
+<a href="http://www.uff.br/leg/">Ana Maria Martensen Roland Kaleff</a>,
+Anne Michelle Dysman Gomes,
+Carla Cristina de Lima Pracias,
+<a href="http://www.professores.uff.br/dirceuesu/">Dirce Uesu Pesco</a>,
+<a href="http://www.mat.puc-rio.br/pagina.php?id=docentes_gpalis">Gilda de La Rocque Palis</a>,
+<br>
+<a href="http://www.professores.uff.br/hjbortol/">Humberto José Bortolossi</a>,
+José Osorio de Figueiredo,
+Rodrigo Viana Pereira,
+Silvana Marini Rodrigues Lopes,
+Thiago Gomes Pereira,
+<a href="http://www.professores.uff.br/wmrezende/">Wanderley Moura Rezende</a>.
+<br>
+<br>
+Biblioteca gráfica:
+<a href="http://www.javaview.de" target="_new">JavaView &ndash; Interactive 3D Geometry and Visualization</a>.
+<br>
+Esta atividade foi construída com o software de matemática dinâmica gratuito
+e multiplataforma
+<a href="http://www.geogebra.org" target="_new">GeoGebra</a>.
+<br>
+<br>
+O Problema da Caixa Versão 07/02/2011
+<br>
+Atualizações desta atividade estarão disponíveis no endereço
+<a href="http://www.uff.br/cdme/">http://www.uff.br/cdme/</a>.
+<br />
+Endereço alternativo: <a href="http://www.cdme.im-uff.mat.br/">http://www.cdme.im-uff.mat.br/</a>.
+</td></tr>
+</table>
+</center>
+<hr width="770">
+<center>
+<font size="3">
+Dúvidas? Sugestões? Nós damos suporte! Contacte-nos pelo e-mail:
+<br>
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;">&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;</a>.
+</font>
+</center>
+</body>
+</html>

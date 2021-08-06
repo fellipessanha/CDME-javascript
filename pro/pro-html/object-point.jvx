@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE jvx-model SYSTEM "http://www.javaview.de/rsrc/jvx.dtd">
+<jvx-model>
+	<meta generator="JavaView v3.99.008"/>
+	<meta dtd="3.00"/>
+	<meta date="Fri Jul 24 15:00:38 BRT 2009"/>
+	<version type="dump">0.10</version>
+	<title>Object_117</title>
+	<geometries>
+		<geometry name="object-point">
+			<pointSet point="show" thicknesses="show" dim="3">
+				<points num="1">
+					<p>10.0 0.0 5.0</p>
+					<thickness>2.0</thickness>
+					<color type="rgb">255 0 0</color>
+					<colorTag type="rgb">255 0 255</colorTag>
+					<labelAtt font="fixed" horAlign="head" verAlign="bottom" visible="hide">
+						<xOffset>0</xOffset>
+						<yOffset>0</yOffset>
+						<color type="rgb">0 0 0</color>
+					</labelAtt>
+				</points>
+				<thicknesses num="1">
+					<th>1.0</th>
+				</thicknesses>
+			</pointSet>
+			<lineSet line="show">
+				<lines>
+					<thickness>1.0</thickness>
+					<color type="rgb">0 0 0</color>
+					<colorTag type="rgb">255 0 255</colorTag>
+				</lines>
+			</lineSet>
+			<bndbox visible="hide">
+				<p>10.0 0.0 5.0</p>
+				<p>10.0 0.0 5.0</p>
+			</bndbox>
+			<center visible="hide">
+				<p>0.0 0.0 0.0</p>
+			</center>
+		</geometry>
+	</geometries>
+</jvx-model>

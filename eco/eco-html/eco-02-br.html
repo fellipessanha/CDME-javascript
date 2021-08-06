@@ -1,0 +1,747 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>O Problema do Cone Inscrito numa Esfera</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+a.mainmenu:link { color : #FFFFFF;  background : transparent; text-decoration : none;}
+a.mainmenu:visited {color : #FFFFFF; background : transparent; text-decoration : none;}
+a.mainmenu:hover {color : #FFFF00; background : transparent; text-decoration : none;}
+span.next:hover {cursor:hand}body {text-align: center; min-width: 800px;}
+/* #menu {position: absolute; left: 50%; width: 800px; margin-left: -210px;} */
+#menu {position: absolute; left: 50%; width: 800px; margin-left: -185px;}
+div.jqDockLabel {border:0px none; padding:0px 4px; font-size:14px; white-space:nowrap; color:#0000FF; background-color:transparent; font-weight: bold;}
+td.id { font-size: xx-small;}
+body, td { font-size: 16px; font-family: "Times New Roman"; }
+.subscript {font-size:xx-small; vertical-align:bottom;}
+.supscript {font-size:xx-small; vertical-align:top;}
+</style>
+<script type='text/javascript' src='jquery-1.2.4.min.js'></script>
+<script type='text/javascript' src='jquery.jqDock.js'></script>
+<script type='text/javascript'>
+var options =
+{ align: 'middle'
+, size: 48
+, labels: true
+};
+jQuery(document).ready(function()
+{
+  jQuery('#menu').jqDock(options);
+});
+</script>
+<script type="text/javascript" src="fc.js"></script>
+</head>
+
+<body bgcolor="#ffffff" leftmargin="0" topmargin="0" onload="initialize();">
+<script type="text/javascript" src="wz_tooltip.js"></script>
+<center>
+<table border="0" cellpadding="0" cellspacing="0" width="770" align="center" height="63">
+  <tr>
+    <td width="770" valign="top">
+      <table border="0" cellpadding="0" cellspacing="0" width="770">
+     <tr>
+         <td><img border="0" src="banner_top_eco_br.gif" width="770" height="63"/></td>
+     </tr>
+   </table>
+    </td>
+  </tr>
+</table>
+<br>
+<br>
+<div style='text-align: left;' id='menu'>
+  <a href="avaliacao.html">
+  <img src='avaliacao.jpg' alt='avaliacao.jpg' title='Avalie-nos!'/>
+  </a>
+  <img src='eco-fill.jpg' alt='eco-fill.jpg' title=''/>
+  <a href="eco-aluno.rtf" target="_new">
+  <img src='formulario.jpg' alt='formulario.jpg' title='Formulário de Acompanhamento do Aluno!'/>
+  </a>
+  <img src='eco-fill.jpg' alt='eco-fill.jpg' title=''/>
+  <a href="guia-do-professor.html">
+  <img src='guia.jpg' alt='guia.jpg' title='Guia do Professor!'/>
+  </a>
+  <img src='eco-fill.jpg' alt='eco-fill.jpg' title=''/>
+  <a href="http://www.uff.br/cdme/eco/">
+  <img src='update-01.jpg' alt='update-01.jpg' title='Verificar Atualizações no Servidor 1!'/>
+  </a>
+  <img src='eco-fill.jpg' alt='eco-fill.jpg' title=''/>
+  <a href="http://www.cdme.im-uff.mat.br/eco/">
+  <img src='update-02.jpg' alt='update-02.jpg' title='Verificar Atualizações no Servidor 2!'/>
+  </a>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<center>
+<table border="0" cellpadding="3" cellspacing="0" width="702">
+<tr>
+<td width="33%" align="left">
+</td>
+<td width="33%" align="center">
+<a href="eco-01-br.html">[Clique aqui para ir para a Parte 1]</a>
+</td>
+<td width="33%" align="right">
+<a href="#instrucoes">[Instruções no final desta página!]</a>
+</td>
+</tr>
+</tbody>
+</table>
+<br />
+<table border="0" cellpadding="3" cellspacing="0" width="714" style="margin-bottom:20px;margin-top:8px;">
+<tbody>
+<tr bgcolor="#e0e0e0">
+<td align="center">
+<b>PARTE 2</b>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+
+<table width="710" border="0" bgcolor="#FFFFFF" cellpadding="1" cellspacing="0" style="margin-bottom:0px;">
+<tr valign="top">
+<td align="center" bgcolor="#FFFFFF">
+<p align="center" style="margin-top: 0px; margin-bottom: 10px;">
+<b>Enunciado do Problema</b>
+</p>
+<p align="justify" style="margin-top: 0px; margin-bottom: 0px;">
+Queremos encaixar (inscrever) dentro de uma esfera um cone circular reto com o maior volume possível.
+Se a esfera tem 3 metros de raio, quanto deve ser x, a medida em metros da altura do cone, para que o volume V do cone seja o maior possível?
+</p>
+</td>
+</tr>
+</table>
+
+<br />
+
+
+<table width="700" border="0" bgcolor="#FFFFFF" cellpadding="1" cellspacing="0" style="margin-bottom:0px;">
+<tr valign="top">
+<td bgcolor="#FFFFFF">
+<applet name="lspApplet" id="lspApplet"
+        code="geogebra.GeoGebraApplet" codebase="." archive="geogebra.jar"
+        width="350" height="212"
+        MAYSCRIPT>
+	<param name="filename" value="eco-02-c-br.ggb">
+    <param name="language" value="pt">
+	<param name="framePossible" value="false">
+	<param name="enableRightClick" value="false">
+	<param name="enableShiftDragZoom" value="false">
+	<param name="showToolBar" value="false">
+	<param name="showToolBarHelp" value="false">
+    <param name="allowRescaling" value="true">
+    <param name="borderColor" value="#000000">
+    <param name="ggbOnInitParam" value="lspApplet">
+	Seu navegador não está com a linguagem JAVA instalada ou habilitada!
+	<br>
+	<br>
+	Por favor, verifique se o seu navegador não está bloqueando o acesso ao applet.
+    Para instalar a linguagem JAVA em seu computador, acesse o endereço
+    <a href="http://www.java.com/pt_BR/" target="_new">http://www.java.com/pt_BR/</a>.
+</applet>
+</td>
+<td align="center" bgcolor="#FFFFFF">
+<applet name="jvxApplet" id="jvxApplet" code="ECO.class"
+        width="354"
+        height="214"
+        archive="javaview.jar,jvx.jar"
+        border="0"
+        alt="O Problema do Cone Inscrito numa Esfera"
+        style="margin-bottom:0px;margin-left:5px;">
+<param name="panel" value="project">
+   Por favor, verifique se o seu navegador não está bloqueando o acesso ao applet. Para instalar a linguagem JAVA em seu computador, acesse o endereço <a href="http://www.java.com/pt_BR/" target="_new">http://www.java.com/pt_BR/</a>.
+</applet>
+</td>
+</tr>
+<tr valign="top">
+<td bgcolor="#FFFFFF"
+&nbsp;
+</td>
+<td align="center" bgcolor="#FFFFFF">
+<applet name="rspApplet" id="rspApplet"
+        code="geogebra.GeoGebraApplet" codebase="." archive="geogebra.jar"
+        width="350" height="212"
+        MAYSCRIPT>
+	<param name="filename" value="eco-02-g-br.ggb">
+    <param name="language" value="pt">
+	<param name="framePossible" value="false">
+	<param name="enableRightClick" value="false">
+	<param name="enableShiftDragZoom" value="false">
+	<param name="showToolBar" value="false">
+	<param name="showToolBarHelp" value="false">
+    <param name="allowRescaling" value="true">
+    <param name="borderColor" value="#000000">
+    <param name="ggbOnInitParam" value="rspApplet">
+	Seu navegador não está com a linguagem JAVA instalada ou habilitada!
+	<br>
+	<br>
+	Por favor, verifique se o seu navegador não está bloqueando o acesso ao applet.
+    Para instalar a linguagem JAVA em seu computador, acesse o endereço
+    <a href="http://www.java.com/pt_BR/" target="_new">http://www.java.com/pt_BR/</a>.
+</applet>
+</td>
+</tr>
+</table>
+
+
+<table width="702" bgcolor="#000000" border="0" cellpadding="5" cellspacing="1" style="margin-bottom:10px;">
+<tr>
+<td bgcolor="#FFFFFF">
+<table width="100%">
+<tr>
+<td align="right" bgcolor="#FFFFFF">
+V = f(x)
+</td>
+<td align="center" bgcolor="#FFFFFF">
+=
+</td>
+<td align="left" bgcolor="#FFFFFF">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="fexp" id="fexp" disabled="true" value="" type="text" style="text-align:left; width:570px; font-weight: bold; position:relative; top:0px; color: #781351;background: #fff8da; border: 1px solid #781351" />
+</td>
+</tr>
+<tr>
+<td align="right" bgcolor="#FFFFFF">
+Domínio
+</td>
+<td align="center" bgcolor="#FFFFFF">
+=
+</td>
+<td align="left" bgcolor="#FFFFFF">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <select id="lint" name="lint" disabled="true" style="position:relative; top:3px;">
+       <option value="("> &nbsp;(&nbsp; </option>
+       <option value="["> &nbsp;[&nbsp; </option>
+       </select>
+       a, b
+       <select id="rint" name="rint" disabled="true" style="position:relative; top:3px;">
+       <option value=")"> &nbsp;)&nbsp; </option>
+       <option value="]"> &nbsp;]&nbsp; </option>
+       </select>
+</td>
+</tr>
+<tr>
+<td align="right" bgcolor="#FFFFFF">
+a
+</td>
+<td align="center" bgcolor="#FFFFFF">
+=
+</td>
+<td align="left" bgcolor="#FFFFFF">
+<input type="radio" id="ltf" disabled="true" name="ltype" onclick="    document.getElementById('xmin').disabled = false;" checked="true" />
+<input name="xmin" id="xmin" disabled="true" type="text" style="text-align:left; width:500px; font-weight: bold; position:relative; top:0px; color: #781351;background: #fff8da; border: 1px solid #781351" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" id="lti" disabled="true" name="ltype" onclick="document.getElementById('xmin').disabled = true;document.getElementById('lint').selectedIndex = 0;" /> &minus;&infin;
+</td>
+</tr>
+<tr>
+<td align="right" bgcolor="#FFFFFF">
+b
+</td>
+<td align="center" bgcolor="#FFFFFF">
+=
+</td>
+<td align="left" bgcolor="#FFFFFF">
+<input type="radio" id="rtf" disabled="true" name="rtype" onclick="document.getElementById('xmax').disabled = false;" checked="true" />
+<input name="xmax" id="xmax" disabled="true" type="text" style="text-align:left; width:500px; font-weight: bold; position:relative; top:0px; color: #781351;background: #fff8da; border: 1px solid #781351" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" id="rti" disabled="true" name="rtype" onclick="document.getElementById('xmax').disabled = true;document.getElementById('rint').selectedIndex = 0;" /> +&infin;
+</td>
+</tr>
+<tr>
+<td colspan="3" align="center" bgcolor="#FFFFFF">
+<input type="button" name="btnc" id="btnc" disabled="true" value="Conferir!" onclick='compute()' style="width:100px;" />
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<center>
+<input type="button" name="btnr" id="btnr" disabled="true" value="Reiniciar!" onclick='reset();' style="width:100px;" />
+</center>
+
+<br />
+<br />
+
+
+<center>
+<a name="instrucoes"></a>
+<table border="0" cellpadding="3" cellspacing="0" width="710">
+<tbody>
+<tr bgcolor="#e0e0e0">
+<td align="center">
+<b>INSTRUÇÕES</b>
+</td>
+</tr>
+</tbody>
+</table>
+<br />
+<table width="710" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+<p align="justify" style="margin-top:0px; margin-bottom:0px" >
+Neste módulo você deve explicitar a função que modela o problema,
+indicando uma expressão para a função e o seu domínio. Preencha os campos acima
+e, então, clique no botão &#8220;Conferir!&#8221;
+para conferir sua resposta. Além de conferir sua resposta,
+o programa também desenhará na cor preta
+o gráfico da função que você forneceu. Para visualizar o gráfico da
+função correta (desenhado em cinza claro), habilite a opção &#8220;Gráfico&#8221;.
+<br />
+<br />
+O domínio da função que modela o problema é indicado
+usando-se a notação de intervalos. Inicialmente, você deve especificar como
+são os extremos do intervalo:
+<nobr>(a, b)</nobr>, <nobr>(a, b]</nobr>, <nobr>[a, b)</nobr>
+ou <nobr>[a, b]</nobr>. Para isto, clique nos seletores e escolha entre as opções
+&#8220;(&#8221;, &#8220;[&#8221;, &#8220;]&#8221; e &#8220;)&#8221;.
+Depois, você deve especificar os valores de &#8220;a&#8221; e &#8220;b&#8221;.
+Se &#8220;a&#8221; for igual a <nobr>&minus;&infin;</nobr>,
+clique na bolinha à esquerda de <nobr>&minus;&infin;</nobr>.
+Caso contrário, clique na bolinha à esquerda do campo de entrada e digite
+o valor de &#8220;a&#8221;.  O valor de &#8220;b&#8221; é especificado
+de modo análogo.
+<br />
+<br />
+Nos campos &#8220;a&#8221;
+e &#8220;b&#8221; você poderá usar números tais como 7, 1/2,
+sqrt(5) (raiz quadrada de 5), sen(8) (seno de 8), pi (o número irracional &pi;), etc.
+<b>Importante: intencionalmente, números com pontos ou vírgulas decimais não são permitidos neste módulo</b>.
+Multiplicações podem ser indicadas com um asterisco ou um espaço em branco
+(por exemplo, 2*pi ou 2&nbsp;pi para indicar o número <nobr>2&nbsp;&pi;</nobr>).
+Use parêntesis para agrupar termos (por exemplo, <nobr>3^(1/2)</nobr>
+para indicar a raiz quadrada de 3).
+<br />
+<br />
+No campo &#8220;V = f(x)&#8221;
+você poderá usar expressões como sqrt(x) (raiz quadrada de x), sen(x) (seno de x),
+2^x <nobr>(2 elevado</nobr> <nobr>a x),</nobr> abs(x) (módulo de x).  Use parêntesis para agrupar termos (por exemplo, <nobr>1/(2 + x)).</nobr>
+Multiplicações podem ser indicadas com um asterisco ou com um espaço em branco
+(por exemplo, <nobr>x*cos(x)</nobr> ou <nobr>x&nbsp;cos(x)</nobr>). Em alguns casos,
+não é necessário usar nem asteriscos e nem espaços em branco, pois
+a multiplicação é identificada automaticamente (por exemplo,
+<nobr>2x</nobr>).
+<br />
+<br />
+Clique e arraste o ponto M. Se a opção &#8220;Rastro&#8221; estiver habilitada,
+o programa irá exibir alguns pontos do gráfico da função que modela o problema durante o processo.
+Para reiniciar o programa, clique no botão &#8220;Reiniciar!&#8221; ou pressione a tecla F5!
+<br />
+<br />
+Clique e arraste o Modelo 3D para girá-lo. Para mudar a transparência da esfera,
+clique na janela e, então, pressione as teclas <b>1</b> (para tornar a esfera mais transparente)
+e <b>2</b> (para tornar a esfera mais opaca). Para ampliar ou reduzir o Modelo 3D, clique com o botão direito
+do mouse e, mantendo-o pressionado, arraste o mouse.
+<br />
+<br />
+Nas versões mais atuais do Firefox, do Internet Explorer e do Google Chrome,
+é possível usar as combinações de teclas indicadas na tabela abaixo para aumentar ou diminuir
+o tamanho da fonte do texto e o tamanho das figuras.
+Isto permite configurar estes navegadores para uma leitura mais agradável.
+</p>
+<p align="center">
+<table width="400" bgcolor="#000000" cellspacing="1" cellpadding="5" border="0">
+    <tr>
+      <th align="center" bgcolor="#DDDDDD">Combinação de Teclas</TH>
+      <th align="center" bgcolor="#DDDDDD">Efeito</TH></TR>
+    <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-01.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Ampliar</td></tr>
+    <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-02.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Reduzir</td></tr>
+     <tr>
+      <td align="center" bgcolor="#FFFFFF"><img src="accessibility-key-03.gif" width="120" height="38" /></TD>
+      <td align="center" bgcolor="#FFFFFF">Voltar para a configuração inicial</td></tr>
+</table>
+</p>
+</td>
+</tr>
+</table>
+</center>
+
+<script type="text/javascript">
+var check_timer = setInterval("check()", 500);
+
+var lspAppletOK = false;
+var rspAppletOK = false;
+var jvxAppletOK = true;
+
+var ltiChecked = false;
+var rtiChecked = false;
+
+var notMax = 7;
+var notVal = 0;
+
+
+function ggbOnInit(c)
+{
+   document.getElementById("fexp").value = "";
+   document.getElementById("xmin").value = "";
+   document.getElementById("xmax").value = "";
+   document.getElementById("ltf").checked = true;
+   document.getElementById("rtf").checked = true;
+
+   if (c == "lspApplet")
+   {
+      lspAppletOK = true;
+   }
+
+   if (c == "rspApplet")
+   {
+      rspAppletOK = true;
+   }
+}
+
+function check()
+{
+   document.getElementById("lspApplet").evalCommand("loadValue = 1/3 + 1/3 + 1/3");
+   if (document.getElementById("lspApplet").getValue("loadTest") == 0)
+   {
+      return;
+   }
+
+   if ((lspAppletOK == true) && (rspAppletOK == true) &&
+       (jvxAppletOK == true))
+   {
+      document.getElementById("lspApplet").setErrorDialogsActive(false);
+      document.getElementById("lspApplet").setFixed("M", false);
+      document.getElementById("lspApplet").registerObjectUpdateListener("M", "updateX");
+
+      document.getElementById("rspApplet").setErrorDialogsActive(false);
+      document.getElementById("rspApplet").registerObjectUpdateListener("showTrace", "updateTrace");
+
+      document.getElementById("fexp").disabled = false;
+      document.getElementById("xmin").disabled = false;
+      document.getElementById("xmax").disabled = false;
+      document.getElementById("btnc").disabled = false;
+      document.getElementById("btnr").disabled = false;
+      document.getElementById("lint").disabled = false;
+      document.getElementById("rint").disabled = false;
+      document.getElementById("ltf").disabled = false;
+      document.getElementById("lti").disabled = false;
+      document.getElementById("rti").disabled = false;
+      document.getElementById("rtf").disabled = false;
+
+      clearInterval(check_timer);
+   }
+}
+
+function updateX()
+{
+   xVal = document.getElementById("lspApplet").getValue("xVal");
+   document.getElementById("rspApplet").setValue("aGGB", xVal);
+   document.getElementById("jvxApplet").xVal = xVal;
+   document.getElementById("jvxApplet").updateCone();
+}
+
+function updateTrace()
+{
+   var showTrace = true;
+   if (document.getElementById("rspApplet").getValue("showTrace") == 0)
+   {
+      showTrace = false;
+   }
+   document.getElementById("rspApplet").setTrace("PGGB", showTrace);
+}
+
+function compute()
+{
+   var uMin;
+   var uMax;
+   var uGGB;
+
+   // Function expression test
+   id = "fexp";
+   v = document.getElementById(id).value;
+   v = v.replace(/sen/g, "sin");
+   v = v.replace(/tg/g, "tan");
+   v = v.replace(/,/g, "\.");
+
+   if (v == '')
+   {
+      alert('Digite algum valor para o campo indicado!');
+      document.getElementById(id).style.background = '#ff7777';
+      return;
+   }
+
+   if (v.indexOf(".") != -1)
+   {
+      alert('Dê sua resposta sem usar números com pontos ou vírgulas decimais!');
+      document.getElementById(id).style.background = '#ff7777';
+      return;
+   }
+
+   if  (document.getElementById("rspApplet").exists("pTest") == true)
+   {
+      document.getElementById("rspApplet").deleteObject("pTest")
+   }
+
+
+   document.getElementById("rspApplet").evalCommand("pTest(x) = " + v);
+   document.getElementById("rspApplet").setVisible("pTest", false);
+   if (document.getElementById("rspApplet").isDefined("pTest") == false)
+   {
+      alert('Erro de sintaxe para o campo indicado!');
+      document.getElementById(id).style.background = '#ff7777';
+      return;
+   }
+   else
+   {
+      document.getElementById(id).style.background = '#fff8da';
+      uGGB = v;
+   }
+
+   // xMin test
+   id = "xmin";
+   v = document.getElementById(id).value;
+   v = v.replace(/sen/g, "sin");
+   v = v.replace(/tg/g, "tan");
+   v = v.replace(/,/g, "\.");
+
+   if (document.getElementById("lti").checked == false)
+   {
+       ltiChecked = false;
+       if (v == '')
+       {
+          alert('Digite algum valor para o campo indicado!');
+          document.getElementById(id).style.background = '#ff7777';
+          return;
+       }
+
+       if (v.indexOf(".") != -1)
+       {
+          alert('Dê sua resposta sem usar números com pontos ou vírgulas decimais!');
+          document.getElementById(id).style.background = '#ff7777';
+          return;
+       }
+
+       if  (document.getElementById("lspApplet").exists("pTest") == true)
+       {
+          document.getElementById("lspApplet").deleteObject("pTest")
+       }
+       document.getElementById("lspApplet").evalCommand("pTest =" + v);
+       if (document.getElementById("lspApplet").isDefined("pTest") == false)
+       {
+          alert('Erro de sintaxe para o campo indicado!');
+          document.getElementById(id).style.background = '#ff7777';
+          return;
+       }
+       else
+       {
+          xVal = document.getElementById("lspApplet").getValue("pTest");
+
+          document.getElementById(id).style.background = '#fff8da';
+          uMin = v;
+       }
+   }
+   else
+   {
+       ltiChecked = true;
+       var infVal = "\u221e";
+       uMin = "-" + infVal;
+   }
+
+   // xMax test
+   id = "xmax";
+   v = document.getElementById(id).value;
+   v = v.replace(/sen/g, "sin");
+   v = v.replace(/tg/g, "tan");
+   v = v.replace(/,/g, "\.");
+
+   if (document.getElementById("rti").checked == false)
+   {
+       rtiChecked = false;
+       if (v == '')
+       {
+          alert('Digite algum valor para o campo indicado!');
+          document.getElementById(id).style.background = '#ff7777';
+          return;
+       }
+
+       if (v.indexOf(".") != -1)
+       {
+          alert('Dê sua resposta sem usar números com pontos ou vírgulas decimais!');
+          document.getElementById(id).style.background = '#ff7777';
+          return;
+       }
+
+       if  (document.getElementById("lspApplet").exists("pTest") == true)
+       {
+          document.getElementById("lspApplet").deleteObject("pTest")
+       }
+       document.getElementById("lspApplet").evalCommand("pTest =" + v);
+       if (document.getElementById("lspApplet").isDefined("pTest") == false)
+       {
+          alert('Erro de sintaxe para o campo indicado!');
+          document.getElementById(id).style.background = '#ff7777';
+          return;
+       }
+       else
+       {
+          xVal = document.getElementById("lspApplet").getValue("pTest");
+
+          document.getElementById(id).style.background = '#fff8da';
+          uMax = v;
+       }
+   }
+   else
+   {
+       rtiChecked = true;
+       var infVal = "\u221e";
+       uMax = infVal;
+   }
+
+   // document.getElementById("rspApplet").setVisible("hGGB", true);
+   // document.getElementById("rspApplet").evalCommand("pList = {" + uMin + ", " + uMax + ", " + uGGB + "}");
+      document.getElementById("rspApplet").evalCommand("uMin = " + uMin);
+      document.getElementById("rspApplet").evalCommand("uMax = " + uMax);
+      document.getElementById("rspApplet").evalCommand("uGGB(x) = " + uGGB);
+      document.getElementById("rspApplet").deleteObject("hGGB");
+      document.getElementById("rspApplet").evalCommand("hGGB(x) = Função[" + uGGB + ", " + uMin + ", " + uMax + "]");
+   // document.getElementById("rspApplet").setColor("hGGB", 0, 0, 255);
+
+   // Check answer
+   notVal++;
+
+   isOK = true;
+
+   // fexp
+   if ((document.getElementById("rspApplet").getValue("fB") == 0) ||
+       (document.getElementById("rspApplet").getValue("iB") == 0))
+   {
+      alert("A expressão para a função não está correta! Tentativa " + notVal + " de " + notMax + "!");
+      isOK = false;
+   }
+   else
+   {
+       // rint and lint
+       if ((document.getElementById('lint').selectedIndex == 1) ||
+           (document.getElementById('rint').selectedIndex == 1))
+       {
+          alert("O domínio não está correto! Tentativa " + notVal + " de " + notMax + "!");
+          isOK = false;
+       }
+       else
+       {
+           // xMin and xMax
+           if ((document.getElementById("rspApplet").getValue("xMinB") == 0) ||
+               (document.getElementById("rspApplet").getValue("xMaxB") == 0))
+           {
+              alert("O domínio não está correto! Tentativa " + notVal + " de " + notMax + "!");
+              isOK = false
+           }
+       }
+    }
+
+
+   if (isOK == true)
+   {
+       document.getElementById("fexp").disabled = true;
+       document.getElementById("xmin").disabled = true;
+       document.getElementById("xmax").disabled = true;
+       document.getElementById("btnc").disabled = true;
+       document.getElementById("lint").disabled = true;
+       document.getElementById("rint").disabled = true;
+       document.getElementById("ltf").disabled = true;
+       document.getElementById("lti").disabled = true;
+       document.getElementById("rti").disabled = true;
+       document.getElementById("rtf").disabled = true;
+
+       alert("Parabéns!");
+   }
+   else
+   {
+      if (notVal == notMax)
+      {
+           document.getElementById("rspApplet").deleteObject("hGGB");
+
+           document.getElementById("fexp").value = "pi x^2 (6 - x)/3";
+           document.getElementById("lint").selectedIndex = 0;
+           document.getElementById("rint").selectedIndex = 0;
+           document.getElementById("ltf").checked = true;
+           document.getElementById("xmin").value = "0";
+           document.getElementById("rtf").checked = true;
+           document.getElementById("xmax").value = "6";
+
+           document.getElementById("fexp").disabled = true;
+           document.getElementById("xmin").disabled = true;
+           document.getElementById("xmax").disabled = true;
+           document.getElementById("btnc").disabled = true;
+           document.getElementById("lint").disabled = true;
+           document.getElementById("rint").disabled = true;
+           document.getElementById("ltf").disabled = true;
+           document.getElementById("lti").disabled = true;
+           document.getElementById("rti").disabled = true;
+           document.getElementById("rtf").disabled = true;
+
+           alert("Número máximo de tentativas atingido!\nAs respostas corretas estão apresentadas nos vários campos!");
+      }
+   }
+}
+
+function getCookie(c_name)
+{
+   var i,x,y,ARRcookies=document.cookie.split(";");
+   for (i=0;i<ARRcookies.length;i++)
+   {
+     x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+     y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+     x=x.replace(/^\s+|\s+$/g,"");
+     if (x==c_name)
+     {
+        return unescape(y);
+     }
+   }
+   return(null);
+}
+
+function initialize()
+{
+   wp = getCookie("resetECO2");
+   document.cookie = "resetECO1 = 0";
+   if (wp != null)
+   {
+       wp = parseInt(wp);
+       window.scrollTo(0, wp);
+   }
+}
+
+function reset()
+{
+   wp = document.body.scrollTop || document.documentElement.scrollTop;
+
+   document.cookie = "resetECO2 = " + wp;
+   document.location.reload(true);
+}
+</script>
+
+
+<table width="770" align="center" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+     <td>
+     <table width="770" border="0" cellpadding="0" cellspacing="0">
+     <tbody><tr>
+     <td><div align="right"><img name="banner_final" src="banner_final.gif" border="0" width="390" height="33"></div></td><td><div align="left"><div align="right"><img name="banner_final" src="banner_final.gif" border="0" width="390" height="33"></div></div></td>
+     </tr>
+     </tbody></table>
+     </td>
+  </tr>
+</tbody>
+</table>
+<br>
+<center>
+<font size="3">
+Dúvidas? Sugestões? Nós damos suporte! Contacte-nos pelo e-mail:
+<br>
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;">&#99;&#111;&#110;&#116;&#101;&#117;&#100;&#111;&#115;&#100;&#105;&#103;&#105;&#116;&#97;&#105;&#115;&#64;&#105;&#109;&#46;&#117;&#102;&#102;&#46;&#98;&#114;</a>.
+</font>
+</center>
+</body>
+</html>
+

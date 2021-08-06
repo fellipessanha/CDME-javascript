@@ -159,12 +159,12 @@ def convertAppletoJS(htmlFile, dir, ggbdir, vparameters, htmlparameters, lastApp
 
 ggbDir = "geogebra-constructions\\"
 
-dirs = listdir(ggbDir)
+# dirs = listdir(ggbDir)
+dirs = ["eci", 'eco', 'epi']
 print(dirs)
 
-quit()
-dirs.remove('copying.py')
-dirs.remove('estranhos')
+# dirs.remove('copying.py')
+# dirs.remove('estranhos')
 
 
 # print(dir+"\\"+dir+"-html\\filename")
@@ -186,7 +186,7 @@ for curr in dirs:
     htmlfile = convertAppletoJS(htmlfile, curr, ggbDir, ggbConstructParams, oldHtmlParams, lastApplet=True)
     # quit()
 
-    with open(curr+'\\converted-'+filetoConvert, 'w', encoding='utf-8') as f:
+    with open(curr+'\\'+curr+'-html'+'\\converted-'+filetoConvert, 'w', encoding='utf-8') as f:
       f.write(htmlfile)
 
 # print(ggbhtmlFile)

@@ -39,3 +39,28 @@ var applet3ddd = new GGBApplet(parameters, '5.0', views);
 window.onload = function() {applet3ddd.inject('Applet3d')};
 // applet.setPreviewImage('data:image/gif;base64,R0lGODlhAQABAAAAADs=','https://www.geogebra.org/images/GeoGebra_loading.png','https://www.geogebra.org/images/applet_play.png');
 
+
+function closingAnimation()
+{
+   var animation = Applet3d.getValue('variavelMovimento');
+   animation = Math.max(animation - 0.1, 0);
+   Applet3d.setValue('variavelMovimento', animation);
+}
+
+function openingAnimation()
+{
+   var animation = Applet3d.getValue('variavelMovimento');
+   animation = Math.min(animation + 0.1, 1);
+   Applet3d.setValue('variavelMovimento', animation);
+}
+
+function checkKeyPress(key){
+
+   if (key.keyCode == '49' || key.keyCode == '97'){
+      openingAnimation();
+   } else if (key.keyCode == '50' || key.keyCode == '98'){
+      closingAnimation();
+   }
+}
+
+window.addEventListener("keypress", checkKeyPress, false);

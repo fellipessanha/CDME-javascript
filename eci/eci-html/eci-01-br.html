@@ -132,16 +132,8 @@ window.addEventListener("load", function(){lspApplet.inject("lspApplet_container
 <div id="lspApplet_container"></div>
 </td>
 <td align="center" bgcolor="#FFFFFF">
-<applet name="jvxApplet" id="jvxApplet" code="ECI.class"
-        width="354"
-        height="214"
-        archive="javaview.jar,jvx.jar"
-        border="0"
-        alt="O Problema do Cilindro Inscrito numa Esfera"
-        style="margin-bottom:0px;margin-left:5px;">
-<param name="panel" value="project">
-   Por favor, verifique se o seu navegador não está bloqueando o acesso ao applet. Para instalar a linguagem JAVA em seu computador, acesse o endereço <a href="http://www.java.com/pt_BR/" target="_new">http://www.java.com/pt_BR/</a>.
-</applet>
+<script src="Cilindro-inscrito-esfera.js"></script>
+<div id="Applet3d"></div>
 </td>
 </tr>
 <tr valign="top">
@@ -278,7 +270,6 @@ var check_timer = setInterval("check()", 500);
 
 var lspAppletOK = false;
 var rspAppletOK = false;
-var jvxAppletOK = true;
 
 var nod = 7;
 var nop_max = 100;
@@ -296,8 +287,7 @@ function check()
       return;
    }
 
-   if ((lspAppletOK == true) && (rspAppletOK == true) &&
-       (jvxAppletOK == true))
+   if ((lspAppletOK == true) && (rspAppletOK == true))
    {
       lspApplet.setErrorDialogsActive(false);
       lspApplet.setMode(40);
@@ -318,8 +308,7 @@ function updateX()
 {
    xVal = lspApplet.getValue("xVal");
    rspApplet.setValue("a", xVal);
-   document.getElementById("jvxApplet").xVal = xVal;
-   document.getElementById("jvxApplet").updateBox();
+   Applet3d.setValue("variavelX", xVal);
 }
 
 function n2s(number)
@@ -396,8 +385,7 @@ function onClickCB(i)
    document.getElementById(id).style.backgroundColor = "#ffff00";
    xVal = xArray[i];
    rspApplet.setValue("a", xVal);
-   document.getElementById("jvxApplet").xVal = xVal;
-   document.getElementById("jvxApplet").updateCylinder();
+   Applet3d.setValue("variavelX", xVal);
    lspApplet.evalCommand("xVal = " + xVal);
    document.getElementById("fldx").value = "";
    document.getElementById("fldv").value = "";
@@ -513,8 +501,7 @@ function compute()
       rspApplet.setFixed("P" + nop, true);
       rspApplet.setLayer("P" + nop, 0);
 
-      document.getElementById("jvxApplet").xVal = xVal;
-      document.getElementById("jvxApplet").updateCylinder();
+      Applet3d.setValue("variavelX", xVal);      
 
       lspApplet.evalCommand("xVal = " + xVal);
 

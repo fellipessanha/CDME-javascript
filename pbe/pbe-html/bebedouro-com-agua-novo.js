@@ -18,7 +18,7 @@ var parameters3d = {
 "showZoomButtons":false,
 "capturingThreshold":3,
 // add code here to run when the applet starts
-"appletOnLoad":function(api){ /* api.evalCommand('Segment((1,2),(3,4))');*/ },
+"appletOnLoad":function(api){api.setMode(540);},
 "showFullscreenButton":false,
 "scale":1,
 "disableAutoScale":false,

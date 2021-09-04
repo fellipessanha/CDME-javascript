@@ -57,9 +57,12 @@ var parameters3d = {
    function checkKeyPress(key){
    
       if (key.keyCode == '49' || key.keyCode == '97'){
+         console.log('oi');
          openingAnimation();
       } else if (key.keyCode == '50' || key.keyCode == '98'){
          closingAnimation();
+         console.log('tchau');
+
       }
    }
    

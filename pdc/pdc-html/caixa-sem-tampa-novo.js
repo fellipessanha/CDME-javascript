@@ -17,7 +17,7 @@ var parameters = {
 "showZoomButtons":false,
 "capturingThreshold":3,
 // add code here to run when the applet starts
-"appletOnLoad":function(api){},
+"appletOnLoad":function(api){api.setMode(540)},
 "showFullscreenButton":false,
 "scale":1,
 "disableAutoScale":false,

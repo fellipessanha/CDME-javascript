@@ -1,0 +1,116 @@
+\chapter{O Projeto CDME e o Projeto Ótimo}
+\label{cap:CDME}
+
+% ->¨Veio de um incentivo do governo de apoio financeiro à produção de conteúdos digitais educacionais, em um contexto de aumento de aumento de investimento na inclusão digital de alunos de escolas públicas
+% -> Softwares para esse propósito costumam ser pagos e oferecidos principalmente em inglês e esquema de mensalidade, o que é dramático em situações de inflação e desvalorização da moeda.
+% -> software livre e com curva de aprendizado suave: professor e aluno não precisam se preocupar com implementação de tecnologia alguma.
+% -> contém mais de 60 atividades que contemplam as mais diversas áreas da matemática.
+
+% -> cdme estava pra ser incluído no portal do professor, segundo \citeonline{bortolossiaulas}
+
+% Um capítulo sobre o projeto CDME (histórico, contexto, objetivos e o que ele alcançou) 
+
+A década de 2010 foi marcada por um avanço em políticas educacionais que investiam na inclusão digital dos alunos e professores de escola públicas. O estado do Rio de Janeiro forneceu, por exemplo, um notebook com acesso a internet via conexão 3G a cada professor da rede estadual. Com esse movimento de inclusão também se investiu em produção de conteúdos educacionais digitais multimídia. Uma iniciativa, por exemplo, foi um edital no valor de 75 milhões de reais do Ministério de Educação e do Ministério da Ciência, em meados de 2007 que focava no segmento do ensino médio, e contemplava as áreas de química, biologia, e português~\cite{cdmebortolossi2016conteudos}.
+
+Esse edital buscava a produção de conteúdos de qualidade, fácil acesso e boas orientações metodológicas e gratuito, que pudesse servir de alternativa aos recursos pagos, normalmente em sistema de assinatura, que se tornam inviáveis até mesmo para escolas e universidade.
+
+
+\section{O Projeto CDME}
+
+% MINISTÉRIO DA CIÊNCIA E TECNOLOGIA
+% MINISTÉRIO DA EDUCAÇÃO
+% EDITAL DE SELEÇÃO Nº 1/2007
+% CHAMADA PÚBLICA PARA APOIO FINANCEIRO À PRODUÇÃO DE CONTEÚDOS EDUCACIONAIS DIGITAIS MULTIMÍDIA
+
+Dentre os projetos contemplados no edital de Chamada Pública Para Apoio Financeiro À Produção De Conteúdos Educacionais Digitais Multimídia (Edital 1/2007), conjunto do Ministério de Ciência e Tecnologia e Ministério da Educação~\cite{editalCDME}, estava o projeto CDME\footnote{Conteúdos Digitais para o Ensino e Aprendizagem da Matemática do Ensino Médio} da Universidade Federal Fluminense, contemplado com financiamento de 220 mil reais para o desenvolvimento de mais de 60 atividades multimídia, experimentos e clipes de áudio educacionais para a área de Matemática, de utilização livre e gratuita por professores. O projeto propunha atividades fechadas que o professor poderia usar com os seus alunos, indo diretamente para o foco do problema sem ter que se preocupar com a montagem ou implementação da atividade, e chegou a ser cogitado para ser incluído na no Portal do Professor do MEC~\cite{bortolossiaulas}. \\
+
+O Projeto Ótimo foi disponibilizado no endereço \url{http://www.cdme.im-uff.mat.br/pot/pot-html/pot-br.html}. Como explicaremos no capítulo~\ref{cap:partetecnica}, este projeto foi implementado utilizando a tecnologia dos applets java, que atualmente perdeu o suporte nos navegadores modernos. Como já dissemos, o foco deste trabalho foi a atualização das atividades do projeto, e a nova versão pode ser encontrada no link \url{https://fellipessanha.github.io/CDME-javascript/pot/}.\\
+
+As atividades propostas no CDME abrangem diversos conteúdos de Matemática e Estatística abordados no Ensino Médio. Entre os temas estão: 
+
+\begin{itemize}
+    \item Geometria Espacial, em atividades como "Uma Pletora de Poliedros", que permitia manipular e visualizar diversos tipos de poliedros, e "Jogo da Tomografia", cujo objetivo era identificar um objeto visualizando apenas duas projeções ortogonais em um eixo;
+    
+    \item Estatística, nas atividades "Distribuição de Frequências e Seus Gráficos", que descreve como gráficos são feitos a partir de dados estatísticos, e "Pesquisas Estatísticas no Dia a Dia", que detalha alguns dados estatísticos importantes do Brasil;
+    
+    \item Funções, como em "Variação da Função Exponencial", que contém uma série de exercícios que abordam a natureza da função exponencial,
+    
+    \item Otimização, no grupo de atividades intitulado "Projeto Ótimo", que consiste em diversas situações de otimização, com atividades associadas; entre outros.
+\end{itemize}
+
+Neste trabalho, nos concentraremos no grupo de atividades intitulado ``Projeto Ótimo", com uma pequena apresentação sobre as atividades, seus objetivos e métodos, uma discussão sobre a temática de otimização no Ensino Médio e o problema da atualização destas atividades para as novas tecnologias de recursos computacionais. 
+
+\section{O Projeto Ótimo}
+
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\textwidth]{media/CDME-projeto-otimo.jpg}
+    \caption{Thumbnail do Projeto Ótimo no site do CDME}
+    \label{fig:projotimo}
+\end{figure}
+
+O Projeto Ótimo~(Figura \ref{fig:projotimo}) consiste de 21 módulos de problemas de otimização de uma variável acompanhados de construções GeoGebra, contextualizando a situação-problema, além de gráficos que relacionam as variáveis do domínio do problema com a imagem no contra-domínio. Os problemas exploram conceitos como domínio, imagem, gráfico de função, entre outros, estimulando conexões entre os aspectos algébrico, numérico, geométrico e verbal da função real. Para que o foco permaneça no processo de otimização propriamente dito, todas estas atividades possuem solução única e facilmente identificável como tal dentro do domínio.
+
+Esses módulos vêm acompanhados de um documento com exercícios sugeridos que, caso o professor escolha usar, podem ser modificados para se adequarem aos alunos. Além disso, o professor pode utilizar as atividades de diversas maneiras: junto aos alunos em sala de aula; utilizando um projetor ou monitor; como atividade de casa após uma introdução em aula; em laboratório de informática da escola, deixando que os alunos discutam entre si e com o professor.
+\\
+
+A otimização --- tema do Projeto -- é, de maneira geral, o processo de maximizar ou minimizar o valor de uma função, através da uma escolha viável de suas variáveis segundo as condições impostas pela situação em que o problema se insere. Tais problemas são relevantes por serem extremamente comuns em praticamente qualquer área de atuação profissional: um empresário busca maximizar lucros; um engenheiro busca maior eficiência na produção; empresas de logística buscam maximizar a eficiência do roteamento de seus veículos. 
+\\
+
+Além de contextos humanos e profissionais, problemas de otimização também aparecem em contextos naturais: uma bolha de sabão é tal que a sua superfície é a mínima para um dado volume; a luz sempre percorre a distância que minimize a distância percorrida; e um objeto sempre tende ao equilíbrio em um ponto que minimize a sua energia potencial.
+
+A grande relevância e recorrência deste tipo de problemas torna indispensável sua abordagem em sala de aula. Muitos dos alunos terão que \textit{otimizar} alguma tarefa ao longo de suas vidas, e a experiência de reconhecer domínios e contra-domínios, elaborar e modelar uma lei de função, aprender técnicas que facilitem suas resoluções, quando vista em sala de aula, pode acrescentar muito na formação escolar. 
+\\
+
+Cada módulo do Projeto Ótimo consiste de duas ou mais atividades. Uma atividade trata da otimização da situação apresentada, por exemplo, determinar a medida da base que maximiza a área de um triângulo, dado um perímetro fixo. Outra, aborda a modelagem geral de um problema, por exemplo, determinar a lei de formação de um triângulo de perímetro fixo, em função de sua base, seguindo o exemplo anterior. Essas atividade são acompanhados por uma simulação computacional gráfica da situação, que permite que o aluno interaja com o problema e tenha um melhor entendimento de suas particularidades e limitações. As situações também são acompanhadas de formulários de acompanhamento do aluno, que propõem reflexões adicionais sobre a estrutura do problema de otimização naquele contexto.
+
+\begin{figure}[htb]
+    \begin{subfigure}[b]{0.47\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{media/CDME-prob-geometrico-12.png}
+    \caption{Exemplo de atividade do Projeto Ótimo sem nenhuma entrada/}
+    \label{fig:otimo13-11}
+    \end{subfigure}
+    % 
+    \hfill
+    % 
+    \begin{subfigure}[b]{0.47\textwidth}
+    \includegraphics[width=\textwidth]{media/CDME-prob-geometrico-11.png}
+    \caption{Exemplo de atividade do Projeto Ótimo após entradas válidas.}
+    \label{fig:otimo13-12}
+    \end{subfigure}
+    \caption{Primeira parte do módulo 6: ``Um Problema Geométrico".}
+    \label{fig:otimo13-1}
+    
+\end{figure}
+
+\begin{figure}
+\begin{subfigure}[b]{0.47\textwidth}
+    \centering
+    \includegraphics[width=8cm]{media/CDME-prob-geometrico-21.png}
+    \caption{Atividade sem rastro nem linha do gráfico aparente}
+\end{subfigure}
+% 
+\hfill
+% 
+\begin{subfigure}[b]{0.47\textwidth}
+    \includegraphics[width=8cm]{media/CDME-problema-geometric-grafico-rastro.jpg}
+    \caption{Atividade com a linha do gráfico e alguns pontos do rastro aparentes aparente}
+\end{subfigure}
+    \caption{Segunda parte do módulo 6: ``Um Problema Geométrico"}
+    \label{fig:otimo13-2}
+\end{figure}
+
+Um exemplo da estrutura citada no parágrafo anterior se encontra nas Figuras~\ref{fig:otimo13-1} e~\ref{fig:otimo13-2}. Na primeira parte o aluno deve buscar o valor da variável que otimiza o problema proposto. O valor da variável pode ser calculado ou estimado com o apoio das construções do GeoGebra, que exibem a situação-problema adaptada para o valor estimado da variável e a representação dessa estimativa no gráfico em uma tabela, como mostrado nas Figuras~\ref{fig:otimo13-11} e \ref{fig:otimo13-12}. Na segunda parte o aluno deve descrever a lei de formação da função e seu domínio, utilizando os conhecimentos que obteve na primeira etapa e uma nova construção GeoGebra, que permite interação clicando e arrastando nos pontos que representam a variável do domínio, ao mesmo tempo em que o gráfico é atualizado com o rastro deixado pelas variações. Também é possível ver diretamente o gráfico da função (Figura~\ref{fig:otimo13-2}).
+
+
+Essa abordagem incentiva que o aluno entenda o problema e aprenda Matemática por meio de sua resolução. O entendimento de uma situação-problema traz benefícios como o de relacionar o pensar matemático com uma gama maior de contextos, estimular a capacidade do aluno de reconhecer ideias ou conceitos matemáticos, e ajuda a construir as relações entre as diversas ideias matemáticas que permeiam um dado problema~\cite{schroeder1989developing}.
+
+Outra questão que vem à tona no Projeto Ótimo é a da representação matemática em contextos eletrônicos. A maior parte dos alunos está acostumada a representar os conceitos matemáticos através de símbolos --- $\sqrt{16}=4$, $2\pi\theta$, ou $2^3=8$, por exemplo --- que não são possíveis de escrever com teclados convencionais. Por isso, o aluno deve se familiarizar com a noção de que a representação de uma determinada operação ou conceito pode variar dependendo do contexto, e também se familiarizar com a maneira de escrevê-las da maneira que a programação do site entenda. Por exemplo, em contextos computacionais, é usual uma notação baseada no conceito de função, como em \texttt{sqrt()} para representa raiz quadrada. As operações aritméticas também possuem outras notações, como \^{} para representar potência, \texttt{*} para produto, etc. Também se faz necessário maior uso de parênteses para explicitar a precedência de operações, por exemplo \texttt{(x\^{}(25)+1)/(3\^{}2)} em vez de $\frac{x^{25}+1}{3^2}$.
+
+\section{As atividades do Projeto Ótimo}
+
+A seguir apresentaremos os 21 módulos do Projeto Ótimo, com seus respectivos enunciados e acompanhados de um pequeno comentário destacando pontos interessantes em cada um.
+
+\input{CDME-modulos-otimo}

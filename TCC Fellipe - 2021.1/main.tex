@@ -1,0 +1,162 @@
+%\documentclass[12pt]{book}
+\documentclass[12pt,openright,twoside,a4paper,brazil]{abntex2}
+
+%\usepackage[portuguese]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+
+% Figures, and captions
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+% Coloring text
+\usepackage{xcolor}
+
+% Hyperlinks
+\usepackage{hyperref}
+
+% Enumerating with pretty symbols
+\usepackage{enumerate}
+
+% No idea
+\usepackage[normalem]{ulem}
+\usepackage{wallpaper}
+
+% Unused but maybe useful to soemeone else:
+% \usepackage{wrapfig}
+%\usepackage[a4paper, top=3cm, bottom=2cm, outer=2cm, inner=3cm]{geometry}
+%\setlength{\parskip}{1.5em}
+%\setlength{\baselineskip}{1.5em}
+% \newenvironment{rascunho}{ \color{red}\noindent\textbf{Rascunho:} }{}
+% \newcommand{\revisaoleo}[1]{{\color{red}[#1]}}
+% \newcommand{\sugestao}[1]{{\color{red}#1}}
+% \newcommand{\cortar}[1]{\sout{#1}}
+
+
+% Bibliografias natbib ou ABNT. Escolh apenas um estilo
+
+% \usepackage{natbib}
+% \bibliographystyle{dinat}
+%
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}  % Citações padrão ABNT
+\usepackage{pdfpages}
+
+% [alf,abnt-emphasize=bf] use these options for bold ABNT stuff
+
+
+%\pagenumbering{arabic}
+
+%   \usepackage[
+%     backend=biber,
+%     style=authoryear,
+%   ]{biblatex}
+
+% \addbibresource{references.bib} %Imports bibliography file
+
+\include{Modelo/modelo}
+
+% \title{Por favor, me dê um nome!}
+\title{Agora sim o Projeto está Ótimo: Uma recuperação do Projeto CDME e uma discussão acerca da tecnologia em contextos educacionais}
+\author{Fellipe Souza Pessanha}
+\orientador{Leonardo Tadeu Silvares Martins}
+\def\orientadorassinatura{DSc. Universidade Federal Fluminense}
+\local{Niterói}
+\data{2021}
+\def\imprimirdatadeaprovacao{17/09/2021}
+\def\bancaUm{Prof. Leonardo Tadeu Silvares Martins - Orientador\\ DSc. Universidade Federal Fluminense}
+\def\bancaDois{Prof. Humberto José Bortolossi - Membro\\ DSc. Universidade Federal Fluminense}
+\def\bancaTres{Prof. Wanderley Moura Rezende - Membro\\ DSc. Universidade Federal Fluminense}
+
+\begin{document}
+
+\pretextual
+
+\imprimircapa
+
+\imprimirfolhaderosto
+
+
+\imprimirfolhadeaprovacao
+
+\begin{agradecimentos}
+
+    Um breve agradecimento a quem foi importante de alguma maneira no curso desse trabalho:
+    \\
+    
+    Primeiramente, ao professor Humberto José Bortolossi, por toda a ideia do trabalho aqui feito, e por acompanhar tudo na medida do possível.
+    \\
+    
+    A Michelle Pessanha, Débora Ribeiro, e Evelyn Murad por me terem sido minhas conselheiras no processo de escrita, que é normalmente tão difícil, para mim, e ao meu conselheiro de temas históricos, Diogo Mendonça.
+    \\
+    
+    A João Bragança, Laurinha Lero, Thiago França, e Emmet Cohen por fazerem a trilha sonora deste trabalho
+    \\
+    
+    À minha família: meu pai, Sidney; minha mãe, Elaine; minha irmã, Michelle, meu cunhado, Renan, além de toda família extendida, por me aconselharem no caminho, e principalmente por aturar minha companhia ligeiramente mais estressada nesse período corrido.
+    \\
+    
+    Aos meus orientadores de TCC e pesquisa --- Leonardo Silvares e Igor Coelho, respectivamente --- por me orientarem brilhantemente em direção a um futuro mais promissor.
+    
+    % Ao Governo Federal e ao Governo do Estado do Rio de Janeiro por assegurarem que eu tivesse o tempo necessário para escrever este trabalho, lidando tão desastrosamente com a pandemia.
+    
+
+\end{agradecimentos}
+
+\begin{resumo}
+    
+   Como um meio de promover ferramentas educacionais multimídia de alta qualidade, foi desenvolvido na Universidade Federal Fluminense, por volta de 2010, o Projeto CDME, uma série de atividades voltadas para o ensino de Matemática e Estatística para o Ensino Médio. Dentre essas atividades se encontra o Projeto Ótimo, um software voltado ao conteúdo de otimização.
+   \\
+    
+    Em 2017 a tecnologia dos applets java -- na qual o Projeto Ótimo e de diversas outras atividades do Projeto CDME se baseavam -- deixou de ser suportada pela maior parte dos navegadores de internet, fazendo com que todos os conteúdos que dependessem de applets java se perdessem para o público geral.
+    \\
+
+    Esse exemplo prático mostra que qualquer trabalho -- mesmo os de alta qualidade e feitos com grande grande atenção à escolha de tecnologias atuais -- está sujeito a uma mudança externa que pode impedir o seu funcionamento, e que deve haver um esforço de manutenção para evitar que projetos interessantes se percam por esses motivos.
+    \\
+    
+    Neste trabalho, é feito um levantamento acerca do entendimento do que é tecnologia, seu histórico e seus usos, com foco especial no uso voltado ao Ensino de Matemática, um pequeno resumo da história do Projeto CDME, e um guia das mudanças práticas feitas para a reativação do Projeto Ótimo.
+    
+    \vspace{\onelineskip}
+    \noindent
+    \textbf{Palavras-chave}: GeoGebra, Tecnologia, TIC, Educação Matemática, JavaScript, Otimização
+\end{resumo}
+
+\begin{resumo}[Abstract]
+
+    As a means do promote high quality multimedia educational tools, the Fluminense Federal University began hosting, around 2010, the CDME Project: a series of activities aimed towards math and statistics education in basic school. Among these activities, there was an optimization software called Projeto Ótimo, or Optimum Project.
+    \\
+    
+    In 2017 the java applets technology -- in which the Projeto Ótimo and and many other activities from the CDME Project were base on --  was deprecated and lost support from the most popular web browsers, making numerous websites change their implementations of certain functionalities under risk of losing them.
+    \\
+    
+    The situation explained above shows that any work -- even the high quality ones, made with great attention to the current technologies -- is subject to external changes that may compromise it, and that, to keep interesting content up, some maintenance work is needed.
+    \\
+    
+    This work raises the discussion about technology, its historic and its uses, with a special focus Mathematical Education, talks about the CDME Project, and sums up the practical procedures made in the process of recovering the ``Projeto Ótimo".
+    
+    
+    \vspace{\onelineskip}
+    \noindent
+    \textbf{Keywords}: GeoGebra, Techonlogy, TIC, Mathematical Education, JavaScript, Optimization
+\end{resumo}
+
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
+\textual
+
+\OnehalfSpacing
+
+\setcounter{page}{1}
+\include{introducao}          %01
+\include{recComputacionais}   %02
+\include{historicoWeb}        %03
+\include{CDME}                %04
+\include{partetecnica}        %05
+\include{conclusao}
+
+% \printbibliography
+\bibliography{references.bib}
+
+\end{document}

@@ -1,0 +1,131 @@
+
+\renewcommand{\imprimircapa}{%
+    \begin{capa}%
+        \ThisCenterWallPaper{1}{Modelo/Fundo.png}
+        
+        \vspace*{9cm}
+    
+        \begin{minipage}{0.3\textwidth}
+        $\;$
+        \end{minipage}~\begin{minipage}{0.7\textwidth}
+            \begin{center}
+                {\ABNTEXchapterfont\bfseries\large\MakeUppercase{\imprimirautor}}
+            \end{center}
+        \end{minipage}
+    
+        \vspace*{3cm}
+    
+        \begin{minipage}{0.3\textwidth}
+        $\;$
+        \end{minipage}~\begin{minipage}{0.7\textwidth}
+            \begin{center}
+               {\ABNTEXchapterfont\slshape\LARGE\MakeUppercase{\imprimirtitulo}}
+            \end{center}
+        \end{minipage}
+    
+        \vfill
+        
+        \begin{minipage}{0.5\textwidth}
+        $\;$
+        \end{minipage}~\begin{minipage}{0.5\textwidth}
+            \begin{center}
+               {\ABNTEXchapterfont\bfseries\large\MakeUppercase{\imprimirlocal}}
+               
+               {\ABNTEXchapterfont\bfseries\large\MakeUppercase{\imprimirdata}}
+               
+            \end{center}
+        \end{minipage}
+    
+    \end{capa}
+}
+\renewcommand{\imprimirfolhaderosto}{%
+    \begin{folhaderosto}%
+    
+        \begin{center}%
+            {\ABNTEXchapterfont\bfseries\large\MakeUppercase{\imprimirautor}}
+            
+            \vspace*{4cm}
+            
+            {\ABNTEXchapterfont\bfseries\large\MakeUppercase{\imprimirtitulo}}
+            
+            \vspace*{2.9cm}
+            
+            \begin{minipage}{0.5\textwidth}
+            $\,$
+            \end{minipage}~\begin{minipage}{0.5\textwidth}
+                {\ABNTEXchapterfont\large{Trabalho de Conclusão de Curso \linebreak apresentado à Coordenação do Curso \linebreak Graduação de Licenciatura em \linebreak Matemática da Universidade \linebreak Federal Fluminense como requisito parcial para aprovação na disciplina Trabalho de Conclusão de Curso II (GTL00003).}}
+            \end{minipage}
+            
+            \vspace*{2.3cm}
+            
+            {\ABNTEXchapterfont\bfseries\large{Orientador: \imprimirorientador}}
+        
+            \vfill
+            
+            {\ABNTEXchapterfont\bfseries\large{\imprimirlocal}}
+               
+            {\ABNTEXchapterfont\bfseries\large{\imprimirdata}}
+               
+        \end{center}
+        
+    \newpage
+    \ThisCenterWallPaper{1}{Modelo/ficha-catalografica-1.jpg}
+    \end{folhaderosto}
+    
+}
+
+\renewcommand{\assinatura}[1]{%
+    \begin{minipage}{0.8\textwidth}
+        \begin{center}
+            \hrulefill
+            
+            \large{#1}
+            
+            \vspace*{2cm}
+        \end{center}
+    \end{minipage}
+}
+
+\newcommand{\imprimirfolhadeaprovacao}{%
+    \begin{folhadeaprovacao}
+        
+        \begin{center}%
+            {\ABNTEXchapterfont\bfseries\large\MakeUppercase{\imprimirautor}}
+            
+            \vfill
+            
+            {\ABNTEXchapterfont\bfseries\large\MakeUppercase{\imprimirtitulo}}
+            
+            \vspace*{1.5cm}
+            
+            \begin{minipage}{0.5\textwidth}
+            $\,$
+            \end{minipage}~\begin{minipage}{0.5\textwidth}
+                {\ABNTEXchapterfont\large{Trabalho de Conclusão de Curso \linebreak apresentado à Coordenação do Curso \linebreak Graduação de Licenciatura em \linebreak Matemática da Universidade \linebreak Federal Fluminense como requisito parcial para aprovação na disciplina Trabalho de Conclusão de Curso II (GTL00003).}}
+            \end{minipage}
+        \end{center}
+        
+        \vspace*{0.5cm}
+            
+        {\ABNTEXchapterfont\bfseries\large{Aprovada em: \imprimirdatadeaprovacao}}
+        
+        \vspace*{0.5cm}
+        
+        \begin{center}
+        {\ABNTEXchapterfont
+            
+            {\bfseries\large{Banca examinadora}}
+            
+            \vspace*{2cm}
+        
+            \assinatura{\bancaUm}
+            
+            \assinatura{\bancaDois}
+            
+            \assinatura{\bancaTres}
+        
+        }
+        \end{center}
+    
+    \end{folhadeaprovacao}
+}

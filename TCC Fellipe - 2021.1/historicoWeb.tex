@@ -1,0 +1,41 @@
+\chapter{Um histórico dos recursos web}
+\label{cap:historicoWeb}
+%Uma ideia (algo bem rápido) sobre a evolução geral dos recursos web: \\
+
+% -> surge a internet, como uma ferramenta para conectar computadores de todo o mundo
+% -> naturalmente há uma grande produção de conteúdo focado em educação matemática, inclusive dada a própria natureza algoritmica da internerd
+% -> Evoluiu a internet, e veio a web 2.0, com um volume muito maior de informações sendo trocadas via internet
+% -> Começou a se normalizar o conceito de software pago, o que inclui grande parte dos maiores softwares de educação matemática de propósito geral (wolfram mathematica 83 dól/ano
+% -> há uma alternativa nos softwares livres (open source), mas a oferta é relativamente pequena
+% -> Houve, em 2007, um edital do governo sobre 
+
+%  \revisaoleo{Acho que "tecnologia" funciona melhor que "ferramenta"}
+
+Surge, na década de 60, da DARPA\footnote{Defense Advanced Research Projects Agency, ou Agência de Projetos de Pesquisa Avançada de Defesa). Uma entidade americana de pesquisa e desenvolvimento de novas tecnologias, criada em fevereiro de 1958, ainda como ARPA}, a Internet, uma tecnologia que permitia conectar redes de computadores --- inicialmente em contextos militares ou acadêmicos --- de maneira rápida. O intuito era facilitar a comunicação, e no ano de 1985 já era extremamente popular entre diversas universidades americanas~\cite{internetleiner2009brief}, facilitando em muito o esforço de colaboração de universidades em pesquisas, assim sendo uma grande ferramenta para a educação nas universidades que as adotavam.
+\\
+
+Nos anos 90 a internet começava a se popularizar em residências, com a implementação da Rede Mundial de Computadores, ou World Wide Web -- WWW --, e o volume de informações consumidas pela internet passou a aumentar cada vez mais rápido, com fóruns de discussões sobre assuntos diversos, grandes repositórios de conhecimentos --- potencializados pelos documentos hiperlinks, uma nova ferramenta exclusiva da internet, utilizados no modelo \textit{Wiki}
+\footnote{Uma coletânea de documentos hipertexto editáveis pelo público, permitindo grande diversidade de fontes sobre os mais diversos assuntos.}
+, como a Wikipédia~\cite{wikivoss2005measuring} ---, e softwares de utilidades gerais. 
+
+Essa popularização fez com que a maneira de se usar a internet mudasse de uma postura passiva, de ``leitura exclusiva", para uma postura mais ativa, de ``leitura e escrita", onde quem acessava o um determinado endereço não estava restrito a uma leitura de um documento, mas também poderia interagir com a página, deixando o seu comentário e interagindo com outras pessoas que também poderiam acessá-la. Essa nova fase da internet foi chamada de Web 2.0~\cite{web20jones2013patterns}.\\ 
+ 
+A contrário do que pode se imaginar, o advento da internet não acarretou impactos positivos diretos em todas as áreas do conhecimento, pois o acesso às novas tecnologias não garante bom uso delas~\cite{lei2007technology}. O Ensino de Matemática, por exemplo, se mostrou defasado em frente à maior disponibilidade de computadores com acesso à internet~\cite{cdmebortolossi2016conteudos}.
+
+Diante dessa realidade, surgem esforços que visam disponibilizar conteúdo educacional de qualidade na internet, como universidades que disponibilizam cursos gratuitamente online~\cite{aulasunigratuitas}, sites que disponibilizam conteúdos educacionais para qualquer pessoa com acesso à internet~\cite{khanthompson2011khan}. Algumas ações de fomento, como editais de apoio financeiro à produção de conteúdos educacionais digitais multimídia, potencializaram o desenvolvimento de projetos como o do CDME~\cite{cdmebortolossi2016conteudos}, que motivou esse trabalho.
+\\
+
+Há uma dificuldade adicional para quem se propõe a ofertar esses serviços na internet: a manutenção da plataforma online. Para manter um site online, se utilizam tecnologias que geralmente são mantidas por terceiros, como navegadores, interfaces de programação de aplicações (APIs) \footnote{Application Programming Interface, ou Interface de Programação de Aplicação. É uma camada que permite que um desenvolvedor utilize aplicações de terceiros sem precisar se preocupar com os pormenores da aplicação do software}, \textit{frameworks} \footnote{Uma camada de ferramentas previamente desenvolvidas que podem ser utilizadas por desenvolvedores.}, bibliotecas de programação, e \textit{plug-ins}\footnote{Programa de computador que adiciona funções a outros programas maiores}~\cite{mckimm2006abc} que evoluem independentemente. Estas tecnologias podem apresentar eventuais erros de compatibilidade, ou até mesmo deixarem completamente de ser suportadas pelos equipamentos e ferramentas disponíveis ao usuário.
+
+Um importante exemplo ocorreu a partir de 2013 quando uma API chamada NPAPI, que servia para integrar plugins em navegadores e era fundamental para dar suporte ao uso do framework Java em navegadores, deixou de ser suportado pelos principais navegadores de internet, fazendo com que todas as aplicações que haviam sido implementadas dessa maneira deixassem de funcionar.
+\\
+
+Existem alguns exemplos de tecnologias que são mais seguras nesse quesito, por conta de um esforço de padronização da World Wide Web Consortium(W3C)~\cite{internetleiner2009brief}, e do esforço de grandes empresas em manter as tecnologias seguras e funcionais. Esse é o caso da linguagem de marcação padrão da internet, cujo padrão é o HTML(HyperText Markup Language, ou Linguagem de Marcação Hipertexto), usada para especificar a estrutura de um documento. Navegadores de internet (web browsers) conseguem interpretar estas marcações de estrutura e construir páginas web com recursos de hipermídia, como estamos habituados a ver hoje em dia.
+\\
+
+Atualmente, a linguagem de marcação HTML5, versão mais moderna do HTML, junto da linguagem JavaScript para execução de \textit{scripts}\footnote{Programas escritos para um sistema de tempo de execução que automatiza a execução de tarefas que seriam executadas, uma de cada vez, por um operador humano} que acrescentam o dinamismo às páginas, o que há de mais moderno e popular em termos de desenvolvimento de aplicativos web, sendo utilizada por cerca de 88\% dos sites no ar em junho de 2021~\cite{html5-percentage}. Há uma quantidade enorme de bibliotecas disponíveis para implementação usando essas tecnologias, com suporte para dispositivos desde computadores a celulares, o que torna essa linguagem atualmente a mais indicada para uso em desenvolvimento web.
+
+Mas ainda que o HTML5 seja realmente uma ferramenta popular para o desenvolvimento web atualmente, nada garante que não haverá uma grande mudança tecnológica em um futuro próximo. Portanto, o único jeito para garantir que uma plataforma se mantenha no ar é estar permanentemente atento às mudanças tecnológicas e ativamente renovando as tecnologias para que o conteúdo produzido não se perca.
+\\
+
+A proposta prática desse trabalho de conclusão de curso é a de modernizar os conteúdos do projeto ótimo do CDME, onde as atividades haviam sido implementadas em Java utilizando-se da NPAPI, que deixou de funcionar quando os navegadores de internet pararam de suportar essa tecnologia.
